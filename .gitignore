@@ -1,0 +1,139 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.venv/
+venv/
+env/
+pip-wheel-metadata/
+
+# Distribution / packaging
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+nohup.out
+
+# Caches
+.cache/
+.mypy_cache/
+.pytest_cache/
+__cache__/
+util/__cache__/
+
+# Outputs & temp
+output/
+tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model/index artifacts
+*.index
+*.idx
+*.faiss
+*.bin
+*.pt
+*.ckpt
+*.safetensors
+
+# Project-specific
+passages.index
+
+# Node (if any)
+node_modules/
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.env
+.env.*
+.venv/
+venv/
+env/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / Dist
+build/
+dist/
+*.egg-info/
+
+# Logs and temp
+*.log
+logs/
+tmp/
+tmp_*/
+
+# Project outputs & caches
+output/
+__cache__/
+util/__cache__/
+
+# Model checkpoints / large artifacts
+*.pt
+*.pth
+*.bin
+*.safetensors
+checkpoints/
+tmp_intent_out/
+
+# Indexes / generated data
+passages.index
+passages_meta.pkl
+*.faiss
+data/top_20/
+data/example/
+
+# Local files
+dialog_01.txt
+dialog2flow.pdf
+FILES_ANALYSIS.txt
+pipeline_verification.txt
+.cache
+.ollama
+.DS_Store
+models/
+output/
+outputs/
+wandb/
+__pycache__
+__cache__
+core
+train/data/dialog-acts+slots.csv
+train/data/dialog-acts.csv
+train/data/slots.csv
+.venv/
+__pycache__/
+__cache__/
