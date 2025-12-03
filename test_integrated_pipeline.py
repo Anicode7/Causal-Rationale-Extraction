@@ -6,11 +6,18 @@ Runs a small test to verify all components work correctly.
 import os
 import sys
 import json
+from pathlib import Path
 
 # Add current directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from integrated_pipeline import IntegratedPipeline
+from graph_gen import IntegratedPipeline
+
+
+BASE_DIR = Path(__file__).resolve().parent
+TOP20_DIR = (BASE_DIR / 'data' / 'top_20').resolve()
+EXAMPLE_DIR = (BASE_DIR / 'data' / 'example').resolve()
+OUTPUT_DIR = (BASE_DIR / 'output').resolve()
 
 
 def verify_metadata_preservation():
@@ -20,9 +27,9 @@ def verify_metadata_preservation():
     print("=" * 80)
     
     # Check if files exist
-    top20_dir = "/home/pushpendras0026/dialog2flow/data/top_20"
-    example_dir = "/home/pushpendras0026/dialog2flow/data/example"
-    output_dir = "/home/pushpendras0026/dialog2flow/output"
+    top20_dir = str(TOP20_DIR)
+    example_dir = str(EXAMPLE_DIR)
+    output_dir = str(OUTPUT_DIR)
     
     # 1. Check top_20 files
     print("\n1. Checking top_20 files...")

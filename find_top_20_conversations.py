@@ -12,12 +12,13 @@ This script:
 
 import json
 import os
+import re
 import numpy as np
 import argparse
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
 import faiss
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
 from datetime import datetime
 
 
@@ -37,6 +38,14 @@ class ConversationSearchPipeline:
         self.embeddings = None
         self.index = None
         self.turn_metadata = []  # Store metadata for each turn
+
+    @staticmethod
+    def _safe_token(value: Optional[str], default: str = 'all') -> str:
+        """Return lowercase slug suitable for filenames."""
+        if not value:
+            return default
+        token = re.sub(r'[^a-z0-9]+', '_', value.strip().lower()).strip('_')
+        return token or default
         
     def load_data(self, json_file_path: str) -> List[Dict]:
         """
@@ -54,7 +63,7 @@ class ConversationSearchPipeline:
         print(f"Loaded {len(data)} transcripts")
         return data
     
-    def filter_by_domain(self, data: List[Dict], domain: str) -> List[Dict]:
+    def filter_by_domain(self, data: List[Dict], domain: Optional[str]) -> List[Dict]:
         """
         Filter transcripts by domain.
         
@@ -65,8 +74,22 @@ class ConversationSearchPipeline:
         Returns:
             Filtered list of transcripts for the specified domain
         """
+        if not domain:
+            print("No domain filter applied")
+            return data
+
         filtered = [t for t in data if t.get('domain', '').lower() == domain.lower()]
         print(f"Filtered to {len(filtered)} transcripts for domain: {domain}")
+        return filtered
+
+    def filter_by_intent(self, data: List[Dict], intent: Optional[str]) -> List[Dict]:
+        """Filter transcripts by intent label."""
+        if not intent:
+            print("No intent filter applied")
+            return data
+
+        filtered = [t for t in data if t.get('intent', '').lower() == intent.lower()]
+        print(f"Filtered to {len(filtered)} transcripts for intent: {intent}")
         return filtered
     
     def prepare_turn_text(self, turn: Dict, reason_for_call: str = "") -> str:
@@ -298,7 +321,14 @@ class ConversationSearchPipeline:
         
         return full_transcripts
     
-    def save_results(self, results: List[Dict], output_dir: str, domain: str, query: str):
+    def save_results(
+        self,
+        results: List[Dict],
+        output_dir: str,
+        domain: Optional[str],
+        intent: Optional[str],
+        query: str
+    ):
         """
         Save the top results as individual text files and a summary JSON.
         
@@ -313,15 +343,17 @@ class ConversationSearchPipeline:
         
         # Create filename with timestamp
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        safe_domain = domain.replace(' ', '_').lower()
+        safe_domain = self._safe_token(domain, default='all')
+        safe_intent = self._safe_token(intent, default='any')
         
         # Save summary JSON
-        json_filename = f"top_20_{safe_domain}_{timestamp}.json"
+        json_filename = f"top_20_{safe_domain}_{safe_intent}_{timestamp}.json"
         json_path = os.path.join(output_dir, json_filename)
         
         output_data = {
             'query': query,
             'domain': domain,
+            'intent': intent,
             'timestamp': timestamp,
             'num_results': len(results),
             'results': results
@@ -440,8 +472,15 @@ class ConversationSearchPipeline:
         
         return json_path
     
-    def run_pipeline(self, json_file_path: str, domain: str, query: str, 
-                     output_dir: str = None, top_k: int = 20):
+    def run_pipeline(
+        self,
+        json_file_path: str,
+        domain: Optional[str],
+        intent: Optional[str],
+        query: str,
+        output_dir: str = None,
+        top_k: int = 20
+    ):
         """
         Run the complete pipeline.
         
@@ -459,15 +498,27 @@ class ConversationSearchPipeline:
         
         # Step 1: Load data
         all_data = self.load_data(json_file_path)
-        
-        # Step 2: Filter by domain
-        self.data = self.filter_by_domain(all_data, domain)
-        
+
+        # Step 2: Filter by domain and intent if provided
+        filtered_data = self.filter_by_domain(all_data, domain)
+        filtered_data = self.filter_by_intent(filtered_data, intent)
+        self.data = filtered_data
+
         if len(self.data) == 0:
-            print(f"Error: No transcripts found for domain '{domain}'")
-            available_domains = set(t.get('domain', '') for t in all_data)
-            print(f"Available domains: {sorted(available_domains)}")
-            return
+            scope = []
+            if domain:
+                scope.append(f"domain '{domain}'")
+            if intent:
+                scope.append(f"intent '{intent}'")
+            scope_str = ' and '.join(scope) if scope else 'provided filters'
+            print(f"Error: No transcripts found for {scope_str}")
+            available_domains = sorted({t.get('domain', '') for t in all_data if t.get('domain')})
+            available_intents = sorted({t.get('intent', '') for t in all_data if t.get('intent')})
+            if available_domains:
+                print(f"Available domains: {available_domains}")
+            if available_intents:
+                print(f"Available intents: {available_intents}")
+            return []
         
         # Step 3: Create embeddings
         self.embeddings, self.turn_metadata = self.create_embeddings(self.data)
@@ -478,6 +529,9 @@ class ConversationSearchPipeline:
         # Step 5: Search for similar turns
         # Get more turns initially for better transcript-level aggregation
         search_k = min(len(self.turn_metadata), 100)
+        if search_k == 0:
+            print("Error: No conversation turns available after filtering")
+            return []
         distances, indices = self.search_similar_turns(query, k=search_k)
         
         # Step 6: Aggregate to transcript level and get top K
@@ -487,13 +541,14 @@ class ConversationSearchPipeline:
         full_transcripts = self.get_full_transcripts(top_results)
         
         # Step 8: Save results
-        output_path = self.save_results(full_transcripts, output_dir, domain, query)
+        output_path = self.save_results(full_transcripts, output_dir, domain, intent, query)
         
         # Print summary
         print("\n" + "="*80)
         print("SEARCH SUMMARY")
         print("="*80)
-        print(f"Domain: {domain}")
+        print(f"Domain: {domain or 'All'}")
+        print(f"Intent: {intent or 'Any'}")
         print(f"Query: {query}")
         print(f"Total transcripts in domain: {len(self.data)}")
         print(f"Top {len(full_transcripts)} results saved to: {output_path}")
@@ -520,14 +575,20 @@ def main():
     parser.add_argument(
         '--data-path',
         type=str,
-        default='/home/pushpendras0026/dialog2flow/data/final_json_for_d2f.json',
+        default='data/final_json_for_d2f.json',
         help='Path to input JSON file'
     )
     parser.add_argument(
         '--domain',
         type=str,
-        required=True,
+        default=None,
         help='Domain to search within (e.g., Flight, Hotel, Banking, Retail, Telecom, Insurance)'
+    )
+    parser.add_argument(
+        '--intent',
+        type=str,
+        default=None,
+        help='Intent label to filter within the selected domain'
     )
     parser.add_argument(
         '--query',
@@ -538,7 +599,7 @@ def main():
     parser.add_argument(
         '--output-dir',
         type=str,
-        default='/home/pushpendras0026/dialog2flow/data/top_20',
+        default='data/top_20',
         help='Directory to save results'
     )
     parser.add_argument(
@@ -556,15 +617,25 @@ def main():
     
     args = parser.parse_args()
     
+    base_dir = Path(__file__).resolve().parent
+    data_path = Path(args.data_path)
+    if not data_path.is_absolute():
+        data_path = (base_dir / data_path).resolve()
+
+    output_dir = Path(args.output_dir)
+    if not output_dir.is_absolute():
+        output_dir = (base_dir / output_dir).resolve()
+
     # Initialize pipeline
     pipeline = ConversationSearchPipeline(model_name=args.model)
-    
+
     # Run pipeline
     pipeline.run_pipeline(
-        json_file_path=args.data_path,
+        json_file_path=str(data_path),
         domain=args.domain,
+        intent=args.intent,
         query=args.query,
-        output_dir=args.output_dir,
+        output_dir=str(output_dir),
         top_k=args.top_k
     )
 

@@ -13,6 +13,7 @@ MIT License
 import os
 import json
 import logging
+from pathlib import Path
 from typing import Dict, List
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
@@ -121,9 +122,10 @@ def extract_dialogs_from_top20(top20_dir: str, output_dir: str, metadata_file: s
 
 def main():
     """Main function to prepare top 20 for Dialog2Flow."""
-    top20_dir = "/home/pushpendras0026/dialog2flow/data/top_20"
-    output_dir = "/home/pushpendras0026/dialog2flow/data/example"
-    metadata_file = os.path.join(output_dir, "conversations_metadata.json")
+    base_dir = Path(__file__).resolve().parent
+    top20_dir = (base_dir / 'data' / 'top_20').resolve()
+    output_dir = (base_dir / 'data' / 'example').resolve()
+    metadata_file = output_dir / "conversations_metadata.json"
     
     # Clear existing files in output directory (except metadata from previous runs)
     if os.path.exists(output_dir):
@@ -133,7 +135,7 @@ def main():
                 logger.info(f"Removed old file: {filename}")
     
     # Extract and prepare dialogs
-    metadata = extract_dialogs_from_top20(top20_dir, output_dir, metadata_file)
+    metadata = extract_dialogs_from_top20(str(top20_dir), str(output_dir), str(metadata_file))
     
     return metadata
 
