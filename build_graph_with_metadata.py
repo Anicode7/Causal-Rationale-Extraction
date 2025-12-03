@@ -12,6 +12,7 @@ Enhanced for metadata handling
 import os
 import json
 import argparse
+from pathlib import Path
 import networkx as nx
 from typing import Dict, List
 from collections import defaultdict, Counter
@@ -146,8 +147,11 @@ def export_graph_graphml(G: nx.DiGraph, output_path: str):
     # Create a copy of the graph and convert list attributes to strings for GraphML compatibility
     G_copy = G.copy()
     
+    print("\n[DEBUG] Checking node attributes for GraphML export...")
     for node_id in G_copy.nodes:
         for key, value in list(G_copy.nodes[node_id].items()):
+            if value is None:
+                print(f"[DEBUG] Node {node_id} has None value for key '{key}'")
             if isinstance(value, list):
                 if key == 'utterances':
                     # Join utterances with newline for better readability
@@ -490,12 +494,12 @@ def main():
     )
     parser.add_argument(
         '--trajectories',
-        default='/home/pushpendras0026/dialog2flow/output/trajectories_with_metadata.json',
+        default='output/trajectories_with_metadata.json',
         help='Path to trajectories JSON with metadata'
     )
     parser.add_argument(
         '--output-dir',
-        default='/home/pushpendras0026/dialog2flow/output',
+        default='output',
         help='Directory to save graph files'
     )
     parser.add_argument(
@@ -508,9 +512,19 @@ def main():
     
     args = parser.parse_args()
     
+    base_dir = Path(__file__).resolve().parent
+
+    trajectories_path = Path(args.trajectories)
+    if not trajectories_path.is_absolute():
+        trajectories_path = (base_dir / trajectories_path).resolve()
+
+    output_dir = Path(args.output_dir)
+    if not output_dir.is_absolute():
+        output_dir = (base_dir / output_dir).resolve()
+
     build_and_export_graph(
-        args.trajectories,
-        args.output_dir,
+        str(trajectories_path),
+        str(output_dir),
         args.formats
     )
 

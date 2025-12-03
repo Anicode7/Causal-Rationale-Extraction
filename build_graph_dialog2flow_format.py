@@ -168,14 +168,15 @@ def main():
     parser = argparse.ArgumentParser(
         description='Build Dialog2Flow action flow graph from trajectories with metadata'
     )
+    base_dir = Path(__file__).resolve().parent
     parser.add_argument(
         '--trajectories',
-        default='/home/pushpendras0026/dialog2flow/output/trajectories_with_metadata.json',
+        default=str((base_dir / 'output' / 'trajectories_with_metadata.json').resolve()),
         help='Path to trajectories_with_metadata.json'
     )
     parser.add_argument(
         '--output',
-        default='/home/pushpendras0026/dialog2flow/output/graph_dialog2flow',
+        default=str((base_dir / 'output' / 'graph_dialog2flow').resolve()),
         help='Output folder for graph'
     )
     parser.add_argument(
@@ -214,9 +215,18 @@ def main():
     
     args = parser.parse_args()
     
+    base_dir = Path(__file__).resolve().parent
+    trajectories_path = Path(args.trajectories)
+    if not trajectories_path.is_absolute():
+        trajectories_path = (base_dir / trajectories_path).resolve()
+
+    output_path = Path(args.output)
+    if not output_path.is_absolute():
+        output_path = (base_dir / output_path).resolve()
+
     build_dialog2flow_graph(
-        args.trajectories,
-        args.output,
+        str(trajectories_path),
+        str(output_path),
         args.domain,
         args.edges_weight,
         args.prune_edges,

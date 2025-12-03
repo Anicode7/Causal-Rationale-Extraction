@@ -1,0 +1,24 @@
+[
+    {
+        "id": "a21",
+        "utterance": "i understand your concerns dylan last minute cancellations can incur fees our policies are structure...",
+        "escalation_level": 0.13064139229910715,
+        "churn_risk_score": 0.16781180245535715,
+        "empathy_score": 0.7423270089285714,
+        "escalation_risks": 0.14379119873046875,
+        "intents_emotions": "Acknowledgement/Explanation - Empathetic",
+        "speaker": "Agent",
+        "similarity": 0.6968281865119934
+    },
+    {
+        "id": "u36",
+        "utterance": "hi this is dylan parker i need some clarification on your cancellation policies especially about fee...",
+        "escalation_level": 0.16388260690789475,
+        "churn_risk_score": 0.24707673725328946,
+        "empathy_score": -0.005322908100328948,
+        "escalation_risks": 0.18967692057291666,
+        "intents_emotions": "Cancellation Policy Inquiry - Neutral/Curious",
+        "speaker": "Customer",
+        "similarity": 0.6481244564056396
+    }
+]

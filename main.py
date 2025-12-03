@@ -5,13 +5,13 @@ os.environ["HF_HUB_DISABLE_SYMLINKS"] = "1"
 import llm_handler
 import json
 import embedder
+import graph_gen
 import graph_operator
 from datetime import datetime
 import time
 import graph_operator
 import os 
-import pandas as pd
-import graph_gen
+
 
 QUERIES_FILE = os.path.join(os.getcwd(),"data","queries_data.csv")
 

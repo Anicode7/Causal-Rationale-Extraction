@@ -137,3 +137,6 @@ train/data/slots.csv
 .venv/
 __pycache__/
 __cache__/
+
+data
+train

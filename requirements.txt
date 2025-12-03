@@ -24,3 +24,12 @@ wandb
 frozendict
 pytest
 sentence-transformers
+neo4j
+pandas
+numpy
+faiss-cpu
+tenacity
+matplotlib
+simpleneighbors
+openai
+graphviz

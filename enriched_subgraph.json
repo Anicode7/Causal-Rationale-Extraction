@@ -1,0 +1,730 @@
+{
+    "edges": [
+        {
+            "source": "a7",
+            "target": "u36",
+            "local_probability": 0.8,
+            "explanation": "The Customer's question about cancellation policies and fees directly responded to Agent's greeting, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "a7",
+            "target": "u51",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration about the last-minute fleece purchase directly correlates with the Agent's greeting, indicating a strong causal link between the two."
+        },
+        {
+            "source": "u36",
+            "target": "a40",
+            "local_probability": 0.8,
+            "explanation": "The agent directly responded to the customer's inquiry about cancellation policies, showing a strong causal link."
+        },
+        {
+            "source": "u36",
+            "target": "a20",
+            "local_probability": 0.8,
+            "explanation": "The customer's inquiry about cancellation policies directly influenced the agent's response to provide clarification, indicating a strong causal link."
+        },
+        {
+            "source": "u36",
+            "target": "a50",
+            "local_probability": 0.9,
+            "explanation": "The Agent's empathetic response in Node2 is likely caused by the Customer's cancellation policy inquiry and fee complaint in Node1, as indicated by the strong intent-emotion match ('Cancellation Policy Inquiry - Neutral/Curious' in Node1 vs 'Confirmation/Assistance - Polite' in Node2), and the decrease in escalation level and churn risk score from Node1 to Node2."
+        },
+        {
+            "source": "u36",
+            "target": "a21",
+            "local_probability": 0.8,
+            "explanation": "The customer's question about cancellation policies led to the agent providing a clear explanation, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "u36",
+            "target": "a46",
+            "local_probability": 0.8,
+            "explanation": "The agent's response directly addresses the customer's inquiry about cancellation policies and fees, indicating a strong causal link."
+        },
+        {
+            "source": "u36",
+            "target": "a30",
+            "local_probability": 0.8,
+            "explanation": "The Agent's response directly addressed the Customer's inquiry about cancellation policies, showing a strong causal link."
+        },
+        {
+            "source": "a40",
+            "target": "u51",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration about the last-minute fleece (Target) is a direct response to the agent's offer of assistance (Source), which mentions booking in mind and does not specifically address the issue with the fleece."
+        },
+        {
+            "source": "u51",
+            "target": "a21",
+            "local_probability": 0.8,
+            "explanation": "The agent's empathetic acknowledgement and explanation of the fee policy directly responds to the customer's frustration about last minute fleece cancellations."
+        },
+        {
+            "source": "u51",
+            "target": "a50",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration about the last minute fleece (specific entity mentioned) directly influenced the agent's polite confirmation response, indicating a strong causal link."
+        },
+        {
+            "source": "u51",
+            "target": "a11",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration about the last minute fleece change caused the agent to provide a policy explanation, which increased escalation level and churn risk."
+        },
+        {
+            "source": "u51",
+            "target": "a45",
+            "local_probability": 0.9,
+            "explanation": "The Agent's utterance is a direct response to the Customer's frustration with last-minute fleece, clarifying the main issues which are related to coverage limits on cancellations mentioned in the Source Node."
+        },
+        {
+            "source": "u51",
+            "target": "a30",
+            "local_probability": 0.8,
+            "explanation": "Strong causal link due to direct response from Agent regarding specific entity mentioned in Source (bk 2746519) and escalation of frustration"
+        },
+        {
+            "source": "u51",
+            "target": "a25",
+            "local_probability": 0.8,
+            "explanation": "The Agent's response in Node2 ('yes you are still eligible for a deluxe room when you reschedule would you me to check available dat...') shows reassurance and helpfulness, indicating a direct response to the Customer's frustration with last-minute fleece changes in Node1."
+        },
+        {
+            "source": "u51",
+            "target": "u20",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration about the last minute fleece in Node1 directly influenced their response in Node2, indicating a strong causal link."
+        },
+        {
+            "source": "a21",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The customer's response in Node2 ('it is not that simple...') indicates confusion and concern, directly influenced by the agent's acknowledgment and explanation in Node1 ('i understand your concerns...'). The agent's utterance also mentions a specific entity (Dylan) which triggered a complaint from the customer."
+        },
+        {
+            "source": "a21",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The customer's escalation level and churn risk score increased after the agent acknowledged their concerns, indicating a strong causal link between the source node's empathetic response and the target node's frustrated inquiry about last minute fees."
+        },
+        {
+            "source": "a21",
+            "target": "u7",
+            "local_probability": 0.8,
+            "explanation": "Customer's high escalation level and churn risk score are directly related to Agent's mention of policies and fees in their utterance, which triggered a frustrated response from the Customer."
+        },
+        {
+            "source": "a3",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration and concern about last-minute fees were directly addressed by the agent's apology and empathetic response, mentioning specific circumstances (cancellations close to check-in) that trigger high fees."
+        },
+        {
+            "source": "a3",
+            "target": "u7",
+            "local_probability": 0.8,
+            "explanation": "Customer's complaint about being stuck in a script is directly caused by Agent's previous statement apologizing for fees, which is likely to be perceived as insincere or rehearsed."
+        },
+        {
+            "source": "u5",
+            "target": "a0",
+            "local_probability": 0.8,
+            "explanation": "The customer expresses frustration about last-minute fees in Node1, and the agent responds by acknowledging this frustration and providing clarification in Node2."
+        },
+        {
+            "source": "u5",
+            "target": "a21",
+            "local_probability": 0.7,
+            "explanation": "The Customer's mention of 'last minute fees' in Node1 is directly addressed by the Agent's explanation in Node2, indicating a strong causal link."
+        },
+        {
+            "source": "u5",
+            "target": "a2",
+            "local_probability": 0.8,
+            "explanation": "The customer's complaint about last minute fees in Node1 directly influenced the agent's apology and reassurance in Node2, indicating a strong causal link."
+        },
+        {
+            "source": "u5",
+            "target": "a11",
+            "local_probability": 0.8,
+            "explanation": "The Agent's utterance indicates an understanding of the Customer's concern (last minute fees), but fails to directly address it, leading to a weak causal link."
+        },
+        {
+            "source": "u5",
+            "target": "a4",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration about last minute fees is directly addressed by the agent's promotion of lower rates, showing a strong causal link."
+        },
+        {
+            "source": "u5",
+            "target": "a34",
+            "local_probability": 0.8,
+            "explanation": "The customer's utterance about last-minute fees and frustration directly influenced the agent's response with a promo code, attempting to address the customer's concerns."
+        },
+        {
+            "source": "u5",
+            "target": "a6",
+            "local_probability": 0.9,
+            "explanation": "The Agent's response contains a direct offer to counter the Customer's concern about last minute fees, indicating a strong causal link between Node1 and Node2."
+        },
+        {
+            "source": "u5",
+            "target": "a22",
+            "local_probability": 0.7,
+            "explanation": "Customer's last minute fee concern caused Agent to explain policy, reducing escalation risk"
+        },
+        {
+            "source": "u5",
+            "target": "a45",
+            "local_probability": 0.8,
+            "explanation": "The customer's intent to cancel and frustration about last-minute fees led the agent to provide a clarification/recap, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "a0",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration and confusion in Node2 are directly linked to the agent's explanation of last-minute fees in Node1, as indicated by the presence of the entity 'last minute fees' in the utterance of Node1."
+        },
+        {
+            "source": "a0",
+            "target": "u5",
+            "local_probability": 0.9,
+            "explanation": "The customer's utterance directly responds to the agent's mention of \"last minute fees\", indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "a11",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The customer's utterance ('i mean do you think people find that more frustrating i feel last minute fees are just harder to...') directly responds to the agent's policy explanation ('that is understandable however our typical policy is that changes made in that timeframe can often r...'), indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "a11",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The customer's escalation level increased due to the agent's explanation, which did not address their concerns directly. The customer's intent and emotions indicate a lack of clarity and concern, while the agent's response was informative but empathetically low."
+        },
+        {
+            "source": "a11",
+            "target": "u7",
+            "local_probability": 0.9,
+            "explanation": "The customer's escalation level increased because they specifically mentioned being stuck with a \"script\" which aligns with the agent's previous policy explanation, indicating a direct response to a complaint about a specific entity (policy) mentioned in Node1's utterance."
+        },
+        {
+            "source": "a11",
+            "target": "u64",
+            "local_probability": 0.8,
+            "explanation": "The customer's utterance is a direct response to the agent's explanation of their typical policy, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "a11",
+            "target": "u86",
+            "local_probability": 0.9,
+            "explanation": "The Target Node's 'Price Inquiry - Frustrated/Concerned' intent and emotion was triggered by the Source Node's mention of 'our typical policy', which is a direct response to the customer's question about negotiating prices, indicating a strong causal link."
+        },
+        {
+            "source": "a11",
+            "target": "u25",
+            "local_probability": 0.9,
+            "explanation": "The customer's utterance directly responds to the agent's explanation of their policy, as indicated by phrases such as \"let us go ahead and cancel that booking then\" which is a direct response to \"our typical policy is that changes made in that timeframe can often r...\""
+        },
+        {
+            "source": "a1",
+            "target": "u7",
+            "local_probability": 0.8,
+            "explanation": "The customer's high churn risk score and escalation level, along with their frustrated tone in response to the agent's rigid policy explanation, indicate a strong causal link between Node1 and Node2."
+        },
+        {
+            "source": "a1",
+            "target": "u1",
+            "local_probability": 0.9,
+            "explanation": "Customer's high escalation level and churn risk score are directly linked to Agent's explanation of policies being rigid, indicating a strong causal link between Source Node (Agent) and Target Node (Customer)."
+        },
+        {
+            "source": "u1",
+            "target": "a23",
+            "local_probability": 0.8,
+            "explanation": "The Agent's apologetic response with empathetic intent directly addresses the Customer's concern about complex information, indicating a strong causal link between the Source Node (Agent's apology) and the Target Node (Customer's clarification request)."
+        },
+        {
+            "source": "u1",
+            "target": "a1",
+            "local_probability": 0.8,
+            "explanation": "The agent's response directly addresses the customer's concerns about rigidity of policy, showing a strong causal link."
+        },
+        {
+            "source": "u1",
+            "target": "a6",
+            "local_probability": 0.8,
+            "explanation": "The agent's response in Node2 directly addresses the customer's concern about understanding and offering alternatives, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "u1",
+            "target": "a21",
+            "local_probability": 0.8,
+            "explanation": "The customer's utterance in Node1 ('it is not that simple...') prompted the agent to respond with an empathetic acknowledgement and explanation in Node2, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "u1",
+            "target": "a10",
+            "local_probability": 0.7,
+            "explanation": "The Agent's empathetic response ('i can see how that might feel sticker shock') directly addresses the Customer's concern and confusion, indicating a strong causal link between Node1 and Node2."
+        },
+        {
+            "source": "u1",
+            "target": "a11",
+            "local_probability": 0.7,
+            "explanation": "Customer expressed confusion and concern, prompting Agent to provide a clear explanation of the policy, indicating a strong causal link between the Source node (Customer's utterance) and the Target node (Agent's response)."
+        },
+        {
+            "source": "u1",
+            "target": "a16",
+            "local_probability": 0.8,
+            "explanation": "The customer's utterance contained a clarification request with confused/concerned emotions, and the agent responded with an informative/helpful intent, suggesting a strong causal link between the two nodes."
+        },
+        {
+            "source": "u1",
+            "target": "a3",
+            "local_probability": 0.8,
+            "explanation": "The Agent's apology was likely caused by the Customer's clarification request regarding cancellation fees, as indicated by phrases like \"it is not that simple\" and \"do probing questions you know really clear things...\", which match the escalation risks in Node1 (specifically \"fees\") and the intent of Node2 (apology)."
+        },
+        {
+            "source": "u1",
+            "target": "a2",
+            "local_probability": 0.9,
+            "explanation": "The agent's empathetic apology in response to the customer's confused/concerned clarification request indicates a strong causal link, directly influencing the customer's decreased escalation level and churn risk score."
+        },
+        {
+            "source": "u1",
+            "target": "a22",
+            "local_probability": 0.7,
+            "explanation": "The Customer's concern about understanding (Source Node) triggered the Agent's detailed explanation of policy (Target Node), indicating a strong causal link."
+        },
+        {
+            "source": "u1",
+            "target": "a46",
+            "local_probability": 0.9,
+            "explanation": "The agent's assistance offer was a direct response to the customer's request for clarification and understanding, which indicates a strong causal link between the two nodes."
+        },
+        {
+            "source": "u1",
+            "target": "a9",
+            "local_probability": 0.8,
+            "explanation": "The Agent's empathetic response ('i completely empathize with you') directly addressed the Customer's concern about wanting an understanding, which is mentioned in the utterance 'it is not that simple i just want an understanding do probing questions you know really clear things...' The Agent's use of phrases like 'if you decide to adjust your booking timing' suggests a direct response to the Customer's request for clarification."
+        },
+        {
+            "source": "a23",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The Customer's utterance is a direct response to the Agent's apology, mentioning specific entities (last minute fees) and expressing concern, which suggests a strong causal link between Node1 and Node2."
+        },
+        {
+            "source": "u7",
+            "target": "a7",
+            "local_probability": 0.8,
+            "explanation": "The customer's complaint about the agent sticking to a script led to a decrease in escalation level and churn risk score, but an increase in empathy score."
+        },
+        {
+            "source": "u7",
+            "target": "a21",
+            "local_probability": 0.8,
+            "explanation": "Customer's complaint in Node1 about the Agent sticking to a script caused the Agent to respond with an Acknowledgement/Explanation, showing empathy and trying to address the customer's concerns."
+        },
+        {
+            "source": "u7",
+            "target": "a11",
+            "local_probability": 0.7,
+            "explanation": "Customer's complaint about feeling stuck with a script led to Agent's empathetic policy explanation, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "u7",
+            "target": "a20",
+            "local_probability": 0.7,
+            "explanation": "The customer's complaint about the script being followed directly led to the agent requesting a hold, as indicated by the customer's frustrated tone and the agent's empathetic response."
+        },
+        {
+            "source": "u7",
+            "target": "a2",
+            "local_probability": 0.9,
+            "explanation": "The customer expressed frustration about the agent sticking to a script, which led to an apology from the agent showing empathy and understanding."
+        },
+        {
+            "source": "u7",
+            "target": "a6",
+            "local_probability": 0.8,
+            "explanation": "The Agent's response in Node2 is a direct attempt to address the Customer's complaint about feeling stuck in a script, as mentioned in the utterance of Node1."
+        },
+        {
+            "source": "u7",
+            "target": "a4",
+            "local_probability": 0.9,
+            "explanation": "The Customer's complaint about feeling stuck in a script directly led to the Agent's empathetic offer of promotional rates, showing a strong causal link."
+        },
+        {
+            "source": "u7",
+            "target": "a3",
+            "local_probability": 0.8,
+            "explanation": "The agent's apology directly responded to the customer's complaint about being stuck to a script, showing empathy and providing informative feedback about cancellation fees."
+        },
+        {
+            "source": "a50",
+            "target": "u51",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration about the last-minute fleece booking (Node2) can be directly linked to the agent's response (Node1), where the agent is confirming and assisting with the customer's booking details, indicating a strong causal link."
+        },
+        {
+            "source": "a50",
+            "target": "u7",
+            "local_probability": 0.8,
+            "explanation": "Customer's complaint about being stuck with a script is likely due to Agent's previous response mentioning pulling up booking details, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "a2",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The agent's apology and empathetic response directly influenced the customer's clarification request, as the customer continued to express their concern for clarity."
+        },
+        {
+            "source": "a5",
+            "target": "u64",
+            "local_probability": 0.8,
+            "explanation": "The customer's utterance in Node2 ('reschedule really how does that work') is a direct response to the agent's statement in Node1 ('your account shows you are at the basic tier which does not provide benefits for this situation'). The intent_emotions in both nodes match, and the customer's inquiry about rescheduling implies they were previously discussed with the agent. However, the empathy_score in Node2 is low, indicating a negative/reactive tone."
+        },
+        {
+            "source": "a4",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The customer's increased escalation level and churn risk score can be attributed to the agent's mention of promotional rates, which triggered a clarification request from the customer."
+        },
+        {
+            "source": "a4",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The Customer's escalation level and churn risk score increased because the Agent mentioned promotional rates in response to the Customer's inquiry about last-minute fees, which were described as frustrating."
+        },
+        {
+            "source": "a8",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The customer's utterance in Node2 shows a high escalation level and churn risk score, indicating they are concerned and confused about the promotional offer mentioned in Node1. The customer explicitly mentions they want clarity and probing questions, which suggests a direct response to the agent's promotion-related utterance."
+        },
+        {
+            "source": "a18",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The Agent's apology and expression of empathy in Node1 directly influenced the Customer's frustrated tone and cancellation inquiry in Node2, as evidenced by the mention of 'last minute fees' in both nodes."
+        },
+        {
+            "source": "a28",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The customer's high escalation level and churn risk score are likely due to the agent's comparison-focused response, which may have come across as insensitive or dismissive of the customer's concerns."
+        },
+        {
+            "source": "a28",
+            "target": "u7",
+            "local_probability": 0.9,
+            "explanation": "Customer's complaint is directly related to Agent's previous comparison, as Customer mentions \"you were just sticking to a script\" which implies Agent's comparison was seen as insincere."
+        },
+        {
+            "source": "a28",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The Customer's complaint about last-minute fees is a direct response to the Agent's comparison of competing brands and policies, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "a6",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "Target's high escalation level and churn risk score are directly related to the Agent's offer being met with the Customer's clarification request, indicating a mismatch between their understanding."
+        },
+        {
+            "source": "a6",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The Agent's utterance triggered a strong reaction from the Customer, who expressed frustration and concern about last-minute fees, which were mentioned in the Source Node."
+        },
+        {
+            "source": "a6",
+            "target": "u7",
+            "local_probability": 0.9,
+            "explanation": "The customer's complaint about being stuck to a script is directly related to the agent's previous offer, which mentioned \"competitive terms and alternatives for future bookings\". The customer's escalation level and churn risk score increased significantly after this exchange."
+        },
+        {
+            "source": "a16",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "Target Node's high escalation level and churn risk score are caused by the Agent's mention of specific benefits in the loyalty program, which directly influenced the Customer's confusion and concerns."
+        },
+        {
+            "source": "a16",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The customer's intent in Node2 (Cancellation Inquiry - Frustrated/Concerned) is a direct response to the loyalty offer mentioned in Node1, which triggered a complaint about last minute fees, indicating a strong causal link."
+        },
+        {
+            "source": "a16",
+            "target": "u61",
+            "local_probability": 0.9,
+            "explanation": "The Customer's agreement to join the loyalty program as a silver member, accessed better cancellation options directly responded to Agent's offer mentioned in Node1."
+        },
+        {
+            "source": "a13",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The customer's intent in Node2 ('Cancellation Inquiry') is directly related to the Agent's utterance in Node1, which mentions 'last minute fees', a topic that triggered the Customer's frustration and concern."
+        },
+        {
+            "source": "a45",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "Strong causal link due to customer's reaction to agent's recap, specifically mentioning 'coverage limits on cancellations' and expressing concern ('i just want an understanding')."
+        },
+        {
+            "source": "a45",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The customer's utterance in Node2 is a direct response to the Agent's recap of main issues in Node1, specifically mentioning \"coverage limits on cancellations\" which is a topic discussed earlier."
+        },
+        {
+            "source": "a30",
+            "target": "u5",
+            "local_probability": 0.9,
+            "explanation": "The Customer's frustrated tone in Node2 is likely a direct response to the Agent's mention of \"last minute fees\" in Node1, indicating a strong causal link."
+        },
+        {
+            "source": "a30",
+            "target": "u51",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration (Target Node) is likely caused by the agent's mention of a cancellation fee (Source Node), which prompted the customer to express their dissatisfaction."
+        },
+        {
+            "source": "a10",
+            "target": "u7",
+            "local_probability": 0.8,
+            "explanation": "The customer's complaint about being stuck with a script directly responds to the agent's empathetic acknowledgement of sticker shock, indicating a strong causal link."
+        },
+        {
+            "source": "a10",
+            "target": "u64",
+            "local_probability": 0.9,
+            "explanation": "The Customer's utterance ('reschedule really how does that work') is a direct response to the Agent's empathetic acknowledgement ('i can see how that might feel sticker shock'), indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "a10",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The Customer's high escalation level and churn risk score in Node2 are likely due to the Agent's empathetic response in Node1, which did not provide clear clarification, leading to further confusion."
+        },
+        {
+            "source": "a10",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The Customer's utterance is a direct response to the Agent's acknowledgement of sticker shock, indicating strong causality."
+        },
+        {
+            "source": "u64",
+            "target": "a4",
+            "local_probability": 0.8,
+            "explanation": "The agent responded directly to the customer's inquiry about rescheduling, offering alternative promotional rates."
+        },
+        {
+            "source": "u64",
+            "target": "a21",
+            "local_probability": 0.8,
+            "explanation": "The Agent's empathetic response (Acknowledgement/Explanation - Empathetic) to the Customer's rescheduling inquiry (Rescheduling Inquiry - Neutral/Curious), specifically mentioning Dylan and last minute cancellations, shows a strong causal link between Node1 and Node2."
+        },
+        {
+            "source": "u64",
+            "target": "a6",
+            "local_probability": 0.8,
+            "explanation": "The Agent's helpful response directly addressed the Customer's question about rescheduling, implying a strong causal link between Node1 and Node2."
+        },
+        {
+            "source": "a25",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The customer's intent and emotions in Node2 ('Clarification Request - Confused/Concerned') closely relate to the Agent's offer of assistance in rescheduling (Node1). The customer's utterance specifically mentions 'understanding' which is directly connected to the previous conversation about room rescheduling. The escalation level, churn risk score, and empathy scores also indicate a significant increase in negativity and confusion after Node1's response."
+        },
+        {
+            "source": "a25",
+            "target": "u7",
+            "local_probability": 0.8,
+            "explanation": "The customer's churn risk score and escalation level increased after the agent's response, suggesting that the agent's rescheduling assistance was not helpful to the customer, who became frustrated and annoyed."
+        },
+        {
+            "source": "a25",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The customer's escalation level and churn risk score increased after the agent offered assistance with rescheduling, indicating a strong causal link between Node1's reassuring/helpful intent and Node2's frustrated/concerned intent."
+        },
+        {
+            "source": "a20",
+            "target": "u51",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration (Frustration - Frustrated about last minute fleece) in Node2 is a direct response to the Agent's hold request (Hold Request - Helpful/Neutral) in Node1, indicating a strong causal link."
+        },
+        {
+            "source": "a39",
+            "target": "u5",
+            "local_probability": 0.9,
+            "explanation": "The customer's utterance in Node2 mentions 'last minute fees' which is a specific entity mentioned in the Agent's previous utterance (Node1) as something that would be reviewed upon callback."
+        },
+        {
+            "source": "a39",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The customer's escalation level increased after the agent mentioned reviewing their case based on documentation, which is a direct response to the customer's request for probing questions."
+        },
+        {
+            "source": "a34",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The customer's escalation level and churn risk score increased after the agent's response, which mentioned a promo code that was not applicable for future bookings, matching the customer's inquiry about last minute fees."
+        },
+        {
+            "source": "a34",
+            "target": "u25",
+            "local_probability": 0.8,
+            "explanation": "The customer's utterance in Node2 is a direct response to the promo code offer made by the Agent in Node1, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "a33",
+            "target": "u5",
+            "local_probability": 0.9,
+            "explanation": "The customer's utterance in Node2 is a direct response to the agent's confirmation ('right') in Node1, indicating frustration about last minute fees, which matches the topic of concern mentioned in Node1."
+        },
+        {
+            "source": "a22",
+            "target": "u5",
+            "local_probability": 0.9,
+            "explanation": "The customer's frustration about last-minute fees is likely caused by the agent's statement on booking commitments and availability, which may be perceived as strict or inflexible."
+        },
+        {
+            "source": "a22",
+            "target": "u7",
+            "local_probability": 0.9,
+            "explanation": "The Customer's complaint about being stuck to a script is directly related to Agent's previous utterance mentioning specific booking commitments, which implies the Agent was not providing personalized service as expected by the Customer."
+        },
+        {
+            "source": "a27",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The Customer's utterance in Node2 directly responds to the Agent's offer for rescheduling mentioned in Node1, indicating a strong causal link."
+        },
+        {
+            "source": "u86",
+            "target": "a21",
+            "local_probability": 0.8,
+            "explanation": "The agent's empathetic response acknowledges the customer's price inquiry and explains the fee policy, suggesting a strong causal link from the customer's frustrated inquiry to the agent's acknowledgement."
+        },
+        {
+            "source": "u25",
+            "target": "a21",
+            "local_probability": 0.8,
+            "explanation": "The customer's utterance 'alright let us go ahead and cancel that booking then' directly influenced the agent's empathetic response 'i understand your concerns dylan last minute cancellations can incur fees our policies are structure...'"
+        },
+        {
+            "source": "u25",
+            "target": "a16",
+            "local_probability": 0.8,
+            "explanation": "The customer's cancellation request directly influenced the agent's offer of a loyalty program, which is a response to the specific entity mentioned (cancellation)."
+        },
+        {
+            "source": "a46",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The customer's escalation level increased because they mentioned feeling frustrated about last-minute fees, which was directly addressed by the agent in Node1 who offered assistance and help with a specific topic (last minute fees)."
+        },
+        {
+            "source": "a37",
+            "target": "u1",
+            "local_probability": 0.8,
+            "explanation": "The customer's clarification request is a direct response to the agent's policy explanation, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "u61",
+            "target": "a21",
+            "local_probability": 0.8,
+            "explanation": "The customer's utterance ('okay fine let us do it then') triggered the agent's empathetic acknowledgement and explanation, indicating a strong causal link between the two nodes."
+        },
+        {
+            "source": "u20",
+            "target": "u36",
+            "local_probability": 0.8,
+            "explanation": "The customer in Node1's greeting and helpful intent directly influenced the customer in Node2 to ask about cancellation policies, specifically mentioning a fee, indicating a strong causal link."
+        },
+        {
+            "source": "u20",
+            "target": "u51",
+            "local_probability": 0.8,
+            "explanation": "The Customer in Node2 shows frustration about the \"last minute fleece\" which was likely caused by a conversation topic introduced or discussed in Node1 where the Customer said 'how can i assist you today' indicating an escalation of last minute fleece issue."
+        },
+        {
+            "source": "a9",
+            "target": "u5",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration about last-minute fees is directly addressed by the agent's empathetic response, suggesting a strong causal link between the two nodes."
+        },
+        {
+            "source": "a7",
+            "target": "u36",
+            "local_probability": 0.8,
+            "explanation": "The customer's escalation level and churn risk score increased due to the agent's greeting not addressing the customer's specific question about cancellation policies, showing a lack of empathy and understanding of the customer's intent."
+        },
+        {
+            "source": "a7",
+            "target": "u51",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration about the last-minute fleece purchase is directly linked to the agent's greeting, which triggered a response from the customer."
+        },
+        {
+            "source": "u51",
+            "target": "u20",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration about the last-minute fleece in Node1 strongly influenced the escalated conversation and high churn risk score in Node2, as the customer's greeting and helpful intent is a direct response to the previous issue with the fleece."
+        },
+        {
+            "source": "u7",
+            "target": "a7",
+            "local_probability": 0.8,
+            "explanation": "The customer's complaint about the agent sticking to a script directly influenced the agent's response, which was a weak attempt to re-escalate the conversation and turn it into a positive interaction."
+        },
+        {
+            "source": "u63",
+            "target": "a7",
+            "local_probability": 0.3,
+            "explanation": "Customer thanked the agent and expressed appreciation, which led to a weak causal link between Node1's utterance and Node2's intent/emotions."
+        },
+        {
+            "source": "u18",
+            "target": "a7",
+            "local_probability": 0.8,
+            "explanation": "The Customer's complaint about being disappointed and seeking alternatives in Node1 strongly influences the Agent's neutral/helpful greeting in Node2, indicating a strong causal link."
+        },
+        {
+            "source": "u20",
+            "target": "u36",
+            "local_probability": 0.7,
+            "explanation": "Target node's intent_emotions are directly related to a specific entity ('fee') mentioned in the Source node's utterance, indicating a strong causal link."
+        },
+        {
+            "source": "u20",
+            "target": "u51",
+            "local_probability": 0.8,
+            "explanation": "The customer's frustration about the last-minute fleece, mentioned in Node2, is likely caused by the response from CozyInn (Node1), which failed to address their concerns or provide a satisfactory solution."
+        },
+        {
+            "source": "u20",
+            "target": "u34",
+            "local_probability": 0.6,
+            "explanation": "The customer's positive response ('sure no problem') to the initial greeting and assistance question from the representative ('Lisa Chen') indicates a strong causal link between the two nodes."
+        },
+        {
+            "source": "u34",
+            "target": "u20",
+            "local_probability": 0.6,
+            "explanation": "The Target node has a lower escalation level and churn risk score, indicating that the Source node's confirmation ('sure no problem') helped to reduce tension and improve customer satisfaction."
+        }
+    ]
+}

@@ -1,0 +1,157 @@
+[
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.16781180245535715,
+                "empathy_score": 0.7423270089285714,
+                "escalation_level": 0.13064139229910715,
+                "escalation_risks": 0.14379119873046875,
+                "id": "a21",
+                "intents_emotions": "Acknowledgement/Explanation - Empathetic",
+                "speaker": "Agent",
+                "utterance": "i understand your concerns dylan last minute cancellations can incur fees our policies are structure..."
+            },
+            {
+                "source": "u51",
+                "target": "a21",
+                "local_probability": 0.8,
+                "explanation": "The agent's empathetic acknowledgement and explanation of the fee policy directly responds to the customer's frustration about last minute fleece cancellations."
+            },
+            {
+                "churn_risk_score": 0.05163913302951389,
+                "empathy_score": 0.004641638861762153,
+                "escalation_level": 0.04828431871202257,
+                "escalation_risks": 0.04196817734662224,
+                "id": "u51",
+                "intents_emotions": "Frustration - Frustrated about last minute fleece",
+                "speaker": "Customer",
+                "utterance": "yeah it is bk 2746519 i am just really frustrated with these last minute fleece"
+            }
+        ],
+        "cumulative_probability": 0.8
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.16781180245535715,
+                "empathy_score": 0.7423270089285714,
+                "escalation_level": 0.13064139229910715,
+                "escalation_risks": 0.14379119873046875,
+                "id": "a21",
+                "intents_emotions": "Acknowledgement/Explanation - Empathetic",
+                "speaker": "Agent",
+                "utterance": "i understand your concerns dylan last minute cancellations can incur fees our policies are structure..."
+            },
+            {
+                "source": "u1",
+                "target": "a21",
+                "local_probability": 0.8,
+                "explanation": "The customer's utterance in Node1 ('it is not that simple...') prompted the agent to respond with an empathetic acknowledgement and explanation in Node2, indicating a strong causal link between the two nodes."
+            },
+            {
+                "churn_risk_score": 0.3667207605698529,
+                "empathy_score": 0.07136939553653493,
+                "escalation_level": 0.41037166819852944,
+                "escalation_risks": 0.38646673387096775,
+                "id": "u1",
+                "intents_emotions": "Clarification Request - Confused/Concerned",
+                "speaker": "Customer",
+                "utterance": "it is not that simple i just want an understanding do probing questions you know really clear things..."
+            }
+        ],
+        "cumulative_probability": 0.8
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.16781180245535715,
+                "empathy_score": 0.7423270089285714,
+                "escalation_level": 0.13064139229910715,
+                "escalation_risks": 0.14379119873046875,
+                "id": "a21",
+                "intents_emotions": "Acknowledgement/Explanation - Empathetic",
+                "speaker": "Agent",
+                "utterance": "i understand your concerns dylan last minute cancellations can incur fees our policies are structure..."
+            },
+            {
+                "source": "u7",
+                "target": "a21",
+                "local_probability": 0.8,
+                "explanation": "Customer's complaint in Node1 about the Agent sticking to a script caused the Agent to respond with an Acknowledgement/Explanation, showing empathy and trying to address the customer's concerns."
+            },
+            {
+                "churn_risk_score": 0.49462890625,
+                "empathy_score": 0.018822860717773438,
+                "escalation_level": 0.442431640625,
+                "escalation_risks": 0.49457750822368424,
+                "id": "u7",
+                "intents_emotions": "Complaint - Frustrated/Annoyed",
+                "speaker": "Customer",
+                "utterance": "it is just not helpful i am ending the call feeling you were just sticking to a script the whole tim..."
+            }
+        ],
+        "cumulative_probability": 0.8
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.16781180245535715,
+                "empathy_score": 0.7423270089285714,
+                "escalation_level": 0.13064139229910715,
+                "escalation_risks": 0.14379119873046875,
+                "id": "a21",
+                "intents_emotions": "Acknowledgement/Explanation - Empathetic",
+                "speaker": "Agent",
+                "utterance": "i understand your concerns dylan last minute cancellations can incur fees our policies are structure..."
+            },
+            {
+                "source": "u64",
+                "target": "a21",
+                "local_probability": 0.8,
+                "explanation": "The Agent's empathetic response (Acknowledgement/Explanation - Empathetic) to the Customer's rescheduling inquiry (Rescheduling Inquiry - Neutral/Curious), specifically mentioning Dylan and last minute cancellations, shows a strong causal link between Node1 and Node2."
+            },
+            {
+                "churn_risk_score": 0.21053059895833334,
+                "empathy_score": 0.08011881510416667,
+                "escalation_level": 0.256591796875,
+                "escalation_risks": 0.21879069010416666,
+                "id": "u64",
+                "intents_emotions": "Rescheduling Inquiry - Neutral/Curious",
+                "speaker": "Customer",
+                "utterance": "reschedule really how does that work"
+            }
+        ],
+        "cumulative_probability": 0.8
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.16781180245535715,
+                "empathy_score": 0.7423270089285714,
+                "escalation_level": 0.13064139229910715,
+                "escalation_risks": 0.14379119873046875,
+                "id": "a21",
+                "intents_emotions": "Acknowledgement/Explanation - Empathetic",
+                "speaker": "Agent",
+                "utterance": "i understand your concerns dylan last minute cancellations can incur fees our policies are structure..."
+            },
+            {
+                "source": "u86",
+                "target": "a21",
+                "local_probability": 0.8,
+                "explanation": "The agent's empathetic response acknowledges the customer's price inquiry and explains the fee policy, suggesting a strong causal link from the customer's frustrated inquiry to the agent's acknowledgement."
+            },
+            {
+                "churn_risk_score": 0.396484375,
+                "empathy_score": 0.03564453125,
+                "escalation_level": 0.41796875,
+                "escalation_risks": 0.404296875,
+                "id": "u86",
+                "intents_emotions": "Price Inquiry - Frustrated/Concerned",
+                "speaker": "Customer",
+                "utterance": "wow that is quite high can we negotiate that i have been a loyal customer"
+            }
+        ],
+        "cumulative_probability": 0.8
+    }
+]
