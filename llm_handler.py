@@ -1,10 +1,8 @@
 import os
-from xmlrpc.client import boolean
-from groq import Groq
 import json
 import ollama
 from pydantic import BaseModel
-ct = 0
+
 class EdgeSchema(BaseModel):
     causal: bool
     probability: float
@@ -13,75 +11,162 @@ class EdgeSchema(BaseModel):
 class llm:
     def __init__(self, model="llama3.1"): 
         self.model = model
-        self.base_prompt = """
-You are an expert in causal reasoning for conversational analysis. 
-Your task is to determine if the 'Source Node' is the CAUSE of the 'Target Node's' content AND OUTPUT ONLY A JSON FILE.
-Each node has the following metadata :
-    1. intent_emotions depicting the intents and emotions detected in the utterance.
-    2. escalation_level indicating how escalated the conversation is because of this utterance.
-    3. churn_risk_score indicating the risk of customer churn because of this utterance
-    4. empathy_score indicating the level of empathy shown in this utterance.
-    5. escalation_risks indicating the risk factors contributing to escalation because of this utterance.
-    6. speaker indicating who is speaking in this utterance.
+        
+        # --- OPTIMIZED BATCH PROMPT ---
+        self.batch_prompt = """
+You are a causal reasoning engine. Analyze the BATCH of node pairs.
+Determine if 'SOURCE' caused 'TARGET'.
 
-USE THE ABOVE METADATA CAREFULLY IN YOUR ANALYSIS.
+SCORING:
+0.0: No link/Reaction unrelated.
+0.1-0.5: Weak link/Topic shift.
+0.6-1.0: Strong causal link (Direct answer/complaint).
 
-INPUT DATA:
-You will receive two JSON objects containing text and metadata. YOU NEED TO OUTPUT ONLY A JSON FILE
-
-TASK:
-1. Analyze if the event/statement in the SOURCE directly influenced the TARGET.
-2. Also, look for reasons explaining why the TARGET node has the given scores which are in metadata.
-3. Pay close attention to the text which is stored in utterances field of both nodes.
-
-SCORING GUIDE:
-- 0.0: No causal link, or Target is not negative/reactive.
-- 0.1 - 0.5: Weak link (topic match, but loose causality).
-- 0.6 - 1.0: Strong causal link (direct response, complaint about specific entity mentioned in Source).
-
-OUTPUT FORMAT:
-Return STRICT JSON only. Do not use Markdown codes (no ```json). 
-Format:
+OUTPUT:
+Return ONLY a JSON object. No markdown.
 {
-    "causal": boolean,
-    "probability": float,
-    "explanation": "concise reason referencing specific entities/topics"
+    "results": [
+        { "id": <INT>, "causal": <BOOL>, "probability": <FLOAT>, "explanation": "<SHORT_STRING>" }
+    ]
 }
 """
 
-    def generate_edge(self,node_1,node_2):
-        #print(node_1)
 
+    def query_splitter(self,query):
+        prompt = f"""You are an expert NLU (Natural Language Understanding) router. Your goal is to map a user's input query to the most relevant (Domain, Intent) pairs from a provided list and optimize the query for search.
 
-        prompt = f'''Here is the data of both the nodes
-            Node1 --
-            {node_1}
+### Instructions:
+1. **Analyze:** Read the user's input query.
+2. **Select:** Compare the input against the "Allowed Domain-Intent List" provided below. Select the best matches (maximum 3, sorted by relevance). If the query is unambiguous, select only 1. If no match is found, return an empty 'matches' array: [].
+3. **Reform:** For each selected pair, generate a 'reformed_query'. This query must strip conversational filler and inject specific technical keywords or terminology relevant to that specific (Domain, Intent) to assist downstream search retrieval.
+4. **Output:** Return the result in the specified JSON format only. DO NOT include any introductory or explanatory text outside of the JSON block.
 
-            Node2 --
-            {node_2}
-        '''
+### Allowed Domain-Intent List (37 Pairs):
+[
+  ("Banking", "Credit Limit Requests"),
+  ("Banking", "Fee Complaints"),
+  ("Banking", "Fraud Alerts"),
+  ("Banking", "Loan Application"),
+  ("Banking", "Product Comparison"),
+  ("Banking", "Refund Delays"),
+  ("Flight", "Cross Brand Mentions"),
+  ("Flight", "Delay Management"),
+  ("Flight", "Loyalty Program"),
+  ("Flight", "Price Sensitivity"),
+  ("Flight", "Refund Policy"),
+  ("Flight", "Urgency & Stress"),
+  ("Hotel", "Booking Errors"),
+  ("Hotel", "Brand Loyalty"),
+  ("Hotel", "Cancellation Policies"),
+  ("Hotel", "Discounts & Promotions"),
+  ("Hotel", "Service Complaints"),
+  ("Hotel", "Upgrade Requests"),
+  ("Insurance", "Claims & Refunds"),
+  ("Insurance", "Competitor Comparison"),
+  ("Insurance", "Customer Trust"),
+  ("Insurance", "Feature Understanding"),
+  ("Insurance", "Policy Renewal"),
+  ("Insurance", "Sales Effectiveness"),
+  ("Insurance", "Upselling Strategy"),
+  ("Retail", "Delivery Delays"),
+  ("Retail", "Loyalty Program"),
+  ("Retail", "Product Feedback"),
+  ("Retail", "Product Returns"),
+  ("Retail", "Replacement Vs Refund"),
+  ("Telecom", "Churn Prediction"),
+  ("Telecom", "Connectivity Complaints"),
+  ("Telecom", "Feature Requests"),
+  ("Telecom", "Network Outages"),
+  ("Telecom", "Plan Upgrades"),
+  ("Telecom", "Technical Support")
+]
 
+### Output Format (JSON):
+{
+  "matches": [
+    {
+      "domain": "String",
+      "intent": "String",
+      "reformed_query": "String",
+      "reasoning": "Brief explanation of why this pair was chosen"
+    }
+  ]
+}
+"""
+        
+        user_content_str = f"""
+This is the User Query:
+{query}
+Now generate the output as per the instructions above.
+"""
+        
         response = ollama.chat(
-            model=self.model,
-            messages=[
-                {"role": "system", "content": self.base_prompt},
-                {"role": "user", "content": prompt}
-            ],
-            format="json"
-        )
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": self.prompt},
+                    {"role": "user", "content": user_content_str}
+                ],
+                format="json",
+                options={
+                    "num_gpu": 99,     
+                    "num_ctx": 16384,   
+                    "temperature": 0.0,
+                    "num_predict": -1,   # Unlimited output tokens
+                    "num_batch": 2048    # <--- THIS IS THE CRITICAL FIX FOR SPEED
+                },
+                keep_alive="24h" 
+            )
+
+        content = response['message']['content']
+        parsed_response = json.loads(content)
+        return parsed_response.get("matches", [])
+
+
+    def generate_batch_edges(self, edge_batch):
+        # 1. Construct the batch string
+        user_content_str = "ANALYZE THIS BATCH:\n"
+        
+        for item in edge_batch:
+            # Minimal data representation to save tokens
+            source = item['source']
+            target = item['target']
+            
+            # Helper to safely truncate text
+            def get_s(n, k): return str(n.get(k, ''))[:150] 
+
+            s_text = f"Spk:{source.get('speaker')} Utt:{get_s(source, 'utterance')} Emo:{get_s(source, 'intents_emotions')}"
+            t_text = f"Spk:{target.get('speaker')} Utt:{get_s(target, 'utterance')} Emo:{get_s(target, 'intents_emotions')}"
+
+            user_content_str += f"ID:{item['id']} | SRC:[{s_text}] -> TGT:[{t_text}]\n"
 
         try:
-            ans = json.loads(response['message']['content'])
-            return ans
-        except json.JSONDecodeError:
-            print("Error decoding JSON from Ollama response")
-            return {
-                "causal": False,
-                "probability": 0.0,
-                "explanation": "Failed to parse LLM response"
-            }
-    
-    def answer_query(self,query,context):
+            response = ollama.chat(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": self.batch_prompt},
+                    {"role": "user", "content": user_content_str}
+                ],
+                format="json",
+                options={
+                    "num_gpu": 99,     
+                    "num_ctx": 16384,   
+                    "temperature": 0.0,
+                    "num_predict": -1,   # Unlimited output tokens
+                    "num_batch": 2048    # <--- THIS IS THE CRITICAL FIX FOR SPEED
+                },
+                keep_alive="24h" 
+            )
+
+            content = response['message']['content']
+            parsed_response = json.loads(content)
+            return parsed_response.get("results", [])
+
+        except Exception as e:
+            print(f"⚠️ Batch inference failed: {e}")
+            return []
+
+    # ... (Rest of the class methods: answer_query, answer_query_causal remain unchanged)
+    def answer_query(self, query, context):
         sys_prompt = f'''
         Your task is to perform causal analysis given the causal chains related to the query and a query.
         In each causal chain you will find a series of causes and effects with explanations and probabilities.
@@ -99,29 +184,30 @@ Format:
             messages=[
                 {"role": "system", "content": sys_prompt},
                 {"role": "user", "content": curr_prompt}
-            ]
+            ],
+            options={
+                "num_gpu": 99,
+                "num_ctx": 4096
+            },
+            keep_alive="5m"
         )
 
         ans = response['message']['content']
-        #print(ans)
         return ans
 
-    def answer_query_causal(self,query,chains):
+    def answer_query_causal(self, query, chains):
         sys_prompt = f'''
         You are an expert Root Cause Analysis AI.
         Your task is to perform causal analysis given the causal chains related to the query and a query.
         You will be given a causal chain in the form of NODE , EDGE , NODE ... format. For each node, you will have metadata such as utterance , empathy score, escalation risk, churn risk , intent_emotions etc. For each edge, you will have an explanation and a cumulative probability score.
         The edges represent the causal relationships between the nodes.
         Your goal is to analyze these chains to provide a concise answer to the user's query.
-        
-
 
         INSTRUCTIONS:
         1. REVIEW: Read the provided chains (ordered: Cause -> Effect).
-        2.ANALYZE METADATA : Analyze all the metadata such as utterance , empathy score, escalation risk, churn risk , intent_emotions etc in the nodes of the chains to get better context on the causal relationships.
+        2. ANALYZE METADATA : Analyze all the metadata such as utterance , empathy score, escalation risk, churn risk , intent_emotions etc in the nodes of the chains to get better context on the causal relationships.
         3. WEIGH: Pay strict attention to the 'cumulative_probability' score. Trust high-probability chains (0.7+) over low ones.
         4. ANSWER: Provide a concise, direct answer to the query based ONLY on this evidence. Do not invent facts.
-
 
         OUTPUT_FORMAT -- DO NOT MENTION the cumulative probabilities in your answer. However you can mention the implications of properties and metdata such as empathy score, escalation risk etc of high or low probability chains in your reasoning.
         Give a short concise explanation using ONLY the causal chains to answer the query
@@ -133,15 +219,18 @@ Format:
         
         Give your answer now :'''
 
-
         response = ollama.chat(
             model=self.model,
             messages=[
                 {"role": "system", "content": sys_prompt},
                 {"role": "user", "content": curr_prompt}
-            ]
+            ],
+            options={
+                "num_gpu": 99,
+                "num_ctx": 8192 
+            },
+            keep_alive="5m"
         )
 
         ans = response['message']['content']
-        #print(ans)
         return ans
