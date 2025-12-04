@@ -1,0 +1,212 @@
+[
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.09106551959950437,
+                "empathy_score": 0.7283581149193549,
+                "escalation_level": 0.12028126050067205,
+                "escalation_risks": 0.08786498175726996,
+                "id": "a12",
+                "intents_emotions": "Information - Reassuring/Informative",
+                "speaker": "Agent",
+                "utterance": "you should see the changes reflected almost immediately after this call"
+            },
+            {
+                "source": "a12",
+                "target": "u170",
+                "explanation": "The agent's information did not prevent the customer from considering switching to another hotel due to frustration and dissatisfaction."
+            },
+            {
+                "churn_risk_score": 0.7473958333333334,
+                "empathy_score": -0.09993489583333333,
+                "escalation_level": 0.7825520833333334,
+                "escalation_risks": 0.79296875,
+                "id": "u170",
+                "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                "speaker": "Customer",
+                "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
+            }
+        ],
+        "cumulative_probability": 0.9
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.3543259640957447,
+                "empathy_score": 0.074434239813622,
+                "escalation_level": 0.4068603515625,
+                "escalation_risks": 0.37930521150914637,
+                "id": "u22",
+                "intents_emotions": "Complaint - Frustrated/Impatient",
+                "speaker": "Customer",
+                "utterance": "that is just so annoying it feels like there is no accountability on your side"
+            },
+            {
+                "source": "u22",
+                "target": "a12",
+                "explanation": "The agent's explanation of the changes reflected after the call directly addresses the customer's concern about accountability."
+            },
+            {
+                "churn_risk_score": 0.09106551959950437,
+                "empathy_score": 0.7283581149193549,
+                "escalation_level": 0.12028126050067205,
+                "escalation_risks": 0.08786498175726996,
+                "id": "a12",
+                "intents_emotions": "Information - Reassuring/Informative",
+                "speaker": "Agent",
+                "utterance": "you should see the changes reflected almost immediately after this call"
+            },
+            {
+                "source": "a12",
+                "target": "u170",
+                "explanation": "The agent's information did not prevent the customer from considering switching to another hotel due to frustration and dissatisfaction."
+            },
+            {
+                "churn_risk_score": 0.7473958333333334,
+                "empathy_score": -0.09993489583333333,
+                "escalation_level": 0.7825520833333334,
+                "escalation_risks": 0.79296875,
+                "id": "u170",
+                "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                "speaker": "Customer",
+                "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
+            }
+        ],
+        "cumulative_probability": 0.9
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.2255577674278846,
+                "empathy_score": 0.056410569411057696,
+                "escalation_level": 0.22526198167067307,
+                "escalation_risks": 0.22027470515324518,
+                "id": "u131",
+                "intents_emotions": "Complaint - Frustrated/Disappointed",
+                "speaker": "Customer",
+                "utterance": "a meal voucher is that really all i was expecting a quicker resolution"
+            },
+            {
+                "source": "u131",
+                "target": "a12",
+                "explanation": "The agent's explanation of the changes reflected after the call directly addresses the customer's concern about resolution."
+            },
+            {
+                "churn_risk_score": 0.09106551959950437,
+                "empathy_score": 0.7283581149193549,
+                "escalation_level": 0.12028126050067205,
+                "escalation_risks": 0.08786498175726996,
+                "id": "a12",
+                "intents_emotions": "Information - Reassuring/Informative",
+                "speaker": "Agent",
+                "utterance": "you should see the changes reflected almost immediately after this call"
+            },
+            {
+                "source": "a12",
+                "target": "u170",
+                "explanation": "The agent's information did not prevent the customer from considering switching to another hotel due to frustration and dissatisfaction."
+            },
+            {
+                "churn_risk_score": 0.7473958333333334,
+                "empathy_score": -0.09993489583333333,
+                "escalation_level": 0.7825520833333334,
+                "escalation_risks": 0.79296875,
+                "id": "u170",
+                "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                "speaker": "Customer",
+                "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
+            }
+        ],
+        "cumulative_probability": 0.9
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.26513671875,
+                "empathy_score": 0.075750732421875,
+                "escalation_level": 0.31845703125,
+                "escalation_risks": 0.28828125,
+                "id": "u4",
+                "intents_emotions": "Complaint - Frustrated/Concerned about future delays",
+                "speaker": "Customer",
+                "utterance": "so you just accept these delays as inevitable what about future delays"
+            },
+            {
+                "source": "u4",
+                "target": "a12",
+                "explanation": "The agent's explanation of the changes reflected after the call directly addresses the customer's concern about future delays."
+            },
+            {
+                "churn_risk_score": 0.09106551959950437,
+                "empathy_score": 0.7283581149193549,
+                "escalation_level": 0.12028126050067205,
+                "escalation_risks": 0.08786498175726996,
+                "id": "a12",
+                "intents_emotions": "Information - Reassuring/Informative",
+                "speaker": "Agent",
+                "utterance": "you should see the changes reflected almost immediately after this call"
+            },
+            {
+                "source": "a12",
+                "target": "u170",
+                "explanation": "The agent's information did not prevent the customer from considering switching to another hotel due to frustration and dissatisfaction."
+            },
+            {
+                "churn_risk_score": 0.7473958333333334,
+                "empathy_score": -0.09993489583333333,
+                "escalation_level": 0.7825520833333334,
+                "escalation_risks": 0.79296875,
+                "id": "u170",
+                "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                "speaker": "Customer",
+                "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
+            }
+        ],
+        "cumulative_probability": 0.9
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.3241373697916667,
+                "empathy_score": 0.06366984049479167,
+                "escalation_level": 0.4539388020833333,
+                "escalation_risks": 0.4060872395833333,
+                "id": "u5",
+                "intents_emotions": "Request for assistance - Neutral/Curious",
+                "speaker": "Customer",
+                "utterance": "how can you fix this"
+            },
+            {
+                "source": "u5",
+                "target": "a12",
+                "explanation": "The agent's explanation of the changes reflected after the call directly addresses the customer's concern about resolution."
+            },
+            {
+                "churn_risk_score": 0.09106551959950437,
+                "empathy_score": 0.7283581149193549,
+                "escalation_level": 0.12028126050067205,
+                "escalation_risks": 0.08786498175726996,
+                "id": "a12",
+                "intents_emotions": "Information - Reassuring/Informative",
+                "speaker": "Agent",
+                "utterance": "you should see the changes reflected almost immediately after this call"
+            },
+            {
+                "source": "a12",
+                "target": "u170",
+                "explanation": "The agent's information did not prevent the customer from considering switching to another hotel due to frustration and dissatisfaction."
+            },
+            {
+                "churn_risk_score": 0.7473958333333334,
+                "empathy_score": -0.09993489583333333,
+                "escalation_level": 0.7825520833333334,
+                "escalation_risks": 0.79296875,
+                "id": "u170",
+                "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                "speaker": "Customer",
+                "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
+            }
+        ],
+        "cumulative_probability": 0.9
+    }
+]

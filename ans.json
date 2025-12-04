@@ -1,0 +1,758 @@
+[
+    {
+        "query": "How do fare increases and decreases impact customer satisfaction, and what are the optimal fare management strategies?",
+        "error": "Invalid format specifier ' \"String\",\n      \"intent\": \"String\",\n      \"reformed_query\": \"String\",\n      \"reasoning\": \"Brief explanation of why this pair was chosen\"\n    ' for object of type 'str'"
+    },
+    {
+        "query": "How do fare increases and decreases impact customer satisfaction, and what are the optimal fare management strategies?",
+        "error": "generate_json_graph() missing 2 required positional arguments: 'intent' and 'domain'"
+    },
+    {
+        "query": "How do fare increases and decreases impact customer satisfaction, and what are the optimal fare management strategies?",
+        "error": "name 'intent' is not defined"
+    },
+    {
+        "timestamp": "2025-12-04T17:22:39.062627",
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "answer": "Based on the provided causal chains, I can identify the difficulties faced by customers in Hotel and Flight domains.\n\nFrom PATHWAY 1 (Confidence: 0.90), it is clear that the customer is considering switching hotels due to unresolved complaints and lack of empathy from the agent.\n\nThe recurring pattern across multiple pathways (PATHWAY 2-5) suggests that customers are facing issues with:\n\n1. **Complex policy language**: This is a common complaint mentioned in multiple paths, particularly in PATHWAY 3, 4, and 5.\n2. **Unresolved complaints**: Customers are expressing frustration with the lack of resolution to their concerns, as seen in PATHWAY 1-5.\n3. **Lack of empathy from agents**: The low empathy scores for customers in multiple pathways indicate that they feel unheard or disregarded by the agents.\n\nHigh probability chains (PATHWAY 1, Confidence: 0.90) emphasize the importance of addressing customer complaints and providing empathetic support to prevent churn.\n\nThe implications of these findings are:\n\n* Hotels should simplify their policy language to avoid confusing customers.\n* Agents must provide empathetic responses to address customer concerns promptly.\n* Resolution of complaints is crucial in retaining customers, as evident from the high probability chain (PATHWAY 1).\n\nBy understanding and addressing these difficulties, hotels can improve customer satisfaction and reduce churn.",
+        "causal_chains_content": [
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": -0.0172642299,
+                        "empathy_score": 0.8565848214285714,
+                        "escalation_level": 0.012312752842857143,
+                        "escalation_risks": -0.0146004813,
+                        "id": "a10",
+                        "intents_emotions": "Gratitude/Reassurance - Polite/Helpful",
+                        "speaker": "Agent",
+                        "utterance": "thank you for your patience carter we appreciate your feedback and i am here if you need anything el..."
+                    },
+                    {
+                        "source": "a10",
+                        "target": "u57",
+                        "explanation": "Agent's gratitude and reassurance led to a customer considering switching hotels."
+                    },
+                    {
+                        "churn_risk_score": 0.75390625,
+                        "empathy_score": -0.095703125,
+                        "escalation_level": 0.7734375,
+                        "escalation_risks": 0.796875,
+                        "id": "u57",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                        "speaker": "Customer",
+                        "utterance": "please do because i am considering actually i am considering switching to another hotel if this keep..."
+                    }
+                ],
+                "cumulative_probability": 0.9
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.5001775568181818,
+                        "empathy_score": -0.03303978659545454,
+                        "escalation_level": 0.5011985085227273,
+                        "escalation_risks": 0.5188210227272727,
+                        "id": "u37",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
+                        "speaker": "Customer",
+                        "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
+                    },
+                    {
+                        "source": "u37",
+                        "target": "a29",
+                        "explanation": "The agent's response was related to the customer's complaint, but not a direct causal link."
+                    },
+                    {
+                        "churn_risk_score": 0.06667480468,
+                        "empathy_score": 0.8375,
+                        "escalation_level": 0.06467285156,
+                        "escalation_risks": 0.03819580078,
+                        "id": "a29",
+                        "intents_emotions": "Information Request - Neutral/Curious",
+                        "speaker": "Agent",
+                        "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
+                    }
+                ],
+                "cumulative_probability": 0.5
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.049917602535555564,
+                        "empathy_score": 0.8785590277777777,
+                        "escalation_level": 0.09196912976666667,
+                        "escalation_risks": 0.04741139845,
+                        "id": "a20",
+                        "intents_emotions": "Apology - Empathetic/Inquiry",
+                        "speaker": "Agent",
+                        "utterance": "i am sorry to hear that evelyn can you please provide me with some details about your complaint"
+                    },
+                    {
+                        "source": "a20",
+                        "target": "u37",
+                        "explanation": "The agent's apology and inquiry triggered the customer's threat to switch hotels if complaints are not resolved."
+                    },
+                    {
+                        "churn_risk_score": 0.5001775568181818,
+                        "empathy_score": -0.03303978659545454,
+                        "escalation_level": 0.5011985085227273,
+                        "escalation_risks": 0.5188210227272727,
+                        "id": "u37",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
+                        "speaker": "Customer",
+                        "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
+                    },
+                    {
+                        "source": "u37",
+                        "target": "a29",
+                        "explanation": "The agent's response was related to the customer's complaint, but not a direct causal link."
+                    },
+                    {
+                        "churn_risk_score": 0.06667480468,
+                        "empathy_score": 0.8375,
+                        "escalation_level": 0.06467285156,
+                        "escalation_risks": 0.03819580078,
+                        "id": "a29",
+                        "intents_emotions": "Information Request - Neutral/Curious",
+                        "speaker": "Agent",
+                        "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
+                    }
+                ],
+                "cumulative_probability": 0.5
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.05056653704285714,
+                        "empathy_score": 0.8521205357142857,
+                        "escalation_level": 0.07845633371428572,
+                        "escalation_risks": 0.0338418143,
+                        "id": "a28",
+                        "intents_emotions": "Clarification Request - Empathetic/Inquisitive",
+                        "speaker": "Agent",
+                        "utterance": "i understand can you clarify what specific issues you faced during your stay"
+                    },
+                    {
+                        "source": "a28",
+                        "target": "u37",
+                        "explanation": "The agent's clarification request triggered the customer's threat to switch hotels if complaints are not resolved."
+                    },
+                    {
+                        "churn_risk_score": 0.5001775568181818,
+                        "empathy_score": -0.03303978659545454,
+                        "escalation_level": 0.5011985085227273,
+                        "escalation_risks": 0.5188210227272727,
+                        "id": "u37",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
+                        "speaker": "Customer",
+                        "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
+                    },
+                    {
+                        "source": "u37",
+                        "target": "a29",
+                        "explanation": "The agent's response was related to the customer's complaint, but not a direct causal link."
+                    },
+                    {
+                        "churn_risk_score": 0.06667480468,
+                        "empathy_score": 0.8375,
+                        "escalation_level": 0.06467285156,
+                        "escalation_risks": 0.03819580078,
+                        "id": "a29",
+                        "intents_emotions": "Information Request - Neutral/Curious",
+                        "speaker": "Agent",
+                        "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
+                    }
+                ],
+                "cumulative_probability": 0.5
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.08540103309473683,
+                        "empathy_score": 0.744140625,
+                        "escalation_level": 0.12556537828947367,
+                        "escalation_risks": 0.09229318719473684,
+                        "id": "a3",
+                        "intents_emotions": "Information Request - Concerned/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "i see can you tell me more about the complicated policy language that was concerning to you"
+                    },
+                    {
+                        "source": "a3",
+                        "target": "u37",
+                        "explanation": "The agent's information request triggered the customer's threat to switch hotels if complaints are not resolved."
+                    },
+                    {
+                        "churn_risk_score": 0.5001775568181818,
+                        "empathy_score": -0.03303978659545454,
+                        "escalation_level": 0.5011985085227273,
+                        "escalation_risks": 0.5188210227272727,
+                        "id": "u37",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
+                        "speaker": "Customer",
+                        "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
+                    },
+                    {
+                        "source": "u37",
+                        "target": "a29",
+                        "explanation": "The agent's response was related to the customer's complaint, but not a direct causal link."
+                    },
+                    {
+                        "churn_risk_score": 0.06667480468,
+                        "empathy_score": 0.8375,
+                        "escalation_level": 0.06467285156,
+                        "escalation_risks": 0.03819580078,
+                        "id": "a29",
+                        "intents_emotions": "Information Request - Neutral/Curious",
+                        "speaker": "Agent",
+                        "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
+                    }
+                ],
+                "cumulative_probability": 0.5
+            }
+        ],
+        "landing_points_content": [
+            {
+                "id": "a29",
+                "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies",
+                "escalation_level": 0.06467285156,
+                "churn_risk_score": 0.06667480468,
+                "empathy_score": 0.8375,
+                "escalation_risks": 0.03819580078,
+                "intents_emotions": "Information Request - Neutral/Curious",
+                "speaker": "Agent",
+                "similarity": 0.4661597013473511
+            },
+            {
+                "id": "u57",
+                "utterance": "please do because i am considering actually i am considering switching to another hotel if this keep...",
+                "escalation_level": 0.7734375,
+                "churn_risk_score": 0.75390625,
+                "empathy_score": -0.095703125,
+                "escalation_risks": 0.796875,
+                "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                "speaker": "Customer",
+                "similarity": 0.45719027519226074
+            }
+        ],
+        "candidate_pairs_content": null
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "generate_json_graph() missing 2 required positional arguments: 'intent' and 'domain'"
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "CachedEmbeddingSearch.__init__() missing 1 required positional argument: 'db_path'"
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "name 'searcer' is not defined"
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "Metadata file not found at /home/linux/IntegratedPipeline/obai/data/example/conversations_metadata.json"
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "name 'self' is not defined"
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "name 'self' is not defined"
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "expected str, bytes or os.PathLike object, not tuple"
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "name 'self' is not defined"
+    },
+    {
+        "timestamp": "2025-12-04T19:10:25.749618",
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "answer": "Based on the provided causal chains, I can see that customers are facing difficulties in the Hotel and Flight domains due to issues with policy language and complaint resolution.\n\nThe high-probability chain (Pathway 1) shows that a customer is considering switching hotels if their complaints are not resolved. The agent's response was related to the customer's complaint, but not a direct causal link, indicating that there may be a communication breakdown or lack of empathy in resolving issues.\n\nIn Pathways 2-5, customers are also expressing frustration and threats to switch hotels due to unresolved complaints. The agents' responses seem to be related to the customers' complaints, but the relationships between them are not as clear-cut. However, the cumulative probability scores indicate that these chains are less reliable than Pathway 1.\n\nThe implications of high-probability chains (0.7+) and low-probability chains on this analysis are as follows:\n\n* High-probability chains (e.g., Pathway 1) highlight the importance of empathetic communication and effective complaint resolution in preventing customer churn.\n* Low-probability chains suggest that there may be other factors at play, such as unclear policy language or inadequate communication.\n\nConsidering these findings, I conclude that customers are facing difficulties in the Hotel and Flight domains due to issues with policy language and complaint resolution. Effective communication, empathy, and prompt issue resolution are crucial to preventing customer churn.\n\nAnswer: Customers are experiencing difficulties in Hotel and Flight domains due to unresolved complaints and unclear policy language, which may lead to customer churn if not addressed promptly and empathetically.",
+        "causal_chains_content": [
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": -0.017264229910714284,
+                        "empathy_score": 0.8565848214285714,
+                        "escalation_level": 0.012312752859933036,
+                        "escalation_risks": -0.014600481305803572,
+                        "id": "a10",
+                        "intents_emotions": "Gratitude/Reassurance - Polite/Helpful",
+                        "speaker": "Agent",
+                        "utterance": "thank you for your patience carter we appreciate your feedback and i am here if you need anything el..."
+                    },
+                    {
+                        "source": "a10",
+                        "target": "u57",
+                        "explanation": "Agent's gratitude and reassurance led to a customer considering switching hotels."
+                    },
+                    {
+                        "churn_risk_score": 0.75390625,
+                        "empathy_score": -0.095703125,
+                        "escalation_level": 0.7734375,
+                        "escalation_risks": 0.796875,
+                        "id": "u57",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                        "speaker": "Customer",
+                        "utterance": "please do because i am considering actually i am considering switching to another hotel if this keep..."
+                    }
+                ],
+                "cumulative_probability": 0.9
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.5001775568181818,
+                        "empathy_score": -0.03303978659889915,
+                        "escalation_level": 0.5011985085227273,
+                        "escalation_risks": 0.5188210227272727,
+                        "id": "u37",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
+                        "speaker": "Customer",
+                        "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
+                    },
+                    {
+                        "source": "u37",
+                        "target": "a29",
+                        "explanation": "The agent's response was related to the customer's complaint, but not a direct causal link."
+                    },
+                    {
+                        "churn_risk_score": 0.0666748046875,
+                        "empathy_score": 0.8375,
+                        "escalation_level": 0.0646728515625,
+                        "escalation_risks": 0.03819580078125,
+                        "id": "a29",
+                        "intents_emotions": "Information Request - Neutral/Curious",
+                        "speaker": "Agent",
+                        "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
+                    }
+                ],
+                "cumulative_probability": 0.5
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.0499176025390625,
+                        "empathy_score": 0.8785590277777777,
+                        "escalation_level": 0.09196912977430556,
+                        "escalation_risks": 0.04741139845414595,
+                        "id": "a20",
+                        "intents_emotions": "Apology - Empathetic/Inquiry",
+                        "speaker": "Agent",
+                        "utterance": "i am sorry to hear that evelyn can you please provide me with some details about your complaint"
+                    },
+                    {
+                        "source": "a20",
+                        "target": "u37",
+                        "explanation": "The agent's apology and inquiry triggered the customer's threat to switch hotels if complaints are not resolved."
+                    },
+                    {
+                        "churn_risk_score": 0.5001775568181818,
+                        "empathy_score": -0.03303978659889915,
+                        "escalation_level": 0.5011985085227273,
+                        "escalation_risks": 0.5188210227272727,
+                        "id": "u37",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
+                        "speaker": "Customer",
+                        "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
+                    },
+                    {
+                        "source": "u37",
+                        "target": "a29",
+                        "explanation": "The agent's response was related to the customer's complaint, but not a direct causal link."
+                    },
+                    {
+                        "churn_risk_score": 0.0666748046875,
+                        "empathy_score": 0.8375,
+                        "escalation_level": 0.0646728515625,
+                        "escalation_risks": 0.03819580078125,
+                        "id": "a29",
+                        "intents_emotions": "Information Request - Neutral/Curious",
+                        "speaker": "Agent",
+                        "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
+                    }
+                ],
+                "cumulative_probability": 0.5
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.05056653703962054,
+                        "empathy_score": 0.8521205357142857,
+                        "escalation_level": 0.07845633370535714,
+                        "escalation_risks": 0.03384181431361607,
+                        "id": "a28",
+                        "intents_emotions": "Clarification Request - Empathetic/Inquisitive",
+                        "speaker": "Agent",
+                        "utterance": "i understand can you clarify what specific issues you faced during your stay"
+                    },
+                    {
+                        "source": "a28",
+                        "target": "u37",
+                        "explanation": "The agent's clarification request triggered the customer's threat to switch hotels if complaints are not resolved."
+                    },
+                    {
+                        "churn_risk_score": 0.5001775568181818,
+                        "empathy_score": -0.03303978659889915,
+                        "escalation_level": 0.5011985085227273,
+                        "escalation_risks": 0.5188210227272727,
+                        "id": "u37",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
+                        "speaker": "Customer",
+                        "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
+                    },
+                    {
+                        "source": "u37",
+                        "target": "a29",
+                        "explanation": "The agent's response was related to the customer's complaint, but not a direct causal link."
+                    },
+                    {
+                        "churn_risk_score": 0.0666748046875,
+                        "empathy_score": 0.8375,
+                        "escalation_level": 0.0646728515625,
+                        "escalation_risks": 0.03819580078125,
+                        "id": "a29",
+                        "intents_emotions": "Information Request - Neutral/Curious",
+                        "speaker": "Agent",
+                        "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
+                    }
+                ],
+                "cumulative_probability": 0.5
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.08540103310032894,
+                        "empathy_score": 0.744140625,
+                        "escalation_level": 0.12556537828947367,
+                        "escalation_risks": 0.09229318719161184,
+                        "id": "a3",
+                        "intents_emotions": "Information Request - Concerned/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "i see can you tell me more about the complicated policy language that was concerning to you"
+                    },
+                    {
+                        "source": "a3",
+                        "target": "u37",
+                        "explanation": "The agent's information request triggered the customer's threat to switch hotels if complaints are not resolved."
+                    },
+                    {
+                        "churn_risk_score": 0.5001775568181818,
+                        "empathy_score": -0.03303978659889915,
+                        "escalation_level": 0.5011985085227273,
+                        "escalation_risks": 0.5188210227272727,
+                        "id": "u37",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
+                        "speaker": "Customer",
+                        "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
+                    },
+                    {
+                        "source": "u37",
+                        "target": "a29",
+                        "explanation": "The agent's response was related to the customer's complaint, but not a direct causal link."
+                    },
+                    {
+                        "churn_risk_score": 0.0666748046875,
+                        "empathy_score": 0.8375,
+                        "escalation_level": 0.0646728515625,
+                        "escalation_risks": 0.03819580078125,
+                        "id": "a29",
+                        "intents_emotions": "Information Request - Neutral/Curious",
+                        "speaker": "Agent",
+                        "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
+                    }
+                ],
+                "cumulative_probability": 0.5
+            }
+        ],
+        "landing_points_content": [
+            {
+                "id": "a29",
+                "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies",
+                "escalation_level": 0.0646728515625,
+                "churn_risk_score": 0.0666748046875,
+                "empathy_score": 0.8375,
+                "escalation_risks": 0.03819580078125,
+                "intents_emotions": "Information Request - Neutral/Curious",
+                "speaker": "Agent",
+                "similarity": 0.4661597013473511
+            },
+            {
+                "id": "u57",
+                "utterance": "please do because i am considering actually i am considering switching to another hotel if this keep...",
+                "escalation_level": 0.7734375,
+                "churn_risk_score": 0.75390625,
+                "empathy_score": -0.095703125,
+                "escalation_risks": 0.796875,
+                "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                "speaker": "Customer",
+                "similarity": 0.45719027519226074
+            }
+        ],
+        "candidate_pairs_content": null
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "name 'query_embeddings_db' is not defined"
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "Metadata file not found at /home/linux/IntegratedPipeline/obai/data/example/conversations_metadata.json"
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "cannot access local variable 'graph' where it is not associated with a value"
+    },
+    {
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "error": "cannot access local variable 'graph' where it is not associated with a value"
+    },
+    {
+        "timestamp": "2025-12-04T19:44:15.931857",
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "answer": "Based on the provided causal chains, it appears that customers are facing difficulties in the Hotel and Flight domains due to frustration and dissatisfaction with delayed changes and lack of accountability.\n\nFrom the chains, we can see that customers are expressing concerns about:\n\n* Frustration with delays (PATHWAY 1)\n* Lack of accountability from the agent or hotel/flight provider (PATHWAY 2)\n* Expectation for quicker resolution (PATHWAY 3)\n* Concerns about future delays (PATHWAY 4)\n* Need for a fix to resolve the issue (PATHWAY 5)\n\nThe chains also indicate that customers are considering switching to another hotel due to these issues, which suggests a high risk of churn.\n\nOne common thread throughout the paths is that the agents' explanations of changes reflected after the call often do not directly address the customer's concerns. This implies that there may be a need for more effective communication and resolution strategies in place.\n\nThe empathy scores for customers are generally low (-0.10 to 0.08), indicating that they are experiencing strong negative emotions during these interactions. This highlights the importance of addressing their concerns and providing a satisfactory resolution to prevent further frustration and potential churn.\n\nTherefore, based on this analysis, it can be concluded that customers in the Hotel and Flight domains are facing difficulties due to delayed changes, lack of accountability, and ineffective communication, leading to frustration and dissatisfaction, which may result in them considering switching to another hotel or service provider.",
+        "causal_chains_content": [
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.09106551959950437,
+                        "empathy_score": 0.7283581149193549,
+                        "escalation_level": 0.12028126050067205,
+                        "escalation_risks": 0.08786498175726996,
+                        "id": "a12",
+                        "intents_emotions": "Information - Reassuring/Informative",
+                        "speaker": "Agent",
+                        "utterance": "you should see the changes reflected almost immediately after this call"
+                    },
+                    {
+                        "source": "a12",
+                        "target": "u170",
+                        "explanation": "The agent's information did not prevent the customer from considering switching to another hotel due to frustration and dissatisfaction."
+                    },
+                    {
+                        "churn_risk_score": 0.7473958333333334,
+                        "empathy_score": -0.09993489583333333,
+                        "escalation_level": 0.7825520833333334,
+                        "escalation_risks": 0.79296875,
+                        "id": "u170",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                        "speaker": "Customer",
+                        "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
+                    }
+                ],
+                "cumulative_probability": 0.9
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.3543259640957447,
+                        "empathy_score": 0.074434239813622,
+                        "escalation_level": 0.4068603515625,
+                        "escalation_risks": 0.37930521150914637,
+                        "id": "u22",
+                        "intents_emotions": "Complaint - Frustrated/Impatient",
+                        "speaker": "Customer",
+                        "utterance": "that is just so annoying it feels like there is no accountability on your side"
+                    },
+                    {
+                        "source": "u22",
+                        "target": "a12",
+                        "explanation": "The agent's explanation of the changes reflected after the call directly addresses the customer's concern about accountability."
+                    },
+                    {
+                        "churn_risk_score": 0.09106551959950437,
+                        "empathy_score": 0.7283581149193549,
+                        "escalation_level": 0.12028126050067205,
+                        "escalation_risks": 0.08786498175726996,
+                        "id": "a12",
+                        "intents_emotions": "Information - Reassuring/Informative",
+                        "speaker": "Agent",
+                        "utterance": "you should see the changes reflected almost immediately after this call"
+                    },
+                    {
+                        "source": "a12",
+                        "target": "u170",
+                        "explanation": "The agent's information did not prevent the customer from considering switching to another hotel due to frustration and dissatisfaction."
+                    },
+                    {
+                        "churn_risk_score": 0.7473958333333334,
+                        "empathy_score": -0.09993489583333333,
+                        "escalation_level": 0.7825520833333334,
+                        "escalation_risks": 0.79296875,
+                        "id": "u170",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                        "speaker": "Customer",
+                        "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
+                    }
+                ],
+                "cumulative_probability": 0.9
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.2255577674278846,
+                        "empathy_score": 0.056410569411057696,
+                        "escalation_level": 0.22526198167067307,
+                        "escalation_risks": 0.22027470515324518,
+                        "id": "u131",
+                        "intents_emotions": "Complaint - Frustrated/Disappointed",
+                        "speaker": "Customer",
+                        "utterance": "a meal voucher is that really all i was expecting a quicker resolution"
+                    },
+                    {
+                        "source": "u131",
+                        "target": "a12",
+                        "explanation": "The agent's explanation of the changes reflected after the call directly addresses the customer's concern about resolution."
+                    },
+                    {
+                        "churn_risk_score": 0.09106551959950437,
+                        "empathy_score": 0.7283581149193549,
+                        "escalation_level": 0.12028126050067205,
+                        "escalation_risks": 0.08786498175726996,
+                        "id": "a12",
+                        "intents_emotions": "Information - Reassuring/Informative",
+                        "speaker": "Agent",
+                        "utterance": "you should see the changes reflected almost immediately after this call"
+                    },
+                    {
+                        "source": "a12",
+                        "target": "u170",
+                        "explanation": "The agent's information did not prevent the customer from considering switching to another hotel due to frustration and dissatisfaction."
+                    },
+                    {
+                        "churn_risk_score": 0.7473958333333334,
+                        "empathy_score": -0.09993489583333333,
+                        "escalation_level": 0.7825520833333334,
+                        "escalation_risks": 0.79296875,
+                        "id": "u170",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                        "speaker": "Customer",
+                        "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
+                    }
+                ],
+                "cumulative_probability": 0.9
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.26513671875,
+                        "empathy_score": 0.075750732421875,
+                        "escalation_level": 0.31845703125,
+                        "escalation_risks": 0.28828125,
+                        "id": "u4",
+                        "intents_emotions": "Complaint - Frustrated/Concerned about future delays",
+                        "speaker": "Customer",
+                        "utterance": "so you just accept these delays as inevitable what about future delays"
+                    },
+                    {
+                        "source": "u4",
+                        "target": "a12",
+                        "explanation": "The agent's explanation of the changes reflected after the call directly addresses the customer's concern about future delays."
+                    },
+                    {
+                        "churn_risk_score": 0.09106551959950437,
+                        "empathy_score": 0.7283581149193549,
+                        "escalation_level": 0.12028126050067205,
+                        "escalation_risks": 0.08786498175726996,
+                        "id": "a12",
+                        "intents_emotions": "Information - Reassuring/Informative",
+                        "speaker": "Agent",
+                        "utterance": "you should see the changes reflected almost immediately after this call"
+                    },
+                    {
+                        "source": "a12",
+                        "target": "u170",
+                        "explanation": "The agent's information did not prevent the customer from considering switching to another hotel due to frustration and dissatisfaction."
+                    },
+                    {
+                        "churn_risk_score": 0.7473958333333334,
+                        "empathy_score": -0.09993489583333333,
+                        "escalation_level": 0.7825520833333334,
+                        "escalation_risks": 0.79296875,
+                        "id": "u170",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                        "speaker": "Customer",
+                        "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
+                    }
+                ],
+                "cumulative_probability": 0.9
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.3241373697916667,
+                        "empathy_score": 0.06366984049479167,
+                        "escalation_level": 0.4539388020833333,
+                        "escalation_risks": 0.4060872395833333,
+                        "id": "u5",
+                        "intents_emotions": "Request for assistance - Neutral/Curious",
+                        "speaker": "Customer",
+                        "utterance": "how can you fix this"
+                    },
+                    {
+                        "source": "u5",
+                        "target": "a12",
+                        "explanation": "The agent's explanation of the changes reflected after the call directly addresses the customer's concern about resolution."
+                    },
+                    {
+                        "churn_risk_score": 0.09106551959950437,
+                        "empathy_score": 0.7283581149193549,
+                        "escalation_level": 0.12028126050067205,
+                        "escalation_risks": 0.08786498175726996,
+                        "id": "a12",
+                        "intents_emotions": "Information - Reassuring/Informative",
+                        "speaker": "Agent",
+                        "utterance": "you should see the changes reflected almost immediately after this call"
+                    },
+                    {
+                        "source": "a12",
+                        "target": "u170",
+                        "explanation": "The agent's information did not prevent the customer from considering switching to another hotel due to frustration and dissatisfaction."
+                    },
+                    {
+                        "churn_risk_score": 0.7473958333333334,
+                        "empathy_score": -0.09993489583333333,
+                        "escalation_level": 0.7825520833333334,
+                        "escalation_risks": 0.79296875,
+                        "id": "u170",
+                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                        "speaker": "Customer",
+                        "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
+                    }
+                ],
+                "cumulative_probability": 0.9
+            }
+        ],
+        "landing_points_content": [
+            {
+                "id": "u170",
+                "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi...",
+                "escalation_level": 0.7825520833333334,
+                "churn_risk_score": 0.7473958333333334,
+                "empathy_score": -0.09993489583333333,
+                "escalation_risks": 0.79296875,
+                "intents_emotions": "Complaint - Frustrated/Considering Switch",
+                "speaker": "Customer",
+                "similarity": 0.48118406534194946
+            },
+            {
+                "id": "a11",
+                "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies",
+                "escalation_level": 0.08699857271634616,
+                "churn_risk_score": 0.07703106219951923,
+                "empathy_score": 0.7262620192307693,
+                "escalation_risks": 0.06217487041766827,
+                "intents_emotions": "Information Request - Neutral/Curious",
+                "speaker": "Agent",
+                "similarity": 0.4661597013473511
+            }
+        ],
+        "candidate_pairs_content": null
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "id": "u170",
+        "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi...",
+        "escalation_level": 0.7825520833333334,
+        "churn_risk_score": 0.7473958333333334,
+        "empathy_score": -0.09993489583333333,
+        "escalation_risks": 0.79296875,
+        "intents_emotions": "Complaint - Frustrated/Considering Switch",
+        "speaker": "Customer",
+        "similarity": 0.48118406534194946
+    },
+    {
+        "id": "a11",
+        "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies",
+        "escalation_level": 0.08699857271634616,
+        "churn_risk_score": 0.07703106219951923,
+        "empathy_score": 0.7262620192307693,
+        "escalation_risks": 0.06217487041766827,
+        "intents_emotions": "Information Request - Neutral/Curious",
+        "speaker": "Agent",
+        "similarity": 0.4661597013473511
+    }
+]

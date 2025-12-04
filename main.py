@@ -19,9 +19,7 @@ LANDING_FILE = "landing_points.json"
 # --- Input Data List ---
 queries_to_run = [
     {
-        "query": "How do fare increases and decreases impact customer satisfaction, and what are the optimal fare management strategies?",
-        "domain": "Flight",
-        "intent": "Price Sensitivity"
+        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
     }
 ]
 
@@ -62,20 +60,13 @@ print(f"Start Time: {start_time.time()}")
 
 for i, item in enumerate(queries_to_run):
     curr_query = item["query"]
-    curr_domain = item["domain"]
-    curr_intent = item["intent"]
-    
-    print(f"\n[{i+1}/{len(queries_to_run)}] PROCESSING: {curr_domain} - {curr_intent}")
-    print(f"Query: {curr_query}")
     
     try:
-        # 1. Generate Graph
+        # 1. Generate Graphs
         # Note: Assuming generate_json_graph returns something or modifies state. 
         # If it returns the graph object, we capture it, otherwise we just run it.
         graph_gen.generate_json_graph(
             query=curr_query,
-            domain=curr_domain,
-            intent=curr_intent,
             data_path=DATA_PATH
         )
         
@@ -92,8 +83,6 @@ for i, item in enumerate(queries_to_run):
         result_entry = {
             "timestamp": datetime.now().isoformat(),
             "query": curr_query,
-            "domain": curr_domain,
-            "intent": curr_intent,
             "answer": ans,
             "causal_chains_content": causal_data,
             "landing_points_content": landing_data,
@@ -108,8 +97,6 @@ for i, item in enumerate(queries_to_run):
         # Optionally log the error to the json as well
         error_entry = {
             "query": curr_query,
-            "domain": curr_domain,
-            "intent": curr_intent,
             "error": str(e)
         }
         update_master_json(error_entry, OUTPUT_FILE)

@@ -33,7 +33,7 @@ Return ONLY a JSON object. No markdown.
 
 
     def query_splitter(self,query):
-        prompt = f"""You are an expert NLU (Natural Language Understanding) router. Your goal is to map a user's input query to the most relevant (Domain, Intent) pairs from a provided list and optimize the query for search.
+        prompt = """You are an expert NLU (Natural Language Understanding) router. Your goal is to map a user's input query to the most relevant (Domain, Intent) pairs from a provided list and optimize the query for search.
 
 ### Instructions:
 1. **Analyze:** Read the user's input query.
@@ -103,7 +103,7 @@ Now generate the output as per the instructions above.
         response = ollama.chat(
                 model=self.model,
                 messages=[
-                    {"role": "system", "content": self.prompt},
+                    {"role": "system", "content": prompt},
                     {"role": "user", "content": user_content_str}
                 ],
                 format="json",

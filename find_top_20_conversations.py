@@ -119,6 +119,9 @@ class ConversationSearchPipeline:
         
         return combined
     
+    #def create_embeddings_new(self, data: List[Dict]) -> Tuple[np.ndarray, List[Dict]]:
+
+    
     def create_embeddings(self, data: List[Dict]) -> Tuple[np.ndarray, List[Dict]]:
         """
         Create embeddings for all turns in the dataset.
@@ -567,78 +570,20 @@ class ConversationSearchPipeline:
         return full_transcripts
 
 
-def main():
+def main( domain , intent, query , pipeline ,data_path = 'data/final_json_for_d2f.json', output_dir = "data/top_20" , model = 'sentence-transformers/all-mpnet-base-v2',top_k = 20,):
     """Main function to run the pipeline from command line."""
-    parser = argparse.ArgumentParser(
-        description='Find top 20 most relevant conversations using semantic similarity'
-    )
-    parser.add_argument(
-        '--data-path',
-        type=str,
-        default='data/final_json_for_d2f.json',
-        help='Path to input JSON file'
-    )
-    parser.add_argument(
-        '--domain',
-        type=str,
-        default=None,
-        help='Domain to search within (e.g., Flight, Hotel, Banking, Retail, Telecom, Insurance)'
-    )
-    parser.add_argument(
-        '--intent',
-        type=str,
-        default=None,
-        help='Intent label to filter within the selected domain'
-    )
-    parser.add_argument(
-        '--query',
-        type=str,
-        required=True,
-        help='Search query'
-    )
-    parser.add_argument(
-        '--output-dir',
-        type=str,
-        default='data/top_20',
-        help='Directory to save results'
-    )
-    parser.add_argument(
-        '--top-k',
-        type=int,
-        default=20,
-        help='Number of top results to return (default: 20)'
-    )
-    parser.add_argument(
-        '--model',
-        type=str,
-        default='sentence-transformers/all-mpnet-base-v2',
-        help='Sentence transformer model to use'
-    )
-    
-    args = parser.parse_args()
-    
-    base_dir = Path(__file__).resolve().parent
-    data_path = Path(args.data_path)
-    if not data_path.is_absolute():
-        data_path = (base_dir / data_path).resolve()
+   
 
-    output_dir = Path(args.output_dir)
-    if not output_dir.is_absolute():
-        output_dir = (base_dir / output_dir).resolve()
-
-    # Initialize pipeline
-    pipeline = ConversationSearchPipeline(model_name=args.model)
+    #pipeline = ConversationSearchPipeline(model_name=model)
 
     # Run pipeline
-    pipeline.run_pipeline(
+    transcripts = pipeline.run_pipeline(
         json_file_path=str(data_path),
-        domain=args.domain,
-        intent=args.intent,
-        query=args.query,
+        domain=domain,
+        intent=intent,
+        query=query,
         output_dir=str(output_dir),
-        top_k=args.top_k
+        top_k=top_k
     )
 
-
-if __name__ == '__main__':
-    main()
+    return transcripts

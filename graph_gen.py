@@ -22,7 +22,8 @@ import re
 from pathlib import Path
 from collections import defaultdict
 from typing import Dict, List, Optional, Tuple
-
+import query_splitter
+import llm_handler
 # Add current directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -218,6 +219,7 @@ class GraphGenerator:
                 
                 logger.info(f"✓ Found {len(results)} relevant conversations")
                 logger.info(f"✓ Saved to {self.top20_dir}\n")
+                
         else:
             # Fall back to computing embeddings
             logger.info("Computing embeddings on-the-fly (slower)...")
@@ -599,8 +601,6 @@ class GraphGenerator:
     def run(
         self,
         query: str,
-        domain: str = None,
-        intent: str = None,
         model_name: str = "sergioburdisso/dialog2flow-joint-bert-base",
         n_clusters: int = None,
         distance_threshold: float = 0.5,
@@ -631,7 +631,8 @@ class GraphGenerator:
         logger.info("║" + " " * 15 + "INTEGRATED PIPELINE: TOP 20 → DIALOG2FLOW" + " " * 22 + "║")
         logger.info("╚" + "=" * 78 + "╝")
         logger.info("")
-        
+        domain = None
+        intent = None
         results = {}
         self.last_intent = intent
         
@@ -641,7 +642,8 @@ class GraphGenerator:
                 self.clean_directories()
             
             # Step 1: Find top 20 conversations
-            results['top_20'] = self.step1_find_top20(query, domain, intent)
+            llm = llm_handler.llm()
+            results['top_20'] = query_splitter.categorize_query(query,llm,self.embeddings_db, self.data_path)
             
             # Step 2: Prepare for Dialog2Flow
             results['metadata'] = self.step2_prepare_for_dialog2flow()
@@ -673,14 +675,12 @@ class GraphGenerator:
 
 
 # check what n_clusters is and add it here
-def generate_json_graph(query,intent,domain,data_path,distance_threshold = 0.5):
+def generate_json_graph(query,data_path,distance_threshold = 0.5):
 
     pipeline = GraphGenerator(data_path=data_path)
     
     pipeline.run(
         query=query,
-        domain=domain,
-        intent=intent,
         distance_threshold=distance_threshold,
     )
 

@@ -39,22 +39,44 @@ def extract_dialogs_from_top20(top20_dir: str, output_dir: str, metadata_file: s
     
     # Load the original JSON to get full metadata
     # Find the summary JSON file
-    json_files = [f for f in os.listdir(top20_dir) if f.endswith('.json') and f.startswith('top_20_')]
-    
+    # gather all matching json files (sorted for deterministic order)
+    json_files = sorted([f for f in os.listdir(top20_dir) if f.endswith('.json') and f.startswith('top_20_')])
     if not json_files:
-        logger.error(f"No summary JSON file found in {top20_dir}")
+        logger.error(f"No top_20 JSON files found in {top20_dir}")
         return {}
-    
-    # Use the most recent JSON file
-    json_file = sorted(json_files)[-1]
-    json_path = os.path.join(top20_dir, json_file)
-    
-    logger.info(f"Loading summary from {json_path}")
-    with open(json_path, 'r') as f:
-        summary_data = json.load(f)
-    
-    conversations = summary_data.get('results', [])
-    logger.info(f"Found {len(conversations)} conversations in summary")
+
+    # Instead of using only the most recent file, process all json files and merge conversations
+    conversations = []
+    for json_file in json_files:
+        json_path = os.path.join(top20_dir, json_file)
+        try:
+            with open(json_path, 'r') as f:
+                data = json.load(f)
+        except Exception as e:
+            logger.warning(f"Skipping {json_file}: failed to read/parse ({e})")
+            continue
+
+        # Accept several possible shapes; prefer a top-level 'conversations' list
+        if isinstance(data, dict):
+            convs = data.get('results',[])
+            
+        else:
+            convs = None
+
+        if convs is None:
+            # If the file itself is a list, assume it's the conversations
+            if isinstance(data, list):
+                convs = data
+            else:
+                logger.warning(f"Skipping {json_file}: no conversations list found")
+                continue
+
+        if not isinstance(convs, list):
+            logger.warning(f"Skipping {json_file}: conversations is not a list")
+            continue
+        
+        logger.info(f"Found {len(conversations)} conversations in summary")
+        conversations.extend(convs)
     
     # Store all metadata
     conversations_metadata = {}
