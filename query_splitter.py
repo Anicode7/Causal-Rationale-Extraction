@@ -32,7 +32,62 @@ def categorize_query(query, llm, embeddings_db, data_path,follow_up,topK_dir,top
 	"""
 
 	searcher = query_embeddings_db.CachedEmbeddingSearch(embeddings_db, data_path)
-	queries_list = llm.query_splitter(query)
+	queries_list_old = llm.query_splitter(query)
+	list_intent = [
+    ("Banking", "Credit Limit Requests"),
+    ("Banking", "Fee Complaints"),
+    ("Banking", "Fraud Alerts"),
+    ("Banking", "Loan Application"),
+    ("Banking", "Product Comparison"),
+    ("Banking", "Refund Delays"),
+    ("Flight", "Cross Brand Mentions"),
+    ("Flight", "Delay Management"),
+    ("Flight", "Loyalty Program"),
+    ("Flight", "Price Sensitivity"),
+    ("Flight", "Refund Policy"),
+    ("Flight", "Urgency & Stress"),
+    ("Hotel", "Booking Errors"),
+    ("Hotel", "Brand Loyalty"),
+    ("Hotel", "Cancellation Policies"),
+    ("Hotel", "Discounts & Promotions"),
+    ("Hotel", "Service Complaints"),
+    ("Hotel", "Upgrade Requests"),
+    ("Insurance", "Claims & Refunds"),
+    ("Insurance", "Competitor Comparison"),
+    ("Insurance", "Customer Trust"),
+    ("Insurance", "Feature Understanding"),
+    ("Insurance", "Policy Renewal"),
+    ("Insurance", "Sales Effectiveness"),
+    ("Insurance", "Upselling Strategy"),
+    ("Retail", "Delivery Delays"),
+    ("Retail", "Loyalty Program"),
+    ("Retail", "Product Feedback"),
+    ("Retail", "Product Returns"),
+    ("Retail", "Replacement Vs Refund"),
+    ("Telecom", "Churn Prediction"),
+    ("Telecom", "Connectivity Complaints"),
+    ("Telecom", "Feature Requests"),
+    ("Telecom", "Network Outages"),
+    ("Telecom", "Plan Upgrades"),
+    ("Telecom", "Technical Support"),
+]
+	queries_list = []
+	print("hiiiiiii" , queries_list_old)
+	for obj in queries_list_old:
+		id = obj["domain_intent"]
+		curr_domain = list_intent[id-1][0]
+		curr_intent = list_intent[id-1][1]
+		curr_query = obj["reformed_query"]
+		reas = obj["reasoning"]
+		queries_list.append({
+			"domain": curr_domain,
+			"reformed_query": curr_query,
+			"intent": curr_intent,
+			"reasoning": reas
+		})
+	
+
+	print("byee " , queries_list)
 	unique_conversations = {}
 	transcript_id_list = []
 	if(follow_up!=0):

@@ -82,52 +82,55 @@ Return ONLY a JSON object. No markdown.
 3. **Reform:** For each selected pair, generate a 'reformed_query'. This query must strip conversational filler and inject specific technical keywords or terminology relevant to that specific (Domain, Intent) to assist downstream search retrieval.
 4. **Output:** Return the result in the specified JSON format only. DO NOT include any introductory or explanatory text outside of the JSON block.
 
+***IMPORTANT RULE***-
+your output for the "domain_intent" field MUST be an integer representing the index (1-based) of the intent within its domain as per the "Allowed Domain-Intent List" below.
+
+
 ### Allowed Domain-Intent List (37 Pairs):
 [
-  ("Banking", "Credit Limit Requests"),
-  ("Banking", "Fee Complaints"),
-  ("Banking", "Fraud Alerts"),
-  ("Banking", "Loan Application"),
-  ("Banking", "Product Comparison"),
-  ("Banking", "Refund Delays"),
-  ("Flight", "Cross Brand Mentions"),
-  ("Flight", "Delay Management"),
-  ("Flight", "Loyalty Program"),
-  ("Flight", "Price Sensitivity"),
-  ("Flight", "Refund Policy"),
-  ("Flight", "Urgency & Stress"),
-  ("Hotel", "Booking Errors"),
-  ("Hotel", "Brand Loyalty"),
-  ("Hotel", "Cancellation Policies"),
-  ("Hotel", "Discounts & Promotions"),
-  ("Hotel", "Service Complaints"),
-  ("Hotel", "Upgrade Requests"),
-  ("Insurance", "Claims & Refunds"),
-  ("Insurance", "Competitor Comparison"),
-  ("Insurance", "Customer Trust"),
-  ("Insurance", "Feature Understanding"),
-  ("Insurance", "Policy Renewal"),
-  ("Insurance", "Sales Effectiveness"),
-  ("Insurance", "Upselling Strategy"),
-  ("Retail", "Delivery Delays"),
-  ("Retail", "Loyalty Program"),
-  ("Retail", "Product Feedback"),
-  ("Retail", "Product Returns"),
-  ("Retail", "Replacement Vs Refund"),
-  ("Telecom", "Churn Prediction"),
-  ("Telecom", "Connectivity Complaints"),
-  ("Telecom", "Feature Requests"),
-  ("Telecom", "Network Outages"),
-  ("Telecom", "Plan Upgrades"),
-  ("Telecom", "Technical Support")
+1.  ("Banking", "Credit Limit Requests"),
+2.  ("Banking", "Fee Complaints"),
+3.  ("Banking", "Fraud Alerts"),
+4.  ("Banking", "Loan Application"),
+5.  ("Banking", "Product Comparison"),
+6.  ("Banking", "Refund Delays"),
+7.  ("Flight", "Cross Brand Mentions"),
+8.  ("Flight", "Delay Management"),
+9.  ("Flight", "Loyalty Program"),
+10.  ("Flight", "Price Sensitivity"),
+11. ("Flight", "Refund Policy"),
+12.  ("Flight", "Urgency & Stress"),
+13.  ("Hotel", "Booking Errors"),
+14.  ("Hotel", "Brand Loyalty"),
+15.  ("Hotel", "Cancellation Policies"),
+16.  ("Hotel", "Discounts & Promotions"),
+17.  ("Hotel", "Service Complaints"),
+18.  ("Hotel", "Upgrade Requests"),
+19.  ("Insurance", "Claims & Refunds"),
+20.  ("Insurance", "Competitor Comparison"),
+21.  ("Insurance", "Customer Trust"),
+22.  ("Insurance", "Feature Understanding"),
+23.  ("Insurance", "Policy Renewal"),
+24.  ("Insurance", "Sales Effectiveness"),
+25.  ("Insurance", "Upselling Strategy"),
+26.  ("Retail", "Delivery Delays"),
+27.  ("Retail", "Loyalty Program"),
+28.  ("Retail", "Product Feedback"),
+29.  ("Retail", "Product Returns"),
+30.  ("Retail", "Replacement Vs Refund"),
+31.  ("Telecom", "Churn Prediction"),
+32.  ("Telecom", "Connectivity Complaints"),
+33.  ("Telecom", "Feature Requests"),
+34.  ("Telecom", "Network Outages"),
+35.  ("Telecom", "Plan Upgrades"),
+36.  ("Telecom", "Technical Support")
 ]
 
 ### Output Format (JSON):
 {
   "matches": [
     {
-      "domain": "String",
-      "intent": "String",
+      "domain_intent": int,
       "reformed_query": "String",
       "reasoning": "Brief explanation of why this pair was chosen"
     }

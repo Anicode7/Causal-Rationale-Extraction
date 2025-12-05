@@ -33,3 +33,4 @@ matplotlib
 simpleneighbors
 openai
 graphviz
+Groq

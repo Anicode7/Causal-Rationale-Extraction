@@ -19,7 +19,7 @@ LANDING_FILE = "landing_points.json"
 # --- Input Data List ---
 queries_to_run = [
     {
-        "query": "What are the problems faced by customers in flight domain?",
+        "query": "How does dissatisfaction with claim payout amounts, combined with unclear deductible explanations, drive complaints to external agencies and switches to rivals??",
     }
 ]
 
