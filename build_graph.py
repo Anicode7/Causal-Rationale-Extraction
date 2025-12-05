@@ -301,7 +301,8 @@ def create_graph(trajectories: Dict,
             image.show()
         except:
             pass
-
+    
+    interactive_visualization = False
     if interactive_visualization:
         output_folder = os.path.join(output_folder, "visualization")
         output_file = os.path.join(output_folder, "graph.html")

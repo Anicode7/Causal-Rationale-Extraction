@@ -1,24 +1,24 @@
 [
     {
-        "id": "u10",
-        "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas",
-        "escalation_level": 0.2191162109375,
-        "churn_risk_score": 0.30473128609035327,
-        "empathy_score": -0.006027885105298913,
-        "escalation_risks": 0.26229372891512787,
-        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
-        "speaker": "Customer",
-        "similarity": 0.4922518730163574
+        "id": "a28",
+        "utterance": "that is a great question generally we find that retention discussions can lead to maintaining about ...",
+        "escalation_level": 0.0633544921875,
+        "churn_risk_score": 0.092376708984375,
+        "empathy_score": 0.3927001953125,
+        "escalation_risks": 0.0657958984375,
+        "intents_emotions": "Retention Advice - Informative/Neutral",
+        "speaker": "Agent",
+        "similarity": 0.41733741760253906
     },
     {
-        "id": "u14",
-        "utterance": "fifty percent that is just frustrating i mean how does that compare to other hotels",
-        "escalation_level": 0.3857421875,
-        "churn_risk_score": 0.32728794642857145,
-        "empathy_score": 0.03226579938616071,
-        "escalation_risks": 0.3662109375,
-        "intents_emotions": "Complaint - Frustrated/Concerned about rate",
-        "speaker": "Customer",
-        "similarity": 0.4709113836288452
+        "id": "a1",
+        "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc...",
+        "escalation_level": 0.1554686504861583,
+        "churn_risk_score": 0.19958031695822012,
+        "empathy_score": 0.5952551468558933,
+        "escalation_risks": 0.18742138406504755,
+        "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
+        "speaker": "Agent",
+        "similarity": 0.3299262523651123
     }
 ]

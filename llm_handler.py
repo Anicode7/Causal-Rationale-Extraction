@@ -165,62 +165,32 @@ Now generate the output as per the instructions above.
             print(f"Batch inference failed: {e} !!")
             return []
 
-    # ... (Rest of the class methods: answer_query, answer_query_causal remain unchanged)
-    def answer_query(self, query, context):
-        sys_prompt = f'''
-        Your task is to perform causal analysis given the causal chains related to the query and a query.
-        In each causal chain you will find a series of causes and effects with explanations and probabilities.
-        Your goal is to analyze these chains to provide a concise answer to the user's query.
-        DO NOT MENTION the cumulative probabilities in your answer. However you can mention the implications of properties and metdata such as empathy score, escalation risk etc of high or low probability chains in your reasoning.
-        Give a short concise explanation using ONLY the context to answer the query.
-        '''
-
-        curr_prompt = f'''Query -- {query}
-        Causal Chains -- {context}
-        Give your answer now :'''
-        
-        response = ollama.chat(
-            model=self.model,
-            messages=[
-                {"role": "system", "content": sys_prompt},
-                {"role": "user", "content": curr_prompt}
-            ],
-            options={
-                "num_gpu": 99,
-                "num_ctx": 4096
-            },
-            keep_alive="5m"
-        )
-
-        ans = response['message']['content']
-        return ans
-
     def answer_query_causal(self, query, chains):
+        # IMPROVED PROMPT for follow_up = 0
         sys_prompt = f'''
-        You are an expert Root Cause Analysis AI.
-        Your task is to perform causal analysis given the causal chains related to the query and a query.
-        You will be given a causal chain in the form of NODE , EDGE , NODE ... format. For each node, you will have metadata such as utterance , empathy score, escalation risk, churn risk , intent_emotions etc. For each edge, you will have an explanation and a cumulative probability score.
-        The edges represent the causal relationships between the nodes.
-        Your goal is to analyze these chains to provide a concise answer to the user's query.
+        You are an expert Root Cause Analysis AI. 
+        Your task is to provide a professional, executive-level summary answering the user's query based on the provided causal analysis.
 
-        INSTRUCTIONS:
-        1. REVIEW: Read the provided chains (ordered: Cause -> Effect).
-        2. ANALYZE METADATA : Analyze all the metadata such as utterance , empathy score, escalation risk, churn risk , intent_emotions etc in the nodes of the chains to get better context on the causal relationships.
-        3. WEIGH: Pay strict attention to the 'cumulative_probability' score. Trust high-probability chains (0.7+) over low ones.
-        4. ANSWER: Provide a concise, direct answer to the query based ONLY on this evidence. Do not invent facts.
-        
-        **IMPORTANT** 
-        Pay special attention to the utterance field in the metadata
+        INPUT DATA:
+        - You are given "Causal Chains" containing nodes (metadata like empathy, escalation risk) and edges (probabilities, explanations).
+        - The chains are sorted by confidence (cumulative probability).
 
-        OUTPUT_FORMAT -- DO NOT MENTION the cumulative probabilities in your answer. However you can mention the implications of properties and metdata such as empathy score, escalation risk etc of high or low probability chains in your reasoning.
-        Give a short concise explanation using ONLY the causal chains to answer the query
+        STRICT OUTPUT GUIDELINES:
+        1. **Narrative Focus**: Synthesize the information into a single, cohesive argument. 
+        2. **Hide Mechanics**: DO NOT explicitly mention "Pathway 1", "Chain 3", "Confidence: 0.8", or internal IDs in your final text. The user should not know how the data was structured.
+        3. **Analytical Tone**: Instead of saying "Pathway 1 says X", say "Primary analysis indicates X..." or "There is strong evidence that X...".
+        4. **Handling Uncertainty**: Use high-probability chains for your main conclusion. Mention lower-probability chains only if they offer distinct, valuable nuance, introducing them with phrases like "Additionally, it is worth noting..." or "A secondary factor appears to be...".
+        5. **Metadata Integration**: Weave metadata (e.g., "high churn risk", "low empathy") naturally into your sentences (e.g., "The lack of empathy shown by agents correlates with the high churn risk observed...").
+
+        Goal: A direct, seamless answer that sounds like a human expert analyst, not a machine debugging a graph.
         '''
 
-        curr_prompt = f'''Query -- {query}
-        CAUSAL CHAINS--- 
+        curr_prompt = f'''Query: {query}
+        
+        EVIDENCE (CAUSAL CHAINS): 
         {chains}
         
-        Give your answer now :'''
+        Provide your expert analysis now:'''
 
         response = ollama.chat(
             model=self.model,
@@ -237,3 +207,100 @@ Now generate the output as per the instructions above.
 
         ans = response['message']['content']
         return ans
+
+    def answer_query_causal(self, query, chains):
+        # IMPROVED PROMPT for follow_up = 0
+        sys_prompt = f'''
+        You are an expert Root Cause Analysis AI. 
+        Your task is to provide a professional, executive-level summary answering the user's query based on the provided causal analysis.
+
+        INPUT DATA:
+        - "Causal Chains": Nodes (metadata) and Edges (probabilities). Sorted by confidence.
+
+        STRICT OUTPUT GUIDELINES:
+        1. **STRICT FACTUALITY**: STRICTLY FOLLOW the facts received from the graph (Causal Chains). Do analysis ONLY on them. Do not hallucinate or add outside information.
+        2. **Narrative Focus**: Synthesize info into a cohesive argument. Use paragraphs, NOT lists.
+        3. **Hide Mechanics**: DO NOT mention "Pathway 1", "Confidence: 0.8", or IDs.
+        4. **Analytical Tone**: Say "Primary analysis indicates..." or "Evidence suggests...".
+        5. **Metadata Integration**: Weave metadata (e.g., "high churn risk") naturally into sentences.
+        6. **Formatting**: Keep output COMPACT. Single spacing between sentences. No multiple blank lines.
+        '''
+
+        curr_prompt = f'''Query: {query}
+        
+        EVIDENCE (CAUSAL CHAINS): 
+        {chains}
+        
+        Provide your expert analysis now:'''
+
+        response = ollama.chat(
+            model=self.model,
+            messages=[
+                {"role": "system", "content": sys_prompt},
+                {"role": "user", "content": curr_prompt}
+            ],
+            options={
+                "num_gpu": 99,
+                "num_ctx": 8192 
+            },
+            keep_alive="5m"
+        )
+
+        ans = response['message']['content']
+        # Remove excessive newlines
+        return ans.strip().replace("\n\n\n", "\n\n")
+
+    def answer_followup_causal(self, query, chains, history):
+        # NEW PROMPT for follow_up > 0
+        sys_prompt = f'''
+        You are an intelligent Conversational Analyst.
+        
+        TASK: 
+        Answer the "Current Query" using the "New Evidence". 
+        Use "Conversation History" ONLY to resolve ambiguous references (e.g., "it", "they", "that issue").
+
+         STRICT OUTPUT GUIDELINES:
+        1. **STRICT FACTUALITY**: STRICTLY FOLLOW the facts received from the graph (Causal Chains)  and the previous conversation's context. Do analysis ONLY on them. Do not hallucinate or add outside information.
+        2. **Narrative Focus**: Synthesize info into a cohesive argument. Use paragraphs, NOT lists.
+        3. **Hide Mechanics**: DO NOT mention "Pathway 1", "Confidence: 0.8", or IDs.
+        4. **Analytical Tone**: Say "Primary analysis indicates..." or "Evidence suggests...".
+        5. **Metadata Integration**: Weave metadata (e.g., "high churn risk") naturally into sentences.
+        6. **Formatting**: Keep output COMPACT. Single spacing between sentences. No multiple blank lines.
+        7. **Source of Truth**: The "New Evidence" and "Previous Contexts" are the ONLY factual source for this answer. Ignore factual contradictions from old history.
+        8. **Conciseness**: Get straight to the point.
+        '''
+
+        # Format history for the prompt
+        history_str = ""
+        for turn in history:
+            role = "User" if turn["role"] == "user" else "Analyst"
+            history_str += f"{role}: {turn['content']}\n"
+
+        curr_prompt = f'''
+        --- CONVERSATION HISTORY ---
+        {history_str}
+        
+        --- NEW EVIDENCE (CAUSAL CHAINS) ---
+        {chains}
+        
+        --- CURRENT QUERY ---
+        {query}
+        
+        Answer:'''
+
+        response = ollama.chat(
+            model=self.model,
+            messages=[
+                {"role": "system", "content": sys_prompt},
+                {"role": "user", "content": curr_prompt}
+            ],
+            options={
+                "num_gpu": 99,
+                "num_ctx": 12000 
+            },
+            keep_alive="5m"
+        )
+
+        ans = response['message']['content']
+        # Remove excessive newlines
+        return ans.strip().replace("\n\n\n", "\n\n")

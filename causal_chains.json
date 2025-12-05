@@ -2,29 +2,29 @@
     {
         "chain": [
             {
-                "churn_risk_score": -0.006738935198102679,
-                "empathy_score": 0.7802734375,
-                "escalation_level": 0.027165004185267856,
-                "escalation_risks": 0.016124861580984935,
-                "id": "a9",
-                "intents_emotions": "Assistance - Helpful/Neutral",
-                "speaker": "Agent",
-                "utterance": "i can definitely help you with that jack can i get your booking I would first please"
-            },
-            {
-                "source": "a9",
-                "target": "u10",
-                "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
-            },
-            {
-                "churn_risk_score": 0.30473128609035327,
-                "empathy_score": -0.006027885105298913,
-                "escalation_level": 0.2191162109375,
-                "escalation_risks": 0.26229372891512787,
-                "id": "u10",
+                "churn_risk_score": 0.12100915063785601,
+                "empathy_score": 0.135505000247231,
+                "escalation_level": 0.09356679795663568,
+                "escalation_risks": 0.09927308714234984,
+                "id": "u8",
                 "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                 "speaker": "Customer",
                 "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+            },
+            {
+                "source": "u8",
+                "target": "a1",
+                "explanation": "The agent reassures the customer about cancellation, which is a direct response to their concerns."
+            },
+            {
+                "churn_risk_score": 0.19958031695822012,
+                "empathy_score": 0.5952551468558933,
+                "escalation_level": 0.1554686504861583,
+                "escalation_risks": 0.18742138406504755,
+                "id": "a1",
+                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
+                "speaker": "Agent",
+                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
             }
         ],
         "cumulative_probability": 1.0
@@ -32,10 +32,10 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.1816156333852037,
-                "empathy_score": 0.5689281927090939,
-                "escalation_level": 0.13918682347948305,
-                "escalation_risks": 0.1501878405374194,
+                "churn_risk_score": 0.09497236247321957,
+                "empathy_score": 0.5286986438940603,
+                "escalation_level": 0.08336359840194667,
+                "escalation_risks": 0.08415499805698734,
                 "id": "a0",
                 "intents_emotions": "Policy Explanation - Neutral/Informative",
                 "speaker": "Agent",
@@ -43,18 +43,18 @@
             },
             {
                 "source": "a0",
-                "target": "u10",
-                "explanation": "The agent's explanation of the policy led to a cancellation inquiry."
+                "target": "a1",
+                "explanation": "The agent reassures the customer about cancellation, which is a direct response to their concerns."
             },
             {
-                "churn_risk_score": 0.30473128609035327,
-                "empathy_score": -0.006027885105298913,
-                "escalation_level": 0.2191162109375,
-                "escalation_risks": 0.26229372891512787,
-                "id": "u10",
-                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
-                "speaker": "Customer",
-                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+                "churn_risk_score": 0.19958031695822012,
+                "empathy_score": 0.5952551468558933,
+                "escalation_level": 0.1554686504861583,
+                "escalation_risks": 0.18742138406504755,
+                "id": "a1",
+                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
+                "speaker": "Agent",
+                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
             }
         ],
         "cumulative_probability": 1.0
@@ -62,44 +62,29 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.041115654839409724,
-                "empathy_score": 0.012638939751519097,
-                "escalation_level": 0.050793965657552086,
-                "escalation_risks": 0.035769294289981615,
-                "id": "u39",
-                "intents_emotions": "Confirmation - Neutral",
+                "churn_risk_score": 0.2188173130580357,
+                "empathy_score": 0.12522792271205357,
+                "escalation_level": 0.23909005301339287,
+                "escalation_risks": 0.21237655738731484,
+                "id": "u2",
+                "intents_emotions": "Churn Threat - Uncertain/Considering Cancellation",
                 "speaker": "Customer",
-                "utterance": "sure it is bk 4578209"
+                "utterance": "i see but i am still not sure it is worth it i might just cancel altogether"
             },
             {
-                "source": "u39",
-                "target": "a9",
-                "explanation": "SOURCE's confirmation led to TARGET's assistance due to need for clarification on cancellation process"
+                "source": "u2",
+                "target": "a1",
+                "explanation": "The customer threatens to cancel, and the agent reassures them about cancellation."
             },
             {
-                "churn_risk_score": -0.006738935198102679,
-                "empathy_score": 0.7802734375,
-                "escalation_level": 0.027165004185267856,
-                "escalation_risks": 0.016124861580984935,
-                "id": "a9",
-                "intents_emotions": "Assistance - Helpful/Neutral",
+                "churn_risk_score": 0.19958031695822012,
+                "empathy_score": 0.5952551468558933,
+                "escalation_level": 0.1554686504861583,
+                "escalation_risks": 0.18742138406504755,
+                "id": "a1",
+                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
                 "speaker": "Agent",
-                "utterance": "i can definitely help you with that jack can i get your booking I would first please"
-            },
-            {
-                "source": "a9",
-                "target": "u10",
-                "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
-            },
-            {
-                "churn_risk_score": 0.30473128609035327,
-                "empathy_score": -0.006027885105298913,
-                "escalation_level": 0.2191162109375,
-                "escalation_risks": 0.26229372891512787,
-                "id": "u10",
-                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
-                "speaker": "Customer",
-                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
             }
         ],
         "cumulative_probability": 1.0
@@ -107,44 +92,29 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.527610922759434,
-                "empathy_score": 0.0010486818709463444,
-                "escalation_level": 0.3993219339622642,
-                "escalation_risks": 0.46541883680555557,
-                "id": "u16",
-                "intents_emotions": "Cancellation Inquiry - Frustrated/Concerned",
+                "churn_risk_score": 0.3475494384765625,
+                "empathy_score": 0.033240954081217446,
+                "escalation_level": 0.2740637461344401,
+                "escalation_risks": 0.30945148873836437,
+                "id": "u6",
+                "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
                 "speaker": "Customer",
-                "utterance": "yes please i just find it frustrating because i did not realize the penalties involved with cancelli..."
+                "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
             },
             {
-                "source": "u16",
-                "target": "a9",
-                "explanation": "SOURCE's cancellation inquiry led to TARGET's assistance due to need for clarification on Premier Resorts' terms"
+                "source": "u6",
+                "target": "a1",
+                "explanation": "The agent reassures the customer about cancellation, which is related to their concerns and intention to switch to Marriott."
             },
             {
-                "churn_risk_score": -0.006738935198102679,
-                "empathy_score": 0.7802734375,
-                "escalation_level": 0.027165004185267856,
-                "escalation_risks": 0.016124861580984935,
-                "id": "a9",
-                "intents_emotions": "Assistance - Helpful/Neutral",
+                "churn_risk_score": 0.19958031695822012,
+                "empathy_score": 0.5952551468558933,
+                "escalation_level": 0.1554686504861583,
+                "escalation_risks": 0.18742138406504755,
+                "id": "a1",
+                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
                 "speaker": "Agent",
-                "utterance": "i can definitely help you with that jack can i get your booking I would first please"
-            },
-            {
-                "source": "a9",
-                "target": "u10",
-                "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
-            },
-            {
-                "churn_risk_score": 0.30473128609035327,
-                "empathy_score": -0.006027885105298913,
-                "escalation_level": 0.2191162109375,
-                "escalation_risks": 0.26229372891512787,
-                "id": "u10",
-                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
-                "speaker": "Customer",
-                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
             }
         ],
         "cumulative_probability": 1.0
@@ -152,44 +122,29 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.43359375,
-                "empathy_score": 0.0283203125,
-                "escalation_level": 0.392578125,
-                "escalation_risks": 0.427734375,
-                "id": "u30",
-                "intents_emotions": "Consideration - Neutral/Considering",
+                "churn_risk_score": 0.08878580729166667,
+                "empathy_score": 0.16267903645833334,
+                "escalation_level": 0.12095133463541667,
+                "escalation_risks": 0.0992889404296875,
+                "id": "u9",
+                "intents_emotions": "Confirmation/Agreement - Neutral/Cooperative",
                 "speaker": "Customer",
-                "utterance": "what if i yeah i might be interested but i really need to think about it you know if i decide to sta..."
+                "utterance": "yeah that might help clear things up i can review it later"
             },
             {
-                "source": "u30",
-                "target": "a9",
-                "explanation": "The customer's consideration led to assistance from the agent."
+                "source": "u9",
+                "target": "a1",
+                "explanation": "The agent's reassurance and explanation of the policy led to a positive response from the customer, who expressed gratitude for the help."
             },
             {
-                "churn_risk_score": -0.006738935198102679,
-                "empathy_score": 0.7802734375,
-                "escalation_level": 0.027165004185267856,
-                "escalation_risks": 0.016124861580984935,
-                "id": "a9",
-                "intents_emotions": "Assistance - Helpful/Neutral",
+                "churn_risk_score": 0.19958031695822012,
+                "empathy_score": 0.5952551468558933,
+                "escalation_level": 0.1554686504861583,
+                "escalation_risks": 0.18742138406504755,
+                "id": "a1",
+                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
                 "speaker": "Agent",
-                "utterance": "i can definitely help you with that jack can i get your booking I would first please"
-            },
-            {
-                "source": "a9",
-                "target": "u10",
-                "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
-            },
-            {
-                "churn_risk_score": 0.30473128609035327,
-                "empathy_score": -0.006027885105298913,
-                "escalation_level": 0.2191162109375,
-                "escalation_risks": 0.26229372891512787,
-                "id": "u10",
-                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
-                "speaker": "Customer",
-                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
             }
         ],
         "cumulative_probability": 1.0

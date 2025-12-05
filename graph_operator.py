@@ -378,8 +378,28 @@ class MemgraphRAG:
         return "".join(narrative_parts)
 
 
-def get_ans(query_text, UNEMBEDDED_JSON_FILE=os.path.join(CURR_DIR, "output", "graph_with_metadata.json")):
+# REPLACE the existing get_ans function with this updated version:
 
+def get_ans(query_text, follow_up=0, UNEMBEDDED_JSON_FILE=os.path.join(CURR_DIR, "output", "graph_with_metadata.json")):
+
+    # --- 1. HISTORY MANAGEMENT ---
+    HISTORY_FILE = "conversation_history.json"
+    conversation_history = []
+
+    if follow_up == 0:
+        # Reset history for new query
+        conversation_history = []
+    elif os.path.exists(HISTORY_FILE):
+        try:
+            with open(HISTORY_FILE, 'r', encoding='utf-8') as hf:
+                conversation_history = json.load(hf)
+        except json.JSONDecodeError:
+            conversation_history = []
+            
+    # Append current user query
+    conversation_history.append({"role": "user", "content": query_text})
+
+    # --- 2. EXISTING GRAPH LOGIC (UNCHANGED) ---
     emb = embedder.embed_sentence(query_text)
     
     if os.path.exists(UNEMBEDDED_JSON_FILE):
@@ -415,7 +435,6 @@ def get_ans(query_text, UNEMBEDDED_JSON_FILE=os.path.join(CURR_DIR, "output", "g
 
     with open ("causal_chains.json", "w", encoding='utf-8') as f:
         json.dump(chains, f, indent=4)
-        print(f"Saved causal chains to 'causal_chains.json'")
     
     formatted_chains_text = []
     for i, chain_wrapper in enumerate(chains):
@@ -424,6 +443,18 @@ def get_ans(query_text, UNEMBEDDED_JSON_FILE=os.path.join(CURR_DIR, "output", "g
         formatted_chains_text.append(f"### PATHWAY {i+1} (Confidence: {score:.2f})\n{path_str}")
     
     full_context_string = "\n\n".join(formatted_chains_text)
-    ans = db.llm.answer_query_causal(query_text, full_context_string)
+    
+    # --- 3. UPDATED LLM CALL & HISTORY SAVE ---
+    if follow_up > 0:
+        print("Generating Answer (Follow-up Context)...")
+        ans = db.llm.answer_followup_causal(query_text, full_context_string, conversation_history)
+    else:
+        print("Generating Answer (Fresh Context)...")
+        ans = db.llm.answer_query_causal(query_text, full_context_string)
+    
+    # Save Assistant Response to History
+    conversation_history.append({"role": "assistant", "content": ans})
+    with open(HISTORY_FILE, 'w', encoding='utf-8') as hf:
+        json.dump(conversation_history, hf, indent=4)
     
     return ans, db

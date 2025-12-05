@@ -507,7 +507,7 @@ class GraphGenerator:
         query: str,
         model_name: str = "sergioburdisso/dialog2flow-joint-bert-base",
         distance_threshold: float = 0.5,
-        export_formats: list = ['json', 'graphml', 'html'],
+        export_formats: list = ['json', 'graphml'],
         labels_enabled: bool = False,
         labels_model: str = 'llama3:8b',
         clean: bool = True,

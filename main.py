@@ -19,11 +19,11 @@ LANDING_FILE = "landing_points.json"
 # --- Input Data List ---
 queries_to_run = [
     {
-        "query": "Why are customers cancelling so many bookings?",
+        "query": "How significantly does this policy confusion impact the churn risk scores?",
     }
 ]
 
-follow_up = 0
+follow_up = 1
 distance_threshold = 0.6
 topK = 20
 
@@ -78,7 +78,7 @@ for i, item in enumerate(queries_to_run):
         )
         
         # 2. Get Answer
-        ans, _ = graph_operator.get_ans(curr_query)
+        ans, _ = graph_operator.get_ans(curr_query,follow_up=follow_up)
         print(f"Answer generated.")
 
         # 3. Read side-effect files (Causal Chains and Landing Points)

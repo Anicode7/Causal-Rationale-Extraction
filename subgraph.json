@@ -1,325 +1,840 @@
 [
     {
-        "landing_node_id": "u10",
-        "similarity_score": 0.4922518730163574,
-        "landing_node_text": "hi this is jack nguyen i am looking to cancel my booking in las vegas",
+        "landing_node_id": "a28",
+        "similarity_score": 0.41733741760253906,
+        "landing_node_text": "that is a great question generally we find that retention discussions can lead to maintaining about ...",
         "causalgraph_nodes": [
             {
-                "churn_risk_score": 0.30473128609035327,
-                "empathy_score": -0.006027885105298913,
-                "escalation_level": 0.2191162109375,
-                "escalation_risks": 0.26229372891512787,
-                "id": "u10",
-                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
-                "speaker": "Customer",
-                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
-            },
-            {
-                "churn_risk_score": 0.046160888671875,
-                "empathy_score": 0.6500434027777777,
-                "escalation_level": 0.035638427734375,
-                "escalation_risks": 0.04550277355105378,
-                "id": "a6",
-                "intents_emotions": "Greeting - Neutral/Helpful",
+                "churn_risk_score": 0.092376708984375,
+                "empathy_score": 0.3927001953125,
+                "escalation_level": 0.0633544921875,
+                "escalation_risks": 0.0657958984375,
+                "id": "a28",
+                "intents_emotions": "Retention Advice - Informative/Neutral",
                 "speaker": "Agent",
-                "utterance": "thank you for calling premier resorts this is ethan clark how can i help you today"
+                "utterance": "that is a great question generally we find that retention discussions can lead to maintaining about ..."
             },
             {
-                "churn_risk_score": 0.45334551411290325,
-                "empathy_score": -0.0026680731004284273,
-                "escalation_level": 0.3698336693548387,
-                "escalation_risks": 0.42458417338709675,
+                "churn_risk_score": 0.2188173130580357,
+                "empathy_score": 0.12522792271205357,
+                "escalation_level": 0.23909005301339287,
+                "escalation_risks": 0.21237655738731484,
                 "id": "u2",
-                "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
-                "speaker": "Customer",
-                "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
-            },
-            {
-                "churn_risk_score": 0.527610922759434,
-                "empathy_score": 0.0010486818709463444,
-                "escalation_level": 0.3993219339622642,
-                "escalation_risks": 0.46541883680555557,
-                "id": "u16",
-                "intents_emotions": "Cancellation Inquiry - Frustrated/Concerned",
-                "speaker": "Customer",
-                "utterance": "yes please i just find it frustrating because i did not realize the penalties involved with cancelli..."
-            },
-            {
-                "churn_risk_score": 0.31944255587420883,
-                "empathy_score": 0.12132282498516614,
-                "escalation_level": 0.31989684285996833,
-                "escalation_risks": 0.3159141540527344,
-                "id": "u9",
                 "intents_emotions": "Churn Threat - Uncertain/Considering Cancellation",
                 "speaker": "Customer",
                 "utterance": "i see but i am still not sure it is worth it i might just cancel altogether"
             },
             {
-                "churn_risk_score": 0.0021453857421875,
-                "empathy_score": 0.3220458984375,
-                "escalation_level": -0.01163330078125,
-                "escalation_risks": -0.006797409057617188,
-                "id": "u25",
-                "intents_emotions": "Farewell - Friendly/Polite",
-                "speaker": "Customer",
-                "utterance": "you too bye"
-            },
-            {
-                "churn_risk_score": 0.3089087701612903,
-                "empathy_score": 0.07931321667086694,
-                "escalation_level": 0.3249354208669355,
-                "escalation_risks": 0.3148993130387931,
-                "id": "u23",
-                "intents_emotions": "Billing Concern - Surprised/Seeking Alternatives",
-                "speaker": "Customer",
-                "utterance": "that is quite a bit i did not realize that is there any way to avoid those charges"
-            },
-            {
-                "churn_risk_score": 0.32728794642857145,
-                "empathy_score": 0.03226579938616071,
-                "escalation_level": 0.3857421875,
-                "escalation_risks": 0.3662109375,
-                "id": "u14",
-                "intents_emotions": "Complaint - Frustrated/Concerned about rate",
-                "speaker": "Customer",
-                "utterance": "fifty percent that is just frustrating i mean how does that compare to other hotels"
-            },
-            {
-                "churn_risk_score": 0.480078125,
-                "empathy_score": -0.01788330078125,
-                "escalation_level": 0.541796875,
-                "escalation_risks": 0.543359375,
-                "id": "u13",
-                "intents_emotions": "Complaint - Disappointed/Frustrated",
-                "speaker": "Customer",
-                "utterance": "no actually i have stayed before but this time it is just well disappointing"
-            },
-            {
-                "churn_risk_score": 0.1884765625,
-                "empathy_score": 0.05322265625,
-                "escalation_level": 0.1357421875,
-                "escalation_risks": 0.16796875,
-                "id": "u26",
-                "intents_emotions": "Product/Service Inquiry - Neutral/Curious",
-                "speaker": "Customer",
-                "utterance": "i found you guys online just searching for options"
-            },
-            {
-                "churn_risk_score": 0.03802490234375,
-                "empathy_score": 0.2335205078125,
-                "escalation_level": 0.05712890625,
-                "escalation_risks": 0.03057861328125,
-                "id": "u11",
-                "intents_emotions": "Confirmation - Neutral/Positive",
-                "speaker": "Customer",
-                "utterance": "fine just do it"
-            },
-            {
-                "churn_risk_score": -0.006738935198102679,
-                "empathy_score": 0.7802734375,
-                "escalation_level": 0.027165004185267856,
-                "escalation_risks": 0.016124861580984935,
-                "id": "a9",
+                "churn_risk_score": 0.0003938802083333333,
+                "empathy_score": 0.7635807291666666,
+                "escalation_level": 0.02930633544921875,
+                "escalation_risks": 0.010382334391276041,
+                "id": "a2",
                 "intents_emotions": "Assistance - Helpful/Neutral",
                 "speaker": "Agent",
                 "utterance": "i can definitely help you with that jack can i get your booking I would first please"
             },
             {
-                "churn_risk_score": 0.041115654839409724,
-                "empathy_score": 0.012638939751519097,
-                "escalation_level": 0.050793965657552086,
-                "escalation_risks": 0.035769294289981615,
-                "id": "u39",
-                "intents_emotions": "Confirmation - Neutral",
-                "speaker": "Customer",
-                "utterance": "sure it is bk 4578209"
+                "churn_risk_score": 0.12583269391741073,
+                "empathy_score": 0.6826171875,
+                "escalation_level": 0.09153965541294642,
+                "escalation_risks": 0.10584707821116728,
+                "id": "a5",
+                "intents_emotions": "Cancellation Assistance - Polite/Neutral",
+                "speaker": "Agent",
+                "utterance": "thank you just a moment while i pull that up alright i see your deluxe room booking can you share wh..."
             },
             {
-                "churn_risk_score": 0.43359375,
-                "empathy_score": 0.0283203125,
-                "escalation_level": 0.392578125,
-                "escalation_risks": 0.427734375,
-                "id": "u30",
-                "intents_emotions": "Consideration - Neutral/Considering",
-                "speaker": "Customer",
-                "utterance": "what if i yeah i might be interested but i really need to think about it you know if i decide to sta..."
-            },
-            {
-                "churn_risk_score": 0.09033203125,
-                "empathy_score": 0.02764892578125,
-                "escalation_level": 0.075927734375,
-                "escalation_risks": 0.059326171875,
-                "id": "u1",
-                "intents_emotions": "Policy Inquiry - Confused/Uncertain",
-                "speaker": "Customer",
-                "utterance": "i have heard of it but i thought it only applied to first time guests"
-            },
-            {
-                "churn_risk_score": 0.1816156333852037,
-                "empathy_score": 0.5689281927090939,
-                "escalation_level": 0.13918682347948305,
-                "escalation_risks": 0.1501878405374194,
+                "churn_risk_score": 0.09497236247321957,
+                "empathy_score": 0.5286986438940603,
+                "escalation_level": 0.08336359840194667,
+                "escalation_risks": 0.08415499805698734,
                 "id": "a0",
                 "intents_emotions": "Policy Explanation - Neutral/Informative",
                 "speaker": "Agent",
                 "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
             },
             {
-                "churn_risk_score": 0.04974365234375,
-                "empathy_score": 0.0252532958984375,
-                "escalation_level": 0.04931640625,
-                "escalation_risks": 0.030002593994140625,
+                "churn_risk_score": 0.19958031695822012,
+                "empathy_score": 0.5952551468558933,
+                "escalation_level": 0.1554686504861583,
+                "escalation_risks": 0.18742138406504755,
+                "id": "a1",
+                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
+                "speaker": "Agent",
+                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
+            },
+            {
+                "churn_risk_score": 0.166748046875,
+                "empathy_score": 0.4833984375,
+                "escalation_level": 0.0736083984375,
+                "escalation_risks": 0.11328125,
+                "id": "a13",
+                "intents_emotions": "Cancellation Policy - Positive/Informative",
+                "speaker": "Agent",
+                "utterance": "yes if you cancel within the day it would be one night's charge if you keep it is both a great rate ..."
+            },
+            {
+                "churn_risk_score": 0.06221771240234375,
+                "empathy_score": 0.390380859375,
+                "escalation_level": 0.0307769775390625,
+                "escalation_risks": 0.0426177978515625,
+                "id": "a9",
+                "intents_emotions": "Booking Confirmation - Neutral/Helpful",
+                "speaker": "Agent",
+                "utterance": "got it bk 4782926 i see here that your booking is for a deluxe room is that right"
+            },
+            {
+                "churn_risk_score": 0.026896158854166668,
+                "empathy_score": 0.5618896484375,
+                "escalation_level": 0.045206705729166664,
+                "escalation_risks": 0.016754150390625,
+                "id": "a4",
+                "intents_emotions": "Empathy - Helpful/Supportive",
+                "speaker": "Agent",
+                "utterance": "right i can see why that would be frustrating let me check if there are any alternatives that could ..."
+            },
+            {
+                "churn_risk_score": 0.022900390625,
+                "empathy_score": 0.8765625,
+                "escalation_level": 0.060498046875,
+                "escalation_risks": 0.01500244140625,
+                "id": "a11",
+                "intents_emotions": "Apology - Empathetic",
+                "speaker": "Agent",
+                "utterance": "i get that and i am really sorry to hear you feel that way"
+            },
+            {
+                "churn_risk_score": 0.07387601412259616,
+                "empathy_score": 0.3915264423076923,
+                "escalation_level": 0.04915208082932692,
+                "escalation_risks": 0.046317760760967545,
+                "id": "a30",
+                "intents_emotions": "Pricing Inquiry - Neutral/Helpful",
+                "speaker": "Agent",
+                "utterance": "i understand henry marriott does have competitive rates did you have a specific aspect of their poli..."
+            },
+            {
+                "churn_risk_score": 0.07316237229567307,
+                "empathy_score": 0.37158203125,
+                "escalation_level": 0.066070556640625,
+                "escalation_risks": 0.07014973958333333,
+                "id": "a6",
+                "intents_emotions": "Coverage Explanation - Neutral/Informative",
+                "speaker": "Agent",
+                "utterance": "right so there are some exclusions you might not be covered for say cosmetic procedures"
+            },
+            {
+                "churn_risk_score": 0.1064453125,
+                "empathy_score": 0.07421875,
+                "escalation_level": 0.08251953125,
+                "escalation_risks": 0.07568359375,
+                "id": "a29",
+                "intents_emotions": "Conversation Record - Confused/Concerned",
+                "speaker": "Agent",
+                "utterance": "i believe we have had about eleven distinct exchanges you know"
+            },
+            {
+                "churn_risk_score": 0.028523763020833332,
+                "empathy_score": 0.5496419270833334,
+                "escalation_level": 0.02606201171875,
+                "escalation_risks": 0.026123046875,
+                "id": "a7",
+                "intents_emotions": "Information Request - Neutral/Helpful",
+                "speaker": "Agent",
+                "utterance": "of course mason what specific details are you looking for regarding your homeowner's policy"
+            },
+            {
+                "churn_risk_score": 0.15587160767627364,
+                "empathy_score": 0.060527897682510504,
+                "escalation_level": 0.1449112451377035,
+                "escalation_risks": 0.13910335964626735,
+                "id": "u24",
+                "intents_emotions": "Complaint - Frustrated/Requesting Improvement",
+                "speaker": "Customer",
+                "utterance": "i know that it is just frustrating you guys should really do better with your policies"
+            },
+            {
+                "churn_risk_score": 0.12100915063785601,
+                "empathy_score": 0.135505000247231,
+                "escalation_level": 0.09356679795663568,
+                "escalation_risks": 0.09927308714234984,
+                "id": "u8",
+                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
+                "speaker": "Customer",
+                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+            },
+            {
+                "churn_risk_score": 0.0294342041015625,
+                "empathy_score": 0.6455078125,
+                "escalation_level": 0.0533447265625,
+                "escalation_risks": 0.0379486083984375,
+                "id": "a14",
+                "intents_emotions": "Billing Information - Helpful/Neutral",
+                "speaker": "Agent",
+                "utterance": "right i can give you the specifics on those fees right now"
+            },
+            {
+                "churn_risk_score": -0.007415771484375,
+                "empathy_score": 0.337890625,
+                "escalation_level": 0.032470703125,
+                "escalation_risks": 0.01116943359375,
+                "id": "a17",
+                "intents_emotions": "Clarification Request - Neutral/Curious",
+                "speaker": "Agent",
+                "utterance": "what specifically would you to clarify"
+            },
+            {
+                "churn_risk_score": 0.18883260091145834,
+                "empathy_score": 0.031724039713541666,
+                "escalation_level": 0.212890625,
+                "escalation_risks": 0.1874176025390625,
                 "id": "u5",
+                "intents_emotions": "Decision Delay - Hesitant/Reserved",
+                "speaker": "Customer",
+                "utterance": "that is tempting but i still think i need time to weigh my options"
+            },
+            {
+                "churn_risk_score": 0.23313522338867188,
+                "empathy_score": 0.08115768432617188,
+                "escalation_level": 0.270538330078125,
+                "escalation_risks": 0.24859619140625,
+                "id": "u14",
+                "intents_emotions": "Complaint - Frustrated/Concerned about rate",
+                "speaker": "Customer",
+                "utterance": "fifty percent that is just frustrating i mean how does that compare to other hotels"
+            }
+        ],
+        "causalgraph_edges": [
+            {
+                "source": "u8",
+                "target": "a2"
+            },
+            {
+                "source": "u8",
+                "target": "a0"
+            },
+            {
+                "source": "u8",
+                "target": "u8"
+            },
+            {
+                "source": "u8",
+                "target": "u24"
+            },
+            {
+                "source": "u8",
+                "target": "a11"
+            },
+            {
+                "source": "u8",
+                "target": "a1"
+            },
+            {
+                "source": "u8",
+                "target": "a7"
+            },
+            {
+                "source": "u8",
+                "target": "a6"
+            },
+            {
+                "source": "a2",
+                "target": "u2"
+            },
+            {
+                "source": "a2",
+                "target": "u8"
+            },
+            {
+                "source": "a2",
+                "target": "u24"
+            },
+            {
+                "source": "a2",
+                "target": "a5"
+            },
+            {
+                "source": "a2",
+                "target": "u14"
+            },
+            {
+                "source": "a5",
+                "target": "u2"
+            },
+            {
+                "source": "a5",
+                "target": "u24"
+            },
+            {
+                "source": "a0",
+                "target": "u2"
+            },
+            {
+                "source": "a0",
+                "target": "u24"
+            },
+            {
+                "source": "a0",
+                "target": "u5"
+            },
+            {
+                "source": "a0",
+                "target": "u14"
+            },
+            {
+                "source": "a0",
+                "target": "u8"
+            },
+            {
+                "source": "a0",
+                "target": "a1"
+            },
+            {
+                "source": "a0",
+                "target": "a30"
+            },
+            {
+                "source": "u2",
+                "target": "a1"
+            },
+            {
+                "source": "u2",
+                "target": "a5"
+            },
+            {
+                "source": "u2",
+                "target": "a0"
+            },
+            {
+                "source": "u2",
+                "target": "a28"
+            },
+            {
+                "source": "u2",
+                "target": "a13"
+            },
+            {
+                "source": "u2",
+                "target": "a2"
+            },
+            {
+                "source": "u2",
+                "target": "a4"
+            },
+            {
+                "source": "u2",
+                "target": "a6"
+            },
+            {
+                "source": "u2",
+                "target": "a30"
+            },
+            {
+                "source": "u2",
+                "target": "a11"
+            },
+            {
+                "source": "u2",
+                "target": "a7"
+            },
+            {
+                "source": "a1",
+                "target": "u24"
+            },
+            {
+                "source": "a1",
+                "target": "u2"
+            },
+            {
+                "source": "a1",
+                "target": "a0"
+            },
+            {
+                "source": "a1",
+                "target": "u8"
+            },
+            {
+                "source": "u24",
+                "target": "a0"
+            },
+            {
+                "source": "u24",
+                "target": "a28"
+            },
+            {
+                "source": "u24",
+                "target": "a14"
+            },
+            {
+                "source": "u24",
+                "target": "a30"
+            },
+            {
+                "source": "u24",
+                "target": "u8"
+            },
+            {
+                "source": "u24",
+                "target": "a6"
+            },
+            {
+                "source": "u24",
+                "target": "a1"
+            },
+            {
+                "source": "u24",
+                "target": "a2"
+            },
+            {
+                "source": "u24",
+                "target": "a17"
+            },
+            {
+                "source": "u24",
+                "target": "a9"
+            },
+            {
+                "source": "a28",
+                "target": "u2"
+            },
+            {
+                "source": "a28",
+                "target": "u14"
+            },
+            {
+                "source": "a28",
+                "target": "u24"
+            },
+            {
+                "source": "u5",
+                "target": "a1"
+            },
+            {
+                "source": "u5",
+                "target": "a0"
+            },
+            {
+                "source": "u5",
+                "target": "a28"
+            },
+            {
+                "source": "u5",
+                "target": "a29"
+            },
+            {
+                "source": "a13",
+                "target": "u2"
+            },
+            {
+                "source": "u14",
+                "target": "a5"
+            },
+            {
+                "source": "u14",
+                "target": "a4"
+            },
+            {
+                "source": "u14",
+                "target": "a14"
+            },
+            {
+                "source": "u14",
+                "target": "a0"
+            },
+            {
+                "source": "u14",
+                "target": "a28"
+            },
+            {
+                "source": "a9",
+                "target": "u2"
+            },
+            {
+                "source": "a4",
+                "target": "u2"
+            },
+            {
+                "source": "a14",
+                "target": "u24"
+            },
+            {
+                "source": "a14",
+                "target": "u5"
+            },
+            {
+                "source": "a11",
+                "target": "u2"
+            },
+            {
+                "source": "a30",
+                "target": "u2"
+            },
+            {
+                "source": "a30",
+                "target": "u24"
+            },
+            {
+                "source": "a30",
+                "target": "u8"
+            },
+            {
+                "source": "a6",
+                "target": "u24"
+            },
+            {
+                "source": "a6",
+                "target": "u2"
+            },
+            {
+                "source": "a29",
+                "target": "u2"
+            },
+            {
+                "source": "a7",
+                "target": "u24"
+            },
+            {
+                "source": "a7",
+                "target": "u2"
+            },
+            {
+                "source": "a17",
+                "target": "u24"
+            }
+        ]
+    },
+    {
+        "landing_node_id": "a1",
+        "similarity_score": 0.3299262523651123,
+        "landing_node_text": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc...",
+        "causalgraph_nodes": [
+            {
+                "churn_risk_score": 0.19958031695822012,
+                "empathy_score": 0.5952551468558933,
+                "escalation_level": 0.1554686504861583,
+                "escalation_risks": 0.18742138406504755,
+                "id": "a1",
+                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
+                "speaker": "Agent",
+                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
+            },
+            {
+                "churn_risk_score": 0.12100915063785601,
+                "empathy_score": 0.135505000247231,
+                "escalation_level": 0.09356679795663568,
+                "escalation_risks": 0.09927308714234984,
+                "id": "u8",
+                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
+                "speaker": "Customer",
+                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+            },
+            {
+                "churn_risk_score": -0.03714134579613095,
+                "empathy_score": 0.6051897321428571,
+                "escalation_level": -0.023232596261160716,
+                "escalation_risks": -0.01426853277744391,
+                "id": "a3",
+                "intents_emotions": "Greeting - Neutral/Helpful",
+                "speaker": "Agent",
+                "utterance": "thank you for calling premier resorts this is ethan clark how can i help you today"
+            },
+            {
+                "churn_risk_score": 0.0003938802083333333,
+                "empathy_score": 0.7635807291666666,
+                "escalation_level": 0.02930633544921875,
+                "escalation_risks": 0.010382334391276041,
+                "id": "a2",
+                "intents_emotions": "Assistance - Helpful/Neutral",
+                "speaker": "Agent",
+                "utterance": "i can definitely help you with that jack can i get your booking I would first please"
+            },
+            {
+                "churn_risk_score": 0.09497236247321957,
+                "empathy_score": 0.5286986438940603,
+                "escalation_level": 0.08336359840194667,
+                "escalation_risks": 0.08415499805698734,
+                "id": "a0",
+                "intents_emotions": "Policy Explanation - Neutral/Informative",
+                "speaker": "Agent",
+                "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
+            },
+            {
+                "churn_risk_score": 0.15587160767627364,
+                "empathy_score": 0.060527897682510504,
+                "escalation_level": 0.1449112451377035,
+                "escalation_risks": 0.13910335964626735,
+                "id": "u24",
+                "intents_emotions": "Complaint - Frustrated/Requesting Improvement",
+                "speaker": "Customer",
+                "utterance": "i know that it is just frustrating you guys should really do better with your policies"
+            },
+            {
+                "churn_risk_score": 0.07387601412259616,
+                "empathy_score": 0.3915264423076923,
+                "escalation_level": 0.04915208082932692,
+                "escalation_risks": 0.046317760760967545,
+                "id": "a30",
+                "intents_emotions": "Pricing Inquiry - Neutral/Helpful",
+                "speaker": "Agent",
+                "utterance": "i understand henry marriott does have competitive rates did you have a specific aspect of their poli..."
+            },
+            {
+                "churn_risk_score": -0.033447265625,
+                "empathy_score": 0.8125,
+                "escalation_level": 0.003631591796875,
+                "escalation_risks": -0.0177001953125,
+                "id": "u51",
+                "intents_emotions": "Assistance Offer - Helpful/Neutral",
+                "speaker": "Customer",
+                "utterance": "absolutely i can help with that can you tell me specifically what you are looking to understand"
+            },
+            {
+                "churn_risk_score": 0.03997955322265625,
+                "empathy_score": 0.011298751831054688,
+                "escalation_level": 0.04804916381835937,
+                "escalation_risks": 0.03322159616570724,
+                "id": "u25",
+                "intents_emotions": "Confirmation - Neutral",
+                "speaker": "Customer",
+                "utterance": "sure it is bk 4578209"
+            },
+            {
+                "churn_risk_score": 0.0048980712890625,
+                "empathy_score": 0.076171875,
+                "escalation_level": 0.007358551025390625,
+                "escalation_risks": -0.0048122406005859375,
+                "id": "a10",
+                "intents_emotions": "Confirmation - Neutral",
+                "speaker": "Agent",
+                "utterance": "yes"
+            },
+            {
+                "churn_risk_score": -0.03607177734375,
+                "empathy_score": 0.7861328125,
+                "escalation_level": 0.008216222127278646,
+                "escalation_risks": -0.0037584304809570312,
+                "id": "a18",
+                "intents_emotions": "Information Request - Polite/Neutral",
+                "speaker": "Agent",
+                "utterance": "certainly carter could you please provide me with your booking I would i mean your booking id"
+            },
+            {
+                "churn_risk_score": 0.3475494384765625,
+                "empathy_score": 0.033240954081217446,
+                "escalation_level": 0.2740637461344401,
+                "escalation_risks": 0.30945148873836437,
+                "id": "u6",
+                "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
+                "speaker": "Customer",
+                "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
+            },
+            {
+                "churn_risk_score": 0.12583269391741073,
+                "empathy_score": 0.6826171875,
+                "escalation_level": 0.09153965541294642,
+                "escalation_risks": 0.10584707821116728,
+                "id": "a5",
+                "intents_emotions": "Cancellation Assistance - Polite/Neutral",
+                "speaker": "Agent",
+                "utterance": "thank you just a moment while i pull that up alright i see your deluxe room booking can you share wh..."
+            },
+            {
+                "churn_risk_score": 0.026896158854166668,
+                "empathy_score": 0.5618896484375,
+                "escalation_level": 0.045206705729166664,
+                "escalation_risks": 0.016754150390625,
+                "id": "a4",
+                "intents_emotions": "Empathy - Helpful/Supportive",
+                "speaker": "Agent",
+                "utterance": "right i can see why that would be frustrating let me check if there are any alternatives that could ..."
+            },
+            {
+                "churn_risk_score": 0.07316237229567307,
+                "empathy_score": 0.37158203125,
+                "escalation_level": 0.066070556640625,
+                "escalation_risks": 0.07014973958333333,
+                "id": "a6",
+                "intents_emotions": "Coverage Explanation - Neutral/Informative",
+                "speaker": "Agent",
+                "utterance": "right so there are some exclusions you might not be covered for say cosmetic procedures"
+            },
+            {
+                "churn_risk_score": 0.49267578125,
+                "empathy_score": 0.037723541259765625,
+                "escalation_level": 0.428955078125,
+                "escalation_risks": 0.4837646484375,
+                "id": "u10",
+                "intents_emotions": "Cancellation Inquiry - Frustrated/Concerned",
+                "speaker": "Customer",
+                "utterance": "yes please i just find it frustrating because i did not realize the penalties involved with cancelli..."
+            },
+            {
+                "churn_risk_score": 0.049235026041666664,
+                "empathy_score": 0.026957194010416668,
+                "escalation_level": 0.052408854166666664,
+                "escalation_risks": 0.031010945638020832,
+                "id": "u48",
                 "intents_emotions": "Clarification Request - Neutral/Curious",
                 "speaker": "Customer",
                 "utterance": "like what"
             },
             {
-                "churn_risk_score": -0.024603949652777776,
-                "empathy_score": 0.6028103298611112,
-                "escalation_level": 0.016171773274739582,
-                "escalation_risks": -0.001514010959201389,
-                "id": "a1",
-                "intents_emotions": "Confirmation/Assistance - Neutral/Helpful",
-                "speaker": "Agent",
-                "utterance": "you will receive an email confirmation shortly with all the details just to confirm is there anythin..."
+                "churn_risk_score": 0.2188173130580357,
+                "empathy_score": 0.12522792271205357,
+                "escalation_level": 0.23909005301339287,
+                "escalation_risks": 0.21237655738731484,
+                "id": "u2",
+                "intents_emotions": "Churn Threat - Uncertain/Considering Cancellation",
+                "speaker": "Customer",
+                "utterance": "i see but i am still not sure it is worth it i might just cancel altogether"
+            },
+            {
+                "churn_risk_score": 0.40957126847232683,
+                "empathy_score": 0.04369896578501506,
+                "escalation_level": 0.32863525022943335,
+                "escalation_risks": 0.36815494961208767,
+                "id": "u11",
+                "intents_emotions": "Cancellation Intent - Mildly Dissatisfied/Considering Cancellation",
+                "speaker": "Customer",
+                "utterance": "that sounds appealing but i am still leaning toward cancellation"
             },
             {
                 "churn_risk_score": 0.20703125,
                 "empathy_score": 0.04150390625,
                 "escalation_level": 0.2021484375,
                 "escalation_risks": 0.171875,
-                "id": "u41",
+                "id": "u33",
                 "intents_emotions": "Complaint - Frustrated/Hopeful",
                 "speaker": "Customer",
                 "utterance": "no just i hope i do not regret this"
             },
             {
-                "churn_risk_score": 0.14892578125,
-                "empathy_score": 0.159942626953125,
-                "escalation_level": 0.15771484375,
-                "escalation_risks": 0.1412353515625,
-                "id": "u21",
+                "churn_risk_score": 0.146484375,
+                "empathy_score": 0.133544921875,
+                "escalation_level": 0.150390625,
+                "escalation_risks": 0.134375,
+                "id": "u34",
                 "intents_emotions": "Decision Consideration - Neutral/Uncertain",
                 "speaker": "Customer",
                 "utterance": "sure i will think about it"
             },
             {
-                "churn_risk_score": -0.018280029296875,
-                "empathy_score": 0.4979248046875,
-                "escalation_level": -0.0255889892578125,
-                "escalation_risks": -0.027943929036458332,
-                "id": "a3",
-                "intents_emotions": "Closing - Polite/Friendly",
+                "churn_risk_score": 0.002838134765625,
+                "empathy_score": 0.24742431640625,
+                "escalation_level": -0.0256927490234375,
+                "escalation_risks": -0.024547576904296875,
+                "id": "a8",
+                "intents_emotions": "Farewell - Neutral",
                 "speaker": "Agent",
-                "utterance": "that sounds good thank you for your understanding have a great day"
+                "utterance": "bye jack"
             },
             {
-                "churn_risk_score": 0.1080322265625,
-                "empathy_score": 0.174560546875,
-                "escalation_level": 0.14306640625,
+                "churn_risk_score": 0.08251953125,
+                "empathy_score": 0.15266927083333334,
+                "escalation_level": 0.1181640625,
                 "escalation_risks": 0.1175537109375,
-                "id": "u7",
+                "id": "u3",
                 "intents_emotions": "Waiting - Neutral/Polite",
                 "speaker": "Customer",
                 "utterance": "wait"
             },
             {
-                "churn_risk_score": 0.2654622395833333,
-                "empathy_score": 0.03680419921875,
-                "escalation_level": 0.2939453125,
-                "escalation_risks": 0.2776692708333333,
-                "id": "u20",
+                "churn_risk_score": 0.13435872395833334,
+                "empathy_score": 0.3098958333333333,
+                "escalation_level": 0.22298177083333334,
+                "escalation_risks": 0.16731770833333334,
+                "id": "u54",
                 "intents_emotions": "Confusion - Mildly Frustrated/Concerned",
                 "speaker": "Customer",
                 "utterance": "okay then thanks just i am just so confused"
             },
             {
-                "churn_risk_score": 0.218780517578125,
-                "empathy_score": 0.0302734375,
-                "escalation_level": 0.217376708984375,
-                "escalation_risks": 0.206512451171875,
-                "id": "u19",
-                "intents_emotions": "Refund Inquiry - Neutral/Curious",
+                "churn_risk_score": 0.296630859375,
+                "empathy_score": 0.06207275390625,
+                "escalation_level": 0.27001953125,
+                "escalation_risks": 0.28662109375,
+                "id": "u36",
+                "intents_emotions": "Consideration - Neutral/Considering",
                 "speaker": "Customer",
-                "utterance": "yes specifically what are the fees involved and how long does it take for refunds if needed"
+                "utterance": "what if i yeah i might be interested but i really need to think about it you know if i decide to sta..."
             },
             {
-                "churn_risk_score": 0.1016845703125,
-                "empathy_score": 0.06315104166666667,
-                "escalation_level": 0.11149088541666667,
-                "escalation_risks": 0.09676615397135417,
-                "id": "u18",
-                "intents_emotions": "Clarification Request - Neutral/Concerned",
-                "speaker": "Customer",
-                "utterance": "got it so it is not clear cut then"
-            },
-            {
-                "churn_risk_score": 0.388671875,
-                "empathy_score": 0.003849029541015625,
-                "escalation_level": 0.4437255859375,
-                "escalation_risks": 0.432373046875,
-                "id": "u34",
+                "churn_risk_score": 0.18883260091145834,
+                "empathy_score": 0.031724039713541666,
+                "escalation_level": 0.212890625,
+                "escalation_risks": 0.1874176025390625,
+                "id": "u5",
                 "intents_emotions": "Decision Delay - Hesitant/Reserved",
                 "speaker": "Customer",
                 "utterance": "that is tempting but i still think i need time to weigh my options"
             },
             {
-                "churn_risk_score": 0.0960693359375,
-                "empathy_score": 0.2679036458333333,
-                "escalation_level": 0.16593424479166666,
-                "escalation_risks": 0.1292724609375,
-                "id": "u4",
+                "churn_risk_score": 0.08878580729166667,
+                "empathy_score": 0.16267903645833334,
+                "escalation_level": 0.12095133463541667,
+                "escalation_risks": 0.0992889404296875,
+                "id": "u9",
                 "intents_emotions": "Confirmation/Agreement - Neutral/Cooperative",
                 "speaker": "Customer",
                 "utterance": "yeah that might help clear things up i can review it later"
             },
             {
-                "churn_risk_score": 0.283935546875,
-                "empathy_score": 0.018034798758370534,
-                "escalation_level": 0.2529820033482143,
-                "escalation_risks": 0.26405770438058035,
-                "id": "u33",
+                "churn_risk_score": 0.3718804253472222,
+                "empathy_score": -0.00382232666015625,
+                "escalation_level": 0.3217637803819444,
+                "escalation_risks": 0.3455691867404514,
+                "id": "u26",
                 "intents_emotions": "Acknowledgement - Neutral/Considering Switch",
                 "speaker": "Customer",
                 "utterance": "okay i will keep that in mind while i browse other brands"
             },
             {
-                "churn_risk_score": -0.011144638061523438,
-                "empathy_score": 0.7392578125,
-                "escalation_level": 0.0039520263671875,
-                "escalation_risks": -0.00270843505859375,
-                "id": "u47",
+                "churn_risk_score": -0.02091217041015625,
+                "empathy_score": 0.7650669642857143,
+                "escalation_level": -0.000518798828125,
+                "escalation_risks": -0.010493687220982142,
+                "id": "u44",
                 "intents_emotions": "Gratitude - Appreciative",
                 "speaker": "Customer",
                 "utterance": "alright appreciate your help today"
             },
             {
-                "churn_risk_score": 0.333984375,
-                "empathy_score": 0.302734375,
-                "escalation_level": 0.22265625,
-                "escalation_risks": 0.275390625,
-                "id": "u31",
-                "intents_emotions": "Cancellation Inquiry - Neutral/Clarifying",
+                "churn_risk_score": 0.2586146763392857,
+                "empathy_score": 0.09090750558035714,
+                "escalation_level": 0.32216099330357145,
+                "escalation_risks": 0.29896763392857145,
+                "id": "u4",
+                "intents_emotions": "Billing Concern - Surprised/Seeking Alternatives",
                 "speaker": "Customer",
-                "utterance": "thanks for that but just to clarify if i do cancel later it is going to be one nights charge right"
+                "utterance": "that is quite a bit i did not realize that is there any way to avoid those charges"
             },
             {
-                "churn_risk_score": 0.20928955078125,
-                "empathy_score": 0.13800048828125,
-                "escalation_level": 0.1071929931640625,
-                "escalation_risks": 0.1497650146484375,
-                "id": "u0",
-                "intents_emotions": "Information Request - Neutral/Curious",
+                "churn_risk_score": 0.23313522338867188,
+                "empathy_score": 0.08115768432617188,
+                "escalation_level": 0.270538330078125,
+                "escalation_risks": 0.24859619140625,
+                "id": "u14",
+                "intents_emotions": "Complaint - Frustrated/Concerned about rate",
                 "speaker": "Customer",
-                "utterance": "you mean when do i decide to disconnect from something"
+                "utterance": "fifty percent that is just frustrating i mean how does that compare to other hotels"
             },
             {
-                "churn_risk_score": 0.00983428955078125,
-                "empathy_score": 0.09185791015625,
-                "escalation_level": 0.010417938232421875,
-                "escalation_risks": 0.00665283203125,
-                "id": "u42",
+                "churn_risk_score": 0.34981863839285715,
+                "empathy_score": 0.007577078683035714,
+                "escalation_level": 0.4072265625,
+                "escalation_risks": 0.39034598214285715,
+                "id": "u12",
+                "intents_emotions": "Billing Concern - Unsatisfied/Concerned",
+                "speaker": "Customer",
+                "utterance": "i guess i will but i am still not thrilled about those charges"
+            },
+            {
+                "churn_risk_score": 0.028080531529017856,
+                "empathy_score": 0.14826311383928573,
+                "escalation_level": 0.039424351283482144,
+                "escalation_risks": 0.034820556640625,
+                "id": "u53",
                 "intents_emotions": "Confirmation - Neutral/Confirming",
                 "speaker": "Customer",
                 "utterance": "yes that is right"
@@ -329,47 +844,67 @@
                 "empathy_score": -0.07763671875,
                 "escalation_level": 0.62890625,
                 "escalation_risks": 0.625,
-                "id": "u29",
+                "id": "u35",
                 "intents_emotions": "Hangup - Neutral/Polite",
                 "speaker": "Customer",
                 "utterance": "hangs up"
             },
             {
-                "churn_risk_score": 0.19783528645833334,
-                "empathy_score": 0.06703694661458333,
-                "escalation_level": 0.18717447916666666,
-                "escalation_risks": 0.19384765625,
-                "id": "u12",
+                "churn_risk_score": 0.01336669921875,
+                "empathy_score": 0.09716796875,
+                "escalation_level": 0.0380859375,
+                "escalation_risks": 0.005279541015625,
+                "id": "a22",
+                "intents_emotions": "Confirmation - Neutral/Positive",
+                "speaker": "Agent",
+                "utterance": "all done here"
+            },
+            {
+                "churn_risk_score": 0.15185546875,
+                "empathy_score": 0.0748138427734375,
+                "escalation_level": 0.144622802734375,
+                "escalation_risks": 0.14511489868164062,
+                "id": "u18",
                 "intents_emotions": "Confusion/Decision - Frustrated/Decisional",
                 "speaker": "Customer",
                 "utterance": "yeah i mean if that is the only option i guess i have to do it"
             },
             {
-                "churn_risk_score": -0.0060577392578125,
-                "empathy_score": 0.669921875,
-                "escalation_level": 0.03155517578125,
-                "escalation_risks": 0.018463134765625,
-                "id": "u8",
-                "intents_emotions": "Appreciation + Hope for Discounts - Concerned/Positive",
+                "churn_risk_score": -0.0069122314453125,
+                "empathy_score": 0.748046875,
+                "escalation_level": 0.02587890625,
+                "escalation_risks": 0.0089111328125,
+                "id": "u17",
+                "intents_emotions": "Acknowledgement - Polite/Confirming",
                 "speaker": "Customer",
-                "utterance": "i appreciate that also i hope those discounts you mentioned are still available later"
+                "utterance": "no not at all but thanks for your help i will be on my way now"
             },
             {
-                "churn_risk_score": 0.0252685546875,
-                "empathy_score": 0.234375,
-                "escalation_level": 0.05029296875,
-                "escalation_risks": 0.0279541015625,
+                "churn_risk_score": 0.18704659598214285,
+                "empathy_score": 0.030743190220424106,
+                "escalation_level": 0.1562227521623884,
+                "escalation_risks": 0.16602652413504465,
+                "id": "u19",
+                "intents_emotions": "Request for more time - Neutral/Reserved",
+                "speaker": "Customer",
+                "utterance": "twenty per cent that sounds good but right now i just i need more time to think about everything"
+            },
+            {
+                "churn_risk_score": -0.0111083984375,
+                "empathy_score": 0.306640625,
+                "escalation_level": 0.005401611328125,
+                "escalation_risks": 0.004608154296875,
                 "id": "u32",
-                "intents_emotions": "Acknowledgement - Neutral/Patient",
+                "intents_emotions": "Hold Request - Positive/Neutral",
                 "speaker": "Customer",
-                "utterance": "good to hear i think i will just sleep on it and let you know tomorrow"
+                "utterance": "yes please holding it would be great"
             },
             {
-                "churn_risk_score": 0.08642578125,
-                "empathy_score": 0.134765625,
-                "escalation_level": 0.123046875,
-                "escalation_risks": 0.080078125,
-                "id": "u27",
+                "churn_risk_score": 0.107666015625,
+                "empathy_score": 0.0947265625,
+                "escalation_level": 0.14697265625,
+                "escalation_risks": 0.10498046875,
+                "id": "u15",
                 "intents_emotions": "Billing Inquiry - Neutral/Curious",
                 "speaker": "Customer",
                 "utterance": "wait charges can you walk me walk me through that"
@@ -379,320 +914,538 @@
                 "empathy_score": 0.072998046875,
                 "escalation_level": 0.072509765625,
                 "escalation_risks": 0.115478515625,
-                "id": "u17",
+                "id": "u27",
                 "intents_emotions": "Cancellation Policy Information - Neutral/Informative",
                 "speaker": "Customer",
                 "utterance": "i think they allow free cancellations up to a day before"
             },
             {
-                "churn_risk_score": 0.186279296875,
-                "empathy_score": 0.04364013671875,
-                "escalation_level": 0.1259765625,
-                "escalation_risks": 0.1328125,
-                "id": "u3",
+                "churn_risk_score": 0.1773681640625,
+                "empathy_score": 0.0067901611328125,
+                "escalation_level": 0.18994140625,
+                "escalation_risks": 0.156494140625,
+                "id": "u45",
                 "intents_emotions": "Billing Reassurance - Confident/Relieved",
                 "speaker": "Customer",
                 "utterance": "and i will not have to worry about extra charges"
             },
             {
-                "churn_risk_score": 0.0615234375,
-                "empathy_score": 0.1015625,
-                "escalation_level": 0.0986328125,
-                "escalation_risks": 0.06591796875,
-                "id": "u35",
-                "intents_emotions": "Confirmation/Agreement - Neutral/Positive",
+                "churn_risk_score": 0.132080078125,
+                "empathy_score": 0.114013671875,
+                "escalation_level": 0.125244140625,
+                "escalation_risks": 0.129150390625,
+                "id": "u20",
+                "intents_emotions": "Product/Service Inquiry - Neutral/Curious",
                 "speaker": "Customer",
-                "utterance": "well whatever just go ahead and finalize it"
+                "utterance": "i found you guys online just searching for options"
             },
             {
-                "churn_risk_score": 0.322265625,
-                "empathy_score": 0.016265869140625,
-                "escalation_level": 0.4453125,
-                "escalation_risks": 0.3955078125,
-                "id": "u37",
-                "intents_emotions": "Complaint - Frustrated/Concerned",
+                "churn_risk_score": 0.03857421875,
+                "empathy_score": 0.0633544921875,
+                "escalation_level": 0.0391845703125,
+                "escalation_risks": 0.0170440673828125,
+                "id": "u23",
+                "intents_emotions": "Schedule Update - Neutral/Positive",
                 "speaker": "Customer",
-                "utterance": "oh wow that is quite a lot"
+                "utterance": "maybe in three weeks"
+            },
+            {
+                "churn_risk_score": 0.205322265625,
+                "empathy_score": 0.0355987548828125,
+                "escalation_level": 0.169677734375,
+                "escalation_risks": 0.1676025390625,
+                "id": "u22",
+                "intents_emotions": "Loyalty Code Inquiry - Neutral/Curious",
+                "speaker": "Customer",
+                "utterance": "and i would still to use that loyalty ten code right"
+            },
+            {
+                "churn_risk_score": 0.07658894856770833,
+                "empathy_score": 0.113311767578125,
+                "escalation_level": 0.07545979817708333,
+                "escalation_risks": 0.06087493896484375,
+                "id": "u0",
+                "intents_emotions": "Promo Code Inquiry - Neutral/Curious",
+                "speaker": "Customer",
+                "utterance": "right the promo code what is that again"
+            },
+            {
+                "churn_risk_score": 0.4010416666666667,
+                "empathy_score": 0.08984375,
+                "escalation_level": 0.2972005208333333,
+                "escalation_risks": 0.36669921875,
+                "id": "u16",
+                "intents_emotions": "Information Request - Neutral/Concerned",
+                "speaker": "Customer",
+                "utterance": "transparency sounds good but i still feel i need more information"
+            },
+            {
+                "churn_risk_score": 0.189208984375,
+                "empathy_score": -0.0025634765625,
+                "escalation_level": 0.298828125,
+                "escalation_risks": 0.2431640625,
+                "id": "u42",
+                "intents_emotions": "Claim Inquiry - Confused/Uncertain",
+                "speaker": "Customer",
+                "utterance": "yeah i just do not know how to start the claims process or what documents are needed will i need any..."
+            },
+            {
+                "churn_risk_score": 0.15185546875,
+                "empathy_score": 0.00982666015625,
+                "escalation_level": 0.158203125,
+                "escalation_risks": 0.1376953125,
+                "id": "u31",
+                "intents_emotions": "Plan/Cost Inquiry - Curious/Neutral",
+                "speaker": "Customer",
+                "utterance": "huh and what if i go to a doctor not in the network is the copay different then"
+            },
+            {
+                "churn_risk_score": 0.0836181640625,
+                "empathy_score": 0.01508331298828125,
+                "escalation_level": 0.07373046875,
+                "escalation_risks": 0.047943115234375,
+                "id": "u47",
+                "intents_emotions": "Clarification Request - Neutral/Curious",
+                "speaker": "Customer",
+                "utterance": "okay so what do you mean by medium is that good or bad"
+            },
+            {
+                "churn_risk_score": 0.045440673828125,
+                "empathy_score": 0.1142578125,
+                "escalation_level": 0.032318115234375,
+                "escalation_risks": 0.02947998046875,
+                "id": "u13",
+                "intents_emotions": "Savings Intent - Positive/Neutral",
+                "speaker": "Customer",
+                "utterance": "sure i the sound of saving money"
+            },
+            {
+                "churn_risk_score": 0.092376708984375,
+                "empathy_score": 0.3927001953125,
+                "escalation_level": 0.0633544921875,
+                "escalation_risks": 0.0657958984375,
+                "id": "a28",
+                "intents_emotions": "Retention Advice - Informative/Neutral",
+                "speaker": "Agent",
+                "utterance": "that is a great question generally we find that retention discussions can lead to maintaining about ..."
+            },
+            {
+                "churn_risk_score": 0.166748046875,
+                "empathy_score": 0.4833984375,
+                "escalation_level": 0.0736083984375,
+                "escalation_risks": 0.11328125,
+                "id": "a13",
+                "intents_emotions": "Cancellation Policy - Positive/Informative",
+                "speaker": "Agent",
+                "utterance": "yes if you cancel within the day it would be one night's charge if you keep it is both a great rate ..."
+            },
+            {
+                "churn_risk_score": 0.06221771240234375,
+                "empathy_score": 0.390380859375,
+                "escalation_level": 0.0307769775390625,
+                "escalation_risks": 0.0426177978515625,
+                "id": "a9",
+                "intents_emotions": "Booking Confirmation - Neutral/Helpful",
+                "speaker": "Agent",
+                "utterance": "got it bk 4782926 i see here that your booking is for a deluxe room is that right"
+            },
+            {
+                "churn_risk_score": 0.022900390625,
+                "empathy_score": 0.8765625,
+                "escalation_level": 0.060498046875,
+                "escalation_risks": 0.01500244140625,
+                "id": "a11",
+                "intents_emotions": "Apology - Empathetic",
+                "speaker": "Agent",
+                "utterance": "i get that and i am really sorry to hear you feel that way"
+            },
+            {
+                "churn_risk_score": 0.1064453125,
+                "empathy_score": 0.07421875,
+                "escalation_level": 0.08251953125,
+                "escalation_risks": 0.07568359375,
+                "id": "a29",
+                "intents_emotions": "Conversation Record - Confused/Concerned",
+                "speaker": "Agent",
+                "utterance": "i believe we have had about eleven distinct exchanges you know"
+            },
+            {
+                "churn_risk_score": 0.028523763020833332,
+                "empathy_score": 0.5496419270833334,
+                "escalation_level": 0.02606201171875,
+                "escalation_risks": 0.026123046875,
+                "id": "a7",
+                "intents_emotions": "Information Request - Neutral/Helpful",
+                "speaker": "Agent",
+                "utterance": "of course mason what specific details are you looking for regarding your homeowner's policy"
+            },
+            {
+                "churn_risk_score": 0.0294342041015625,
+                "empathy_score": 0.6455078125,
+                "escalation_level": 0.0533447265625,
+                "escalation_risks": 0.0379486083984375,
+                "id": "a14",
+                "intents_emotions": "Billing Information - Helpful/Neutral",
+                "speaker": "Agent",
+                "utterance": "right i can give you the specifics on those fees right now"
+            },
+            {
+                "churn_risk_score": -0.007415771484375,
+                "empathy_score": 0.337890625,
+                "escalation_level": 0.032470703125,
+                "escalation_risks": 0.01116943359375,
+                "id": "a17",
+                "intents_emotions": "Clarification Request - Neutral/Curious",
+                "speaker": "Agent",
+                "utterance": "what specifically would you to clarify"
+            },
+            {
+                "churn_risk_score": -0.0167083740234375,
+                "empathy_score": 0.4306640625,
+                "escalation_level": 0.03173828125,
+                "escalation_risks": 0.0102081298828125,
+                "id": "u38",
+                "intents_emotions": "Confirmation - Neutral/Relieved",
+                "speaker": "Customer",
+                "utterance": "got it"
+            },
+            {
+                "churn_risk_score": 0.022064208984375,
+                "empathy_score": 0.7526041666666666,
+                "escalation_level": 0.049723307291666664,
+                "escalation_risks": 0.031042734781901043,
+                "id": "a12",
+                "intents_emotions": "Offer Reassurance - Empathetic/Helpful",
+                "speaker": "Agent",
+                "utterance": "i get it completely if anything changes in the future you can always call us back jack"
+            },
+            {
+                "churn_risk_score": 0.024082728794642856,
+                "empathy_score": 0.7667410714285714,
+                "escalation_level": 0.037109375,
+                "escalation_risks": 0.03595079694475446,
+                "id": "u1",
+                "intents_emotions": "Cancellation Intent - Neutral/Closing",
+                "speaker": "Customer",
+                "utterance": "thanks olivia this has been really helpful but i am still leaning towards cancelling for now"
+            },
+            {
+                "churn_risk_score": 0.04638671875,
+                "empathy_score": -0.00775146484375,
+                "escalation_level": 0.01904296875,
+                "escalation_risks": 0.006622314453125,
+                "id": "a26",
+                "intents_emotions": "Monthly Inquiry - Neutral",
+                "speaker": "Agent",
+                "utterance": "monthly"
+            },
+            {
+                "churn_risk_score": 0.03271484375,
+                "empathy_score": 0.06005859375,
+                "escalation_level": 0.0458984375,
+                "escalation_risks": 0.0172119140625,
+                "id": "a27",
+                "intents_emotions": "Reservation Confirmation - Neutral/Helpful",
+                "speaker": "Agent",
+                "utterance": "okay let me look yes i have space on wednesday say around two pm"
+            },
+            {
+                "churn_risk_score": 0.03485107421875,
+                "empathy_score": 0.1298828125,
+                "escalation_level": 0.0413818359375,
+                "escalation_risks": 0.019989013671875,
+                "id": "u43",
+                "intents_emotions": "Acknowledgement - Neutral/Patient",
+                "speaker": "Customer",
+                "utterance": "good to hear i think i will just sleep on it and let you know tomorrow"
             },
             {
                 "churn_risk_score": 0.05029296875,
                 "empathy_score": -0.00384521484375,
                 "escalation_level": 0.0693359375,
                 "escalation_risks": 0.0283203125,
-                "id": "u46",
+                "id": "u52",
                 "intents_emotions": "Confirmation - Neutral/Confirming",
                 "speaker": "Customer",
                 "utterance": "yes i am doing it now right now"
-            },
-            {
-                "churn_risk_score": 0.057373046875,
-                "empathy_score": -0.001407623291015625,
-                "escalation_level": 0.03643798828125,
-                "escalation_risks": 0.026153564453125,
-                "id": "u15",
-                "intents_emotions": "Membership Inquiry - Neutral/Curious",
-                "speaker": "Customer",
-                "utterance": "yes i do have gold status but how does that help me"
-            },
-            {
-                "churn_risk_score": 0.5078125,
-                "empathy_score": -0.03271484375,
-                "escalation_level": 0.6171875,
-                "escalation_risks": 0.6015625,
-                "id": "u22",
-                "intents_emotions": "Complaint - Frustrated/Impatient",
-                "speaker": "Customer",
-                "utterance": "that is just not acceptable why cannot there be a thing a more reasonable way"
-            },
-            {
-                "churn_risk_score": 0.0144195556640625,
-                "empathy_score": 0.1923828125,
-                "escalation_level": 0.030029296875,
-                "escalation_risks": 0.0123138427734375,
-                "id": "u40",
-                "intents_emotions": "Confirmation - Neutral/Relieved",
-                "speaker": "Customer",
-                "utterance": "got it"
             },
             {
                 "churn_risk_score": 0.045654296875,
                 "empathy_score": 0.068359375,
                 "escalation_level": 0.0703125,
                 "escalation_risks": 0.046630859375,
-                "id": "u44",
+                "id": "u56",
                 "intents_emotions": "Information Request - Neutral/Polite",
                 "speaker": "Customer",
                 "utterance": "alright so just checking do i need to give you my new date you know"
+            },
+            {
+                "churn_risk_score": 0.03802490234375,
+                "empathy_score": 0.2335205078125,
+                "escalation_level": 0.05712890625,
+                "escalation_risks": 0.03057861328125,
+                "id": "u37",
+                "intents_emotions": "Confirmation - Neutral/Positive",
+                "speaker": "Customer",
+                "utterance": "fine just do it"
+            },
+            {
+                "churn_risk_score": 0.03173828125,
+                "empathy_score": 0.0172119140625,
+                "escalation_level": 0.0439453125,
+                "escalation_risks": 0.018310546875,
+                "id": "a15",
+                "intents_emotions": "Information Request - Neutral",
+                "speaker": "Agent",
+                "utterance": "892"
+            },
+            {
+                "churn_risk_score": 0.099609375,
+                "empathy_score": 0.0172119140625,
+                "escalation_level": 0.093994140625,
+                "escalation_risks": 0.0638427734375,
+                "id": "u21",
+                "intents_emotions": "Decision Confirmation - Neutral/Confirming",
+                "speaker": "Customer",
+                "utterance": "you know what i think i will keep it"
             }
         ],
         "causalgraph_edges": [
             {
-                "source": "a6",
-                "target": "u10"
+                "source": "a3",
+                "target": "u8"
             },
             {
-                "source": "a6",
-                "target": "u16"
+                "source": "a3",
+                "target": "u6"
             },
             {
-                "source": "a6",
-                "target": "u5"
+                "source": "u8",
+                "target": "a2"
             },
             {
-                "source": "a6",
-                "target": "u30"
+                "source": "u8",
+                "target": "a0"
             },
             {
-                "source": "a6",
-                "target": "u9"
+                "source": "u8",
+                "target": "a18"
             },
             {
-                "source": "a6",
-                "target": "u21"
+                "source": "u8",
+                "target": "u8"
             },
             {
-                "source": "a6",
-                "target": "u2"
+                "source": "u8",
+                "target": "u51"
             },
             {
-                "source": "a6",
-                "target": "u42"
+                "source": "u8",
+                "target": "u24"
             },
             {
-                "source": "a6",
-                "target": "u17"
+                "source": "u8",
+                "target": "a11"
             },
             {
-                "source": "a6",
+                "source": "u8",
+                "target": "a1"
+            },
+            {
+                "source": "u8",
+                "target": "a7"
+            },
+            {
+                "source": "u8",
+                "target": "a6"
+            },
+            {
+                "source": "a2",
                 "target": "u25"
             },
             {
-                "source": "a6",
-                "target": "u23"
+                "source": "a2",
+                "target": "u38"
             },
             {
-                "source": "a6",
-                "target": "u3"
-            },
-            {
-                "source": "u10",
-                "target": "a9"
-            },
-            {
-                "source": "u10",
-                "target": "a0"
-            },
-            {
-                "source": "a9",
-                "target": "u39"
-            },
-            {
-                "source": "a9",
-                "target": "u40"
-            },
-            {
-                "source": "a9",
-                "target": "u9"
-            },
-            {
-                "source": "a9",
+                "source": "a2",
                 "target": "u2"
             },
             {
-                "source": "a9",
-                "target": "u16"
+                "source": "a2",
+                "target": "u8"
             },
             {
-                "source": "a9",
-                "target": "u10"
+                "source": "a2",
+                "target": "u26"
             },
             {
-                "source": "u39",
-                "target": "a0"
+                "source": "a2",
+                "target": "u12"
             },
             {
-                "source": "u39",
-                "target": "a9"
+                "source": "a2",
+                "target": "u6"
             },
             {
-                "source": "u2",
-                "target": "a6"
+                "source": "a2",
+                "target": "u17"
             },
             {
-                "source": "u2",
-                "target": "a0"
-            },
-            {
-                "source": "u16",
-                "target": "a0"
-            },
-            {
-                "source": "u16",
-                "target": "a9"
-            },
-            {
-                "source": "u16",
-                "target": "a6"
-            },
-            {
-                "source": "a0",
-                "target": "u2"
-            },
-            {
-                "source": "a0",
-                "target": "u9"
-            },
-            {
-                "source": "a0",
-                "target": "u16"
-            },
-            {
-                "source": "a0",
-                "target": "u20"
-            },
-            {
-                "source": "a0",
-                "target": "u19"
-            },
-            {
-                "source": "a0",
-                "target": "u18"
-            },
-            {
-                "source": "a0",
-                "target": "u34"
-            },
-            {
-                "source": "a0",
-                "target": "u23"
-            },
-            {
-                "source": "a0",
+                "source": "a2",
                 "target": "u1"
             },
             {
-                "source": "a0",
+                "source": "a2",
+                "target": "u24"
+            },
+            {
+                "source": "a2",
+                "target": "a5"
+            },
+            {
+                "source": "a2",
+                "target": "u9"
+            },
+            {
+                "source": "a2",
+                "target": "u11"
+            },
+            {
+                "source": "a2",
                 "target": "u14"
             },
             {
-                "source": "a0",
-                "target": "u33"
+                "source": "a2",
+                "target": "u34"
             },
             {
-                "source": "a0",
-                "target": "u0"
+                "source": "a2",
+                "target": "u44"
             },
             {
-                "source": "a0",
+                "source": "u25",
+                "target": "a5"
+            },
+            {
+                "source": "u25",
+                "target": "a0"
+            },
+            {
+                "source": "u25",
+                "target": "a2"
+            },
+            {
+                "source": "u25",
+                "target": "a9"
+            },
+            {
+                "source": "u25",
+                "target": "a1"
+            },
+            {
+                "source": "u25",
+                "target": "a15"
+            },
+            {
+                "source": "a5",
+                "target": "u6"
+            },
+            {
+                "source": "a5",
                 "target": "u10"
             },
             {
-                "source": "a0",
-                "target": "u40"
+                "source": "a5",
+                "target": "u48"
             },
             {
-                "source": "a0",
-                "target": "u29"
+                "source": "a5",
+                "target": "u2"
             },
             {
-                "source": "a0",
+                "source": "a5",
+                "target": "u36"
+            },
+            {
+                "source": "a5",
+                "target": "u34"
+            },
+            {
+                "source": "a5",
+                "target": "u24"
+            },
+            {
+                "source": "a5",
+                "target": "u11"
+            },
+            {
+                "source": "a5",
+                "target": "u53"
+            },
+            {
+                "source": "a5",
+                "target": "u12"
+            },
+            {
+                "source": "a5",
+                "target": "u27"
+            },
+            {
+                "source": "a5",
+                "target": "u22"
+            },
+            {
+                "source": "a5",
+                "target": "u4"
+            },
+            {
+                "source": "u6",
+                "target": "a5"
+            },
+            {
+                "source": "u6",
+                "target": "a0"
+            },
+            {
+                "source": "u6",
+                "target": "a1"
+            },
+            {
+                "source": "u6",
+                "target": "a30"
+            },
+            {
+                "source": "u6",
+                "target": "a6"
+            },
+            {
+                "source": "u10",
+                "target": "a0"
+            },
+            {
+                "source": "u10",
+                "target": "a2"
+            },
+            {
+                "source": "u10",
+                "target": "a9"
+            },
+            {
+                "source": "u10",
+                "target": "a18"
+            },
+            {
+                "source": "u10",
                 "target": "a1"
             },
             {
                 "source": "a0",
-                "target": "u12"
+                "target": "u6"
             },
             {
                 "source": "a0",
-                "target": "u8"
-            },
-            {
-                "source": "a0",
-                "target": "u32"
-            },
-            {
-                "source": "a0",
-                "target": "u47"
-            },
-            {
-                "source": "a0",
-                "target": "u5"
-            },
-            {
-                "source": "a0",
-                "target": "u7"
-            },
-            {
-                "source": "a0",
-                "target": "u21"
-            },
-            {
-                "source": "a0",
-                "target": "u27"
-            },
-            {
-                "source": "a0",
-                "target": "u3"
-            },
-            {
-                "source": "a0",
-                "target": "u13"
-            },
-            {
-                "source": "a0",
-                "target": "u37"
-            },
-            {
-                "source": "a0",
-                "target": "u4"
-            },
-            {
-                "source": "a0",
-                "target": "u46"
-            },
-            {
-                "source": "a0",
-                "target": "u44"
+                "target": "u2"
             },
             {
                 "source": "a0",
@@ -700,738 +1453,7 @@
             },
             {
                 "source": "a0",
-                "target": "u15"
-            },
-            {
-                "source": "u5",
-                "target": "a0"
-            },
-            {
-                "source": "u9",
-                "target": "a0"
-            },
-            {
-                "source": "u9",
-                "target": "a6"
-            },
-            {
-                "source": "u9",
-                "target": "a9"
-            },
-            {
-                "source": "u40",
-                "target": "a1"
-            },
-            {
-                "source": "a1",
-                "target": "u41"
-            },
-            {
-                "source": "a1",
-                "target": "u4"
-            },
-            {
-                "source": "a1",
-                "target": "u10"
-            },
-            {
-                "source": "a1",
-                "target": "u47"
-            },
-            {
-                "source": "a1",
-                "target": "u16"
-            },
-            {
-                "source": "a1",
-                "target": "a0"
-            },
-            {
-                "source": "u41",
-                "target": "a0"
-            },
-            {
-                "source": "u21",
-                "target": "a3"
-            },
-            {
-                "source": "u21",
-                "target": "a0"
-            },
-            {
-                "source": "u21",
-                "target": "a1"
-            },
-            {
-                "source": "a3",
-                "target": "u25"
-            },
-            {
-                "source": "a3",
-                "target": "u7"
-            },
-            {
-                "source": "a3",
-                "target": "a0"
-            },
-            {
-                "source": "u25",
-                "target": "a3"
-            },
-            {
-                "source": "u25",
-                "target": "a6"
-            },
-            {
-                "source": "u7",
-                "target": "a0"
-            },
-            {
-                "source": "u20",
-                "target": "a3"
-            },
-            {
-                "source": "u20",
-                "target": "a0"
-            },
-            {
-                "source": "u19",
-                "target": "a0"
-            },
-            {
-                "source": "u30",
-                "target": "a9"
-            },
-            {
-                "source": "u18",
-                "target": "a0"
-            },
-            {
-                "source": "u34",
-                "target": "a1"
-            },
-            {
-                "source": "u34",
-                "target": "a0"
-            },
-            {
-                "source": "u4",
-                "target": "a1"
-            },
-            {
-                "source": "u4",
-                "target": "a0"
-            },
-            {
-                "source": "u33",
-                "target": "a1"
-            },
-            {
-                "source": "u33",
-                "target": "a0"
-            },
-            {
-                "source": "u47",
-                "target": "a0"
-            },
-            {
-                "source": "u23",
-                "target": "a0"
-            },
-            {
-                "source": "u23",
-                "target": "a6"
-            },
-            {
-                "source": "u1",
-                "target": "a0"
-            },
-            {
-                "source": "u1",
-                "target": "a9"
-            },
-            {
-                "source": "u31",
-                "target": "a0"
-            },
-            {
-                "source": "u14",
-                "target": "a6"
-            },
-            {
-                "source": "u14",
-                "target": "a0"
-            },
-            {
-                "source": "u0",
-                "target": "a0"
-            },
-            {
-                "source": "u42",
-                "target": "a1"
-            },
-            {
-                "source": "u42",
-                "target": "a0"
-            },
-            {
-                "source": "u29",
-                "target": "a0"
-            },
-            {
-                "source": "u12",
-                "target": "a0"
-            },
-            {
-                "source": "u13",
-                "target": "a6"
-            },
-            {
-                "source": "u13",
-                "target": "a0"
-            },
-            {
-                "source": "u8",
-                "target": "a0"
-            },
-            {
-                "source": "u32",
-                "target": "a0"
-            },
-            {
-                "source": "u27",
-                "target": "a0"
-            },
-            {
-                "source": "u17",
-                "target": "a0"
-            },
-            {
-                "source": "u3",
-                "target": "a0"
-            },
-            {
-                "source": "u35",
-                "target": "a0"
-            },
-            {
-                "source": "u37",
-                "target": "a0"
-            },
-            {
-                "source": "u26",
-                "target": "a6"
-            },
-            {
-                "source": "u46",
-                "target": "a0"
-            },
-            {
-                "source": "u44",
-                "target": "a1"
-            },
-            {
-                "source": "u11",
-                "target": "a6"
-            },
-            {
-                "source": "u15",
-                "target": "a0"
-            },
-            {
-                "source": "u22",
-                "target": "a0"
-            }
-        ]
-    },
-    {
-        "landing_node_id": "u14",
-        "similarity_score": 0.4709113836288452,
-        "landing_node_text": "fifty percent that is just frustrating i mean how does that compare to other hotels",
-        "causalgraph_nodes": [
-            {
-                "churn_risk_score": 0.32728794642857145,
-                "empathy_score": 0.03226579938616071,
-                "escalation_level": 0.3857421875,
-                "escalation_risks": 0.3662109375,
-                "id": "u14",
-                "intents_emotions": "Complaint - Frustrated/Concerned about rate",
-                "speaker": "Customer",
-                "utterance": "fifty percent that is just frustrating i mean how does that compare to other hotels"
-            },
-            {
-                "churn_risk_score": 0.1816156333852037,
-                "empathy_score": 0.5689281927090939,
-                "escalation_level": 0.13918682347948305,
-                "escalation_risks": 0.1501878405374194,
-                "id": "a0",
-                "intents_emotions": "Policy Explanation - Neutral/Informative",
-                "speaker": "Agent",
-                "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
-            },
-            {
-                "churn_risk_score": 0.30473128609035327,
-                "empathy_score": -0.006027885105298913,
-                "escalation_level": 0.2191162109375,
-                "escalation_risks": 0.26229372891512787,
-                "id": "u10",
-                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
-                "speaker": "Customer",
-                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
-            },
-            {
-                "churn_risk_score": 0.041115654839409724,
-                "empathy_score": 0.012638939751519097,
-                "escalation_level": 0.050793965657552086,
-                "escalation_risks": 0.035769294289981615,
-                "id": "u39",
-                "intents_emotions": "Confirmation - Neutral",
-                "speaker": "Customer",
-                "utterance": "sure it is bk 4578209"
-            },
-            {
-                "churn_risk_score": 0.45334551411290325,
-                "empathy_score": -0.0026680731004284273,
-                "escalation_level": 0.3698336693548387,
-                "escalation_risks": 0.42458417338709675,
-                "id": "u2",
-                "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
-                "speaker": "Customer",
-                "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
-            },
-            {
-                "churn_risk_score": 0.527610922759434,
-                "empathy_score": 0.0010486818709463444,
-                "escalation_level": 0.3993219339622642,
-                "escalation_risks": 0.46541883680555557,
-                "id": "u16",
-                "intents_emotions": "Cancellation Inquiry - Frustrated/Concerned",
-                "speaker": "Customer",
-                "utterance": "yes please i just find it frustrating because i did not realize the penalties involved with cancelli..."
-            },
-            {
-                "churn_risk_score": 0.04974365234375,
-                "empathy_score": 0.0252532958984375,
-                "escalation_level": 0.04931640625,
-                "escalation_risks": 0.030002593994140625,
-                "id": "u5",
-                "intents_emotions": "Clarification Request - Neutral/Curious",
-                "speaker": "Customer",
-                "utterance": "like what"
-            },
-            {
-                "churn_risk_score": 0.31944255587420883,
-                "empathy_score": 0.12132282498516614,
-                "escalation_level": 0.31989684285996833,
-                "escalation_risks": 0.3159141540527344,
-                "id": "u9",
-                "intents_emotions": "Churn Threat - Uncertain/Considering Cancellation",
-                "speaker": "Customer",
-                "utterance": "i see but i am still not sure it is worth it i might just cancel altogether"
-            },
-            {
-                "churn_risk_score": -0.024603949652777776,
-                "empathy_score": 0.6028103298611112,
-                "escalation_level": 0.016171773274739582,
-                "escalation_risks": -0.001514010959201389,
-                "id": "a1",
-                "intents_emotions": "Confirmation/Assistance - Neutral/Helpful",
-                "speaker": "Agent",
-                "utterance": "you will receive an email confirmation shortly with all the details just to confirm is there anythin..."
-            },
-            {
-                "churn_risk_score": 0.20703125,
-                "empathy_score": 0.04150390625,
-                "escalation_level": 0.2021484375,
-                "escalation_risks": 0.171875,
-                "id": "u41",
-                "intents_emotions": "Complaint - Frustrated/Hopeful",
-                "speaker": "Customer",
-                "utterance": "no just i hope i do not regret this"
-            },
-            {
-                "churn_risk_score": 0.14892578125,
-                "empathy_score": 0.159942626953125,
-                "escalation_level": 0.15771484375,
-                "escalation_risks": 0.1412353515625,
-                "id": "u21",
-                "intents_emotions": "Decision Consideration - Neutral/Uncertain",
-                "speaker": "Customer",
-                "utterance": "sure i will think about it"
-            },
-            {
-                "churn_risk_score": -0.018280029296875,
-                "empathy_score": 0.4979248046875,
-                "escalation_level": -0.0255889892578125,
-                "escalation_risks": -0.027943929036458332,
-                "id": "a3",
-                "intents_emotions": "Closing - Polite/Friendly",
-                "speaker": "Agent",
-                "utterance": "that sounds good thank you for your understanding have a great day"
-            },
-            {
-                "churn_risk_score": 0.1080322265625,
-                "empathy_score": 0.174560546875,
-                "escalation_level": 0.14306640625,
-                "escalation_risks": 0.1175537109375,
-                "id": "u7",
-                "intents_emotions": "Waiting - Neutral/Polite",
-                "speaker": "Customer",
-                "utterance": "wait"
-            },
-            {
-                "churn_risk_score": 0.2654622395833333,
-                "empathy_score": 0.03680419921875,
-                "escalation_level": 0.2939453125,
-                "escalation_risks": 0.2776692708333333,
-                "id": "u20",
-                "intents_emotions": "Confusion - Mildly Frustrated/Concerned",
-                "speaker": "Customer",
-                "utterance": "okay then thanks just i am just so confused"
-            },
-            {
-                "churn_risk_score": 0.218780517578125,
-                "empathy_score": 0.0302734375,
-                "escalation_level": 0.217376708984375,
-                "escalation_risks": 0.206512451171875,
-                "id": "u19",
-                "intents_emotions": "Refund Inquiry - Neutral/Curious",
-                "speaker": "Customer",
-                "utterance": "yes specifically what are the fees involved and how long does it take for refunds if needed"
-            },
-            {
-                "churn_risk_score": 0.1016845703125,
-                "empathy_score": 0.06315104166666667,
-                "escalation_level": 0.11149088541666667,
-                "escalation_risks": 0.09676615397135417,
-                "id": "u18",
-                "intents_emotions": "Clarification Request - Neutral/Concerned",
-                "speaker": "Customer",
-                "utterance": "got it so it is not clear cut then"
-            },
-            {
-                "churn_risk_score": 0.388671875,
-                "empathy_score": 0.003849029541015625,
-                "escalation_level": 0.4437255859375,
-                "escalation_risks": 0.432373046875,
-                "id": "u34",
-                "intents_emotions": "Decision Delay - Hesitant/Reserved",
-                "speaker": "Customer",
-                "utterance": "that is tempting but i still think i need time to weigh my options"
-            },
-            {
-                "churn_risk_score": 0.0960693359375,
-                "empathy_score": 0.2679036458333333,
-                "escalation_level": 0.16593424479166666,
-                "escalation_risks": 0.1292724609375,
-                "id": "u4",
-                "intents_emotions": "Confirmation/Agreement - Neutral/Cooperative",
-                "speaker": "Customer",
-                "utterance": "yeah that might help clear things up i can review it later"
-            },
-            {
-                "churn_risk_score": 0.283935546875,
-                "empathy_score": 0.018034798758370534,
-                "escalation_level": 0.2529820033482143,
-                "escalation_risks": 0.26405770438058035,
-                "id": "u33",
-                "intents_emotions": "Acknowledgement - Neutral/Considering Switch",
-                "speaker": "Customer",
-                "utterance": "okay i will keep that in mind while i browse other brands"
-            },
-            {
-                "churn_risk_score": -0.011144638061523438,
-                "empathy_score": 0.7392578125,
-                "escalation_level": 0.0039520263671875,
-                "escalation_risks": -0.00270843505859375,
-                "id": "u47",
-                "intents_emotions": "Gratitude - Appreciative",
-                "speaker": "Customer",
-                "utterance": "alright appreciate your help today"
-            },
-            {
-                "churn_risk_score": 0.3089087701612903,
-                "empathy_score": 0.07931321667086694,
-                "escalation_level": 0.3249354208669355,
-                "escalation_risks": 0.3148993130387931,
-                "id": "u23",
-                "intents_emotions": "Billing Concern - Surprised/Seeking Alternatives",
-                "speaker": "Customer",
-                "utterance": "that is quite a bit i did not realize that is there any way to avoid those charges"
-            },
-            {
-                "churn_risk_score": 0.09033203125,
-                "empathy_score": 0.02764892578125,
-                "escalation_level": 0.075927734375,
-                "escalation_risks": 0.059326171875,
-                "id": "u1",
-                "intents_emotions": "Policy Inquiry - Confused/Uncertain",
-                "speaker": "Customer",
-                "utterance": "i have heard of it but i thought it only applied to first time guests"
-            },
-            {
-                "churn_risk_score": 0.333984375,
-                "empathy_score": 0.302734375,
-                "escalation_level": 0.22265625,
-                "escalation_risks": 0.275390625,
-                "id": "u31",
-                "intents_emotions": "Cancellation Inquiry - Neutral/Clarifying",
-                "speaker": "Customer",
-                "utterance": "thanks for that but just to clarify if i do cancel later it is going to be one nights charge right"
-            },
-            {
-                "churn_risk_score": 0.20928955078125,
-                "empathy_score": 0.13800048828125,
-                "escalation_level": 0.1071929931640625,
-                "escalation_risks": 0.1497650146484375,
-                "id": "u0",
-                "intents_emotions": "Information Request - Neutral/Curious",
-                "speaker": "Customer",
-                "utterance": "you mean when do i decide to disconnect from something"
-            },
-            {
-                "churn_risk_score": 0.00983428955078125,
-                "empathy_score": 0.09185791015625,
-                "escalation_level": 0.010417938232421875,
-                "escalation_risks": 0.00665283203125,
-                "id": "u42",
-                "intents_emotions": "Confirmation - Neutral/Confirming",
-                "speaker": "Customer",
-                "utterance": "yes that is right"
-            },
-            {
-                "churn_risk_score": 0.546875,
-                "empathy_score": -0.07763671875,
-                "escalation_level": 0.62890625,
-                "escalation_risks": 0.625,
-                "id": "u29",
-                "intents_emotions": "Hangup - Neutral/Polite",
-                "speaker": "Customer",
-                "utterance": "hangs up"
-            },
-            {
-                "churn_risk_score": 0.19783528645833334,
-                "empathy_score": 0.06703694661458333,
-                "escalation_level": 0.18717447916666666,
-                "escalation_risks": 0.19384765625,
-                "id": "u12",
-                "intents_emotions": "Confusion/Decision - Frustrated/Decisional",
-                "speaker": "Customer",
-                "utterance": "yeah i mean if that is the only option i guess i have to do it"
-            },
-            {
-                "churn_risk_score": 0.480078125,
-                "empathy_score": -0.01788330078125,
-                "escalation_level": 0.541796875,
-                "escalation_risks": 0.543359375,
-                "id": "u13",
-                "intents_emotions": "Complaint - Disappointed/Frustrated",
-                "speaker": "Customer",
-                "utterance": "no actually i have stayed before but this time it is just well disappointing"
-            },
-            {
-                "churn_risk_score": -0.0060577392578125,
-                "empathy_score": 0.669921875,
-                "escalation_level": 0.03155517578125,
-                "escalation_risks": 0.018463134765625,
-                "id": "u8",
-                "intents_emotions": "Appreciation + Hope for Discounts - Concerned/Positive",
-                "speaker": "Customer",
-                "utterance": "i appreciate that also i hope those discounts you mentioned are still available later"
-            },
-            {
-                "churn_risk_score": 0.0252685546875,
-                "empathy_score": 0.234375,
-                "escalation_level": 0.05029296875,
-                "escalation_risks": 0.0279541015625,
-                "id": "u32",
-                "intents_emotions": "Acknowledgement - Neutral/Patient",
-                "speaker": "Customer",
-                "utterance": "good to hear i think i will just sleep on it and let you know tomorrow"
-            },
-            {
-                "churn_risk_score": 0.08642578125,
-                "empathy_score": 0.134765625,
-                "escalation_level": 0.123046875,
-                "escalation_risks": 0.080078125,
-                "id": "u27",
-                "intents_emotions": "Billing Inquiry - Neutral/Curious",
-                "speaker": "Customer",
-                "utterance": "wait charges can you walk me walk me through that"
-            },
-            {
-                "churn_risk_score": 0.17333984375,
-                "empathy_score": 0.072998046875,
-                "escalation_level": 0.072509765625,
-                "escalation_risks": 0.115478515625,
-                "id": "u17",
-                "intents_emotions": "Cancellation Policy Information - Neutral/Informative",
-                "speaker": "Customer",
-                "utterance": "i think they allow free cancellations up to a day before"
-            },
-            {
-                "churn_risk_score": 0.186279296875,
-                "empathy_score": 0.04364013671875,
-                "escalation_level": 0.1259765625,
-                "escalation_risks": 0.1328125,
-                "id": "u3",
-                "intents_emotions": "Billing Reassurance - Confident/Relieved",
-                "speaker": "Customer",
-                "utterance": "and i will not have to worry about extra charges"
-            },
-            {
-                "churn_risk_score": 0.0615234375,
-                "empathy_score": 0.1015625,
-                "escalation_level": 0.0986328125,
-                "escalation_risks": 0.06591796875,
-                "id": "u35",
-                "intents_emotions": "Confirmation/Agreement - Neutral/Positive",
-                "speaker": "Customer",
-                "utterance": "well whatever just go ahead and finalize it"
-            },
-            {
-                "churn_risk_score": 0.322265625,
-                "empathy_score": 0.016265869140625,
-                "escalation_level": 0.4453125,
-                "escalation_risks": 0.3955078125,
-                "id": "u37",
-                "intents_emotions": "Complaint - Frustrated/Concerned",
-                "speaker": "Customer",
-                "utterance": "oh wow that is quite a lot"
-            },
-            {
-                "churn_risk_score": 0.05029296875,
-                "empathy_score": -0.00384521484375,
-                "escalation_level": 0.0693359375,
-                "escalation_risks": 0.0283203125,
-                "id": "u46",
-                "intents_emotions": "Confirmation - Neutral/Confirming",
-                "speaker": "Customer",
-                "utterance": "yes i am doing it now right now"
-            },
-            {
-                "churn_risk_score": 0.057373046875,
-                "empathy_score": -0.001407623291015625,
-                "escalation_level": 0.03643798828125,
-                "escalation_risks": 0.026153564453125,
-                "id": "u15",
-                "intents_emotions": "Membership Inquiry - Neutral/Curious",
-                "speaker": "Customer",
-                "utterance": "yes i do have gold status but how does that help me"
-            },
-            {
-                "churn_risk_score": 0.5078125,
-                "empathy_score": -0.03271484375,
-                "escalation_level": 0.6171875,
-                "escalation_risks": 0.6015625,
-                "id": "u22",
-                "intents_emotions": "Complaint - Frustrated/Impatient",
-                "speaker": "Customer",
-                "utterance": "that is just not acceptable why cannot there be a thing a more reasonable way"
-            },
-            {
-                "churn_risk_score": 0.0889892578125,
-                "empathy_score": 0.4921875,
-                "escalation_level": 0.053873697916666664,
-                "escalation_risks": 0.0657958984375,
-                "id": "a8",
-                "intents_emotions": "Retention Advice - Informative/Neutral",
-                "speaker": "Agent",
-                "utterance": "that is a great question generally we find that retention discussions can lead to maintaining about ..."
-            }
-        ],
-        "causalgraph_edges": [
-            {
-                "source": "u10",
-                "target": "a0"
-            },
-            {
-                "source": "u39",
-                "target": "a0"
-            },
-            {
-                "source": "u2",
-                "target": "a0"
-            },
-            {
-                "source": "u16",
-                "target": "a0"
-            },
-            {
-                "source": "a0",
-                "target": "u2"
-            },
-            {
-                "source": "a0",
-                "target": "u9"
-            },
-            {
-                "source": "a0",
-                "target": "u16"
-            },
-            {
-                "source": "a0",
-                "target": "u20"
-            },
-            {
-                "source": "a0",
-                "target": "u19"
-            },
-            {
-                "source": "a0",
-                "target": "u18"
-            },
-            {
-                "source": "a0",
-                "target": "u34"
-            },
-            {
-                "source": "a0",
-                "target": "u23"
-            },
-            {
-                "source": "a0",
-                "target": "u1"
-            },
-            {
-                "source": "a0",
-                "target": "u14"
-            },
-            {
-                "source": "a0",
-                "target": "u33"
-            },
-            {
-                "source": "a0",
-                "target": "u0"
-            },
-            {
-                "source": "a0",
-                "target": "u10"
-            },
-            {
-                "source": "a0",
-                "target": "u29"
-            },
-            {
-                "source": "a0",
-                "target": "a1"
-            },
-            {
-                "source": "a0",
-                "target": "u12"
-            },
-            {
-                "source": "a0",
-                "target": "u8"
-            },
-            {
-                "source": "a0",
-                "target": "u32"
-            },
-            {
-                "source": "a0",
-                "target": "u47"
+                "target": "u24"
             },
             {
                 "source": "a0",
@@ -1439,15 +1461,51 @@
             },
             {
                 "source": "a0",
-                "target": "u7"
+                "target": "u1"
             },
             {
                 "source": "a0",
-                "target": "u21"
+                "target": "u4"
             },
             {
                 "source": "a0",
-                "target": "u27"
+                "target": "u14"
+            },
+            {
+                "source": "a0",
+                "target": "u26"
+            },
+            {
+                "source": "a0",
+                "target": "u8"
+            },
+            {
+                "source": "a0",
+                "target": "u35"
+            },
+            {
+                "source": "a0",
+                "target": "a22"
+            },
+            {
+                "source": "a0",
+                "target": "u18"
+            },
+            {
+                "source": "a0",
+                "target": "u19"
+            },
+            {
+                "source": "a0",
+                "target": "u32"
+            },
+            {
+                "source": "a0",
+                "target": "u17"
+            },
+            {
+                "source": "a0",
+                "target": "u43"
             },
             {
                 "source": "a0",
@@ -1455,43 +1513,163 @@
             },
             {
                 "source": "a0",
-                "target": "u13"
-            },
-            {
-                "source": "a0",
-                "target": "u37"
-            },
-            {
-                "source": "a0",
-                "target": "u4"
-            },
-            {
-                "source": "a0",
-                "target": "u46"
+                "target": "u34"
             },
             {
                 "source": "a0",
                 "target": "u15"
             },
             {
-                "source": "u5",
+                "source": "a0",
+                "target": "u10"
+            },
+            {
+                "source": "a0",
+                "target": "u9"
+            },
+            {
+                "source": "a0",
+                "target": "u48"
+            },
+            {
+                "source": "a0",
+                "target": "u22"
+            },
+            {
+                "source": "a0",
+                "target": "u56"
+            },
+            {
+                "source": "a0",
+                "target": "u0"
+            },
+            {
+                "source": "a0",
+                "target": "u12"
+            },
+            {
+                "source": "a0",
+                "target": "u21"
+            },
+            {
+                "source": "a0",
+                "target": "u54"
+            },
+            {
+                "source": "a0",
+                "target": "u44"
+            },
+            {
+                "source": "a0",
+                "target": "u16"
+            },
+            {
+                "source": "a0",
+                "target": "u42"
+            },
+            {
+                "source": "a0",
+                "target": "a1"
+            },
+            {
+                "source": "a0",
+                "target": "a30"
+            },
+            {
+                "source": "a0",
+                "target": "u31"
+            },
+            {
+                "source": "a0",
+                "target": "u47"
+            },
+            {
+                "source": "a0",
+                "target": "u38"
+            },
+            {
+                "source": "a0",
+                "target": "u36"
+            },
+            {
+                "source": "a0",
+                "target": "u53"
+            },
+            {
+                "source": "a0",
+                "target": "u13"
+            },
+            {
+                "source": "a0",
+                "target": "u45"
+            },
+            {
+                "source": "a0",
+                "target": "u20"
+            },
+            {
+                "source": "u48",
                 "target": "a0"
             },
             {
-                "source": "u9",
+                "source": "u48",
+                "target": "a5"
+            },
+            {
+                "source": "u2",
+                "target": "a1"
+            },
+            {
+                "source": "u2",
+                "target": "a5"
+            },
+            {
+                "source": "u2",
                 "target": "a0"
             },
             {
-                "source": "u9",
-                "target": "a8"
+                "source": "u2",
+                "target": "a12"
+            },
+            {
+                "source": "u2",
+                "target": "a28"
+            },
+            {
+                "source": "u2",
+                "target": "a13"
+            },
+            {
+                "source": "u2",
+                "target": "a2"
+            },
+            {
+                "source": "u2",
+                "target": "a4"
+            },
+            {
+                "source": "u2",
+                "target": "a6"
+            },
+            {
+                "source": "u2",
+                "target": "a30"
+            },
+            {
+                "source": "u2",
+                "target": "a11"
+            },
+            {
+                "source": "u2",
+                "target": "a3"
+            },
+            {
+                "source": "u2",
+                "target": "a7"
             },
             {
                 "source": "a1",
-                "target": "u41"
-            },
-            {
-                "source": "a1",
-                "target": "u4"
+                "target": "u24"
             },
             {
                 "source": "a1",
@@ -1499,162 +1677,358 @@
             },
             {
                 "source": "a1",
-                "target": "u47"
+                "target": "u33"
             },
             {
                 "source": "a1",
-                "target": "u16"
+                "target": "u54"
             },
             {
                 "source": "a1",
-                "target": "a0"
-            },
-            {
-                "source": "u41",
-                "target": "a0"
-            },
-            {
-                "source": "u21",
-                "target": "a3"
-            },
-            {
-                "source": "u21",
-                "target": "a0"
-            },
-            {
-                "source": "u21",
-                "target": "a1"
-            },
-            {
-                "source": "a3",
-                "target": "u7"
-            },
-            {
-                "source": "a3",
-                "target": "a0"
-            },
-            {
-                "source": "u7",
-                "target": "a0"
-            },
-            {
-                "source": "u20",
-                "target": "a3"
-            },
-            {
-                "source": "u20",
-                "target": "a0"
-            },
-            {
-                "source": "u19",
-                "target": "a0"
-            },
-            {
-                "source": "u19",
-                "target": "a8"
-            },
-            {
-                "source": "a8",
                 "target": "u9"
             },
             {
-                "source": "a8",
-                "target": "u14"
+                "source": "a1",
+                "target": "u44"
             },
             {
-                "source": "u18",
+                "source": "a1",
+                "target": "u2"
+            },
+            {
+                "source": "a1",
+                "target": "u11"
+            },
+            {
+                "source": "a1",
+                "target": "u6"
+            },
+            {
+                "source": "a1",
+                "target": "u45"
+            },
+            {
+                "source": "a1",
+                "target": "u52"
+            },
+            {
+                "source": "a1",
+                "target": "u53"
+            },
+            {
+                "source": "a1",
+                "target": "u37"
+            },
+            {
+                "source": "a1",
+                "target": "u1"
+            },
+            {
+                "source": "a1",
+                "target": "u15"
+            },
+            {
+                "source": "a1",
                 "target": "a0"
+            },
+            {
+                "source": "a1",
+                "target": "u8"
+            },
+            {
+                "source": "a1",
+                "target": "u12"
+            },
+            {
+                "source": "u24",
+                "target": "a0"
+            },
+            {
+                "source": "u24",
+                "target": "a28"
+            },
+            {
+                "source": "u24",
+                "target": "a14"
+            },
+            {
+                "source": "u24",
+                "target": "a30"
+            },
+            {
+                "source": "u24",
+                "target": "u8"
+            },
+            {
+                "source": "u24",
+                "target": "a6"
+            },
+            {
+                "source": "u24",
+                "target": "a1"
+            },
+            {
+                "source": "u24",
+                "target": "a2"
+            },
+            {
+                "source": "u24",
+                "target": "a26"
+            },
+            {
+                "source": "u24",
+                "target": "a17"
+            },
+            {
+                "source": "u24",
+                "target": "a9"
+            },
+            {
+                "source": "u11",
+                "target": "a1"
+            },
+            {
+                "source": "u11",
+                "target": "a0"
+            },
+            {
+                "source": "u11",
+                "target": "a5"
+            },
+            {
+                "source": "u11",
+                "target": "a14"
+            },
+            {
+                "source": "u11",
+                "target": "a11"
+            },
+            {
+                "source": "u11",
+                "target": "a6"
+            },
+            {
+                "source": "u38",
+                "target": "a1"
+            },
+            {
+                "source": "u38",
+                "target": "a10"
+            },
+            {
+                "source": "u33",
+                "target": "a0"
+            },
+            {
+                "source": "a12",
+                "target": "u34"
+            },
+            {
+                "source": "a12",
+                "target": "u1"
+            },
+            {
+                "source": "a12",
+                "target": "u20"
+            },
+            {
+                "source": "u34",
+                "target": "a0"
+            },
+            {
+                "source": "u34",
+                "target": "a2"
             },
             {
                 "source": "u34",
                 "target": "a1"
             },
             {
-                "source": "u34",
+                "source": "a8",
+                "target": "u3"
+            },
+            {
+                "source": "a8",
                 "target": "a0"
             },
             {
-                "source": "u34",
+                "source": "u3",
+                "target": "a10"
+            },
+            {
+                "source": "u3",
+                "target": "a0"
+            },
+            {
+                "source": "a10",
+                "target": "u11"
+            },
+            {
+                "source": "a10",
+                "target": "u25"
+            },
+            {
+                "source": "u54",
                 "target": "a8"
             },
             {
-                "source": "u4",
+                "source": "u54",
+                "target": "a0"
+            },
+            {
+                "source": "u36",
+                "target": "a2"
+            },
+            {
+                "source": "u36",
+                "target": "a0"
+            },
+            {
+                "source": "a28",
+                "target": "u2"
+            },
+            {
+                "source": "a28",
+                "target": "u14"
+            },
+            {
+                "source": "a28",
+                "target": "u24"
+            },
+            {
+                "source": "u5",
                 "target": "a1"
             },
             {
-                "source": "u4",
+                "source": "u5",
                 "target": "a0"
             },
             {
-                "source": "u33",
+                "source": "u5",
+                "target": "a28"
+            },
+            {
+                "source": "u5",
+                "target": "a29"
+            },
+            {
+                "source": "u9",
+                "target": "a2"
+            },
+            {
+                "source": "u9",
                 "target": "a1"
             },
             {
-                "source": "u33",
-                "target": "a0"
-            },
-            {
-                "source": "u47",
-                "target": "a0"
-            },
-            {
-                "source": "u23",
+                "source": "u9",
                 "target": "a0"
             },
             {
                 "source": "u1",
+                "target": "a2"
+            },
+            {
+                "source": "u1",
+                "target": "a5"
+            },
+            {
+                "source": "u1",
+                "target": "a1"
+            },
+            {
+                "source": "u1",
+                "target": "a3"
+            },
+            {
+                "source": "u26",
+                "target": "a1"
+            },
+            {
+                "source": "u26",
                 "target": "a0"
             },
             {
-                "source": "u31",
+                "source": "u26",
+                "target": "a11"
+            },
+            {
+                "source": "u26",
+                "target": "a5"
+            },
+            {
+                "source": "u26",
+                "target": "a30"
+            },
+            {
+                "source": "u44",
+                "target": "a2"
+            },
+            {
+                "source": "u44",
                 "target": "a0"
+            },
+            {
+                "source": "a18",
+                "target": "u25"
+            },
+            {
+                "source": "u4",
+                "target": "a0"
+            },
+            {
+                "source": "u4",
+                "target": "a5"
+            },
+            {
+                "source": "a13",
+                "target": "u11"
+            },
+            {
+                "source": "a13",
+                "target": "u2"
+            },
+            {
+                "source": "u14",
+                "target": "a5"
+            },
+            {
+                "source": "u14",
+                "target": "a4"
+            },
+            {
+                "source": "u14",
+                "target": "a14"
             },
             {
                 "source": "u14",
                 "target": "a0"
             },
             {
-                "source": "u0",
-                "target": "a0"
-            },
-            {
-                "source": "u42",
-                "target": "a1"
-            },
-            {
-                "source": "u42",
-                "target": "a0"
-            },
-            {
-                "source": "u29",
-                "target": "a0"
+                "source": "u14",
+                "target": "a28"
             },
             {
                 "source": "u12",
                 "target": "a0"
             },
             {
-                "source": "u13",
-                "target": "a0"
+                "source": "u12",
+                "target": "a2"
             },
             {
-                "source": "u8",
-                "target": "a0"
+                "source": "u12",
+                "target": "a1"
             },
             {
-                "source": "u32",
-                "target": "a0"
+                "source": "u53",
+                "target": "a1"
             },
             {
-                "source": "u27",
-                "target": "a0"
+                "source": "u53",
+                "target": "a2"
             },
             {
-                "source": "u17",
-                "target": "a0"
-            },
-            {
-                "source": "u3",
+                "source": "u53",
                 "target": "a0"
             },
             {
@@ -1662,20 +2036,268 @@
                 "target": "a0"
             },
             {
-                "source": "u37",
+                "source": "a22",
                 "target": "a0"
             },
             {
-                "source": "u46",
+                "source": "a9",
+                "target": "u11"
+            },
+            {
+                "source": "a9",
+                "target": "u53"
+            },
+            {
+                "source": "a9",
+                "target": "u2"
+            },
+            {
+                "source": "a4",
+                "target": "u6"
+            },
+            {
+                "source": "a4",
+                "target": "u2"
+            },
+            {
+                "source": "u18",
+                "target": "a1"
+            },
+            {
+                "source": "u18",
                 "target": "a0"
+            },
+            {
+                "source": "u17",
+                "target": "a0"
+            },
+            {
+                "source": "u19",
+                "target": "a0"
+            },
+            {
+                "source": "u19",
+                "target": "a2"
+            },
+            {
+                "source": "u32",
+                "target": "a0"
+            },
+            {
+                "source": "u43",
+                "target": "a1"
+            },
+            {
+                "source": "u43",
+                "target": "a27"
+            },
+            {
+                "source": "a14",
+                "target": "u24"
+            },
+            {
+                "source": "a14",
+                "target": "u11"
+            },
+            {
+                "source": "a14",
+                "target": "u26"
+            },
+            {
+                "source": "a14",
+                "target": "u5"
             },
             {
                 "source": "u15",
                 "target": "a0"
             },
             {
+                "source": "u27",
+                "target": "a0"
+            },
+            {
+                "source": "u45",
+                "target": "a0"
+            },
+            {
+                "source": "u45",
+                "target": "a6"
+            },
+            {
+                "source": "a11",
+                "target": "u2"
+            },
+            {
+                "source": "a11",
+                "target": "u4"
+            },
+            {
+                "source": "a11",
+                "target": "u12"
+            },
+            {
+                "source": "a11",
+                "target": "u1"
+            },
+            {
+                "source": "u20",
+                "target": "a5"
+            },
+            {
+                "source": "u20",
+                "target": "a0"
+            },
+            {
+                "source": "u52",
+                "target": "a1"
+            },
+            {
+                "source": "u23",
+                "target": "a0"
+            },
+            {
                 "source": "u22",
                 "target": "a0"
+            },
+            {
+                "source": "u56",
+                "target": "a1"
+            },
+            {
+                "source": "u0",
+                "target": "a0"
+            },
+            {
+                "source": "u37",
+                "target": "a5"
+            },
+            {
+                "source": "u37",
+                "target": "a1"
+            },
+            {
+                "source": "u21",
+                "target": "a2"
+            },
+            {
+                "source": "u21",
+                "target": "a1"
+            },
+            {
+                "source": "a15",
+                "target": "u37"
+            },
+            {
+                "source": "a30",
+                "target": "u6"
+            },
+            {
+                "source": "a30",
+                "target": "u11"
+            },
+            {
+                "source": "a30",
+                "target": "u2"
+            },
+            {
+                "source": "a30",
+                "target": "u24"
+            },
+            {
+                "source": "a30",
+                "target": "u8"
+            },
+            {
+                "source": "a30",
+                "target": "u16"
+            },
+            {
+                "source": "a6",
+                "target": "u45"
+            },
+            {
+                "source": "a6",
+                "target": "u24"
+            },
+            {
+                "source": "a6",
+                "target": "u2"
+            },
+            {
+                "source": "a6",
+                "target": "u6"
+            },
+            {
+                "source": "a6",
+                "target": "u11"
+            },
+            {
+                "source": "a6",
+                "target": "u31"
+            },
+            {
+                "source": "u16",
+                "target": "a1"
+            },
+            {
+                "source": "u16",
+                "target": "a0"
+            },
+            {
+                "source": "u16",
+                "target": "a9"
+            },
+            {
+                "source": "u42",
+                "target": "a0"
+            },
+            {
+                "source": "u42",
+                "target": "a1"
+            },
+            {
+                "source": "u51",
+                "target": "u8"
+            },
+            {
+                "source": "a27",
+                "target": "u18"
+            },
+            {
+                "source": "u31",
+                "target": "a0"
+            },
+            {
+                "source": "u47",
+                "target": "a0"
+            },
+            {
+                "source": "a29",
+                "target": "u2"
+            },
+            {
+                "source": "u13",
+                "target": "a0"
+            },
+            {
+                "source": "a7",
+                "target": "u24"
+            },
+            {
+                "source": "a7",
+                "target": "u2"
+            },
+            {
+                "source": "a7",
+                "target": "u36"
+            },
+            {
+                "source": "a26",
+                "target": "u26"
+            },
+            {
+                "source": "a17",
+                "target": "u24"
             }
         ]
     }
