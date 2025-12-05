@@ -10,7 +10,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 CURR_DIR = os.getcwd()
 # --- CONFIGURATION ---
-URI = "bolt://localhost:7687"
+URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
 AUTH = ("", "") 
 
 class MemgraphRAG:

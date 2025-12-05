@@ -1,0 +1,40 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama-debug
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: always
+
+  # --- MEMGRAPH SERVICE ---
+  memgraph:
+    image: memgraph/memgraph-mage:latest
+    container_name: memgraph-debug
+    ports:
+      - "7687:7687"    # Bolt Connection
+      - "7444:7444"    # Monitoring
+    environment:
+      - MEMGRAPH=  # No auth needed
+    restart: always
+  # ------------------------
+
+  app:
+    build: .
+    container_name: dialog2flow-debug
+    depends_on:
+      - ollama
+      - memgraph  # Wait for memgraph to start
+    volumes:
+      - .:/app
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      - LLM_MODEL=llama3.2
+      # TELL YOUR APP TO USE THE CONTAINER NAME, NOT LOCALHOST
+      - NEO4J_URI=bolt://memgraph:7687 
+      - NEO4J_URL=bolt://memgraph:7687
+    shm_size: '4gb' 
+
+volumes:
+  ollama_data:

@@ -11,6 +11,9 @@ class EdgeSchema(BaseModel):
 class llm:
     def __init__(self, model="llama3.2"): 
         self.model = model
+        # Configure Ollama client to use the host from environment variable
+        ollama_host = os.getenv('OLLAMA_HOST', 'http://localhost:11434')
+        self.client = ollama.Client(host=ollama_host)
         
         # --- OPTIMIZED BATCH PROMPT ---
         self.batch_prompt = """
@@ -60,7 +63,7 @@ Return ONLY a JSON object. No markdown.
 
         REWRITTEN QUERY:"""
 
-        response = ollama.chat(
+        response = self.client.chat(
             model=self.model,
             messages=[
                 {"role": "system", "content": sys_prompt},
@@ -144,7 +147,7 @@ This is the User Query:
 Now generate the output as per the instructions above.
 """
         
-        response = ollama.chat(
+        response = self.client.chat(
                 model=self.model,
                 messages=[
                     {"role": "system", "content": prompt},
@@ -184,7 +187,7 @@ Now generate the output as per the instructions above.
             user_content_str += f"ID:{item['id']} | SRC:[{s_text}] -> TGT:[{t_text}]\n"
 
         try:
-            response = ollama.chat(
+            response = self.client.chat(
                 model=self.model,
                 messages=[
                     {"role": "system", "content": self.batch_prompt},
@@ -236,7 +239,7 @@ Now generate the output as per the instructions above.
         
         Provide your expert analysis now:'''
 
-        response = ollama.chat(
+        response = self.client.chat(
             model=self.model,
             messages=[
                 {"role": "system", "content": sys_prompt},
@@ -277,7 +280,7 @@ Now generate the output as per the instructions above.
         
         Provide your expert analysis now:'''
 
-        response = ollama.chat(
+        response = self.client.chat(
             model=self.model,
             messages=[
                 {"role": "system", "content": sys_prompt},
@@ -332,7 +335,7 @@ Now generate the output as per the instructions above.
         
         Answer:'''
 
-        response = ollama.chat(
+        response = self.client.chat(
             model=self.model,
             messages=[
                 {"role": "system", "content": sys_prompt},
