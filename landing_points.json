@@ -1,68 +1,46 @@
 [
     {
-        "id": "u20",
-        "utterance": "but what if jetblue has a better cancellation policy",
-        "escalation_level": 0.3159586588541667,
-        "churn_risk_score": 0.3530849880642361,
-        "empathy_score": 0.043863932291666664,
-        "escalation_risks": 0.336212158203125,
-        "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
-        "speaker": "Customer",
-        "similarity": 0.4942339062690735
+        "id": "a25",
+        "utterance": "ethan being at the airport for so long must be tough right i would rather not waste",
+        "escalation_level": 0.427734375,
+        "churn_risk_score": 0.384765625,
+        "empathy_score": 0.03759765625,
+        "escalation_risks": 0.39453125,
+        "intents_emotions": "Complaint - Frustrated/Seeking Reassurance",
+        "speaker": "Agent",
+        "similarity": 0.6805627942085266
     },
     {
-        "id": "u5",
-        "utterance": "yeah but what if my flight actually gets cancelled what do i do then",
-        "escalation_level": 0.35867047991071427,
-        "churn_risk_score": 0.2801278250558036,
-        "empathy_score": 0.017522103445870536,
-        "escalation_risks": 0.3251630510602679,
-        "intents_emotions": "Flight Cancellation Inquiry - Concerned/Seeking Resolution",
+        "id": "u8",
+        "utterance": "sure but it is just like this is really annoying i have missed connections because of this",
+        "escalation_level": 0.37109956287202384,
+        "churn_risk_score": 0.32208833240327384,
+        "empathy_score": 0.10902005150204613,
+        "escalation_risks": 0.34559326171875,
+        "intents_emotions": "Complaint - Frustrated/Annoyed",
         "speaker": "Customer",
-        "similarity": 0.31622302532196045
+        "similarity": 0.6478651165962219
     },
     {
-        "id": "u20",
-        "utterance": "but what if jetblue has a better cancellation policy",
-        "escalation_level": 0.3159586588541667,
-        "churn_risk_score": 0.3530849880642361,
-        "empathy_score": 0.043863932291666664,
-        "escalation_risks": 0.336212158203125,
-        "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
+        "id": "u36",
+        "utterance": "no just i hope the flight takes off on time",
+        "escalation_level": 0.17889404296875,
+        "churn_risk_score": 0.15643310546875,
+        "empathy_score": 0.083099365234375,
+        "escalation_risks": 0.16363525390625,
+        "intents_emotions": "Flight Delay Concern - Mildly Frustrated/Anxious",
         "speaker": "Customer",
-        "similarity": 0.32168805599212646
+        "similarity": 0.7004726529121399
     },
     {
-        "id": "u19",
-        "utterance": "yeah i know i really need to rebook it urgently",
-        "escalation_level": 0.23030598958333334,
-        "churn_risk_score": 0.16097005208333334,
-        "empathy_score": 0.058339436848958336,
-        "escalation_risks": 0.179931640625,
-        "intents_emotions": "Rebooking Request - Urgent/Urgent",
-        "speaker": "Customer",
-        "similarity": 0.26983290910720825
-    },
-    {
-        "id": "u20",
-        "utterance": "but what if jetblue has a better cancellation policy",
-        "escalation_level": 0.3159586588541667,
-        "churn_risk_score": 0.3530849880642361,
-        "empathy_score": 0.043863932291666664,
-        "escalation_risks": 0.336212158203125,
-        "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
-        "speaker": "Customer",
-        "similarity": 0.5974151492118835
-    },
-    {
-        "id": "u5",
-        "utterance": "yeah but what if my flight actually gets cancelled what do i do then",
-        "escalation_level": 0.35867047991071427,
-        "churn_risk_score": 0.2801278250558036,
-        "empathy_score": 0.017522103445870536,
-        "escalation_risks": 0.3251630510602679,
-        "intents_emotions": "Flight Cancellation Inquiry - Concerned/Seeking Resolution",
-        "speaker": "Customer",
-        "similarity": 0.41005492210388184
+        "id": "a23",
+        "utterance": "yes really yeah it really is i was supposed to be landing by now what is",
+        "escalation_level": 0.46875,
+        "churn_risk_score": 0.330078125,
+        "empathy_score": -0.01300048828125,
+        "escalation_risks": 0.412109375,
+        "intents_emotions": "Flight Delay - Frustrated/Impatient",
+        "speaker": "Agent",
+        "similarity": 0.6868017911911011
     }
 ]

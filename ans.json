@@ -2797,5 +2797,81 @@
             }
         ],
         "candidate_pairs_content": null
+    },
+    {
+        "query": "Are the agents handling these calls properly?",
+        "error": "model 'llama3.1' not found (status code: 404)"
+    },
+    {
+        "query": "What is education and school?",
+        "error": "[Errno 2] No such file or directory: '/home/interiit/obai/data/top_K'"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "[Errno 13] Permission denied: '/home/interiit/obai/output/clusters'"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "[Errno 13] Permission denied: '/home/interiit/obai/output/clusters'"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "failed to execute PosixPath('dot'), make sure the Graphviz executables are on your systems' PATH"
+    },
+    {
+        "timestamp": "2025-12-05T09:55:53.378149",
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "answer": "Primary analysis indicates that issues experienced by hotel customers stem from inadequate communication with staff regarding special requests and unmet expectations. Evidence suggests a causal chain where customers express dissatisfaction due to misunderstandings about room amenities, services, or check-in/check-out procedures.\n\nInsufficient staffing during peak periods is another contributing factor, leading to long wait times for assistance, compromised in-room service, and delayed issue resolution. Furthermore, the hotel's inability to effectively manage guest expectations regarding room cleanliness and maintenance contributes to customer dissatisfaction.\n\nThe root cause of these problems appears to be a lack of proactive measures to address customer needs proactively, resulting in reactive responses that fail to meet expectations. High churn risk is also associated with this domain, suggesting that unaddressed issues can lead to long-term losses for the hotel.",
+        "causal_chains_content": [],
+        "landing_points_content": [],
+        "candidate_pairs_content": null
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "[Errno 2] No such file or directory: 'last_conversation_number.json'"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "[Errno 2] No such file or directory: '/home/interiit/obai/output/data/transcript_id_list.txt'"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "'str' object cannot be interpreted as an integer"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "'str' object cannot be interpreted as an integer"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "'str' object cannot be interpreted as an integer"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "name 'ps' is not defined"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "name 'ps' is not defined"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "not writable"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "not writable"
+    },
+    {
+        "query": "What are the problems faced by customers in Hotel domain?",
+        "error": "not writable"
+    },
+    {
+        "query": "What are the problems faced by customers in flight domain?",
+        "error": "not writable"
+    },
+    {
+        "query": "What are the problems faced by customers in flight domain?",
+        "error": "not writable"
     }
 ]

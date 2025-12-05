@@ -9,7 +9,7 @@ class EdgeSchema(BaseModel):
     explanation: str
 
 class llm:
-    def __init__(self, model="llama3.1"): 
+    def __init__(self, model="llama3.2"): 
         self.model = model
         
         # --- OPTIMIZED BATCH PROMPT ---

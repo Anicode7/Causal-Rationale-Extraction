@@ -19,11 +19,11 @@ LANDING_FILE = "landing_points.json"
 # --- Input Data List ---
 queries_to_run = [
     {
-        "query": "Are the agents handling these calls properly?",
+        "query": "What are the problems faced by customers in flight domain?",
     }
 ]
 
-follow_up = 1
+follow_up = 0
 distance_threshold = 0.6
 topK = 20
 

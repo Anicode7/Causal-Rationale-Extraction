@@ -383,13 +383,31 @@ class MemgraphRAG:
 def get_ans(query_text, queries_list, follow_up=0, UNEMBEDDED_JSON_FILE=os.path.join(CURR_DIR, "output", "graph_with_metadata.json")):
 
     # --- 1. HISTORY MANAGEMENT ---
-    HISTORY_FILE = "conversation_history.json"
-    conversation_history = []
+    with open (os.path.join(os.getcwd(),"cached_convos" , "last_conversation_number.json"), 'r', encoding='utf-8') as f:
+        conv_num_data = json.load(f)
+
 
     if follow_up == 0:
         # Reset history for new query
         conversation_history = []
-    elif os.path.exists(HISTORY_FILE):
+        print("type is", type(conv_num_data["num"]))
+        conv_num_data["num"] = int(conv_num_data["num"]) + 1
+
+        with open (os.path.join(os.getcwd(),"cached_convos" , "last_conversation_number.json"), 'w', encoding='utf-8') as f:
+            json.dump(conv_num_data, f, indent=4)
+       # with open (os.path.join(os.getcwd(),"cached_convos" , "last_conversation_number.json"), 'w', encoding='utf-8') as f:
+
+
+    HISTORY_FILE = os.path.join(os.getcwd(),"cached_convos",f"conversation_history_{conv_num_data["num"]}.json")
+    conversation_history = []
+    TRANSCRIPT_HISTORY_FILE = os.path.join(os.getcwd(),"cached_convos",f"transcript_history_{conv_num_data["num"]}.json")
+    curr_transcripts_file = os.path.join(CURR_DIR, "data", "transcript_id_list.txt")
+    with open(curr_transcripts_file, 'r', encoding='utf-8') as f:
+        transcript_list = [line.strip() for line in f if line.strip()]
+    with open(TRANSCRIPT_HISTORY_FILE, 'w', encoding='utf-8') as f:
+        json.dump(transcript_list, f, indent=4)
+        
+    if os.path.exists(HISTORY_FILE):
         try:
             with open(HISTORY_FILE, 'r', encoding='utf-8') as hf:
                 conversation_history = json.load(hf)
@@ -463,5 +481,7 @@ def get_ans(query_text, queries_list, follow_up=0, UNEMBEDDED_JSON_FILE=os.path.
     conversation_history.append({"role": "assistant", "content": ans})
     with open(HISTORY_FILE, 'w', encoding='utf-8') as hf:
         json.dump(conversation_history, hf, indent=4)
+
+     
     
     return ans, db

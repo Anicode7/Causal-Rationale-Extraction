@@ -23,7 +23,12 @@ model = SentenceTransformer("all-mpnet-base-v2")
 def embed_node(node):   
     # embeddings = model.encode(node["utterances"])
     # avg_embedding =np.mean(np.array(embeddings), axis=0)
-    emb = model.encode(node["utterance"])
+    text = ""
+    text += node["dialogue_acts"][0] + " "
+    text += node["action_type"][0] + " "
+    text += node["intents_emotions"][0] + " "
+    text += node["utterance"][0]
+    emb = model.encode(text.strip())
     return emb
 
 def embed_transcript(graph):
@@ -50,7 +55,8 @@ def embed_transcript(graph):
         node["intents_emotions"] = node.get("intents_emotions")[0]
         
         node["embedding"] = emb
-
+        with open(os.path.join(CURR_DIR,"output","graph_with_metadata_embedded.json"), "w") as outfile:
+            json.dump(graph, outfile, indent=4,cls=NpEncoder)  
 
 def embed_sentence(sentence):
     return model.encode(sentence)
