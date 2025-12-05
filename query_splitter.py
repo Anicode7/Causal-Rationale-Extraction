@@ -47,7 +47,7 @@ def categorize_query(query, llm, embeddings_db, data_path,follow_up,topK_dir,top
 		curr_transcripts = searcher.search_by_domain_and_query(domain=curr_domain, query=curr_query, intent=curr_intent, top_k=topk)
 		for t in curr_transcripts:
 			tid = t.get('transcript_id')
-			if(transcript_id_dict[tid]==False):
+			if(tid not in transcript_id_dict):
 				transcript_id_list.append(tid)
 				transcript_id_dict[tid] = True
 			if tid:

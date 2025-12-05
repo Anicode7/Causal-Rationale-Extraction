@@ -1,24 +1,24 @@
 [
     {
-        "id": "u17",
-        "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ...",
-        "escalation_level": 0.4247159090909091,
-        "churn_risk_score": 0.44691051136363635,
-        "empathy_score": -0.0014312050559303977,
-        "escalation_risks": 0.4677734375,
-        "intents_emotions": "Complaint - Frustrated/Comparative",
+        "id": "u10",
+        "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas",
+        "escalation_level": 0.2191162109375,
+        "churn_risk_score": 0.30473128609035327,
+        "empathy_score": -0.006027885105298913,
+        "escalation_risks": 0.26229372891512787,
+        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
         "speaker": "Customer",
-        "similarity": 0.5284009575843811
+        "similarity": 0.4922518730163574
     },
     {
-        "id": "u3",
-        "utterance": "i understand it looks like your flight was delayed due to mechanical issues",
-        "escalation_level": 0.41650390625,
-        "churn_risk_score": 0.3351236979166667,
-        "empathy_score": 0.18848673502604166,
-        "escalation_risks": 0.378662109375,
-        "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
+        "id": "u14",
+        "utterance": "fifty percent that is just frustrating i mean how does that compare to other hotels",
+        "escalation_level": 0.3857421875,
+        "churn_risk_score": 0.32728794642857145,
+        "empathy_score": 0.03226579938616071,
+        "escalation_risks": 0.3662109375,
+        "intents_emotions": "Complaint - Frustrated/Concerned about rate",
         "speaker": "Customer",
-        "similarity": 0.43957531452178955
+        "similarity": 0.4709113836288452
     }
 ]

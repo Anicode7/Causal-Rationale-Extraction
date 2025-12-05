@@ -2,29 +2,29 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.06881637573242187,
-                "empathy_score": 0.66845703125,
-                "escalation_level": 0.08111114501953125,
-                "escalation_risks": 0.06387798602764423,
+                "churn_risk_score": -0.006738935198102679,
+                "empathy_score": 0.7802734375,
+                "escalation_level": 0.027165004185267856,
+                "escalation_risks": 0.016124861580984935,
                 "id": "a9",
-                "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                "intents_emotions": "Assistance - Helpful/Neutral",
                 "speaker": "Agent",
-                "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                "utterance": "i can definitely help you with that jack can i get your booking I would first please"
             },
             {
                 "source": "a9",
-                "target": "u17",
-                "explanation": "The agent's apology led to another notification about the flight delay."
+                "target": "u10",
+                "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
             },
             {
-                "churn_risk_score": 0.44691051136363635,
-                "empathy_score": -0.0014312050559303977,
-                "escalation_level": 0.4247159090909091,
-                "escalation_risks": 0.4677734375,
-                "id": "u17",
-                "intents_emotions": "Complaint - Frustrated/Comparative",
+                "churn_risk_score": 0.30473128609035327,
+                "empathy_score": -0.006027885105298913,
+                "escalation_level": 0.2191162109375,
+                "escalation_risks": 0.26229372891512787,
+                "id": "u10",
+                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                 "speaker": "Customer",
-                "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
             }
         ],
         "cumulative_probability": 1.0
@@ -32,29 +32,29 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.02265528628700658,
-                "empathy_score": 0.8454975328947368,
-                "escalation_level": 0.06644901476408306,
-                "escalation_risks": 0.025248678107010692,
-                "id": "a17",
-                "intents_emotions": "Gratitude/Reassurance - Empathetic",
+                "churn_risk_score": 0.1816156333852037,
+                "empathy_score": 0.5689281927090939,
+                "escalation_level": 0.13918682347948305,
+                "escalation_risks": 0.1501878405374194,
+                "id": "a0",
+                "intents_emotions": "Policy Explanation - Neutral/Informative",
                 "speaker": "Agent",
-                "utterance": "you are welcome emma i am glad i could help it is important for us to resolve this as smoothly as po..."
+                "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
             },
             {
-                "source": "a17",
-                "target": "u17",
-                "explanation": "The customer's complaint caused the agent to provide a reassuring message."
+                "source": "a0",
+                "target": "u10",
+                "explanation": "The agent's explanation of the policy led to a cancellation inquiry."
             },
             {
-                "churn_risk_score": 0.44691051136363635,
-                "empathy_score": -0.0014312050559303977,
-                "escalation_level": 0.4247159090909091,
-                "escalation_risks": 0.4677734375,
-                "id": "u17",
-                "intents_emotions": "Complaint - Frustrated/Comparative",
+                "churn_risk_score": 0.30473128609035327,
+                "empathy_score": -0.006027885105298913,
+                "escalation_level": 0.2191162109375,
+                "escalation_risks": 0.26229372891512787,
+                "id": "u10",
+                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                 "speaker": "Customer",
-                "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
             }
         ],
         "cumulative_probability": 1.0
@@ -62,44 +62,44 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.2958409926470588,
-                "empathy_score": 0.04687679515165441,
-                "escalation_level": 0.2979592715992647,
-                "escalation_risks": 0.2940494312959559,
-                "id": "u19",
-                "intents_emotions": "Compensation Request - Neutral/Curious",
+                "churn_risk_score": 0.041115654839409724,
+                "empathy_score": 0.012638939751519097,
+                "escalation_level": 0.050793965657552086,
+                "escalation_risks": 0.035769294289981615,
+                "id": "u39",
+                "intents_emotions": "Confirmation - Neutral",
                 "speaker": "Customer",
-                "utterance": "okay sounds good what about any compensation for this delay"
+                "utterance": "sure it is bk 4578209"
             },
             {
-                "source": "u19",
+                "source": "u39",
                 "target": "a9",
-                "explanation": "The agent's apology led to another notification about the flight delay."
+                "explanation": "SOURCE's confirmation led to TARGET's assistance due to need for clarification on cancellation process"
             },
             {
-                "churn_risk_score": 0.06881637573242187,
-                "empathy_score": 0.66845703125,
-                "escalation_level": 0.08111114501953125,
-                "escalation_risks": 0.06387798602764423,
+                "churn_risk_score": -0.006738935198102679,
+                "empathy_score": 0.7802734375,
+                "escalation_level": 0.027165004185267856,
+                "escalation_risks": 0.016124861580984935,
                 "id": "a9",
-                "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                "intents_emotions": "Assistance - Helpful/Neutral",
                 "speaker": "Agent",
-                "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                "utterance": "i can definitely help you with that jack can i get your booking I would first please"
             },
             {
                 "source": "a9",
-                "target": "u17",
-                "explanation": "The agent's apology led to another notification about the flight delay."
+                "target": "u10",
+                "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
             },
             {
-                "churn_risk_score": 0.44691051136363635,
-                "empathy_score": -0.0014312050559303977,
-                "escalation_level": 0.4247159090909091,
-                "escalation_risks": 0.4677734375,
-                "id": "u17",
-                "intents_emotions": "Complaint - Frustrated/Comparative",
+                "churn_risk_score": 0.30473128609035327,
+                "empathy_score": -0.006027885105298913,
+                "escalation_level": 0.2191162109375,
+                "escalation_risks": 0.26229372891512787,
+                "id": "u10",
+                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                 "speaker": "Customer",
-                "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
             }
         ],
         "cumulative_probability": 1.0
@@ -107,44 +107,44 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.18143310546875,
-                "empathy_score": 0.1131591796875,
-                "escalation_level": 0.214923095703125,
-                "escalation_risks": 0.20157470703125,
-                "id": "u44",
-                "intents_emotions": "Confirmation/Assistance - Polite/Neutral",
+                "churn_risk_score": 0.527610922759434,
+                "empathy_score": 0.0010486818709463444,
+                "escalation_level": 0.3993219339622642,
+                "escalation_risks": 0.46541883680555557,
+                "id": "u16",
+                "intents_emotions": "Cancellation Inquiry - Frustrated/Concerned",
                 "speaker": "Customer",
-                "utterance": "yes perfect thank you when will i receive the meal voucher"
+                "utterance": "yes please i just find it frustrating because i did not realize the penalties involved with cancelli..."
             },
             {
-                "source": "u44",
+                "source": "u16",
                 "target": "a9",
-                "explanation": "The agent re-offers the meal voucher due to the delay, which directly addresses the customer's concern."
+                "explanation": "SOURCE's cancellation inquiry led to TARGET's assistance due to need for clarification on Premier Resorts' terms"
             },
             {
-                "churn_risk_score": 0.06881637573242187,
-                "empathy_score": 0.66845703125,
-                "escalation_level": 0.08111114501953125,
-                "escalation_risks": 0.06387798602764423,
+                "churn_risk_score": -0.006738935198102679,
+                "empathy_score": 0.7802734375,
+                "escalation_level": 0.027165004185267856,
+                "escalation_risks": 0.016124861580984935,
                 "id": "a9",
-                "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                "intents_emotions": "Assistance - Helpful/Neutral",
                 "speaker": "Agent",
-                "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                "utterance": "i can definitely help you with that jack can i get your booking I would first please"
             },
             {
                 "source": "a9",
-                "target": "u17",
-                "explanation": "The agent's apology led to another notification about the flight delay."
+                "target": "u10",
+                "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
             },
             {
-                "churn_risk_score": 0.44691051136363635,
-                "empathy_score": -0.0014312050559303977,
-                "escalation_level": 0.4247159090909091,
-                "escalation_risks": 0.4677734375,
-                "id": "u17",
-                "intents_emotions": "Complaint - Frustrated/Comparative",
+                "churn_risk_score": 0.30473128609035327,
+                "empathy_score": -0.006027885105298913,
+                "escalation_level": 0.2191162109375,
+                "escalation_risks": 0.26229372891512787,
+                "id": "u10",
+                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                 "speaker": "Customer",
-                "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
             }
         ],
         "cumulative_probability": 1.0
@@ -152,44 +152,44 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.1731236775716146,
-                "empathy_score": 0.10890924362909227,
-                "escalation_level": 0.12968844459170387,
-                "escalation_risks": 0.13834635416666666,
-                "id": "u9",
-                "intents_emotions": "Cancellation Inquiry - Concerned/Seeking Clarification",
+                "churn_risk_score": 0.43359375,
+                "empathy_score": 0.0283203125,
+                "escalation_level": 0.392578125,
+                "escalation_risks": 0.427734375,
+                "id": "u30",
+                "intents_emotions": "Consideration - Neutral/Considering",
                 "speaker": "Customer",
-                "utterance": "great also if i needed to cancel or whatever is there a fee for that"
+                "utterance": "what if i yeah i might be interested but i really need to think about it you know if i decide to sta..."
             },
             {
-                "source": "u9",
+                "source": "u30",
                 "target": "a9",
-                "explanation": "The customer's cancellation inquiry caused the agent to offer compensation."
+                "explanation": "The customer's consideration led to assistance from the agent."
             },
             {
-                "churn_risk_score": 0.06881637573242187,
-                "empathy_score": 0.66845703125,
-                "escalation_level": 0.08111114501953125,
-                "escalation_risks": 0.06387798602764423,
+                "churn_risk_score": -0.006738935198102679,
+                "empathy_score": 0.7802734375,
+                "escalation_level": 0.027165004185267856,
+                "escalation_risks": 0.016124861580984935,
                 "id": "a9",
-                "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                "intents_emotions": "Assistance - Helpful/Neutral",
                 "speaker": "Agent",
-                "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                "utterance": "i can definitely help you with that jack can i get your booking I would first please"
             },
             {
                 "source": "a9",
-                "target": "u17",
-                "explanation": "The agent's apology led to another notification about the flight delay."
+                "target": "u10",
+                "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
             },
             {
-                "churn_risk_score": 0.44691051136363635,
-                "empathy_score": -0.0014312050559303977,
-                "escalation_level": 0.4247159090909091,
-                "escalation_risks": 0.4677734375,
-                "id": "u17",
-                "intents_emotions": "Complaint - Frustrated/Comparative",
+                "churn_risk_score": 0.30473128609035327,
+                "empathy_score": -0.006027885105298913,
+                "escalation_level": 0.2191162109375,
+                "escalation_risks": 0.26229372891512787,
+                "id": "u10",
+                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                 "speaker": "Customer",
-                "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
             }
         ],
         "cumulative_probability": 1.0

@@ -1235,5 +1235,463 @@
     {
         "query": "Why are flights being cancelled so much?",
         "error": "'78dc7604-de7b-408e-91c4-b3b70aa26d66'"
+    },
+    {
+        "query": "Why are flights being cancelled so much?",
+        "error": "'78dc7604-de7b-408e-91c4-b3b70aa26d66'"
+    },
+    {
+        "timestamp": "2025-12-05T04:26:22.871680",
+        "query": "Why are flights being cancelled so much?",
+        "answer": "Based on the provided causal chains, it appears that flights are being cancelled due to delays in operations. The agents' apologies and offers of compensation seem to be related to the flight cancellations.\n\nA common thread across multiple pathways is the agent's apology leading to another notification about the flight delay (PATHWAY 1, 3, and 4). This suggests that the airlines are experiencing difficulties in managing their flights, leading to delays and cancellations. The customers' responses also indicate frustration with the situation, as seen in the customer's statement \"that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort...\" (STATE u17).\n\nFurthermore, PATHWAY 5 shows that even when customers inquire about cancelling their flights, they are offered compensation, implying that flight cancellations are a widespread issue.\n\nThe empathy scores of the agents in these pathways range from moderate to high, indicating that they are attempting to address the customers' concerns. However, the low empathy score in STATE u17 suggests that some customers may be more resistant to the agents' apologies and offers of compensation.\n\nIn summary, the data suggests that flight cancellations are a result of operational delays within the airlines, which is causing frustration among customers.",
+        "causal_chains_content": [
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.06881637573242187,
+                        "empathy_score": 0.66845703125,
+                        "escalation_level": 0.08111114501953125,
+                        "escalation_risks": 0.06387798602764423,
+                        "id": "a9",
+                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u17",
+                        "explanation": "The agent's apology led to another notification about the flight delay."
+                    },
+                    {
+                        "churn_risk_score": 0.44691051136363635,
+                        "empathy_score": -0.0014312050559303977,
+                        "escalation_level": 0.4247159090909091,
+                        "escalation_risks": 0.4677734375,
+                        "id": "u17",
+                        "intents_emotions": "Complaint - Frustrated/Comparative",
+                        "speaker": "Customer",
+                        "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.02265528628700658,
+                        "empathy_score": 0.8454975328947368,
+                        "escalation_level": 0.06644901476408306,
+                        "escalation_risks": 0.025248678107010692,
+                        "id": "a17",
+                        "intents_emotions": "Gratitude/Reassurance - Empathetic",
+                        "speaker": "Agent",
+                        "utterance": "you are welcome emma i am glad i could help it is important for us to resolve this as smoothly as po..."
+                    },
+                    {
+                        "source": "a17",
+                        "target": "u17",
+                        "explanation": "The customer's complaint caused the agent to provide a reassuring message."
+                    },
+                    {
+                        "churn_risk_score": 0.44691051136363635,
+                        "empathy_score": -0.0014312050559303977,
+                        "escalation_level": 0.4247159090909091,
+                        "escalation_risks": 0.4677734375,
+                        "id": "u17",
+                        "intents_emotions": "Complaint - Frustrated/Comparative",
+                        "speaker": "Customer",
+                        "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.2958409926470588,
+                        "empathy_score": 0.04687679515165441,
+                        "escalation_level": 0.2979592715992647,
+                        "escalation_risks": 0.2940494312959559,
+                        "id": "u19",
+                        "intents_emotions": "Compensation Request - Neutral/Curious",
+                        "speaker": "Customer",
+                        "utterance": "okay sounds good what about any compensation for this delay"
+                    },
+                    {
+                        "source": "u19",
+                        "target": "a9",
+                        "explanation": "The agent's apology led to another notification about the flight delay."
+                    },
+                    {
+                        "churn_risk_score": 0.06881637573242187,
+                        "empathy_score": 0.66845703125,
+                        "escalation_level": 0.08111114501953125,
+                        "escalation_risks": 0.06387798602764423,
+                        "id": "a9",
+                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u17",
+                        "explanation": "The agent's apology led to another notification about the flight delay."
+                    },
+                    {
+                        "churn_risk_score": 0.44691051136363635,
+                        "empathy_score": -0.0014312050559303977,
+                        "escalation_level": 0.4247159090909091,
+                        "escalation_risks": 0.4677734375,
+                        "id": "u17",
+                        "intents_emotions": "Complaint - Frustrated/Comparative",
+                        "speaker": "Customer",
+                        "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.18143310546875,
+                        "empathy_score": 0.1131591796875,
+                        "escalation_level": 0.214923095703125,
+                        "escalation_risks": 0.20157470703125,
+                        "id": "u44",
+                        "intents_emotions": "Confirmation/Assistance - Polite/Neutral",
+                        "speaker": "Customer",
+                        "utterance": "yes perfect thank you when will i receive the meal voucher"
+                    },
+                    {
+                        "source": "u44",
+                        "target": "a9",
+                        "explanation": "The agent re-offers a meal voucher due to the delay, which is a direct consequence of the previous conversation."
+                    },
+                    {
+                        "churn_risk_score": 0.06881637573242187,
+                        "empathy_score": 0.66845703125,
+                        "escalation_level": 0.08111114501953125,
+                        "escalation_risks": 0.06387798602764423,
+                        "id": "a9",
+                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u17",
+                        "explanation": "The agent's apology led to another notification about the flight delay."
+                    },
+                    {
+                        "churn_risk_score": 0.44691051136363635,
+                        "empathy_score": -0.0014312050559303977,
+                        "escalation_level": 0.4247159090909091,
+                        "escalation_risks": 0.4677734375,
+                        "id": "u17",
+                        "intents_emotions": "Complaint - Frustrated/Comparative",
+                        "speaker": "Customer",
+                        "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.1731236775716146,
+                        "empathy_score": 0.10890924362909227,
+                        "escalation_level": 0.12968844459170387,
+                        "escalation_risks": 0.13834635416666666,
+                        "id": "u9",
+                        "intents_emotions": "Cancellation Inquiry - Concerned/Seeking Clarification",
+                        "speaker": "Customer",
+                        "utterance": "great also if i needed to cancel or whatever is there a fee for that"
+                    },
+                    {
+                        "source": "u9",
+                        "target": "a9",
+                        "explanation": "The customer's cancellation inquiry caused the agent to offer compensation."
+                    },
+                    {
+                        "churn_risk_score": 0.06881637573242187,
+                        "empathy_score": 0.66845703125,
+                        "escalation_level": 0.08111114501953125,
+                        "escalation_risks": 0.06387798602764423,
+                        "id": "a9",
+                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u17",
+                        "explanation": "The agent's apology led to another notification about the flight delay."
+                    },
+                    {
+                        "churn_risk_score": 0.44691051136363635,
+                        "empathy_score": -0.0014312050559303977,
+                        "escalation_level": 0.4247159090909091,
+                        "escalation_risks": 0.4677734375,
+                        "id": "u17",
+                        "intents_emotions": "Complaint - Frustrated/Comparative",
+                        "speaker": "Customer",
+                        "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            }
+        ],
+        "landing_points_content": [
+            {
+                "id": "u17",
+                "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ...",
+                "escalation_level": 0.4247159090909091,
+                "churn_risk_score": 0.44691051136363635,
+                "empathy_score": -0.0014312050559303977,
+                "escalation_risks": 0.4677734375,
+                "intents_emotions": "Complaint - Frustrated/Comparative",
+                "speaker": "Customer",
+                "similarity": 0.5284009575843811
+            },
+            {
+                "id": "u3",
+                "utterance": "i understand it looks like your flight was delayed due to mechanical issues",
+                "escalation_level": 0.41650390625,
+                "churn_risk_score": 0.3351236979166667,
+                "empathy_score": 0.18848673502604166,
+                "escalation_risks": 0.378662109375,
+                "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
+                "speaker": "Customer",
+                "similarity": 0.43957531452178955
+            }
+        ],
+        "candidate_pairs_content": null
+    },
+    {
+        "timestamp": "2025-12-05T04:31:33.602757",
+        "query": "Why are customers cancelling so many bookings?",
+        "answer": "Based on the causal chains provided, it appears that customers are cancelling their bookings due to frustration with the cancellation policy and penalties involved.\n\nThe most common theme among the chains is that customers (represented by node \"u10\") are initiating cancellations after being informed about the policies and fees associated with cancellations. This suggests that the complexity of the cancellation process and the surprise of encountering unexpected fees are major contributors to customer frustration and subsequent cancellations.\n\nNotably, high empathy scores from agents in nodes like \"a9\" do not seem to alleviate this issue, implying that more transparency around cancellation policies might be necessary to prevent such cancellations.",
+        "causal_chains_content": [
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": -0.006738935198102679,
+                        "empathy_score": 0.7802734375,
+                        "escalation_level": 0.027165004185267856,
+                        "escalation_risks": 0.016124861580984935,
+                        "id": "a9",
+                        "intents_emotions": "Assistance - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "i can definitely help you with that jack can i get your booking I would first please"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u10",
+                        "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
+                    },
+                    {
+                        "churn_risk_score": 0.30473128609035327,
+                        "empathy_score": -0.006027885105298913,
+                        "escalation_level": 0.2191162109375,
+                        "escalation_risks": 0.26229372891512787,
+                        "id": "u10",
+                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.1816156333852037,
+                        "empathy_score": 0.5689281927090939,
+                        "escalation_level": 0.13918682347948305,
+                        "escalation_risks": 0.1501878405374194,
+                        "id": "a0",
+                        "intents_emotions": "Policy Explanation - Neutral/Informative",
+                        "speaker": "Agent",
+                        "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
+                    },
+                    {
+                        "source": "a0",
+                        "target": "u10",
+                        "explanation": "The agent's explanation of the policy led to a cancellation inquiry."
+                    },
+                    {
+                        "churn_risk_score": 0.30473128609035327,
+                        "empathy_score": -0.006027885105298913,
+                        "escalation_level": 0.2191162109375,
+                        "escalation_risks": 0.26229372891512787,
+                        "id": "u10",
+                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.041115654839409724,
+                        "empathy_score": 0.012638939751519097,
+                        "escalation_level": 0.050793965657552086,
+                        "escalation_risks": 0.035769294289981615,
+                        "id": "u39",
+                        "intents_emotions": "Confirmation - Neutral",
+                        "speaker": "Customer",
+                        "utterance": "sure it is bk 4578209"
+                    },
+                    {
+                        "source": "u39",
+                        "target": "a9",
+                        "explanation": "SOURCE's confirmation led to TARGET's assistance due to need for clarification on cancellation process"
+                    },
+                    {
+                        "churn_risk_score": -0.006738935198102679,
+                        "empathy_score": 0.7802734375,
+                        "escalation_level": 0.027165004185267856,
+                        "escalation_risks": 0.016124861580984935,
+                        "id": "a9",
+                        "intents_emotions": "Assistance - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "i can definitely help you with that jack can i get your booking I would first please"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u10",
+                        "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
+                    },
+                    {
+                        "churn_risk_score": 0.30473128609035327,
+                        "empathy_score": -0.006027885105298913,
+                        "escalation_level": 0.2191162109375,
+                        "escalation_risks": 0.26229372891512787,
+                        "id": "u10",
+                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.527610922759434,
+                        "empathy_score": 0.0010486818709463444,
+                        "escalation_level": 0.3993219339622642,
+                        "escalation_risks": 0.46541883680555557,
+                        "id": "u16",
+                        "intents_emotions": "Cancellation Inquiry - Frustrated/Concerned",
+                        "speaker": "Customer",
+                        "utterance": "yes please i just find it frustrating because i did not realize the penalties involved with cancelli..."
+                    },
+                    {
+                        "source": "u16",
+                        "target": "a9",
+                        "explanation": "SOURCE's cancellation inquiry led to TARGET's assistance due to need for clarification on Premier Resorts' terms"
+                    },
+                    {
+                        "churn_risk_score": -0.006738935198102679,
+                        "empathy_score": 0.7802734375,
+                        "escalation_level": 0.027165004185267856,
+                        "escalation_risks": 0.016124861580984935,
+                        "id": "a9",
+                        "intents_emotions": "Assistance - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "i can definitely help you with that jack can i get your booking I would first please"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u10",
+                        "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
+                    },
+                    {
+                        "churn_risk_score": 0.30473128609035327,
+                        "empathy_score": -0.006027885105298913,
+                        "escalation_level": 0.2191162109375,
+                        "escalation_risks": 0.26229372891512787,
+                        "id": "u10",
+                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.43359375,
+                        "empathy_score": 0.0283203125,
+                        "escalation_level": 0.392578125,
+                        "escalation_risks": 0.427734375,
+                        "id": "u30",
+                        "intents_emotions": "Consideration - Neutral/Considering",
+                        "speaker": "Customer",
+                        "utterance": "what if i yeah i might be interested but i really need to think about it you know if i decide to sta..."
+                    },
+                    {
+                        "source": "u30",
+                        "target": "a9",
+                        "explanation": "The customer's consideration led to assistance from the agent."
+                    },
+                    {
+                        "churn_risk_score": -0.006738935198102679,
+                        "empathy_score": 0.7802734375,
+                        "escalation_level": 0.027165004185267856,
+                        "escalation_risks": 0.016124861580984935,
+                        "id": "a9",
+                        "intents_emotions": "Assistance - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "i can definitely help you with that jack can i get your booking I would first please"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u10",
+                        "explanation": "SOURCE's cancellation inquiry led to TARGET's confirmation of booking cancellation due to successful process"
+                    },
+                    {
+                        "churn_risk_score": 0.30473128609035327,
+                        "empathy_score": -0.006027885105298913,
+                        "escalation_level": 0.2191162109375,
+                        "escalation_risks": 0.26229372891512787,
+                        "id": "u10",
+                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            }
+        ],
+        "landing_points_content": [
+            {
+                "id": "u10",
+                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas",
+                "escalation_level": 0.2191162109375,
+                "churn_risk_score": 0.30473128609035327,
+                "empathy_score": -0.006027885105298913,
+                "escalation_risks": 0.26229372891512787,
+                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
+                "speaker": "Customer",
+                "similarity": 0.4922518730163574
+            },
+            {
+                "id": "u14",
+                "utterance": "fifty percent that is just frustrating i mean how does that compare to other hotels",
+                "escalation_level": 0.3857421875,
+                "churn_risk_score": 0.32728794642857145,
+                "empathy_score": 0.03226579938616071,
+                "escalation_risks": 0.3662109375,
+                "intents_emotions": "Complaint - Frustrated/Concerned about rate",
+                "speaker": "Customer",
+                "similarity": 0.4709113836288452
+            }
+        ],
+        "candidate_pairs_content": null
     }
 ]

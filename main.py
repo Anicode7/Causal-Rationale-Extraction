@@ -19,7 +19,7 @@ LANDING_FILE = "landing_points.json"
 # --- Input Data List ---
 queries_to_run = [
     {
-        "query": "Why are flights being cancelled so much?",
+        "query": "Why are customers cancelling so many bookings?",
     }
 ]
 
