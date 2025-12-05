@@ -28,6 +28,7 @@ def embed_node(node):
 
 def embed_transcript(graph):
     for node in graph["nodes"]:
+        emb = embed_node(node)
         node.pop("escalation_level_std", None)
         node.pop("escalation_level_min", None)
         node.pop("escalation_level_max", None)
@@ -47,10 +48,9 @@ def embed_transcript(graph):
         node["dialogue_acts"] = node.get("dialogue_acts")[0]
         node["action_type"] = node.get("action_type")[0]
         node["intents_emotions"] = node.get("intents_emotions")[0]
-        emb = embed_node(node)
+        
         node["embedding"] = emb
-    with open(os.path.join(CURR_DIR,"output","graph_with_metadata_embedded.json"), "w") as outfile:
-        json.dump(graph, outfile, indent=4,cls=NpEncoder)
+
 
 def embed_sentence(sentence):
     return model.encode(sentence)

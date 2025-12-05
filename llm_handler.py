@@ -222,7 +222,7 @@ Now generate the output as per the instructions above.
         3. **Analytical Tone**: Instead of saying "Pathway 1 says X", say "Primary analysis indicates X..." or "There is strong evidence that X...".
         4. **Handling Uncertainty**: Use high-probability chains for your main conclusion. Mention lower-probability chains only if they offer distinct, valuable nuance, introducing them with phrases like "Additionally, it is worth noting..." or "A secondary factor appears to be...".
         5. **Metadata Integration**: Weave metadata (e.g., "high churn risk", "low empathy") naturally into your sentences (e.g., "The lack of empathy shown by agents correlates with the high churn risk observed...").
-
+        
         Goal: A direct, seamless answer that sounds like a human expert analyst, not a machine debugging a graph.
         '''
 
