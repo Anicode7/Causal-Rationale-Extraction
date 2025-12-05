@@ -139,7 +139,7 @@ def export_graph_json(G: nx.DiGraph, output_path: str):
     with open(output_path, 'w') as f:
         json.dump(graph_data, f, indent=2)
     
-    print(f"✓ Exported graph to JSON: {output_path}")
+    print(f"Exported graph to JSON: {output_path}")
 
 
 def export_graph_graphml(G: nx.DiGraph, output_path: str):
@@ -168,13 +168,13 @@ def export_graph_graphml(G: nx.DiGraph, output_path: str):
                     G_copy.nodes[node_id][key] = ', '.join(str(v) for v in value) if value else ''
     
     nx.write_graphml(G_copy, output_path)
-    print(f"✓ Exported graph to GraphML: {output_path}")
+    print(f"Exported graph to GraphML: {output_path}")
 
 
 def export_graph_gexf(G: nx.DiGraph, output_path: str):
     """Export graph with metadata to GEXF format."""
     nx.write_gexf(G, output_path)
-    print(f"✓ Exported graph to GEXF: {output_path}")
+    print(f"Exported graph to GEXF: {output_path}")
 
 
 def generate_html_visualization(G: nx.DiGraph, output_path: str):
@@ -439,7 +439,7 @@ def generate_html_visualization(G: nx.DiGraph, output_path: str):
     with open(output_path, 'w') as f:
         f.write(html_content)
     
-    print(f"✓ Generated interactive visualization: {output_path}")
+    print(f"Generated interactive visualization: {output_path}")
 
 
 def build_and_export_graph(
@@ -483,7 +483,7 @@ def build_and_export_graph(
         html_path = os.path.join(output_dir, 'graph_visualization.html')
         generate_html_visualization(G, html_path)
     
-    print(f"✓ Graph with metadata exported to {output_dir}")
+    print(f"Graph with metadata exported to {output_dir}")
     
     return G
 

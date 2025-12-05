@@ -3,11 +3,6 @@
 Given a path to a collection of dialogues, this script first cluster all the utterances in the collection
 and then convert each dialogue to a sequence of a "discrete trajectory" by replacing each utterances
 with its corresponding cluster id.
-
-Copyright (c) 2024 Idiap Research Institute
-MIT License
-
-@author: Sergio Burdisso (sergio.burdisso@idiap.ch)
 """
 import os
 import re

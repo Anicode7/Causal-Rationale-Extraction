@@ -754,5 +754,486 @@
             }
         ],
         "candidate_pairs_content": null
+    },
+    {
+        "query": "For AeroLink and SkyBridge Airlines, how does the combination of flight delays and perceived unfair refund policies influence compensation dispute rates compared with competitor airlines?",
+        "error": "Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687',)):\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 111] Connection refused)"
+    },
+    {
+        "timestamp": "2025-12-04T23:53:30.048376",
+        "query": "Why are flights being cancelled so much?",
+        "answer": "Based on the provided causal chains, it appears that flights are being cancelled or delayed due to mechanical issues.\n\nThe customer's understanding and relief in response to the agent's informative responses about flight delays and cancellations indicate a high likelihood of mechanical issues causing these disruptions. The customer's complaints about frustrating delays and their need for rebooking options also suggest that mechanical problems are a significant concern.\n\nFurthermore, the cumulative probabilities associated with these chains (all 1.00) suggest a high degree of confidence in this causal relationship.\n\nTherefore, it can be inferred that flights are being cancelled or delayed primarily due to mechanical issues.",
+        "causal_chains_content": [
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.04662637452821474,
+                        "empathy_score": 0.6306494635504645,
+                        "escalation_level": 0.0969188793285473,
+                        "escalation_risks": 0.07203317195811171,
+                        "id": "a0",
+                        "intents_emotions": "Assistance - Empathetic/Helpful",
+                        "speaker": "Agent",
+                        "utterance": "i understand if you miss the flight do you remember your booking reference i can check your options ..."
+                    },
+                    {
+                        "source": "a0",
+                        "target": "u69",
+                        "explanation": "The agent's informative response about the flight delay led to the customer's understanding and relief."
+                    },
+                    {
+                        "churn_risk_score": 0.3564453125,
+                        "empathy_score": 0.061636861165364584,
+                        "escalation_level": 0.48977864583333336,
+                        "escalation_risks": 0.4371419270833333,
+                        "id": "u69",
+                        "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
+                        "speaker": "Customer",
+                        "utterance": "i understand it looks like your flight was delayed due to mechanical issues"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.11197082201639812,
+                        "empathy_score": 0.010320663452148438,
+                        "escalation_level": 0.16523138682047525,
+                        "escalation_risks": 0.14565217759874133,
+                        "id": "u47",
+                        "intents_emotions": "Confirmation/Request - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "i think it is pnr just give me a moment i meant pnr 2ab456 can you check that for me"
+                    },
+                    {
+                        "source": "u47",
+                        "target": "a0",
+                        "explanation": "The customer's confirmation of their booking reference led to the agent's empathetic response and helpful assistance."
+                    },
+                    {
+                        "churn_risk_score": 0.04662637452821474,
+                        "empathy_score": 0.6306494635504645,
+                        "escalation_level": 0.0969188793285473,
+                        "escalation_risks": 0.07203317195811171,
+                        "id": "a0",
+                        "intents_emotions": "Assistance - Empathetic/Helpful",
+                        "speaker": "Agent",
+                        "utterance": "i understand if you miss the flight do you remember your booking reference i can check your options ..."
+                    },
+                    {
+                        "source": "a0",
+                        "target": "u69",
+                        "explanation": "The agent's informative response about the flight delay led to the customer's understanding and relief."
+                    },
+                    {
+                        "churn_risk_score": 0.3564453125,
+                        "empathy_score": 0.061636861165364584,
+                        "escalation_level": 0.48977864583333336,
+                        "escalation_risks": 0.4371419270833333,
+                        "id": "u69",
+                        "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
+                        "speaker": "Customer",
+                        "utterance": "i understand it looks like your flight was delayed due to mechanical issues"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.25993208451704547,
+                        "empathy_score": 0.027966239235617897,
+                        "escalation_level": 0.3672762784090909,
+                        "escalation_risks": 0.31676664806547616,
+                        "id": "u13",
+                        "intents_emotions": "Complaint - Frustrated/Impatient",
+                        "speaker": "Customer",
+                        "utterance": "mechanical really that is that is frustrating how long will the delay be"
+                    },
+                    {
+                        "source": "u13",
+                        "target": "a0",
+                        "explanation": "The customer's complaint about the delay ('mechanical really that is that is frustrating how long will the delay be') directly causes the agent's assistance response."
+                    },
+                    {
+                        "churn_risk_score": 0.04662637452821474,
+                        "empathy_score": 0.6306494635504645,
+                        "escalation_level": 0.0969188793285473,
+                        "escalation_risks": 0.07203317195811171,
+                        "id": "a0",
+                        "intents_emotions": "Assistance - Empathetic/Helpful",
+                        "speaker": "Agent",
+                        "utterance": "i understand if you miss the flight do you remember your booking reference i can check your options ..."
+                    },
+                    {
+                        "source": "a0",
+                        "target": "u69",
+                        "explanation": "The agent's informative response about the flight delay led to the customer's understanding and relief."
+                    },
+                    {
+                        "churn_risk_score": 0.3564453125,
+                        "empathy_score": 0.061636861165364584,
+                        "escalation_level": 0.48977864583333336,
+                        "escalation_risks": 0.4371419270833333,
+                        "id": "u69",
+                        "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
+                        "speaker": "Customer",
+                        "utterance": "i understand it looks like your flight was delayed due to mechanical issues"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.25140591325431033,
+                        "empathy_score": 0.04515641311119343,
+                        "escalation_level": 0.33214069234913796,
+                        "escalation_risks": 0.27713473338001177,
+                        "id": "u2",
+                        "intents_emotions": "Rebooking Inquiry - Frustrated/Impatient",
+                        "speaker": "Customer",
+                        "utterance": "a couple of hours that is not great at all i need to know what my options are for rebooking can i ge..."
+                    },
+                    {
+                        "source": "u2",
+                        "target": "a0",
+                        "explanation": "The agent's assistance response ('i understand if you miss the flight do you remember your booking reference i can check your options...') directly causes the customer's rebooking inquiry."
+                    },
+                    {
+                        "churn_risk_score": 0.04662637452821474,
+                        "empathy_score": 0.6306494635504645,
+                        "escalation_level": 0.0969188793285473,
+                        "escalation_risks": 0.07203317195811171,
+                        "id": "a0",
+                        "intents_emotions": "Assistance - Empathetic/Helpful",
+                        "speaker": "Agent",
+                        "utterance": "i understand if you miss the flight do you remember your booking reference i can check your options ..."
+                    },
+                    {
+                        "source": "a0",
+                        "target": "u69",
+                        "explanation": "The agent's informative response about the flight delay led to the customer's understanding and relief."
+                    },
+                    {
+                        "churn_risk_score": 0.3564453125,
+                        "empathy_score": 0.061636861165364584,
+                        "escalation_level": 0.48977864583333336,
+                        "escalation_risks": 0.4371419270833333,
+                        "id": "u69",
+                        "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
+                        "speaker": "Customer",
+                        "utterance": "i understand it looks like your flight was delayed due to mechanical issues"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.07904052734375,
+                        "empathy_score": 0.155517578125,
+                        "escalation_level": 0.1396465301513672,
+                        "escalation_risks": 0.10169601440429688,
+                        "id": "u61",
+                        "intents_emotions": "Information Request - Polite/Neutral",
+                        "speaker": "Customer",
+                        "utterance": "yes absolutely can you tell me the details of that flight"
+                    },
+                    {
+                        "source": "u61",
+                        "target": "a0",
+                        "explanation": "The agent's assistance response ('i understand if you miss the flight do you remember your booking reference i can check your options...') directly causes the customer's rebooking inquiry."
+                    },
+                    {
+                        "churn_risk_score": 0.04662637452821474,
+                        "empathy_score": 0.6306494635504645,
+                        "escalation_level": 0.0969188793285473,
+                        "escalation_risks": 0.07203317195811171,
+                        "id": "a0",
+                        "intents_emotions": "Assistance - Empathetic/Helpful",
+                        "speaker": "Agent",
+                        "utterance": "i understand if you miss the flight do you remember your booking reference i can check your options ..."
+                    },
+                    {
+                        "source": "a0",
+                        "target": "u69",
+                        "explanation": "The agent's informative response about the flight delay led to the customer's understanding and relief."
+                    },
+                    {
+                        "churn_risk_score": 0.3564453125,
+                        "empathy_score": 0.061636861165364584,
+                        "escalation_level": 0.48977864583333336,
+                        "escalation_risks": 0.4371419270833333,
+                        "id": "u69",
+                        "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
+                        "speaker": "Customer",
+                        "utterance": "i understand it looks like your flight was delayed due to mechanical issues"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            }
+        ],
+        "landing_points_content": [
+            {
+                "id": "a32",
+                "utterance": "i am sorry to hear that addison let me check your flights details can you provide me with your booki...",
+                "escalation_level": 0.04044886997767857,
+                "churn_risk_score": -0.007847377232142858,
+                "empathy_score": 0.7578125,
+                "escalation_risks": 0.009272984095982142,
+                "intents_emotions": "Apology - Empathetic/Inquiry",
+                "speaker": "Agent",
+                "similarity": 0.44262033700942993
+            },
+            {
+                "id": "u69",
+                "utterance": "i understand it looks like your flight was delayed due to mechanical issues",
+                "escalation_level": 0.48977864583333336,
+                "churn_risk_score": 0.3564453125,
+                "empathy_score": 0.061636861165364584,
+                "escalation_risks": 0.4371419270833333,
+                "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
+                "speaker": "Customer",
+                "similarity": 0.43957531452178955
+            }
+        ],
+        "candidate_pairs_content": null
+    },
+    {
+        "query": "Why are flights being cancelled so much?",
+        "error": "GraphML writer does not support <class 'NoneType'> as data values."
+    },
+    {
+        "timestamp": "2025-12-05T00:48:54.868543",
+        "query": "Why are flights being cancelled so much?",
+        "answer": "Based on the provided causal chains, it appears that flight cancellations are being caused by a combination of factors related to customer service and compensation.\n\nThe high-probability chain (PATHWAY 5) suggests that customers are inquiring about cancellation fees due to delays, which is leading to an offer of compensation from the agent. This indicates that there may be a pattern of customers experiencing frustration with flight delays and seeking redress through cancellations or other forms of compensation.\n\nAdditionally, the empathetic language used by the agent in some of the chains (e.g., \"you are welcome emma i am glad i could help it is important for us to resolve this as smoothly as possible\") suggests that the airline is attempting to address customer concerns and provide a positive experience. However, the customer's response in PATHWAY 2 (\"that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort...\") indicates that some customers may be experiencing frustration or disappointment with the airline's handling of delays.\n\nThe fact that there are multiple chains leading to similar outcomes (e.g., offering compensation) suggests that flight cancellations may be a common consequence of customer dissatisfaction with flight delays.",
+        "causal_chains_content": [
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.06881637573242187,
+                        "empathy_score": 0.66845703125,
+                        "escalation_level": 0.08111114501953125,
+                        "escalation_risks": 0.06387798602764423,
+                        "id": "a9",
+                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u17",
+                        "explanation": "The agent's apology led to another notification about the flight delay."
+                    },
+                    {
+                        "churn_risk_score": 0.44691051136363635,
+                        "empathy_score": -0.0014312050559303977,
+                        "escalation_level": 0.4247159090909091,
+                        "escalation_risks": 0.4677734375,
+                        "id": "u17",
+                        "intents_emotions": "Complaint - Frustrated/Comparative",
+                        "speaker": "Customer",
+                        "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.02265528628700658,
+                        "empathy_score": 0.8454975328947368,
+                        "escalation_level": 0.06644901476408306,
+                        "escalation_risks": 0.025248678107010692,
+                        "id": "a17",
+                        "intents_emotions": "Gratitude/Reassurance - Empathetic",
+                        "speaker": "Agent",
+                        "utterance": "you are welcome emma i am glad i could help it is important for us to resolve this as smoothly as po..."
+                    },
+                    {
+                        "source": "a17",
+                        "target": "u17",
+                        "explanation": "The customer's complaint caused the agent to provide a reassuring message."
+                    },
+                    {
+                        "churn_risk_score": 0.44691051136363635,
+                        "empathy_score": -0.0014312050559303977,
+                        "escalation_level": 0.4247159090909091,
+                        "escalation_risks": 0.4677734375,
+                        "id": "u17",
+                        "intents_emotions": "Complaint - Frustrated/Comparative",
+                        "speaker": "Customer",
+                        "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.2958409926470588,
+                        "empathy_score": 0.04687679515165441,
+                        "escalation_level": 0.2979592715992647,
+                        "escalation_risks": 0.2940494312959559,
+                        "id": "u19",
+                        "intents_emotions": "Compensation Request - Neutral/Curious",
+                        "speaker": "Customer",
+                        "utterance": "okay sounds good what about any compensation for this delay"
+                    },
+                    {
+                        "source": "u19",
+                        "target": "a9",
+                        "explanation": "The agent's apology led to another notification about the flight delay."
+                    },
+                    {
+                        "churn_risk_score": 0.06881637573242187,
+                        "empathy_score": 0.66845703125,
+                        "escalation_level": 0.08111114501953125,
+                        "escalation_risks": 0.06387798602764423,
+                        "id": "a9",
+                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u17",
+                        "explanation": "The agent's apology led to another notification about the flight delay."
+                    },
+                    {
+                        "churn_risk_score": 0.44691051136363635,
+                        "empathy_score": -0.0014312050559303977,
+                        "escalation_level": 0.4247159090909091,
+                        "escalation_risks": 0.4677734375,
+                        "id": "u17",
+                        "intents_emotions": "Complaint - Frustrated/Comparative",
+                        "speaker": "Customer",
+                        "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.18143310546875,
+                        "empathy_score": 0.1131591796875,
+                        "escalation_level": 0.214923095703125,
+                        "escalation_risks": 0.20157470703125,
+                        "id": "u44",
+                        "intents_emotions": "Confirmation/Assistance - Polite/Neutral",
+                        "speaker": "Customer",
+                        "utterance": "yes perfect thank you when will i receive the meal voucher"
+                    },
+                    {
+                        "source": "u44",
+                        "target": "a9",
+                        "explanation": "The agent re-offers the meal voucher due to the delay, which directly addresses the customer's concern."
+                    },
+                    {
+                        "churn_risk_score": 0.06881637573242187,
+                        "empathy_score": 0.66845703125,
+                        "escalation_level": 0.08111114501953125,
+                        "escalation_risks": 0.06387798602764423,
+                        "id": "a9",
+                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u17",
+                        "explanation": "The agent's apology led to another notification about the flight delay."
+                    },
+                    {
+                        "churn_risk_score": 0.44691051136363635,
+                        "empathy_score": -0.0014312050559303977,
+                        "escalation_level": 0.4247159090909091,
+                        "escalation_risks": 0.4677734375,
+                        "id": "u17",
+                        "intents_emotions": "Complaint - Frustrated/Comparative",
+                        "speaker": "Customer",
+                        "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.1731236775716146,
+                        "empathy_score": 0.10890924362909227,
+                        "escalation_level": 0.12968844459170387,
+                        "escalation_risks": 0.13834635416666666,
+                        "id": "u9",
+                        "intents_emotions": "Cancellation Inquiry - Concerned/Seeking Clarification",
+                        "speaker": "Customer",
+                        "utterance": "great also if i needed to cancel or whatever is there a fee for that"
+                    },
+                    {
+                        "source": "u9",
+                        "target": "a9",
+                        "explanation": "The customer's cancellation inquiry caused the agent to offer compensation."
+                    },
+                    {
+                        "churn_risk_score": 0.06881637573242187,
+                        "empathy_score": 0.66845703125,
+                        "escalation_level": 0.08111114501953125,
+                        "escalation_risks": 0.06387798602764423,
+                        "id": "a9",
+                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
+                    },
+                    {
+                        "source": "a9",
+                        "target": "u17",
+                        "explanation": "The agent's apology led to another notification about the flight delay."
+                    },
+                    {
+                        "churn_risk_score": 0.44691051136363635,
+                        "empathy_score": -0.0014312050559303977,
+                        "escalation_level": 0.4247159090909091,
+                        "escalation_risks": 0.4677734375,
+                        "id": "u17",
+                        "intents_emotions": "Complaint - Frustrated/Comparative",
+                        "speaker": "Customer",
+                        "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            }
+        ],
+        "landing_points_content": [
+            {
+                "id": "u17",
+                "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ...",
+                "escalation_level": 0.4247159090909091,
+                "churn_risk_score": 0.44691051136363635,
+                "empathy_score": -0.0014312050559303977,
+                "escalation_risks": 0.4677734375,
+                "intents_emotions": "Complaint - Frustrated/Comparative",
+                "speaker": "Customer",
+                "similarity": 0.5284009575843811
+            },
+            {
+                "id": "u3",
+                "utterance": "i understand it looks like your flight was delayed due to mechanical issues",
+                "escalation_level": 0.41650390625,
+                "churn_risk_score": 0.3351236979166667,
+                "empathy_score": 0.18848673502604166,
+                "escalation_risks": 0.378662109375,
+                "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
+                "speaker": "Customer",
+                "similarity": 0.43957531452178955
+            }
+        ],
+        "candidate_pairs_content": null
+    },
+    {
+        "query": "Why are flights being cancelled so much?",
+        "error": "'78dc7604-de7b-408e-91c4-b3b70aa26d66'"
     }
 ]

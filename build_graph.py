@@ -2,11 +2,6 @@
 """
 Given a collection of dialogue action trajectories, this script convert them into
 a single action transition graph that represent them.
-
-Copyright (c) 2024 Idiap Research Institute
-MIT License
-
-@author: Sergio Burdisso (sergio.burdisso@idiap.ch)
 """
 import os
 import re

@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
 """
-Integrated Pipeline: Top 20 Conversations → Dialog2Flow Graph with Metadata
+Integrated Pipeline: Top K Conversations → Dialog2Flow Graph with Metadata
 
 This pipeline orchestrates the complete workflow:
-1. Find top 20 most relevant conversations for a query and domain
-2. Store them in data/top_20 with full metadata
+1. Find top K most relevant conversations for a query and domain
+2. Store them in data/top_K with full metadata
 3. Run the original Dialog2Flow text-only trajectory extraction
 4. Attach metadata back onto the Dialog2Flow trajectories
 5. Build both metadata-aware and Dialog2Flow graphs (with optional visualizations)
-
-Copyright (c) 2024
-MIT License
 """
 import os
 import sys
@@ -24,12 +21,12 @@ from collections import defaultdict
 from typing import Dict, List, Optional, Tuple
 import query_splitter
 import llm_handler
+
 # Add current directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from find_top_20_conversations import ConversationSearchPipeline
 from query_embeddings_db import CachedEmbeddingSearch
-from prepare_top20_for_dialog2flow import extract_dialogs_from_top20
+from prepare_for_dialog2flow import extract_dialogs
 from extract_trajectories import dialog2trajectories
 from extract_trajectories_with_metadata import aggregate_metadata_for_cluster
 from build_graph_with_metadata import build_and_export_graph
@@ -44,11 +41,10 @@ logger = logging.getLogger(__name__)
 
 class GraphGenerator:
     """Integrated pipeline for conversation analysis and graph extraction."""
-    
     def __init__(
         self,
         data_path: str = 'data/final_annotated_dataset.json',
-        top20_dir: str = 'data/top_20',
+        topK_dir: str = 'data/top_K',
         example_dir: str = 'data/example',
         output_dir: str = 'output',
         embeddings_db: str = None,
@@ -56,7 +52,7 @@ class GraphGenerator:
     ):
         self.base_dir = Path(__file__).resolve().parent
         self.data_path = self._resolve_path(data_path)
-        self.top20_dir = self._resolve_path(top20_dir)
+        self.topK_dir = self._resolve_path(topK_dir)
         self.example_dir = self._resolve_path(example_dir)
         self.output_dir = self._resolve_path(output_dir)
         
@@ -71,12 +67,12 @@ class GraphGenerator:
         # Check if embeddings DB exists
         if use_cached_embeddings:
             if not os.path.exists(self.embeddings_db):
-                logger.warning(f"⚠ Embeddings database not found at {self.embeddings_db}")
-                logger.warning("⚠ Will fall back to computing embeddings on-the-fly")
-                logger.warning(f"⚠ Run 'python3 create_embeddings_db.py --data-path {self.data_path}' to create it")
+                logger.warning(f"Embeddings database not found at {self.embeddings_db}")
+                logger.warning("Will fall back to computing embeddings on-the-fly")
+                logger.warning(f"Run 'python3 create_embeddings_db.py --data-path {self.data_path}' to create it")
                 self.use_cached_embeddings = False
             else:
-                logger.info(f"✓ Using cached embeddings from: {self.embeddings_db}")
+                logger.info(f"Using cached embeddings from: {self.embeddings_db}")
 
         # Keep track of latest run context for downstream steps
         self.last_dialog2flow_path: Optional[str] = None
@@ -108,11 +104,11 @@ class GraphGenerator:
         logger.info("STEP 0: Cleaning previous run outputs")
         logger.info("=" * 80)
         
-        # Clear top_20 directory
-        if os.path.exists(self.top20_dir):
-            logger.info(f"Removing files from {self.top20_dir}")
-            for filename in os.listdir(self.top20_dir):
-                filepath = os.path.join(self.top20_dir, filename)
+        # Clear top_K directory
+        if os.path.exists(self.topK_dir):
+            logger.info(f"Removing files from {self.topK_dir}")
+            for filename in os.listdir(self.topK_dir):
+                filepath = os.path.join(self.topK_dir, filename)
                 try:
                     if os.path.isfile(filepath) or os.path.islink(filepath):
                         os.remove(filepath)
@@ -151,101 +147,10 @@ class GraphGenerator:
                 except Exception as e:
                     logger.warning(f"Could not remove {filepath}: {e}")
         
-        logger.info("✓ Cleaned directories\n")
-    
-    def step1_find_top20(self, query: str, domain: str = None, intent: str = None) -> dict:
-        """Step 1: Find top 20 most relevant conversations."""
-        logger.info("=" * 80)
-        logger.info("STEP 1: Finding Top 20 Conversations")
-        logger.info("=" * 80)
-        logger.info(f"Query: {query}")
-        if domain:
-            logger.info(f"Domain: {domain}")
-        if intent:
-            logger.info(f"Intent: {intent}")
-        logger.info("")
-        
-        # Use cached embeddings if available
-        if self.use_cached_embeddings and os.path.exists(self.embeddings_db):
-            logger.info("Using cached embeddings from database...")
-            searcher = CachedEmbeddingSearch(self.embeddings_db, self.data_path)
-            results = searcher.search_by_domain_and_query(domain, query, top_k=20, intent=intent)
-            self.last_intent = intent
-            
-            # Save results to top20_dir
-            if results:
-                os.makedirs(self.top20_dir, exist_ok=True)
-                
-                # Save summary JSON
-                from datetime import datetime
-                timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-                domain_str = self._sanitize_token(domain)
-                intent_str = self._sanitize_token(intent, default='any')
-                summary_file = os.path.join(
-                    self.top20_dir,
-                    f'top_20_{domain_str}_{intent_str}_{timestamp}.json'
-                )
-                
-                # Wrap results in the expected format
-                output_data = {
-                    'query': query,
-                    'domain': domain,
-                    'intent': intent,
-                    'timestamp': timestamp,
-                    'total_results': len(results),
-                    'results': results
-                }
-                
-                with open(summary_file, 'w') as f:
-                    json.dump(output_data, f, indent=2)
-                
-                # Save individual transcript text files
-                for i, result in enumerate(results, 1):
-                    transcript_id = result['transcript_id']
-                    txt_file = os.path.join(self.top20_dir, f'{transcript_id}.txt')
-                    
-                    with open(txt_file, 'w') as f:
-                        f.write(f"Transcript ID: {transcript_id}\n")
-                        f.write(f"Domain: {result['domain']}\n")
-                        f.write(f"Intent: {result['intent']}\n")
-                        f.write(f"Reason: {result['reason_for_call']}\n")
-                        f.write(f"Max Similarity: {result['similarity_metadata']['max_similarity_score']:.4f}\n")
-                        f.write(f"Avg Similarity: {result['similarity_metadata']['avg_similarity_score']:.4f}\n")
-                        f.write("\nTop Matching Turns:\n")
-                        f.write("=" * 60 + "\n")
-                        for turn in result['similarity_metadata']['top_matching_turns'][:5]:
-                            f.write(f"\n{turn['speaker']}: {turn['text']}\n")
-                            f.write(f"Similarity: {turn['similarity_score']:.4f}\n")
-                
-                logger.info(f"✓ Found {len(results)} relevant conversations")
-                logger.info(f"✓ Saved to {self.top20_dir}\n")
-                
-        else:
-            # Fall back to computing embeddings
-            logger.info("Computing embeddings on-the-fly (slower)...")
-            pipeline = ConversationSearchPipeline()
-            
-            # Run pipeline
-            results = pipeline.run_pipeline(
-                json_file_path=self.data_path,
-                domain=domain,
-                intent=intent,
-                query=query,
-                output_dir=self.top20_dir,
-                top_k=20
-            )
-            self.last_intent = intent
-            
-            if results:
-                logger.info(f"✓ Found {len(results)} relevant conversations")
-                logger.info(f"✓ Saved to {self.top20_dir}\n")
-            else:
-                logger.warning("⚠ No results found")
-        
-        return results if results else []
+        logger.info("Cleaned directories !!\n")
     
     def step2_prepare_for_dialog2flow(self) -> dict:
-        """Step 2: Prepare top 20 for Dialog2Flow format."""
+        """Step 2: Prepare top K for Dialog2Flow format."""
         logger.info("=" * 80)
         logger.info("STEP 2: Preparing for Dialog2Flow")
         logger.info("=" * 80)
@@ -253,21 +158,20 @@ class GraphGenerator:
         metadata_file = os.path.join(self.example_dir, 'conversations_metadata.json')
         
         # Extract dialogs
-        metadata = extract_dialogs_from_top20(
-            self.top20_dir,
+        metadata = extract_dialogs(
+            self.topK_dir,
             self.example_dir,
             metadata_file
         )
         
-        logger.info(f"✓ Prepared {len(metadata)} conversations")
-        logger.info(f"✓ Metadata saved to {metadata_file}\n")
+        logger.info(f"Prepared {len(metadata)} conversations")
+        logger.info(f"Metadata saved to {metadata_file}\n")
         
         return metadata
     
     def step3_extract_dialog2flow_trajectories(
         self,
         model_name: str = "sergioburdisso/dialog2flow-joint-bert-base",
-        n_clusters: int = None,
         distance_threshold: float = 0.5,
         domain: Optional[str] = None
     ) -> Dict[str, object]:
@@ -276,7 +180,7 @@ class GraphGenerator:
         logger.info("STEP 3: Extracting Dialog2Flow Trajectories (Text Only)")
         logger.info("=" * 80)
         logger.info(f"Model: {model_name}")
-        logger.info(f"Clustering params → n_clusters={n_clusters}, distance_threshold={distance_threshold}")
+        logger.info(f"Distance_threshold={distance_threshold}")
         if domain:
             if domain:
                 logger.info(f"Input conversations already restricted to domain: {domain}")
@@ -285,7 +189,7 @@ class GraphGenerator:
         os.makedirs(self.output_dir, exist_ok=True)
 
         # Dialog2Flow uses one threshold per speaker; reuse same value for Agent/Customer
-        threshold_value = n_clusters if n_clusters is not None else distance_threshold
+        threshold_value = distance_threshold
         thresholds = [threshold_value, threshold_value]
 
         logger.info("Invoking dialog2trajectories (text-only)...")
@@ -305,20 +209,20 @@ class GraphGenerator:
         with open(trajectories_path, 'r') as f:
             dialog2flow_output = json.load(f)
 
-        logger.info(f"✓ Extracted trajectories saved to {trajectories_path}\n")
+        logger.info(f"Extracted trajectories saved to {trajectories_path}\n")
         summary = self._summarize_dialog2flow_output(dialog2flow_output)
         summary['threshold_value'] = threshold_value
-        summary['n_clusters_param'] = n_clusters if n_clusters is not None else 'auto'
+        summary['n_clusters_param'] = 'auto'  # since we are using distance thresholding
 
         self.last_dialog2flow_path = trajectories_path
         self.last_model_name = model_name
-        self.last_distance_threshold = distance_threshold if n_clusters is None else None
-        self.last_n_clusters = n_clusters
+        self.last_distance_threshold = distance_threshold
+        self.last_n_clusters = None
         self.last_domain = domain
 
-        logger.info(f"✓ Dialogues processed: {summary['dialogue_count']}")
-        logger.info(f"✓ Agent clusters: {summary['agent_cluster_count']} | Customer clusters: {summary['customer_cluster_count']}")
-        logger.info(f"✓ Trajectories saved to {trajectories_path}\n")
+        logger.info(f"Dialogues processed: {summary['dialogue_count']}")
+        logger.info(f"Agent clusters: {summary['agent_cluster_count']} | Customer clusters: {summary['customer_cluster_count']}")
+        logger.info(f"Trajectories saved to {trajectories_path}\n")
 
         return {
             'path': trajectories_path,
@@ -410,10 +314,10 @@ class GraphGenerator:
         with open(mapping_path, 'w') as f:
             json.dump(turn_mapping, f, indent=2)
 
-        logger.info(f"✓ Metadata attached to {payload['dialogue_count']} dialogues")
-        logger.info(f"✓ Clusters with metadata: {payload['n_clusters']} (Agent={payload['n_agent_clusters']}, Customer={payload['n_customer_clusters']})")
-        logger.info(f"✓ Saved enriched trajectories to {enriched_path}")
-        logger.info(f"✓ Turn → cluster mapping saved to {mapping_path}\n")
+        logger.info(f"Metadata attached to {payload['dialogue_count']} dialogues")
+        logger.info(f"Clusters with metadata: {payload['n_clusters']} (Agent={payload['n_agent_clusters']}, Customer={payload['n_customer_clusters']})")
+        logger.info(f"Saved enriched trajectories to {enriched_path}")
+        logger.info(f"Turn → cluster mapping saved to {mapping_path}\n")
 
         return {
             'path': enriched_path,
@@ -573,7 +477,7 @@ class GraphGenerator:
             target_domains=None
         )
 
-        logger.info(f"✓ Dialog2Flow graph: {len(d2f_graph.nodes)} nodes, {len(d2f_graph.edges)} edges")
+        logger.info(f"Dialog2Flow graph: {len(d2f_graph.nodes)} nodes, {len(d2f_graph.edges)} edges")
 
         logger.info("")
         logger.info("Building metadata-enhanced graph...")
@@ -583,8 +487,8 @@ class GraphGenerator:
             formats=formats
         )
 
-        logger.info(f"✓ Metadata graph: {metadata_graph.number_of_nodes()} nodes, {metadata_graph.number_of_edges()} edges")
-        logger.info(f"✓ Graph artifacts written to {self.output_dir}\n")
+        logger.info(f"Metadata graph: {metadata_graph.number_of_nodes()} nodes, {metadata_graph.number_of_edges()} edges")
+        logger.info(f"Graph artifacts written to {self.output_dir}\n")
 
         return {
             'dialog2flow_graph': {
@@ -602,12 +506,13 @@ class GraphGenerator:
         self,
         query: str,
         model_name: str = "sergioburdisso/dialog2flow-joint-bert-base",
-        n_clusters: int = None,
         distance_threshold: float = 0.5,
         export_formats: list = ['json', 'graphml', 'html'],
         labels_enabled: bool = False,
         labels_model: str = 'llama3:8b',
-        clean: bool = True
+        clean: bool = True,
+        follow_up: int = 0,
+        topK: int = 20
     ):
         """
         Run the complete integrated pipeline.
@@ -617,25 +522,27 @@ class GraphGenerator:
             domain: Filter by domain (optional)
             intent: Filter by intent (optional)
             model_name: Sentence transformer model for trajectory extraction
-            n_clusters: Number of clusters (if None, uses distance_threshold)
             distance_threshold: Distance threshold for clustering
             export_formats: List of graph export formats
             labels_enabled: Enable LLM-based cluster label generation
             labels_model: LLM model for label generation (default: llama3:8b)
             clean: Whether to clean directories before starting
+            follow_up: Whether follow-up queries to consider (default: 0)
+            topK: Number of top conversations to retrieve (default: 20)
         
         Returns:
             Dictionary with results from each step
         """
         logger.info("╔" + "=" * 78 + "╗")
-        logger.info("║" + " " * 15 + "INTEGRATED PIPELINE: TOP 20 → DIALOG2FLOW" + " " * 22 + "║")
+        logger.info("║" + " " * 15 + "INTEGRATED PIPELINE: TOP K → DIALOG2FLOW" + " " * 22 + "║")
         logger.info("╚" + "=" * 78 + "╝")
         logger.info("")
         domain = None
         intent = None
         results = {}
         self.last_intent = intent
-        
+        if follow_up > 0:
+            clean = False
         try:
             # Step 0: Clean directories
             if clean:
@@ -643,7 +550,7 @@ class GraphGenerator:
             
             # Step 1: Find top 20 conversations
             llm = llm_handler.llm()
-            results['top_20'] = query_splitter.categorize_query(query,llm,self.embeddings_db, self.data_path)
+            results['top_K'] = query_splitter.categorize_query(query,llm,self.embeddings_db, self.data_path,follow_up=follow_up, topK_dir=self.topK_dir,topk=topK)
             
             # Step 2: Prepare for Dialog2Flow
             results['metadata'] = self.step2_prepare_for_dialog2flow()
@@ -651,7 +558,6 @@ class GraphGenerator:
             # Step 3: Extract trajectories with metadata
             results['dialog2flow'] = self.step3_extract_dialog2flow_trajectories(
                 model_name=model_name,
-                n_clusters=n_clusters,
                 distance_threshold=distance_threshold,
                 domain=domain
             )
@@ -662,9 +568,6 @@ class GraphGenerator:
             # Step 5: Build graphs
             results['graphs'] = self.step5_build_graphs(export_formats, domain)
             
-            # Final summary
-            # logger.info(f"🎉 PIPELINE COMPLETED SUCCESSFULLY. Final Graph JSON saved to: {self.output_dir}/graph_with_metadata.json. Check {self.output_dir} for all files.")
-
             return results
             
         except Exception as e:
@@ -675,13 +578,15 @@ class GraphGenerator:
 
 
 # check what n_clusters is and add it here
-def generate_json_graph(query,data_path,distance_threshold = 0.5):
+def generate_json_graph(query,data_path,distance_threshold = 0.6,follow_up = 0,topK=20):
 
     pipeline = GraphGenerator(data_path=data_path)
     
     pipeline.run(
         query=query,
         distance_threshold=distance_threshold,
+        follow_up=follow_up,
+        topK=topK
     )
 
     return pipeline

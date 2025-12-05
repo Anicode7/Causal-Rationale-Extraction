@@ -249,7 +249,7 @@ python3 integrated_pipeline.py \
   --query "escalation issues" \
   --domain "Banking" \
   --data-path data/final_json_for_d2f.json \
-  --top20-dir data/top_20 \
+  --top20-dir data/top_K \
   --example-dir data/example \
   --output-dir output \
   --model sergioburdisso/dialog2flow-joint-bert-base \
@@ -269,7 +269,7 @@ python3 integrated_pipeline.py \
 ================================================================================
 PIPELINE COMPLETED SUCCESSFULLY
 ================================================================================
-✓ Top 20 conversations saved to: /path/to/dialog2flow/data/top_20
+✓ Top 20 conversations saved to: /path/to/dialog2flow/data/top_K
 ✓ Dialog2Flow input saved to: /path/to/dialog2flow/data/example
 ✓ Trajectories and graph saved to: /path/to/dialog2flow/output
 ```
@@ -454,7 +454,7 @@ python3 integrated_pipeline.py \
 ```bash
 # Remove all generated outputs
 rm -rf output/*
-rm -rf data/top_20/*
+rm -rf data/top_K/*
 rm -rf data/example/*.txt
 
 # Keep virtual environment and models

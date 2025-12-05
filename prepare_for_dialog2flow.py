@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
 """
-Prepare top 20 conversations from data/top_20 for Dialog2Flow pipeline.
+Prepare top K conversations from data/top_K for Dialog2Flow pipeline.
 This script:
-1. Reads metadata-rich JSON files from data/top_20
+1. Reads metadata-rich JSON files from data/top_K
 2. Extracts speaker and text for Dialog2Flow format
 3. Saves to data/example as .txt files
 4. Maintains mapping from transcript_id + turn_idx to original metadata
-
-Copyright (c) 2024
-MIT License
 """
 import os
 import json
@@ -20,19 +17,19 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(m
 logger = logging.getLogger(__name__)
 
 
-def extract_dialogs_from_top20(top20_dir: str, output_dir: str, metadata_file: str) -> Dict:
+def extract_dialogs(topK_dir: str, output_dir: str, metadata_file: str) -> Dict:
     """
-    Extract dialogs from top_20 directory and prepare for Dialog2Flow.
+    Extract dialogs from top_K directory and prepare for Dialog2Flow.
     
     Args:
-        top20_dir: Directory containing top 20 transcript txt files
+        topK_dir: Directory containing top K transcript txt files
         output_dir: Directory to save simplified txt files (data/example)
         metadata_file: Path to save metadata mapping
         
     Returns:
         Dictionary mapping transcript_id to metadata
     """
-    logger.info(f"Reading top 20 conversations from {top20_dir}")
+    logger.info(f"Reading top K conversations from {topK_dir}")
     
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
@@ -40,15 +37,15 @@ def extract_dialogs_from_top20(top20_dir: str, output_dir: str, metadata_file: s
     # Load the original JSON to get full metadata
     # Find the summary JSON file
     # gather all matching json files (sorted for deterministic order)
-    json_files = sorted([f for f in os.listdir(top20_dir) if f.endswith('.json') and f.startswith('top_20_')])
+    json_files = sorted([f for f in os.listdir(topK_dir) if f.endswith('.json') and f.startswith('top_K_')])
     if not json_files:
-        logger.error(f"No top_20 JSON files found in {top20_dir}")
+        logger.error(f"No top_K JSON files found in {topK_dir}")
         return {}
 
     # Instead of using only the most recent file, process all json files and merge conversations
     conversations = []
     for json_file in json_files:
-        json_path = os.path.join(top20_dir, json_file)
+        json_path = os.path.join(topK_dir, json_file)
         try:
             with open(json_path, 'r') as f:
                 data = json.load(f)
@@ -135,17 +132,17 @@ def extract_dialogs_from_top20(top20_dir: str, output_dir: str, metadata_file: s
     with open(metadata_file, 'w') as f:
         json.dump(conversations_metadata, f, indent=2)
     
-    logger.info(f"✓ Prepared {len(conversations_metadata)} conversations for Dialog2Flow")
-    logger.info(f"✓ Files saved to {output_dir}")
-    logger.info(f"✓ Metadata saved to {metadata_file}")
+    logger.info(f"Prepared {len(conversations_metadata)} conversations for Dialog2Flow")
+    logger.info(f"Files saved to {output_dir}")
+    logger.info(f"Metadata saved to {metadata_file}")
     
     return conversations_metadata
 
 
 def main():
-    """Main function to prepare top 20 for Dialog2Flow."""
+    """Main function to prepare top K for Dialog2Flow."""
     base_dir = Path(__file__).resolve().parent
-    top20_dir = (base_dir / 'data' / 'top_20').resolve()
+    topK_dir = (base_dir / 'data' / 'top_K').resolve()
     output_dir = (base_dir / 'data' / 'example').resolve()
     metadata_file = output_dir / "conversations_metadata.json"
     
@@ -157,7 +154,7 @@ def main():
                 logger.info(f"Removed old file: {filename}")
     
     # Extract and prepare dialogs
-    metadata = extract_dialogs_from_top20(str(top20_dir), str(output_dir), str(metadata_file))
+    metadata = extract_dialogs(str(topK_dir), str(output_dir), str(metadata_file))
     
     return metadata
 

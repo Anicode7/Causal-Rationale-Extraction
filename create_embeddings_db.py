@@ -280,7 +280,7 @@ def main():
     creator = EmbeddingDatabaseCreator(model_name=args.model)
     creator.create_embeddings_for_all_data(str(data_path), str(db_path))
     
-    print("\n✅ EMBEDDING DATABASE CREATED SUCCESSFULLY!")
+    print("\nEMBEDDING DATABASE CREATED SUCCESSFULLY!")
     print(f"   Database: {db_path}")
     print(f"   FAISS index: {str(db_path).replace('.db', '.faiss')}")
     print("\nYou can now run queries using the integrated pipeline.")

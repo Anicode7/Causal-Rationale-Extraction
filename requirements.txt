@@ -6,7 +6,7 @@ tenacity
 simpleneighbors
 scikit-learn
 graphviz
-numpy
+numpy  
 openai
 hydra-core
 nltk

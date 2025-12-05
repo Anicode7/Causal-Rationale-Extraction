@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Query-only pipeline that loads pre-computed embeddings from database.
-This is used by integrated_pipeline.py to avoid re-computing embeddings.
+This is used by graph_gen.py to avoid re-computing embeddings.
 """
 
 import json
@@ -43,7 +43,7 @@ class CachedEmbeddingSearch:
         # Load FAISS index
         print(f"Loading FAISS index from: {self.faiss_index_path}")
         self.index = faiss.read_index(self.faiss_index_path)
-        print(f"✓ Loaded FAISS index with {self.index.ntotal} vectors")
+        print(f"Loaded FAISS index with {self.index.ntotal} vectors")
         
     def search_by_domain_and_query(
         self,
@@ -113,7 +113,7 @@ class CachedEmbeddingSearch:
             if intent:
                 scope_parts.append(f"intent '{intent}'")
             scope = ' and '.join(scope_parts) if scope_parts else 'database'
-            print(f"⚠ No embeddings found for {scope}")
+            print(f"No embeddings found for {scope}")
             return []
         
         detail_parts = []
@@ -122,7 +122,7 @@ class CachedEmbeddingSearch:
         if intent:
             detail_parts.append(f"intent {intent}")
         detail_str = ' and '.join(detail_parts) if detail_parts else 'all data'
-        print(f"✓ Loaded {len(rows)} turns for {detail_str}")
+        print(f"Loaded {len(rows)} turns for {detail_str}")
         
         # Extract embeddings and metadata
         domain_embeddings = []

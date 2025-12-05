@@ -162,7 +162,7 @@ Now generate the output as per the instructions above.
             return parsed_response.get("results", [])
 
         except Exception as e:
-            print(f"⚠️ Batch inference failed: {e}")
+            print(f"Batch inference failed: {e} !!")
             return []
 
     # ... (Rest of the class methods: answer_query, answer_query_causal remain unchanged)
@@ -208,6 +208,9 @@ Now generate the output as per the instructions above.
         2. ANALYZE METADATA : Analyze all the metadata such as utterance , empathy score, escalation risk, churn risk , intent_emotions etc in the nodes of the chains to get better context on the causal relationships.
         3. WEIGH: Pay strict attention to the 'cumulative_probability' score. Trust high-probability chains (0.7+) over low ones.
         4. ANSWER: Provide a concise, direct answer to the query based ONLY on this evidence. Do not invent facts.
+        
+        **IMPORTANT** 
+        Pay special attention to the utterance field in the metadata
 
         OUTPUT_FORMAT -- DO NOT MENTION the cumulative probabilities in your answer. However you can mention the implications of properties and metdata such as empathy score, escalation risk etc of high or low probability chains in your reasoning.
         Give a short concise explanation using ONLY the causal chains to answer the query

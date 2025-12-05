@@ -227,8 +227,8 @@ After running the pipeline, you should see:
 ```
 dialog2flow/
 ├── data/
-│   ├── top_20/                         # Top 20 conversations found
-│   │   ├── top_20_banking_*.json       # Summary JSON
+│   ├── top_K/                         # Top 20 conversations found
+│   │   ├── top_K_banking_*.json       # Summary JSON
 │   │   └── *.txt                       # Individual transcripts
 │   └── example/
 │       ├── *.txt                       # Dialog2Flow format
@@ -460,7 +460,7 @@ The pipeline uses these files (all others can be ignored):
 ```
 dialog2flow/
 ├── integrated_pipeline.py                    # Main orchestrator
-├── find_top_20_conversations.py              # Step 1: Top 20 finder
+├── find_top_K_conversations.py              # Step 1: Top 20 finder
 ├── prepare_top20_for_dialog2flow.py          # Step 2: Data prep
 ├── extract_trajectories_with_metadata.py     # Step 3: Clustering
 ├── build_graph_with_metadata.py              # Step 4a: Metadata graph
@@ -477,13 +477,13 @@ dialog2flow/
 
 ### What Each Step Does
 
-1. **Step 1: Find Top 20** (`find_top_20_conversations.py`)
+1. **Step 1: Find Top 20** (`find_top_K_conversations.py`)
    - Loads all conversations from JSON
    - Filters by domain (e.g., Banking)
    - Creates embeddings for all utterances
    - Builds FAISS index for fast search
    - Finds top 20 most relevant to your query
-   - Saves to `data/top_20/`
+   - Saves to `data/top_K/`
 
 2. **Step 2: Prepare** (`prepare_top20_for_dialog2flow.py`)
    - Converts top 20 to Dialog2Flow text format

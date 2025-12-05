@@ -19,9 +19,13 @@ LANDING_FILE = "landing_points.json"
 # --- Input Data List ---
 queries_to_run = [
     {
-        "query": "What are the difficulties faced by customers in Hotel and Flight domains",
+        "query": "Why are flights being cancelled so much?",
     }
 ]
+
+follow_up = 0
+distance_threshold = 0.6
+topK = 20
 
 def load_json_safe(filepath):
     """Helper to load a JSON file if it exists, otherwise return None or empty dict."""
@@ -67,7 +71,10 @@ for i, item in enumerate(queries_to_run):
         # If it returns the graph object, we capture it, otherwise we just run it.
         graph_gen.generate_json_graph(
             query=curr_query,
-            data_path=DATA_PATH
+            data_path=DATA_PATH,
+            distance_threshold = distance_threshold,
+            follow_up=follow_up,
+            topK=topK
         )
         
         # 2. Get Answer

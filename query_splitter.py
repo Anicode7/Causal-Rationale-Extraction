@@ -2,7 +2,6 @@ import os
 import json
 import logging
 import llm_handler
-import find_top_20_conversations
 import query_embeddings_db
 
 # add logger and helper
@@ -17,34 +16,45 @@ def sanitize_token(token, default='any'):
 	# keep only safe filename characters
 	return "".join(c for c in token if c.isalnum() or c in ('-', '_')).lower()
 
-def categorize_query(query, llm, embeddings_db, data_path):
+def save_list(filename, data_list):
+    with open(filename, "w") as f:
+        for item in data_list:
+            f.write(str(item) + "\n")
+
+def load_list(filename):
+    with open(filename, "r") as f:
+        return [line.strip() for line in f]
+
+def categorize_query(query, llm, embeddings_db, data_path,follow_up,topK_dir,topk):
 	"""
 	Categorizes the query based on the provided domain and intent.
 	Returns a dictionary with the query, domain, and intent.
 	"""
 
-
 	searcher = query_embeddings_db.CachedEmbeddingSearch(embeddings_db, data_path)
-
 	queries_list = llm.query_splitter(query)
 	unique_conversations = {}
-	num_trs = 20
-	conversation_search_pipeline_obj = find_top_20_conversations.ConversationSearchPipeline()
+	transcript_id_list = []
+	if(follow_up!=0):
+		transcript_id_list = load_list(os.path.join("data", "transcript_id_list.txt"))
+	transcript_id_dict = {tid: True for tid in transcript_id_list}
 	for i, data in enumerate(queries_list):
 		curr_domain = data["domain"]
 		curr_query = data["reformed_query"]
 		curr_intent = data.get("intent")
 
 		print(f"Processing query {i+1}/{len(queries_list)}: Domain: {curr_domain}, Intent: {curr_intent}, Query: {curr_query}")
-		curr_transcripts = searcher.search_by_domain_and_query(domain=curr_domain, query=curr_query, intent=curr_intent, top_k=num_trs)
+		curr_transcripts = searcher.search_by_domain_and_query(domain=curr_domain, query=curr_query, intent=curr_intent, top_k=topk)
 		for t in curr_transcripts:
 			tid = t.get('transcript_id')
+			if(transcript_id_dict[tid]==False):
+				transcript_id_list.append(tid)
+				transcript_id_dict[tid] = True
 			if tid:
 				unique_conversations[tid] = t
 
 		if curr_transcripts:
-			top20_dir = os.path.join(os.getcwd(), 'data/top_20')
-			os.makedirs(top20_dir, exist_ok=True)
+			os.makedirs(topK_dir, exist_ok=True)
 
 			# Save summary JSON
 			from datetime import datetime
@@ -52,8 +62,8 @@ def categorize_query(query, llm, embeddings_db, data_path):
 			domain_str = sanitize_token(curr_domain)
 			intent_str = sanitize_token(curr_intent, default='any')
 			summary_file = os.path.join(
-				top20_dir,
-				f'top_20_{domain_str}_{intent_str}_{timestamp}.json'
+				topK_dir,
+				f'top_K_{domain_str}_{intent_str}_{timestamp}.json'
 			)
 
 			# Use current transcripts as results
@@ -75,7 +85,7 @@ def categorize_query(query, llm, embeddings_db, data_path):
 			# Save individual transcript text files
 			for j, result in enumerate(results, 1):
 				transcript_id = result.get('transcript_id', f'unknown_{j}')
-				txt_file = os.path.join(top20_dir, f'{transcript_id}.txt')
+				txt_file = os.path.join(topK_dir, f'{transcript_id}.txt')
 
 				with open(txt_file, 'w') as f:
 					f.write(f"Transcript ID: {transcript_id}\n")
@@ -95,9 +105,10 @@ def categorize_query(query, llm, embeddings_db, data_path):
 						f.write(f"\n{turn.get('speaker')}: {turn.get('text')}\n")
 						f.write(f"Similarity: {turn.get('similarity_score', 0.0):.4f}\n")
 
-			logger.info(f"✓ Found {len(results)} relevant conversations")
-			logger.info(f"✓ Saved to {top20_dir}\n")
-
+			logger.info(f"Found {len(results)} relevant conversations")
+			logger.info(f"Saved to {topK_dir}\n")
+	# Save updated transcript ID list if follow_up is enabled
+	save_list(os.path.join("data", "transcript_id_list.txt"), transcript_id_list)
 	return list(unique_conversations.values())
 
 

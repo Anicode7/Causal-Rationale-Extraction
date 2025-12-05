@@ -170,7 +170,7 @@ output/
     └── visualization/graph.html        # Alternative HTML view
 ```
 
-**Bonus:** Top 20 conversations saved in `data/top_20/` with full metadata.
+**Bonus:** Top 20 conversations saved in `data/top_K/` with full metadata.
 
 ---
 
@@ -253,7 +253,7 @@ Step 1: Find Top 20 Conversations
   ├─ Create utterance embeddings
   ├─ Build FAISS index
   ├─ Search with query
-  └─ Save top 20 to data/top_20/
+  └─ Save top 20 to data/top_K/
 
 Step 2: Prepare for Dialog2Flow
   ├─ Convert to simplified text format

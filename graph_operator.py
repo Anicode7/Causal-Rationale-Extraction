@@ -38,7 +38,7 @@ class MemgraphRAG:
                 CREATE VECTOR INDEX dialogue_vector_index ON :DialogueNode(embedding) 
                 WITH CONFIG { "dimension": 768, "capacity": 10000, "metric": "cos" }
             """)
-        print("✅ Database reset and index created.")
+        print("Database reset and index created.")
 
     def ingest_data(self, JSON_FILE=None):
         if JSON_FILE is None:
@@ -49,11 +49,11 @@ class MemgraphRAG:
             data = self.init_graph
         
         if not os.path.exists(JSON_FILE) and not data:
-            print(f"❌ File {JSON_FILE} not found or empty.")
+            print(f"File {JSON_FILE} not found or empty.")
             return
 
         self.graph = copy.deepcopy(data)
-        print(f"📥 Ingesting {len(data.get('nodes', []))} nodes...")
+        print(f"Ingesting {len(data.get('nodes', []))} nodes...")
 
         with self.driver.session() as session:
             # 1. INGEST NODES
@@ -88,7 +88,7 @@ class MemgraphRAG:
 
             # 2. INGEST EDGES
             edges = data.get("edges", [])
-            print(f"🔗 Connecting {len(edges)} edges...")
+            print(f"Connecting {len(edges)} edges...")
             
             for link in edges:
                 src = f"{link.get('source')}"
@@ -151,7 +151,7 @@ class MemgraphRAG:
                 results = session.run(query, id=l_id, max_depth=max_depth)
                 subgraph_nodes = [record["node_data"] for record in results]
                 
-                print(f"✅ Found {len(subgraph_nodes)} nodes in chain for {l_id}.")
+                print(f"Found {len(subgraph_nodes)} nodes in chain for {l_id}.")
                 ids = [node["id"] for node in subgraph_nodes]
 
                 edges_result = session.run(query_edges, node_ids=ids)
@@ -167,7 +167,7 @@ class MemgraphRAG:
 
         with open("subgraph.json", "w", encoding='utf-8') as f:
             json.dump(output_data, f, indent=4)
-            print(f"✅ Saved results to 'subgraph.json'")
+            print(f"Saved results to 'subgraph.json'")
             
         return output_data
     
@@ -202,7 +202,7 @@ class MemgraphRAG:
         edges_to_process = []
         seen_pairs = set()
 
-        print("📥 Preparing edges for batch processing...")
+        print("Preparing edges for batch processing...")
         
         for i, curr_subgraph in enumerate(subgraphs):
             node_lookup = {n["id"]: n for n in curr_subgraph["causalgraph_nodes"]}
@@ -229,7 +229,7 @@ class MemgraphRAG:
         total_edges = len(edges_to_process)
         MAX_WORKERS = 4 # Match this with OLLAMA_NUM_PARALLEL
         
-        print(f"🔄 Processing {total_edges} edges in batches of {BATCH_SIZE} using {MAX_WORKERS} Parallel Workers...")
+        print(f"Processing {total_edges} edges in batches of {BATCH_SIZE} using {MAX_WORKERS} Parallel Workers...")
         
         batches = [edges_to_process[i:i + BATCH_SIZE] for i in range(0, total_edges, BATCH_SIZE)]
         
@@ -262,9 +262,9 @@ class MemgraphRAG:
                             original_edge_dict["local_probability"] = res.get("probability", 0.0)
                             original_edge_dict["explanation"] = res.get("explanation", "")
                 except Exception as exc:
-                    print(f"❌ Batch generation generated an exception: {exc}")
+                    print(f"Batch generation generated an exception: {exc}")
 
-        print(f"✅ LLM Processing complete. {calls_made} Batch calls made.")
+        print(f"LLM Processing complete. {calls_made} Batch calls made.")
 
         # --- PHASE 3: TRAVERSAL (BFS) ---
         for i, curr_subgraph in enumerate(subgraphs):
@@ -352,7 +352,7 @@ class MemgraphRAG:
 
         with open("edges_computed.json", 'w') as file:
             json.dump(existing_data, file, indent=4)
-            print(f"✅ Saved edges to 'edges_computed.json'")
+            print(f"Saved edges to 'edges_computed.json'")
 
         all_final_chains = sorted(all_final_chains, key=lambda x: x["cumulative_probability"], reverse=True)[:5]
         
@@ -393,20 +393,20 @@ def get_ans(query_text, UNEMBEDDED_JSON_FILE=os.path.join(CURR_DIR, "output", "g
     db.setup_database()
     db.ingest_data(EMBEDDED_JSON_FILE)
 
-    print("⏳ Waiting 2 seconds for vector index...")
+    print("Waiting 2 seconds for vector index...")
     time.sleep(2)
 
     landing_results = db.get_landing_point(emb, threshold=0.0)
-    print(f"🎯 Found {len(landing_results)} landing points.")
+    print(f"Found {len(landing_results)} landing points.")
 
     with open ("landing_points.json", "w", encoding='utf-8') as f:
         json.dump(landing_results, f, indent=4)
 
     subgraphs = db.gen_subgraph(landing_results, max_depth=2)
-    print(f"🎯 Found SUBGRAPHS")
+    print(f"Found SUBGRAPHS")
 
     chains = db.create_causal_chains(subgraphs, [n["id"] for n in landing_results])
-    print(f"🎯 Created CAUSAL CHAINS")
+    print(f"Created CAUSAL CHAINS")
 
     for chain_wrapper in chains:
         for item in chain_wrapper["chain"]:
@@ -415,7 +415,7 @@ def get_ans(query_text, UNEMBEDDED_JSON_FILE=os.path.join(CURR_DIR, "output", "g
 
     with open ("causal_chains.json", "w", encoding='utf-8') as f:
         json.dump(chains, f, indent=4)
-        print(f"✅ Saved causal chains to 'causal_chains.json'")
+        print(f"Saved causal chains to 'causal_chains.json'")
     
     formatted_chains_text = []
     for i, chain_wrapper in enumerate(chains):

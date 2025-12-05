@@ -113,7 +113,7 @@ tmp_intent_out/
 passages.index
 passages_meta.pkl
 *.faiss
-data/top_20/
+data/top_K/
 data/example/
 
 # Local files
