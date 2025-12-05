@@ -550,7 +550,7 @@ class GraphGenerator:
             
             # Step 1: Find top 20 conversations
             llm = llm_handler.llm()
-            results['top_K'] = query_splitter.categorize_query(query,llm,self.embeddings_db, self.data_path,follow_up=follow_up, topK_dir=self.topK_dir,topk=topK)
+            results['top_K'], queries_list = query_splitter.categorize_query(query,llm,self.embeddings_db, self.data_path,follow_up=follow_up, topK_dir=self.topK_dir,topk=topK)
             
             # Step 2: Prepare for Dialog2Flow
             results['metadata'] = self.step2_prepare_for_dialog2flow()
@@ -568,7 +568,7 @@ class GraphGenerator:
             # Step 5: Build graphs
             results['graphs'] = self.step5_build_graphs(export_formats, domain)
             
-            return results
+            return results, queries_list
             
         except Exception as e:
             logger.error(f"Pipeline failed: {e}")
@@ -582,11 +582,11 @@ def generate_json_graph(query,data_path,distance_threshold = 0.6,follow_up = 0,t
 
     pipeline = GraphGenerator(data_path=data_path)
     
-    pipeline.run(
+    results, queries_list = pipeline.run(
         query=query,
         distance_threshold=distance_threshold,
         follow_up=follow_up,
         topK=topK
     )
 
-    return pipeline
+    return pipeline, queries_list

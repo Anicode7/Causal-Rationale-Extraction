@@ -109,7 +109,7 @@ def categorize_query(query, llm, embeddings_db, data_path,follow_up,topK_dir,top
 			logger.info(f"Saved to {topK_dir}\n")
 	# Save updated transcript ID list if follow_up is enabled
 	save_list(os.path.join("data", "transcript_id_list.txt"), transcript_id_list)
-	return list(unique_conversations.values())
+	return list(unique_conversations.values()), queries_list
 
 
 

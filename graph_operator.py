@@ -380,7 +380,7 @@ class MemgraphRAG:
 
 # REPLACE the existing get_ans function with this updated version:
 
-def get_ans(query_text, follow_up=0, UNEMBEDDED_JSON_FILE=os.path.join(CURR_DIR, "output", "graph_with_metadata.json")):
+def get_ans(query_text, queries_list, follow_up=0, UNEMBEDDED_JSON_FILE=os.path.join(CURR_DIR, "output", "graph_with_metadata.json")):
 
     # --- 1. HISTORY MANAGEMENT ---
     HISTORY_FILE = "conversation_history.json"
@@ -400,7 +400,11 @@ def get_ans(query_text, follow_up=0, UNEMBEDDED_JSON_FILE=os.path.join(CURR_DIR,
     conversation_history.append({"role": "user", "content": query_text})
 
     # --- 2. EXISTING GRAPH LOGIC (UNCHANGED) ---
+
     emb = embedder.embed_sentence(query_text)
+    emblist = []
+    for i in queries_list:
+        emblist.append(embedder.embed_sentence(i["reformed_query"]))
     
     if os.path.exists(UNEMBEDDED_JSON_FILE):
         with open(UNEMBEDDED_JSON_FILE, 'r', encoding='utf-8') as f:
@@ -416,7 +420,10 @@ def get_ans(query_text, follow_up=0, UNEMBEDDED_JSON_FILE=os.path.join(CURR_DIR,
     print("Waiting 2 seconds for vector index...")
     time.sleep(2)
 
-    landing_results = db.get_landing_point(emb, threshold=0.0)
+    landing_results = []
+    for i in emblist:
+        results = db.get_landing_point(i, threshold=0.0)
+        landing_results.extend(results)
     print(f"Found {len(landing_results)} landing points.")
 
     with open ("landing_points.json", "w", encoding='utf-8') as f:

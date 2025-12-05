@@ -19,7 +19,7 @@ LANDING_FILE = "landing_points.json"
 # --- Input Data List ---
 queries_to_run = [
     {
-        "query": "How significantly does this policy confusion impact the churn risk scores?",
+        "query": "Are the agents handling these calls properly?",
     }
 ]
 
@@ -62,14 +62,25 @@ print("STARTING BATCH PROCESSING------------------------------------------------
 start_time = datetime.now()
 print(f"Start Time: {start_time.time()}")
 
+
 for i, item in enumerate(queries_to_run):
     curr_query = item["query"]
-    
     try:
+        if follow_up == 1 and os.path.exists("conversation_history.json"):
+            try:
+                with open("conversation_history.json", 'r', encoding='utf-8') as f:
+                    history = json.load(f)
+                temp_llm = llm_handler.llm()
+                print(f"Contextualizing query: '{curr_query}'")
+                curr_query = temp_llm.reformat_query(curr_query, history)
+                print(f"Reformatted Query: '{curr_query}'")
+            except Exception as e:
+                print(f"Error during query reformatting: {e}")
+                
         # 1. Generate Graphs
         # Note: Assuming generate_json_graph returns something or modifies state. 
         # If it returns the graph object, we capture it, otherwise we just run it.
-        graph_gen.generate_json_graph(
+        pipeline, queries_list = graph_gen.generate_json_graph(
             query=curr_query,
             data_path=DATA_PATH,
             distance_threshold = distance_threshold,
@@ -78,7 +89,7 @@ for i, item in enumerate(queries_to_run):
         )
         
         # 2. Get Answer
-        ans, _ = graph_operator.get_ans(curr_query,follow_up=follow_up)
+        ans, _ = graph_operator.get_ans(curr_query, queries_list, follow_up=follow_up)
         print(f"Answer generated.")
 
         # 3. Read side-effect files (Causal Chains and Landing Points)

@@ -1,24 +1,68 @@
 [
     {
-        "id": "a28",
-        "utterance": "that is a great question generally we find that retention discussions can lead to maintaining about ...",
-        "escalation_level": 0.0633544921875,
-        "churn_risk_score": 0.092376708984375,
-        "empathy_score": 0.3927001953125,
-        "escalation_risks": 0.0657958984375,
-        "intents_emotions": "Retention Advice - Informative/Neutral",
-        "speaker": "Agent",
-        "similarity": 0.41733741760253906
+        "id": "u20",
+        "utterance": "but what if jetblue has a better cancellation policy",
+        "escalation_level": 0.3159586588541667,
+        "churn_risk_score": 0.3530849880642361,
+        "empathy_score": 0.043863932291666664,
+        "escalation_risks": 0.336212158203125,
+        "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
+        "speaker": "Customer",
+        "similarity": 0.4942339062690735
     },
     {
-        "id": "a1",
-        "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc...",
-        "escalation_level": 0.1554686504861583,
-        "churn_risk_score": 0.19958031695822012,
-        "empathy_score": 0.5952551468558933,
-        "escalation_risks": 0.18742138406504755,
-        "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
-        "speaker": "Agent",
-        "similarity": 0.3299262523651123
+        "id": "u5",
+        "utterance": "yeah but what if my flight actually gets cancelled what do i do then",
+        "escalation_level": 0.35867047991071427,
+        "churn_risk_score": 0.2801278250558036,
+        "empathy_score": 0.017522103445870536,
+        "escalation_risks": 0.3251630510602679,
+        "intents_emotions": "Flight Cancellation Inquiry - Concerned/Seeking Resolution",
+        "speaker": "Customer",
+        "similarity": 0.31622302532196045
+    },
+    {
+        "id": "u20",
+        "utterance": "but what if jetblue has a better cancellation policy",
+        "escalation_level": 0.3159586588541667,
+        "churn_risk_score": 0.3530849880642361,
+        "empathy_score": 0.043863932291666664,
+        "escalation_risks": 0.336212158203125,
+        "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
+        "speaker": "Customer",
+        "similarity": 0.32168805599212646
+    },
+    {
+        "id": "u19",
+        "utterance": "yeah i know i really need to rebook it urgently",
+        "escalation_level": 0.23030598958333334,
+        "churn_risk_score": 0.16097005208333334,
+        "empathy_score": 0.058339436848958336,
+        "escalation_risks": 0.179931640625,
+        "intents_emotions": "Rebooking Request - Urgent/Urgent",
+        "speaker": "Customer",
+        "similarity": 0.26983290910720825
+    },
+    {
+        "id": "u20",
+        "utterance": "but what if jetblue has a better cancellation policy",
+        "escalation_level": 0.3159586588541667,
+        "churn_risk_score": 0.3530849880642361,
+        "empathy_score": 0.043863932291666664,
+        "escalation_risks": 0.336212158203125,
+        "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
+        "speaker": "Customer",
+        "similarity": 0.5974151492118835
+    },
+    {
+        "id": "u5",
+        "utterance": "yeah but what if my flight actually gets cancelled what do i do then",
+        "escalation_level": 0.35867047991071427,
+        "churn_risk_score": 0.2801278250558036,
+        "empathy_score": 0.017522103445870536,
+        "escalation_risks": 0.3251630510602679,
+        "intents_emotions": "Flight Cancellation Inquiry - Concerned/Seeking Resolution",
+        "speaker": "Customer",
+        "similarity": 0.41005492210388184
     }
 ]

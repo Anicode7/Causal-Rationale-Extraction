@@ -2,29 +2,29 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.12100915063785601,
-                "empathy_score": 0.135505000247231,
-                "escalation_level": 0.09356679795663568,
-                "escalation_risks": 0.09927308714234984,
-                "id": "u8",
-                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
-                "speaker": "Customer",
-                "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
-            },
-            {
-                "source": "u8",
-                "target": "a1",
-                "explanation": "The agent reassures the customer about cancellation, which is a direct response to their concerns."
-            },
-            {
-                "churn_risk_score": 0.19958031695822012,
-                "empathy_score": 0.5952551468558933,
-                "escalation_level": 0.1554686504861583,
-                "escalation_risks": 0.18742138406504755,
-                "id": "a1",
-                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
+                "churn_risk_score": 0.06035028322778567,
+                "empathy_score": 0.6218680950126263,
+                "escalation_level": 0.07953982883029515,
+                "escalation_risks": 0.06337646816087805,
+                "id": "a4",
+                "intents_emotions": "Product Information - Polite/Neutral",
                 "speaker": "Agent",
-                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
+                "utterance": "thank you so you are looking at travel interruption coverage i will just give you a brief overview"
+            },
+            {
+                "source": "a4",
+                "target": "u20",
+                "explanation": "Customer's cancellation concern led the agent to provide a brief overview of travel interruption coverage and offer assistance with rebooking."
+            },
+            {
+                "churn_risk_score": 0.3530849880642361,
+                "empathy_score": 0.043863932291666664,
+                "escalation_level": 0.3159586588541667,
+                "escalation_risks": 0.336212158203125,
+                "id": "u20",
+                "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
+                "speaker": "Customer",
+                "utterance": "but what if jetblue has a better cancellation policy"
             }
         ],
         "cumulative_probability": 1.0
@@ -32,29 +32,44 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.09497236247321957,
-                "empathy_score": 0.5286986438940603,
-                "escalation_level": 0.08336359840194667,
-                "escalation_risks": 0.08415499805698734,
-                "id": "a0",
-                "intents_emotions": "Policy Explanation - Neutral/Informative",
-                "speaker": "Agent",
-                "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
+                "churn_risk_score": 0.032318115234375,
+                "empathy_score": 0.1263427734375,
+                "escalation_level": 0.074951171875,
+                "escalation_risks": 0.039398193359375,
+                "id": "u41",
+                "intents_emotions": "Agreement/Consent - Positive/Neutral",
+                "speaker": "Customer",
+                "utterance": "oh wow okay alright then let us do it"
             },
             {
-                "source": "a0",
-                "target": "a1",
-                "explanation": "The agent reassures the customer about cancellation, which is a direct response to their concerns."
+                "source": "u41",
+                "target": "a4",
+                "explanation": "The customer agrees to proceed with booking, and the agent offers assistance."
             },
             {
-                "churn_risk_score": 0.19958031695822012,
-                "empathy_score": 0.5952551468558933,
-                "escalation_level": 0.1554686504861583,
-                "escalation_risks": 0.18742138406504755,
-                "id": "a1",
-                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
+                "churn_risk_score": 0.06035028322778567,
+                "empathy_score": 0.6218680950126263,
+                "escalation_level": 0.07953982883029515,
+                "escalation_risks": 0.06337646816087805,
+                "id": "a4",
+                "intents_emotions": "Product Information - Polite/Neutral",
                 "speaker": "Agent",
-                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
+                "utterance": "thank you so you are looking at travel interruption coverage i will just give you a brief overview"
+            },
+            {
+                "source": "a4",
+                "target": "u20",
+                "explanation": "Customer's cancellation concern led the agent to provide a brief overview of travel interruption coverage and offer assistance with rebooking."
+            },
+            {
+                "churn_risk_score": 0.3530849880642361,
+                "empathy_score": 0.043863932291666664,
+                "escalation_level": 0.3159586588541667,
+                "escalation_risks": 0.336212158203125,
+                "id": "u20",
+                "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
+                "speaker": "Customer",
+                "utterance": "but what if jetblue has a better cancellation policy"
             }
         ],
         "cumulative_probability": 1.0
@@ -62,91 +77,121 @@
     {
         "chain": [
             {
-                "churn_risk_score": 0.2188173130580357,
-                "empathy_score": 0.12522792271205357,
-                "escalation_level": 0.23909005301339287,
-                "escalation_risks": 0.21237655738731484,
-                "id": "u2",
-                "intents_emotions": "Churn Threat - Uncertain/Considering Cancellation",
-                "speaker": "Customer",
-                "utterance": "i see but i am still not sure it is worth it i might just cancel altogether"
-            },
-            {
-                "source": "u2",
-                "target": "a1",
-                "explanation": "The customer threatens to cancel, and the agent reassures them about cancellation."
-            },
-            {
-                "churn_risk_score": 0.19958031695822012,
-                "empathy_score": 0.5952551468558933,
-                "escalation_level": 0.1554686504861583,
-                "escalation_risks": 0.18742138406504755,
-                "id": "a1",
-                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
+                "churn_risk_score": 0.035440298227163464,
+                "empathy_score": 0.853515625,
+                "escalation_level": 0.0791179950420673,
+                "escalation_risks": 0.03779792785644531,
+                "id": "a10",
+                "intents_emotions": "Acknowledgement/Empathy - Urgent/Assuring",
                 "speaker": "Agent",
-                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
+                "utterance": "okay i understand olivia since you are boarding soon i want to make sure we handle this urgently"
+            },
+            {
+                "source": "a10",
+                "target": "u20",
+                "explanation": "The agent's urgent acknowledgement and empathy triggered the customer's cancellation concern."
+            },
+            {
+                "churn_risk_score": 0.3530849880642361,
+                "empathy_score": 0.043863932291666664,
+                "escalation_level": 0.3159586588541667,
+                "escalation_risks": 0.336212158203125,
+                "id": "u20",
+                "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
+                "speaker": "Customer",
+                "utterance": "but what if jetblue has a better cancellation policy"
             }
         ],
-        "cumulative_probability": 1.0
+        "cumulative_probability": 0.9
     },
     {
         "chain": [
             {
-                "churn_risk_score": 0.3475494384765625,
-                "empathy_score": 0.033240954081217446,
-                "escalation_level": 0.2740637461344401,
-                "escalation_risks": 0.30945148873836437,
-                "id": "u6",
-                "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
+                "churn_risk_score": 0.13775634765625,
+                "empathy_score": 0.018581390380859375,
+                "escalation_level": 0.22891616821289062,
+                "escalation_risks": 0.1842498779296875,
+                "id": "u26",
+                "intents_emotions": "Coverage Inquiry - Concerned/Seeking Reassurance",
                 "speaker": "Customer",
-                "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
+                "utterance": "it is pnr a3b4e5 i just i just want to make sure i am covered if anything happens"
             },
             {
-                "source": "u6",
-                "target": "a1",
-                "explanation": "The agent reassures the customer about cancellation, which is related to their concerns and intention to switch to Marriott."
+                "source": "u26",
+                "target": "a10",
+                "explanation": "Customer's concern about being covered in case of flight disruptions led the agent to acknowledge and empathize with their situation."
             },
             {
-                "churn_risk_score": 0.19958031695822012,
-                "empathy_score": 0.5952551468558933,
-                "escalation_level": 0.1554686504861583,
-                "escalation_risks": 0.18742138406504755,
-                "id": "a1",
-                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
+                "churn_risk_score": 0.035440298227163464,
+                "empathy_score": 0.853515625,
+                "escalation_level": 0.0791179950420673,
+                "escalation_risks": 0.03779792785644531,
+                "id": "a10",
+                "intents_emotions": "Acknowledgement/Empathy - Urgent/Assuring",
                 "speaker": "Agent",
-                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
+                "utterance": "okay i understand olivia since you are boarding soon i want to make sure we handle this urgently"
+            },
+            {
+                "source": "a10",
+                "target": "u20",
+                "explanation": "The agent's urgent acknowledgement and empathy triggered the customer's cancellation concern."
+            },
+            {
+                "churn_risk_score": 0.3530849880642361,
+                "empathy_score": 0.043863932291666664,
+                "escalation_level": 0.3159586588541667,
+                "escalation_risks": 0.336212158203125,
+                "id": "u20",
+                "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
+                "speaker": "Customer",
+                "utterance": "but what if jetblue has a better cancellation policy"
             }
         ],
-        "cumulative_probability": 1.0
+        "cumulative_probability": 0.9
     },
     {
         "chain": [
             {
-                "churn_risk_score": 0.08878580729166667,
-                "empathy_score": 0.16267903645833334,
-                "escalation_level": 0.12095133463541667,
-                "escalation_risks": 0.0992889404296875,
-                "id": "u9",
-                "intents_emotions": "Confirmation/Agreement - Neutral/Cooperative",
+                "churn_risk_score": 0.21231842041015625,
+                "empathy_score": 0.1202392578125,
+                "escalation_level": 0.3685302734375,
+                "escalation_risks": 0.28080610795454547,
+                "id": "u1",
+                "intents_emotions": "Information Request - Neutral/Curious",
                 "speaker": "Customer",
-                "utterance": "yeah that might help clear things up i can review it later"
+                "utterance": "oh got it so how long is the delay expected to be"
             },
             {
-                "source": "u9",
-                "target": "a1",
-                "explanation": "The agent's reassurance and explanation of the policy led to a positive response from the customer, who expressed gratitude for the help."
+                "source": "u1",
+                "target": "a10",
+                "explanation": "The agent acknowledges the customer's urgency and offers assistance regarding their travel."
             },
             {
-                "churn_risk_score": 0.19958031695822012,
-                "empathy_score": 0.5952551468558933,
-                "escalation_level": 0.1554686504861583,
-                "escalation_risks": 0.18742138406504755,
-                "id": "a1",
-                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
+                "churn_risk_score": 0.035440298227163464,
+                "empathy_score": 0.853515625,
+                "escalation_level": 0.0791179950420673,
+                "escalation_risks": 0.03779792785644531,
+                "id": "a10",
+                "intents_emotions": "Acknowledgement/Empathy - Urgent/Assuring",
                 "speaker": "Agent",
-                "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
+                "utterance": "okay i understand olivia since you are boarding soon i want to make sure we handle this urgently"
+            },
+            {
+                "source": "a10",
+                "target": "u20",
+                "explanation": "The agent's urgent acknowledgement and empathy triggered the customer's cancellation concern."
+            },
+            {
+                "churn_risk_score": 0.3530849880642361,
+                "empathy_score": 0.043863932291666664,
+                "escalation_level": 0.3159586588541667,
+                "escalation_risks": 0.336212158203125,
+                "id": "u20",
+                "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
+                "speaker": "Customer",
+                "utterance": "but what if jetblue has a better cancellation policy"
             }
         ],
-        "cumulative_probability": 1.0
+        "cumulative_probability": 0.9
     }
 ]

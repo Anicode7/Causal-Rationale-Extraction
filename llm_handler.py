@@ -32,6 +32,47 @@ Return ONLY a JSON object. No markdown.
 """
 
 
+    def reformat_query(self, query, history):
+        sys_prompt = """
+        You are a Query Contextualizer.
+        Your goal is to rewrite a "Follow-up Query" to be fully self-contained, by incorporating necessary context (Domain, Entity, Topic) from the "Conversation History".
+
+        INSTRUCTIONS:
+        1. Read the Conversation History to identify the active subject (e.g., specific domain, ongoing issue, or entities discussed).
+        2. Rewrite the Follow-up Query to explicitly include this subject so it makes sense in isolation.
+        3. DO NOT change the intent of the question, only narrow its scope.
+        4. If the query is already specific, return it unchanged.
+        5. Output ONLY the rewritten query text. No explanations.
+        """
+
+        # Format history
+        history_str = ""
+        for turn in history:
+            role = "User" if turn["role"] == "user" else "Analyst"
+            history_str += f"{role}: {turn['content']}\n"
+
+        curr_prompt = f"""
+        --- CONVERSATION HISTORY ---
+        {history_str}
+
+        --- FOLLOW-UP QUERY ---
+        {query}
+
+        REWRITTEN QUERY:"""
+
+        response = ollama.chat(
+            model=self.model,
+            messages=[
+                {"role": "system", "content": sys_prompt},
+                {"role": "user", "content": curr_prompt}
+            ],
+            options={ "num_gpu": 99, "num_ctx": 4096 },
+            keep_alive="5m"
+        )
+        
+        return response['message']['content'].strip()
+
+
     def query_splitter(self,query):
         prompt = """You are an expert NLU (Natural Language Understanding) router. Your goal is to map a user's input query to the most relevant (Domain, Intent) pairs from a provided list and optimize the query for search.
 
