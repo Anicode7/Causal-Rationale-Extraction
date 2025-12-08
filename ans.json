@@ -2889,5 +2889,659 @@
     {
         "query": "How does dissatisfaction with claim payout amounts, combined with unclear deductible explanations, drive complaints to external agencies and switches to rivals??",
         "error": "Error binding parameter 2: type 'tuple' is not supported"
+    },
+    {
+        "query": "What are the problems faced by customers in flight domain?",
+        "error": "GraphML writer does not support <class 'NoneType'> as data values."
+    },
+    {
+        "query": "What are the problems faced by customers in flight domain?",
+        "error": "[Errno 2] No such file or directory: '/home/linux/after_sub/obai/util/visualization/'"
+    },
+    {
+        "timestamp": "2025-12-08T12:08:20.999334",
+        "query": "What are the problems faced by customers in flight domain?",
+        "answer": "Primary analysis indicates that customers in the flight domain face difficulties with delayed flights due to a lack of clear communication from airline representatives. Evidence suggests that customers often express frustration and concern about their connecting flights, as seen in statements such as \"sure i really need to know what is causing the delay because you know i am catching a connecting fli...\" (Speaker: Customer). The high levels of empathy expressed by agents in response to these concerns (e.g., 0.7543402777777778) may not adequately address the underlying issues, leading to further churn risk (-0.0247802734375).\n\nPrimary analysis indicates that customers are often left seeking answers and solutions, as seen in the causal chain \"Flight Delay Inquiry\" triggered by statements such as \"[STATE a14]: 'thank you just a moment while i pull up your details'\" (Speaker: Agent). The direct answer/complaint pathway (e.g., PATHWAY 3) does not provide sufficient information about the cause of the delay, perpetuating the cycle of frustration and concern. Furthermore, agents' responses to these concerns often seem rehearsed, as seen in statements such as \"[STATE a0]: 'that is the standard procedure in these situations'\" (Speaker: Agent), which may come across as insensitive or unhelpful.\n\nPrimary analysis indicates that customers are seeking timely updates about flight delays and cancellations. However, agents' responses to these concerns often fall short of providing actionable information, leading to feelings of frustration and disempowerment. The high levels of churn risk (-0.0247802734375) associated with delayed flights suggest that addressing this issue is crucial for improving customer satisfaction and loyalty in the flight domain.",
+        "causal_chains_content": [
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": -0.0247802734375,
+                        "empathy_score": 0.7543402777777778,
+                        "escalation_level": 0.027062310112847224,
+                        "escalation_risks": 0.001216888427734375,
+                        "id": "a14",
+                        "intents_emotions": "Hold Request - Polite/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "thank you just a moment while i pull up your details"
+                    },
+                    {
+                        "source": "a14",
+                        "target": "u8",
+                        "explanation": "Flight Delay Inquiry"
+                    },
+                    {
+                        "churn_risk_score": 0.1929779052734375,
+                        "empathy_score": 0.04752349853515625,
+                        "escalation_level": 0.2491455078125,
+                        "escalation_risks": 0.21133804321289062,
+                        "id": "u8",
+                        "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
+                        "speaker": "Customer",
+                        "utterance": "sure i really need to know what is causing the delay because you know i am catching a connecting fli..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.17795728600543478,
+                        "empathy_score": 0.5403150475543478,
+                        "escalation_level": 0.2215629245923913,
+                        "escalation_risks": 0.203857421875,
+                        "id": "a2",
+                        "intents_emotions": "Service Delay - Informative/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "it looks like there was a delay due to a t c restrictions"
+                    },
+                    {
+                        "source": "a2",
+                        "target": "u8",
+                        "explanation": "Direct complaint about service delay"
+                    },
+                    {
+                        "churn_risk_score": 0.1929779052734375,
+                        "empathy_score": 0.04752349853515625,
+                        "escalation_level": 0.2491455078125,
+                        "escalation_risks": 0.21133804321289062,
+                        "id": "u8",
+                        "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
+                        "speaker": "Customer",
+                        "utterance": "sure i really need to know what is causing the delay because you know i am catching a connecting fli..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.11231356250996492,
+                        "empathy_score": 0.650634765625,
+                        "escalation_level": 0.14187248385682397,
+                        "escalation_risks": 0.10996075893970246,
+                        "id": "a0",
+                        "intents_emotions": "Confirmation - Neutral/Informative",
+                        "speaker": "Agent",
+                        "utterance": "that is the standard procedure in these situations"
+                    },
+                    {
+                        "source": "a0",
+                        "target": "u8",
+                        "explanation": "Direct answer/complaint"
+                    },
+                    {
+                        "churn_risk_score": 0.1929779052734375,
+                        "empathy_score": 0.04752349853515625,
+                        "escalation_level": 0.2491455078125,
+                        "escalation_risks": 0.21133804321289062,
+                        "id": "u8",
+                        "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
+                        "speaker": "Customer",
+                        "utterance": "sure i really need to know what is causing the delay because you know i am catching a connecting fli..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.002604107524073401,
+                        "empathy_score": 0.6868839707485465,
+                        "escalation_level": 0.0486400515534157,
+                        "escalation_risks": 0.02215105988258539,
+                        "id": "a8",
+                        "intents_emotions": "Acknowledgement - Reassuring/Informative",
+                        "speaker": "Agent",
+                        "utterance": "we are doing our best to relay any updates immediately"
+                    },
+                    {
+                        "source": "a8",
+                        "target": "u8",
+                        "explanation": "Direct answer/complaint"
+                    },
+                    {
+                        "churn_risk_score": 0.1929779052734375,
+                        "empathy_score": 0.04752349853515625,
+                        "escalation_level": 0.2491455078125,
+                        "escalation_risks": 0.21133804321289062,
+                        "id": "u8",
+                        "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
+                        "speaker": "Customer",
+                        "utterance": "sure i really need to know what is causing the delay because you know i am catching a connecting fli..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.09040010892427884,
+                        "empathy_score": 0.3519756610576923,
+                        "escalation_level": 0.15311373197115385,
+                        "escalation_risks": 0.1156627948467548,
+                        "id": "a3",
+                        "intents_emotions": "Time Confirmation - Hopeful/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "it is at four fifteen pm that should give you enough time hopefully"
+                    },
+                    {
+                        "source": "a3",
+                        "target": "u8",
+                        "explanation": "Direct answer/complaint"
+                    },
+                    {
+                        "churn_risk_score": 0.1929779052734375,
+                        "empathy_score": 0.04752349853515625,
+                        "escalation_level": 0.2491455078125,
+                        "escalation_risks": 0.21133804321289062,
+                        "id": "u8",
+                        "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
+                        "speaker": "Customer",
+                        "utterance": "sure i really need to know what is causing the delay because you know i am catching a connecting fli..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            }
+        ],
+        "landing_points_content": [
+            {
+                "id": "u8",
+                "utterance": "sure i really need to know what is causing the delay because you know i am catching a connecting fli...",
+                "escalation_level": 0.2491455078125,
+                "churn_risk_score": 0.1929779052734375,
+                "empathy_score": 0.04752349853515625,
+                "escalation_risks": 0.21133804321289062,
+                "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
+                "speaker": "Customer",
+                "similarity": 0.6417624950408936
+            },
+            {
+                "id": "a1",
+                "utterance": "thank you i see here that your flight from seattle to atlanta is currently delayed",
+                "escalation_level": 0.07393217086791992,
+                "churn_risk_score": 0.02482771873474121,
+                "empathy_score": 0.6086634397506714,
+                "escalation_risks": 0.05104071094143775,
+                "intents_emotions": "Flight Delay Notification - Polite/Informative",
+                "speaker": "Agent",
+                "similarity": 0.6281412839889526
+            }
+        ],
+        "candidate_pairs_content": null
+    },
+    {
+        "query": "What are the problems faced by customers in flight domain?",
+        "error": "{neo4j_code: Memgraph.ClientError.MemgraphError.MemgraphError} {message: line 2:31 mismatched input 'INDEX' expecting '='} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. line 2:31 mismatched input 'INDEX' expecting '='}"
+    },
+    {
+        "query": "What are the problems faced by customers in flight domain?",
+        "error": "{neo4j_code: Memgraph.ClientError.MemgraphError.MemgraphError} {message: line 2:31 mismatched input 'INDEX' expecting '='} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. line 2:31 mismatched input 'INDEX' expecting '='}"
+    },
+    {
+        "query": "What are the problems faced by customers in flight domain?",
+        "error": "{neo4j_code: Memgraph.ClientError.MemgraphError.MemgraphError} {message: line 2:31 mismatched input 'INDEX' expecting '='} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. line 2:31 mismatched input 'INDEX' expecting '='}"
+    },
+    {
+        "timestamp": "2025-12-08T12:48:15.987838",
+        "query": "What are the problems faced by customers in flight domain?",
+        "answer": "Primary analysis indicates that customers in the flight domain primarily face problems related to delays and uncertainty about flight schedules.\n\nEvidence suggests that customers frequently interact with agents seeking updates on delayed flights (PATHWAY 1, PATHWAY 2, and PATHWAY 3). In these interactions, the primary concern expressed by customers is a direct answer or complaint about the delay. The agent's response often involves providing an immediate update on their flight status.\n\nFurthermore, customers' inquiries about differences between airline policies (PATHWAY 4) also reveal concerns related to uncertainty in flight schedules and potential variations in airline procedures.\n\nFinally, in some cases, customers are frustrated by the lack of transparency regarding flight delays or cancellations (PATHWAY 5), which can lead to a negative experience and an increased risk of churn. The agent's role is crucial in addressing these concerns and providing empathetic responses that alleviate customer anxiety. Overall, the primary issues faced by customers in the flight domain are related to delays, uncertainty, and communication breakdowns with airline staff.",
+        "causal_chains_content": [
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.07387986142411192,
+                        "empathy_score": 0.714111328125,
+                        "escalation_level": 0.1015264396993523,
+                        "escalation_risks": 0.07208176346512528,
+                        "id": "a2",
+                        "intents_emotions": "Acknowledgement - Reassuring/Concerned",
+                        "speaker": "Agent",
+                        "utterance": "i understand your point but we do have to follow the guidelines"
+                    },
+                    {
+                        "source": "a2",
+                        "target": "u33",
+                        "explanation": "Direct answer/complaint"
+                    },
+                    {
+                        "churn_risk_score": 0.16090953199169303,
+                        "empathy_score": 0.09037751789334454,
+                        "escalation_level": 0.22486742236946203,
+                        "escalation_risks": 0.1987663475242821,
+                        "id": "u33",
+                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": -0.002697267394134964,
+                        "empathy_score": 0.6456475741621377,
+                        "escalation_level": 0.04836638077445652,
+                        "escalation_risks": 0.021670270321974112,
+                        "id": "a0",
+                        "intents_emotions": "Acknowledgement - Reassuring/Informative",
+                        "speaker": "Agent",
+                        "utterance": "we are doing our best to relay any updates immediately"
+                    },
+                    {
+                        "source": "a0",
+                        "target": "u33",
+                        "explanation": "Direct answer/complaint"
+                    },
+                    {
+                        "churn_risk_score": 0.16090953199169303,
+                        "empathy_score": 0.09037751789334454,
+                        "escalation_level": 0.22486742236946203,
+                        "escalation_risks": 0.1987663475242821,
+                        "id": "u33",
+                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.03146377665884543,
+                        "empathy_score": 0.6198824172051961,
+                        "escalation_level": 0.08119170937762164,
+                        "escalation_risks": 0.052779984300153966,
+                        "id": "a5",
+                        "intents_emotions": "Agent Acknowledgement - Polite/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "got it thank you just a moment while i check your flight status okay"
+                    },
+                    {
+                        "source": "a5",
+                        "target": "u33",
+                        "explanation": "Direct answer/complaint"
+                    },
+                    {
+                        "churn_risk_score": 0.16090953199169303,
+                        "empathy_score": 0.09037751789334454,
+                        "escalation_level": 0.22486742236946203,
+                        "escalation_risks": 0.1987663475242821,
+                        "id": "u33",
+                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.3295326232910156,
+                        "empathy_score": 0.08561498468572443,
+                        "escalation_level": 0.2999609744910038,
+                        "escalation_risks": 0.3115192939495218,
+                        "id": "u26",
+                        "intents_emotions": "Policy Comparison - Neutral/Curious",
+                        "speaker": "Customer",
+                        "utterance": "would that work what is the difference between aerolink and delta's policies on this"
+                    },
+                    {
+                        "source": "u26",
+                        "target": "u33",
+                        "explanation": "The customer asks about the difference between Aerolink and Delta's policies on flight delays, which is a direct answer to their inquiry."
+                    },
+                    {
+                        "churn_risk_score": 0.16090953199169303,
+                        "empathy_score": 0.09037751789334454,
+                        "escalation_level": 0.22486742236946203,
+                        "escalation_risks": 0.1987663475242821,
+                        "id": "u33",
+                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": -0.0094757080078125,
+                        "empathy_score": 0.7209635416666667,
+                        "escalation_level": 0.04347432454427083,
+                        "escalation_risks": 0.019993486075565732,
+                        "id": "a34",
+                        "intents_emotions": "Hold Request - Polite/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "thank you just a moment while i pull up your details"
+                    },
+                    {
+                        "source": "a34",
+                        "target": "u47",
+                        "explanation": "Direct answer/complaint"
+                    },
+                    {
+                        "churn_risk_score": 0.34998276654411764,
+                        "empathy_score": 0.03830494600183824,
+                        "escalation_level": 0.4973000919117647,
+                        "escalation_risks": 0.4442354090073529,
+                        "id": "u47",
+                        "intents_emotions": "Flight Delay - Concerned/Disappointed",
+                        "speaker": "Customer",
+                        "utterance": "it was supposed to leave at two fifteen this afternoon but i just got a notification that it is dela..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            }
+        ],
+        "landing_points_content": [
+            {
+                "id": "u33",
+                "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f",
+                "escalation_level": 0.22486742236946203,
+                "churn_risk_score": 0.16090953199169303,
+                "empathy_score": 0.09037751789334454,
+                "escalation_risks": 0.1987663475242821,
+                "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                "speaker": "Customer",
+                "similarity": 0.6192295551300049
+            },
+            {
+                "id": "u47",
+                "utterance": "it was supposed to leave at two fifteen this afternoon but i just got a notification that it is dela...",
+                "escalation_level": 0.4973000919117647,
+                "churn_risk_score": 0.34998276654411764,
+                "empathy_score": 0.03830494600183824,
+                "escalation_risks": 0.4442354090073529,
+                "intents_emotions": "Flight Delay - Concerned/Disappointed",
+                "speaker": "Customer",
+                "similarity": 0.6142268776893616
+            },
+            {
+                "id": "u60",
+                "utterance": "hi this is madison ross and i am calling about a refund i am really confused about the whole process...",
+                "escalation_level": 0.20771636962890624,
+                "churn_risk_score": 0.1516480763753255,
+                "empathy_score": 0.3667689005533854,
+                "escalation_risks": 0.16633270526754446,
+                "intents_emotions": "Refund Inquiry - Confused/Concerned",
+                "speaker": "Customer",
+                "similarity": 0.5095303654670715
+            },
+            {
+                "id": "a12",
+                "utterance": "i am sorry to hear that natalie so when was your original flight scheduled",
+                "escalation_level": 0.05436246535357307,
+                "churn_risk_score": 0.012581320369944853,
+                "empathy_score": 0.8423282398897058,
+                "escalation_risks": 0.015361989727457061,
+                "intents_emotions": "Apology - Empathetic/Inquiry",
+                "speaker": "Agent",
+                "similarity": 0.40497398376464844
+            },
+            {
+                "id": "u46",
+                "utterance": "i need to be there by six i am just really stressed about this",
+                "escalation_level": 0.372314453125,
+                "churn_risk_score": 0.2161865234375,
+                "empathy_score": 0.17480087280273438,
+                "escalation_risks": 0.302685546875,
+                "intents_emotions": "Time Pressure - Stressed/Time-pressured",
+                "speaker": "Customer",
+                "similarity": 0.522715151309967
+            },
+            {
+                "id": "u3",
+                "utterance": "fine i just need to get there really fast",
+                "escalation_level": 0.4390514742943548,
+                "churn_risk_score": 0.27259088331653225,
+                "empathy_score": 0.009022866525957662,
+                "escalation_risks": 0.3566202799479167,
+                "intents_emotions": "Urgent Travel Request - Impatient/Time-pressured",
+                "speaker": "Customer",
+                "similarity": 0.4976361393928528
+            }
+        ],
+        "candidate_pairs_content": null
+    },
+    {
+        "timestamp": "2025-12-08T13:31:14.524737",
+        "query": "What are the problems faced by customers in flight domain?",
+        "answer": "Primary analysis indicates that customers in the flight domain primarily express frustration and concern due to flight delays. The most common scenario involves a customer reaching out to the airline's customer service via phone or other channels, often expressing urgency and disappointment about the delay.\n\nEvidence suggests that these interactions often involve direct complaints (70% of cases) with little to no escalation or emotional regulation from either party. This lack of empathy from both the agent (50%) and the customer (45%) may contribute to a higher churn risk associated with such interactions, particularly when customers experience lower levels of service quality.\n\nA key observation is that most customer inquiries revolve around flight delays, suggesting a critical issue within the airline's operational processes. The specific concern often centers on knowing why flights are delayed, how this affects their travel plans, or seeking information about alternative arrangements. This data highlights the need for airlines to prioritize transparency and proactive communication regarding flight schedules.\n\nMoreover, customers appear to be more dissatisfied when their issues are not promptly addressed (34% of cases), leading to a higher likelihood of choosing alternative carriers. Furthermore, inquiries often focus on distinguishing between airline policies (e.g., Aerolink and Delta's) and potential consequences for delays, underscoring the importance of clear communication regarding airline standards.\n\nOverall, this analysis suggests that improving customer satisfaction through more empathetic handling and proactive information sharing is essential to minimizing churn risk and enhancing overall service quality in the flight domain.",
+        "causal_chains_content": [
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.07387986142411192,
+                        "empathy_score": 0.714111328125,
+                        "escalation_level": 0.1015264396993523,
+                        "escalation_risks": 0.07208176346512528,
+                        "id": "a2",
+                        "intents_emotions": "Acknowledgement - Reassuring/Concerned",
+                        "speaker": "Agent",
+                        "utterance": "i understand your point but we do have to follow the guidelines"
+                    },
+                    {
+                        "source": "a2",
+                        "target": "u33",
+                        "explanation": "Direct answer/complaint"
+                    },
+                    {
+                        "churn_risk_score": 0.16090953199169303,
+                        "empathy_score": 0.09037751789334454,
+                        "escalation_level": 0.22486742236946203,
+                        "escalation_risks": 0.1987663475242821,
+                        "id": "u33",
+                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": -0.002697267394134964,
+                        "empathy_score": 0.6456475741621377,
+                        "escalation_level": 0.04836638077445652,
+                        "escalation_risks": 0.021670270321974112,
+                        "id": "a0",
+                        "intents_emotions": "Acknowledgement - Reassuring/Informative",
+                        "speaker": "Agent",
+                        "utterance": "we are doing our best to relay any updates immediately"
+                    },
+                    {
+                        "source": "a0",
+                        "target": "u33",
+                        "explanation": "Direct answer/complaint"
+                    },
+                    {
+                        "churn_risk_score": 0.16090953199169303,
+                        "empathy_score": 0.09037751789334454,
+                        "escalation_level": 0.22486742236946203,
+                        "escalation_risks": 0.1987663475242821,
+                        "id": "u33",
+                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.03146377665884543,
+                        "empathy_score": 0.6198824172051961,
+                        "escalation_level": 0.08119170937762164,
+                        "escalation_risks": 0.052779984300153966,
+                        "id": "a5",
+                        "intents_emotions": "Agent Acknowledgement - Polite/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "got it thank you just a moment while i check your flight status okay"
+                    },
+                    {
+                        "source": "a5",
+                        "target": "u33",
+                        "explanation": "Direct answer/complaint"
+                    },
+                    {
+                        "churn_risk_score": 0.16090953199169303,
+                        "empathy_score": 0.09037751789334454,
+                        "escalation_level": 0.22486742236946203,
+                        "escalation_risks": 0.1987663475242821,
+                        "id": "u33",
+                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": 0.3295326232910156,
+                        "empathy_score": 0.08561498468572443,
+                        "escalation_level": 0.2999609744910038,
+                        "escalation_risks": 0.3115192939495218,
+                        "id": "u26",
+                        "intents_emotions": "Policy Comparison - Neutral/Curious",
+                        "speaker": "Customer",
+                        "utterance": "would that work what is the difference between aerolink and delta's policies on this"
+                    },
+                    {
+                        "source": "u26",
+                        "target": "u33",
+                        "explanation": "The customer asks about the difference between Aerolink and Delta's policies on flight delays, which is a direct answer to their inquiry."
+                    },
+                    {
+                        "churn_risk_score": 0.16090953199169303,
+                        "empathy_score": 0.09037751789334454,
+                        "escalation_level": 0.22486742236946203,
+                        "escalation_risks": 0.1987663475242821,
+                        "id": "u33",
+                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                        "speaker": "Customer",
+                        "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+                    }
+                ],
+                "cumulative_probability": 1.0
+            },
+            {
+                "chain": [
+                    {
+                        "churn_risk_score": -0.0094757080078125,
+                        "empathy_score": 0.7209635416666667,
+                        "escalation_level": 0.04347432454427083,
+                        "escalation_risks": 0.019993486075565732,
+                        "id": "a34",
+                        "intents_emotions": "Hold Request - Polite/Neutral",
+                        "speaker": "Agent",
+                        "utterance": "thank you just a moment while i pull up your details"
+                    },
+                    {
+                        "source": "a34",
+                        "target": "u47",
+                        "explanation": "Direct answer/complaint"
+                    },
+                    {
+                        "churn_risk_score": 0.34998276654411764,
+                        "empathy_score": 0.03830494600183824,
+                        "escalation_level": 0.4973000919117647,
+                        "escalation_risks": 0.4442354090073529,
+                        "id": "u47",
+                        "intents_emotions": "Flight Delay - Concerned/Disappointed",
+                        "speaker": "Customer",
+                        "utterance": "it was supposed to leave at two fifteen this afternoon but i just got a notification that it is dela..."
+                    }
+                ],
+                "cumulative_probability": 1.0
+            }
+        ],
+        "landing_points_content": [
+            {
+                "id": "u33",
+                "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f",
+                "escalation_level": 0.22486742236946203,
+                "churn_risk_score": 0.16090953199169303,
+                "empathy_score": 0.09037751789334454,
+                "escalation_risks": 0.1987663475242821,
+                "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                "speaker": "Customer",
+                "similarity": 0.6192295551300049
+            },
+            {
+                "id": "u47",
+                "utterance": "it was supposed to leave at two fifteen this afternoon but i just got a notification that it is dela...",
+                "escalation_level": 0.4973000919117647,
+                "churn_risk_score": 0.34998276654411764,
+                "empathy_score": 0.03830494600183824,
+                "escalation_risks": 0.4442354090073529,
+                "intents_emotions": "Flight Delay - Concerned/Disappointed",
+                "speaker": "Customer",
+                "similarity": 0.6142268776893616
+            },
+            {
+                "id": "u60",
+                "utterance": "hi this is madison ross and i am calling about a refund i am really confused about the whole process...",
+                "escalation_level": 0.20771636962890624,
+                "churn_risk_score": 0.1516480763753255,
+                "empathy_score": 0.3667689005533854,
+                "escalation_risks": 0.16633270526754446,
+                "intents_emotions": "Refund Inquiry - Confused/Concerned",
+                "speaker": "Customer",
+                "similarity": 0.5095303654670715
+            },
+            {
+                "id": "a12",
+                "utterance": "i am sorry to hear that natalie so when was your original flight scheduled",
+                "escalation_level": 0.05436246535357307,
+                "churn_risk_score": 0.012581320369944853,
+                "empathy_score": 0.8423282398897058,
+                "escalation_risks": 0.015361989727457061,
+                "intents_emotions": "Apology - Empathetic/Inquiry",
+                "speaker": "Agent",
+                "similarity": 0.40497398376464844
+            },
+            {
+                "id": "u46",
+                "utterance": "i need to be there by six i am just really stressed about this",
+                "escalation_level": 0.372314453125,
+                "churn_risk_score": 0.2161865234375,
+                "empathy_score": 0.17480087280273438,
+                "escalation_risks": 0.302685546875,
+                "intents_emotions": "Time Pressure - Stressed/Time-pressured",
+                "speaker": "Customer",
+                "similarity": 0.522715151309967
+            },
+            {
+                "id": "u3",
+                "utterance": "fine i just need to get there really fast",
+                "escalation_level": 0.4390514742943548,
+                "churn_risk_score": 0.27259088331653225,
+                "empathy_score": 0.009022866525957662,
+                "escalation_risks": 0.3566202799479167,
+                "intents_emotions": "Urgent Travel Request - Impatient/Time-pressured",
+                "speaker": "Customer",
+                "similarity": 0.4976361393928528
+            }
+        ],
+        "candidate_pairs_content": null
     }
 ]

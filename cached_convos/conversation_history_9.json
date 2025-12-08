@@ -1,0 +1,10 @@
+[
+    {
+        "role": "user",
+        "content": "What are the problems faced by customers in flight domain?"
+    },
+    {
+        "role": "assistant",
+        "content": "Primary analysis indicates that customers in the flight domain primarily face problems related to delays and uncertainty about flight schedules.\n\nEvidence suggests that customers frequently interact with agents seeking updates on delayed flights (PATHWAY 1, PATHWAY 2, and PATHWAY 3). In these interactions, the primary concern expressed by customers is a direct answer or complaint about the delay. The agent's response often involves providing an immediate update on their flight status.\n\nFurthermore, customers' inquiries about differences between airline policies (PATHWAY 4) also reveal concerns related to uncertainty in flight schedules and potential variations in airline procedures.\n\nFinally, in some cases, customers are frustrated by the lack of transparency regarding flight delays or cancellations (PATHWAY 5), which can lead to a negative experience and an increased risk of churn. The agent's role is crucial in addressing these concerns and providing empathetic responses that alleviate customer anxiety. Overall, the primary issues faced by customers in the flight domain are related to delays, uncertainty, and communication breakdowns with airline staff."
+    }
+]

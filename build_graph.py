@@ -138,7 +138,7 @@ def create_graph(trajectories: Dict,
                  prune_threshold_edges: float = 0.2,
                  png_show_ids: bool = False,
                  png_visualization: bool = True,
-                 interactive_visualization: bool = False) -> Tuple[nx.DiGraph, Dict[str, Dict]]:
+                 interactive_visualization: bool = True) -> Tuple[nx.DiGraph, Dict[str, Dict]]:
 
     G = nx.DiGraph()
     G.add_node(DEFAULT_TOKEN_START, color="green", fr=1)
@@ -302,7 +302,7 @@ def create_graph(trajectories: Dict,
         except:
             pass
     
-    interactive_visualization = False
+    interactive_visualization = True
     if interactive_visualization:
         output_folder = os.path.join(output_folder, "visualization")
         output_file = os.path.join(output_folder, "graph.html")
@@ -372,7 +372,7 @@ def trajectory2graph(path_trajectories: str,
                      prune_threshold_edges: float = 0.2,
                      png_show_ids: bool = True,
                      png_visualization: bool = True,
-                     interactive_visualization: bool = False,
+                     interactive_visualization: bool = True,
                      target_domains: List[str] = None) -> Tuple[nx.DiGraph, Dict[str, Dict]]:
 
     logger.info(f"  Reading trajectories from ({path_trajectories})...")

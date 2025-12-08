@@ -1,24 +1,68 @@
 [
     {
-        "id": "u1",
-        "utterance": "that sounds good what about the coverage limits how much will i actually be covered for",
-        "escalation_level": 0.17877935053228022,
-        "churn_risk_score": 0.20237010913890796,
-        "empathy_score": 0.06307052779983688,
-        "escalation_risks": 0.17331993289110137,
-        "intents_emotions": "Coverage Inquiry - Neutral/Curious",
+        "id": "u33",
+        "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f",
+        "escalation_level": 0.22486742236946203,
+        "churn_risk_score": 0.16090953199169303,
+        "empathy_score": 0.09037751789334454,
+        "escalation_risks": 0.1987663475242821,
+        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
         "speaker": "Customer",
-        "similarity": 0.4813072681427002
+        "similarity": 0.6192295551300049
     },
     {
-        "id": "u26",
-        "utterance": "no there is been zero win back attempts from them i am just looking to compare",
-        "escalation_level": 0.1632843017578125,
-        "churn_risk_score": 0.21319580078125,
-        "empathy_score": 0.034332275390625,
-        "escalation_risks": 0.17946624755859375,
-        "intents_emotions": "Complaint - Frustrated/Seeking Comparison",
+        "id": "u47",
+        "utterance": "it was supposed to leave at two fifteen this afternoon but i just got a notification that it is dela...",
+        "escalation_level": 0.4973000919117647,
+        "churn_risk_score": 0.34998276654411764,
+        "empathy_score": 0.03830494600183824,
+        "escalation_risks": 0.4442354090073529,
+        "intents_emotions": "Flight Delay - Concerned/Disappointed",
         "speaker": "Customer",
-        "similarity": 0.45211589336395264
+        "similarity": 0.6142268776893616
+    },
+    {
+        "id": "u60",
+        "utterance": "hi this is madison ross and i am calling about a refund i am really confused about the whole process...",
+        "escalation_level": 0.20771636962890624,
+        "churn_risk_score": 0.1516480763753255,
+        "empathy_score": 0.3667689005533854,
+        "escalation_risks": 0.16633270526754446,
+        "intents_emotions": "Refund Inquiry - Confused/Concerned",
+        "speaker": "Customer",
+        "similarity": 0.5095303654670715
+    },
+    {
+        "id": "a12",
+        "utterance": "i am sorry to hear that natalie so when was your original flight scheduled",
+        "escalation_level": 0.05436246535357307,
+        "churn_risk_score": 0.012581320369944853,
+        "empathy_score": 0.8423282398897058,
+        "escalation_risks": 0.015361989727457061,
+        "intents_emotions": "Apology - Empathetic/Inquiry",
+        "speaker": "Agent",
+        "similarity": 0.40497398376464844
+    },
+    {
+        "id": "u46",
+        "utterance": "i need to be there by six i am just really stressed about this",
+        "escalation_level": 0.372314453125,
+        "churn_risk_score": 0.2161865234375,
+        "empathy_score": 0.17480087280273438,
+        "escalation_risks": 0.302685546875,
+        "intents_emotions": "Time Pressure - Stressed/Time-pressured",
+        "speaker": "Customer",
+        "similarity": 0.522715151309967
+    },
+    {
+        "id": "u3",
+        "utterance": "fine i just need to get there really fast",
+        "escalation_level": 0.4390514742943548,
+        "churn_risk_score": 0.27259088331653225,
+        "empathy_score": 0.009022866525957662,
+        "escalation_risks": 0.3566202799479167,
+        "intents_emotions": "Urgent Travel Request - Impatient/Time-pressured",
+        "speaker": "Customer",
+        "similarity": 0.4976361393928528
     }
 ]

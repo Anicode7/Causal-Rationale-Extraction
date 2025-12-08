@@ -1,1 +1,152 @@
-[]
+[
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.07387986142411192,
+                "empathy_score": 0.714111328125,
+                "escalation_level": 0.1015264396993523,
+                "escalation_risks": 0.07208176346512528,
+                "id": "a2",
+                "intents_emotions": "Acknowledgement - Reassuring/Concerned",
+                "speaker": "Agent",
+                "utterance": "i understand your point but we do have to follow the guidelines"
+            },
+            {
+                "source": "a2",
+                "target": "u33",
+                "explanation": "Direct answer/complaint"
+            },
+            {
+                "churn_risk_score": 0.16090953199169303,
+                "empathy_score": 0.09037751789334454,
+                "escalation_level": 0.22486742236946203,
+                "escalation_risks": 0.1987663475242821,
+                "id": "u33",
+                "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                "speaker": "Customer",
+                "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+            }
+        ],
+        "cumulative_probability": 1.0
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": -0.002697267394134964,
+                "empathy_score": 0.6456475741621377,
+                "escalation_level": 0.04836638077445652,
+                "escalation_risks": 0.021670270321974112,
+                "id": "a0",
+                "intents_emotions": "Acknowledgement - Reassuring/Informative",
+                "speaker": "Agent",
+                "utterance": "we are doing our best to relay any updates immediately"
+            },
+            {
+                "source": "a0",
+                "target": "u33",
+                "explanation": "Direct answer/complaint"
+            },
+            {
+                "churn_risk_score": 0.16090953199169303,
+                "empathy_score": 0.09037751789334454,
+                "escalation_level": 0.22486742236946203,
+                "escalation_risks": 0.1987663475242821,
+                "id": "u33",
+                "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                "speaker": "Customer",
+                "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+            }
+        ],
+        "cumulative_probability": 1.0
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.03146377665884543,
+                "empathy_score": 0.6198824172051961,
+                "escalation_level": 0.08119170937762164,
+                "escalation_risks": 0.052779984300153966,
+                "id": "a5",
+                "intents_emotions": "Agent Acknowledgement - Polite/Neutral",
+                "speaker": "Agent",
+                "utterance": "got it thank you just a moment while i check your flight status okay"
+            },
+            {
+                "source": "a5",
+                "target": "u33",
+                "explanation": "Direct answer/complaint"
+            },
+            {
+                "churn_risk_score": 0.16090953199169303,
+                "empathy_score": 0.09037751789334454,
+                "escalation_level": 0.22486742236946203,
+                "escalation_risks": 0.1987663475242821,
+                "id": "u33",
+                "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                "speaker": "Customer",
+                "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+            }
+        ],
+        "cumulative_probability": 1.0
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": 0.3295326232910156,
+                "empathy_score": 0.08561498468572443,
+                "escalation_level": 0.2999609744910038,
+                "escalation_risks": 0.3115192939495218,
+                "id": "u26",
+                "intents_emotions": "Policy Comparison - Neutral/Curious",
+                "speaker": "Customer",
+                "utterance": "would that work what is the difference between aerolink and delta's policies on this"
+            },
+            {
+                "source": "u26",
+                "target": "u33",
+                "explanation": "The customer asks about the difference between Aerolink and Delta's policies on flight delays, which is a direct answer to their inquiry."
+            },
+            {
+                "churn_risk_score": 0.16090953199169303,
+                "empathy_score": 0.09037751789334454,
+                "escalation_level": 0.22486742236946203,
+                "escalation_risks": 0.1987663475242821,
+                "id": "u33",
+                "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
+                "speaker": "Customer",
+                "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
+            }
+        ],
+        "cumulative_probability": 1.0
+    },
+    {
+        "chain": [
+            {
+                "churn_risk_score": -0.0094757080078125,
+                "empathy_score": 0.7209635416666667,
+                "escalation_level": 0.04347432454427083,
+                "escalation_risks": 0.019993486075565732,
+                "id": "a34",
+                "intents_emotions": "Hold Request - Polite/Neutral",
+                "speaker": "Agent",
+                "utterance": "thank you just a moment while i pull up your details"
+            },
+            {
+                "source": "a34",
+                "target": "u47",
+                "explanation": "Direct answer/complaint"
+            },
+            {
+                "churn_risk_score": 0.34998276654411764,
+                "empathy_score": 0.03830494600183824,
+                "escalation_level": 0.4973000919117647,
+                "escalation_risks": 0.4442354090073529,
+                "id": "u47",
+                "intents_emotions": "Flight Delay - Concerned/Disappointed",
+                "speaker": "Customer",
+                "utterance": "it was supposed to leave at two fifteen this afternoon but i just got a notification that it is dela..."
+            }
+        ],
+        "cumulative_probability": 1.0
+    }
+]
