@@ -24,7 +24,6 @@
                         "escalation_level": 0.012312752842857143,
                         "escalation_risks": -0.0146004813,
                         "id": "a10",
-                        "intents_emotions": "Gratitude/Reassurance - Polite/Helpful",
                         "speaker": "Agent",
                         "utterance": "thank you for your patience carter we appreciate your feedback and i am here if you need anything el..."
                     },
@@ -39,7 +38,6 @@
                         "escalation_level": 0.7734375,
                         "escalation_risks": 0.796875,
                         "id": "u57",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "please do because i am considering actually i am considering switching to another hotel if this keep..."
                     }
@@ -54,7 +52,6 @@
                         "escalation_level": 0.5011985085227273,
                         "escalation_risks": 0.5188210227272727,
                         "id": "u37",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
                         "speaker": "Customer",
                         "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
                     },
@@ -69,7 +66,6 @@
                         "escalation_level": 0.06467285156,
                         "escalation_risks": 0.03819580078,
                         "id": "a29",
-                        "intents_emotions": "Information Request - Neutral/Curious",
                         "speaker": "Agent",
                         "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
                     }
@@ -84,7 +80,6 @@
                         "escalation_level": 0.09196912976666667,
                         "escalation_risks": 0.04741139845,
                         "id": "a20",
-                        "intents_emotions": "Apology - Empathetic/Inquiry",
                         "speaker": "Agent",
                         "utterance": "i am sorry to hear that evelyn can you please provide me with some details about your complaint"
                     },
@@ -99,7 +94,6 @@
                         "escalation_level": 0.5011985085227273,
                         "escalation_risks": 0.5188210227272727,
                         "id": "u37",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
                         "speaker": "Customer",
                         "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
                     },
@@ -114,7 +108,6 @@
                         "escalation_level": 0.06467285156,
                         "escalation_risks": 0.03819580078,
                         "id": "a29",
-                        "intents_emotions": "Information Request - Neutral/Curious",
                         "speaker": "Agent",
                         "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
                     }
@@ -129,7 +122,6 @@
                         "escalation_level": 0.07845633371428572,
                         "escalation_risks": 0.0338418143,
                         "id": "a28",
-                        "intents_emotions": "Clarification Request - Empathetic/Inquisitive",
                         "speaker": "Agent",
                         "utterance": "i understand can you clarify what specific issues you faced during your stay"
                     },
@@ -144,7 +136,6 @@
                         "escalation_level": 0.5011985085227273,
                         "escalation_risks": 0.5188210227272727,
                         "id": "u37",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
                         "speaker": "Customer",
                         "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
                     },
@@ -159,7 +150,6 @@
                         "escalation_level": 0.06467285156,
                         "escalation_risks": 0.03819580078,
                         "id": "a29",
-                        "intents_emotions": "Information Request - Neutral/Curious",
                         "speaker": "Agent",
                         "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
                     }
@@ -174,7 +164,6 @@
                         "escalation_level": 0.12556537828947367,
                         "escalation_risks": 0.09229318719473684,
                         "id": "a3",
-                        "intents_emotions": "Information Request - Concerned/Neutral",
                         "speaker": "Agent",
                         "utterance": "i see can you tell me more about the complicated policy language that was concerning to you"
                     },
@@ -189,7 +178,6 @@
                         "escalation_level": 0.5011985085227273,
                         "escalation_risks": 0.5188210227272727,
                         "id": "u37",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
                         "speaker": "Customer",
                         "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
                     },
@@ -204,7 +192,6 @@
                         "escalation_level": 0.06467285156,
                         "escalation_risks": 0.03819580078,
                         "id": "a29",
-                        "intents_emotions": "Information Request - Neutral/Curious",
                         "speaker": "Agent",
                         "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
                     }
@@ -220,7 +207,6 @@
                 "churn_risk_score": 0.06667480468,
                 "empathy_score": 0.8375,
                 "escalation_risks": 0.03819580078,
-                "intents_emotions": "Information Request - Neutral/Curious",
                 "speaker": "Agent",
                 "similarity": 0.4661597013473511
             },
@@ -231,7 +217,6 @@
                 "churn_risk_score": 0.75390625,
                 "empathy_score": -0.095703125,
                 "escalation_risks": 0.796875,
-                "intents_emotions": "Complaint - Frustrated/Considering Switch",
                 "speaker": "Customer",
                 "similarity": 0.45719027519226074
             }
@@ -252,7 +237,6 @@
     },
     {
         "query": "What are the difficulties faced by customers in Hotel and Flight domains",
-        "error": "Metadata file not found at /home/linux/IntegratedPipeline/obai/data/example/conversations_metadata.json"
     },
     {
         "query": "What are the difficulties faced by customers in Hotel and Flight domains",
@@ -283,7 +267,6 @@
                         "escalation_level": 0.012312752859933036,
                         "escalation_risks": -0.014600481305803572,
                         "id": "a10",
-                        "intents_emotions": "Gratitude/Reassurance - Polite/Helpful",
                         "speaker": "Agent",
                         "utterance": "thank you for your patience carter we appreciate your feedback and i am here if you need anything el..."
                     },
@@ -298,7 +281,6 @@
                         "escalation_level": 0.7734375,
                         "escalation_risks": 0.796875,
                         "id": "u57",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "please do because i am considering actually i am considering switching to another hotel if this keep..."
                     }
@@ -313,7 +295,6 @@
                         "escalation_level": 0.5011985085227273,
                         "escalation_risks": 0.5188210227272727,
                         "id": "u37",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
                         "speaker": "Customer",
                         "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
                     },
@@ -328,7 +309,6 @@
                         "escalation_level": 0.0646728515625,
                         "escalation_risks": 0.03819580078125,
                         "id": "a29",
-                        "intents_emotions": "Information Request - Neutral/Curious",
                         "speaker": "Agent",
                         "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
                     }
@@ -343,7 +323,6 @@
                         "escalation_level": 0.09196912977430556,
                         "escalation_risks": 0.04741139845414595,
                         "id": "a20",
-                        "intents_emotions": "Apology - Empathetic/Inquiry",
                         "speaker": "Agent",
                         "utterance": "i am sorry to hear that evelyn can you please provide me with some details about your complaint"
                     },
@@ -358,7 +337,6 @@
                         "escalation_level": 0.5011985085227273,
                         "escalation_risks": 0.5188210227272727,
                         "id": "u37",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
                         "speaker": "Customer",
                         "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
                     },
@@ -373,7 +351,6 @@
                         "escalation_level": 0.0646728515625,
                         "escalation_risks": 0.03819580078125,
                         "id": "a29",
-                        "intents_emotions": "Information Request - Neutral/Curious",
                         "speaker": "Agent",
                         "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
                     }
@@ -388,7 +365,6 @@
                         "escalation_level": 0.07845633370535714,
                         "escalation_risks": 0.03384181431361607,
                         "id": "a28",
-                        "intents_emotions": "Clarification Request - Empathetic/Inquisitive",
                         "speaker": "Agent",
                         "utterance": "i understand can you clarify what specific issues you faced during your stay"
                     },
@@ -403,7 +379,6 @@
                         "escalation_level": 0.5011985085227273,
                         "escalation_risks": 0.5188210227272727,
                         "id": "u37",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
                         "speaker": "Customer",
                         "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
                     },
@@ -418,7 +393,6 @@
                         "escalation_level": 0.0646728515625,
                         "escalation_risks": 0.03819580078125,
                         "id": "a29",
-                        "intents_emotions": "Information Request - Neutral/Curious",
                         "speaker": "Agent",
                         "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
                     }
@@ -433,7 +407,6 @@
                         "escalation_level": 0.12556537828947367,
                         "escalation_risks": 0.09229318719161184,
                         "id": "a3",
-                        "intents_emotions": "Information Request - Concerned/Neutral",
                         "speaker": "Agent",
                         "utterance": "i see can you tell me more about the complicated policy language that was concerning to you"
                     },
@@ -448,7 +421,6 @@
                         "escalation_level": 0.5011985085227273,
                         "escalation_risks": 0.5188210227272727,
                         "id": "u37",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch (Serious Threat)",
                         "speaker": "Customer",
                         "utterance": "yeah exactly and honestly if these complaints are not resolved i am seriously considering switching ..."
                     },
@@ -463,7 +435,6 @@
                         "escalation_level": 0.0646728515625,
                         "escalation_risks": 0.03819580078125,
                         "id": "a29",
-                        "intents_emotions": "Information Request - Neutral/Curious",
                         "speaker": "Agent",
                         "utterance": "oh i understand that evelyn can i ask what features at hilton attract you is it just the policies"
                     }
@@ -479,7 +450,6 @@
                 "churn_risk_score": 0.0666748046875,
                 "empathy_score": 0.8375,
                 "escalation_risks": 0.03819580078125,
-                "intents_emotions": "Information Request - Neutral/Curious",
                 "speaker": "Agent",
                 "similarity": 0.4661597013473511
             },
@@ -490,7 +460,6 @@
                 "churn_risk_score": 0.75390625,
                 "empathy_score": -0.095703125,
                 "escalation_risks": 0.796875,
-                "intents_emotions": "Complaint - Frustrated/Considering Switch",
                 "speaker": "Customer",
                 "similarity": 0.45719027519226074
             }
@@ -503,7 +472,6 @@
     },
     {
         "query": "What are the difficulties faced by customers in Hotel and Flight domains",
-        "error": "Metadata file not found at /home/linux/IntegratedPipeline/obai/data/example/conversations_metadata.json"
     },
     {
         "query": "What are the difficulties faced by customers in Hotel and Flight domains",
@@ -516,7 +484,6 @@
     {
         "timestamp": "2025-12-04T19:44:15.931857",
         "query": "What are the difficulties faced by customers in Hotel and Flight domains",
-        "answer": "Based on the provided causal chains, it appears that customers are facing difficulties in the Hotel and Flight domains due to frustration and dissatisfaction with delayed changes and lack of accountability.\n\nFrom the chains, we can see that customers are expressing concerns about:\n\n* Frustration with delays (PATHWAY 1)\n* Lack of accountability from the agent or hotel/flight provider (PATHWAY 2)\n* Expectation for quicker resolution (PATHWAY 3)\n* Concerns about future delays (PATHWAY 4)\n* Need for a fix to resolve the issue (PATHWAY 5)\n\nThe chains also indicate that customers are considering switching to another hotel due to these issues, which suggests a high risk of churn.\n\nOne common thread throughout the paths is that the agents' explanations of changes reflected after the call often do not directly address the customer's concerns. This implies that there may be a need for more effective communication and resolution strategies in place.\n\nThe empathy scores for customers are generally low (-0.10 to 0.08), indicating that they are experiencing strong negative emotions during these interactions. This highlights the importance of addressing their concerns and providing a satisfactory resolution to prevent further frustration and potential churn.\n\nTherefore, based on this analysis, it can be concluded that customers in the Hotel and Flight domains are facing difficulties due to delayed changes, lack of accountability, and ineffective communication, leading to frustration and dissatisfaction, which may result in them considering switching to another hotel or service provider.",
         "causal_chains_content": [
             {
                 "chain": [
@@ -526,7 +493,6 @@
                         "escalation_level": 0.12028126050067205,
                         "escalation_risks": 0.08786498175726996,
                         "id": "a12",
-                        "intents_emotions": "Information - Reassuring/Informative",
                         "speaker": "Agent",
                         "utterance": "you should see the changes reflected almost immediately after this call"
                     },
@@ -541,7 +507,6 @@
                         "escalation_level": 0.7825520833333334,
                         "escalation_risks": 0.79296875,
                         "id": "u170",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
                     }
@@ -556,7 +521,6 @@
                         "escalation_level": 0.4068603515625,
                         "escalation_risks": 0.37930521150914637,
                         "id": "u22",
-                        "intents_emotions": "Complaint - Frustrated/Impatient",
                         "speaker": "Customer",
                         "utterance": "that is just so annoying it feels like there is no accountability on your side"
                     },
@@ -571,7 +535,6 @@
                         "escalation_level": 0.12028126050067205,
                         "escalation_risks": 0.08786498175726996,
                         "id": "a12",
-                        "intents_emotions": "Information - Reassuring/Informative",
                         "speaker": "Agent",
                         "utterance": "you should see the changes reflected almost immediately after this call"
                     },
@@ -586,7 +549,6 @@
                         "escalation_level": 0.7825520833333334,
                         "escalation_risks": 0.79296875,
                         "id": "u170",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
                     }
@@ -601,7 +563,6 @@
                         "escalation_level": 0.22526198167067307,
                         "escalation_risks": 0.22027470515324518,
                         "id": "u131",
-                        "intents_emotions": "Complaint - Frustrated/Disappointed",
                         "speaker": "Customer",
                         "utterance": "a meal voucher is that really all i was expecting a quicker resolution"
                     },
@@ -616,7 +577,6 @@
                         "escalation_level": 0.12028126050067205,
                         "escalation_risks": 0.08786498175726996,
                         "id": "a12",
-                        "intents_emotions": "Information - Reassuring/Informative",
                         "speaker": "Agent",
                         "utterance": "you should see the changes reflected almost immediately after this call"
                     },
@@ -631,7 +591,6 @@
                         "escalation_level": 0.7825520833333334,
                         "escalation_risks": 0.79296875,
                         "id": "u170",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
                     }
@@ -646,7 +605,6 @@
                         "escalation_level": 0.31845703125,
                         "escalation_risks": 0.28828125,
                         "id": "u4",
-                        "intents_emotions": "Complaint - Frustrated/Concerned about future delays",
                         "speaker": "Customer",
                         "utterance": "so you just accept these delays as inevitable what about future delays"
                     },
@@ -661,7 +619,6 @@
                         "escalation_level": 0.12028126050067205,
                         "escalation_risks": 0.08786498175726996,
                         "id": "a12",
-                        "intents_emotions": "Information - Reassuring/Informative",
                         "speaker": "Agent",
                         "utterance": "you should see the changes reflected almost immediately after this call"
                     },
@@ -676,7 +633,6 @@
                         "escalation_level": 0.7825520833333334,
                         "escalation_risks": 0.79296875,
                         "id": "u170",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
                     }
@@ -691,7 +647,6 @@
                         "escalation_level": 0.4539388020833333,
                         "escalation_risks": 0.4060872395833333,
                         "id": "u5",
-                        "intents_emotions": "Request for assistance - Neutral/Curious",
                         "speaker": "Customer",
                         "utterance": "how can you fix this"
                     },
@@ -706,7 +661,6 @@
                         "escalation_level": 0.12028126050067205,
                         "escalation_risks": 0.08786498175726996,
                         "id": "a12",
-                        "intents_emotions": "Information - Reassuring/Informative",
                         "speaker": "Agent",
                         "utterance": "you should see the changes reflected almost immediately after this call"
                     },
@@ -721,7 +675,6 @@
                         "escalation_level": 0.7825520833333334,
                         "escalation_risks": 0.79296875,
                         "id": "u170",
-                        "intents_emotions": "Complaint - Frustrated/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "this is so frustrating i might have to switch to another hotel i do not want to be let down like thi..."
                     }
@@ -737,7 +690,6 @@
                 "churn_risk_score": 0.7473958333333334,
                 "empathy_score": -0.09993489583333333,
                 "escalation_risks": 0.79296875,
-                "intents_emotions": "Complaint - Frustrated/Considering Switch",
                 "speaker": "Customer",
                 "similarity": 0.48118406534194946
             },
@@ -748,7 +700,6 @@
                 "churn_risk_score": 0.07703106219951923,
                 "empathy_score": 0.7262620192307693,
                 "escalation_risks": 0.06217487041766827,
-                "intents_emotions": "Information Request - Neutral/Curious",
                 "speaker": "Agent",
                 "similarity": 0.4661597013473511
             }
@@ -772,7 +723,6 @@
                         "escalation_level": 0.0969188793285473,
                         "escalation_risks": 0.07203317195811171,
                         "id": "a0",
-                        "intents_emotions": "Assistance - Empathetic/Helpful",
                         "speaker": "Agent",
                         "utterance": "i understand if you miss the flight do you remember your booking reference i can check your options ..."
                     },
@@ -787,7 +737,6 @@
                         "escalation_level": 0.48977864583333336,
                         "escalation_risks": 0.4371419270833333,
                         "id": "u69",
-                        "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
                         "speaker": "Customer",
                         "utterance": "i understand it looks like your flight was delayed due to mechanical issues"
                     }
@@ -802,7 +751,6 @@
                         "escalation_level": 0.16523138682047525,
                         "escalation_risks": 0.14565217759874133,
                         "id": "u47",
-                        "intents_emotions": "Confirmation/Request - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "i think it is pnr just give me a moment i meant pnr 2ab456 can you check that for me"
                     },
@@ -817,7 +765,6 @@
                         "escalation_level": 0.0969188793285473,
                         "escalation_risks": 0.07203317195811171,
                         "id": "a0",
-                        "intents_emotions": "Assistance - Empathetic/Helpful",
                         "speaker": "Agent",
                         "utterance": "i understand if you miss the flight do you remember your booking reference i can check your options ..."
                     },
@@ -832,7 +779,6 @@
                         "escalation_level": 0.48977864583333336,
                         "escalation_risks": 0.4371419270833333,
                         "id": "u69",
-                        "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
                         "speaker": "Customer",
                         "utterance": "i understand it looks like your flight was delayed due to mechanical issues"
                     }
@@ -847,7 +793,6 @@
                         "escalation_level": 0.3672762784090909,
                         "escalation_risks": 0.31676664806547616,
                         "id": "u13",
-                        "intents_emotions": "Complaint - Frustrated/Impatient",
                         "speaker": "Customer",
                         "utterance": "mechanical really that is that is frustrating how long will the delay be"
                     },
@@ -862,7 +807,6 @@
                         "escalation_level": 0.0969188793285473,
                         "escalation_risks": 0.07203317195811171,
                         "id": "a0",
-                        "intents_emotions": "Assistance - Empathetic/Helpful",
                         "speaker": "Agent",
                         "utterance": "i understand if you miss the flight do you remember your booking reference i can check your options ..."
                     },
@@ -877,7 +821,6 @@
                         "escalation_level": 0.48977864583333336,
                         "escalation_risks": 0.4371419270833333,
                         "id": "u69",
-                        "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
                         "speaker": "Customer",
                         "utterance": "i understand it looks like your flight was delayed due to mechanical issues"
                     }
@@ -892,7 +835,6 @@
                         "escalation_level": 0.33214069234913796,
                         "escalation_risks": 0.27713473338001177,
                         "id": "u2",
-                        "intents_emotions": "Rebooking Inquiry - Frustrated/Impatient",
                         "speaker": "Customer",
                         "utterance": "a couple of hours that is not great at all i need to know what my options are for rebooking can i ge..."
                     },
@@ -907,7 +849,6 @@
                         "escalation_level": 0.0969188793285473,
                         "escalation_risks": 0.07203317195811171,
                         "id": "a0",
-                        "intents_emotions": "Assistance - Empathetic/Helpful",
                         "speaker": "Agent",
                         "utterance": "i understand if you miss the flight do you remember your booking reference i can check your options ..."
                     },
@@ -922,7 +863,6 @@
                         "escalation_level": 0.48977864583333336,
                         "escalation_risks": 0.4371419270833333,
                         "id": "u69",
-                        "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
                         "speaker": "Customer",
                         "utterance": "i understand it looks like your flight was delayed due to mechanical issues"
                     }
@@ -937,7 +877,6 @@
                         "escalation_level": 0.1396465301513672,
                         "escalation_risks": 0.10169601440429688,
                         "id": "u61",
-                        "intents_emotions": "Information Request - Polite/Neutral",
                         "speaker": "Customer",
                         "utterance": "yes absolutely can you tell me the details of that flight"
                     },
@@ -952,7 +891,6 @@
                         "escalation_level": 0.0969188793285473,
                         "escalation_risks": 0.07203317195811171,
                         "id": "a0",
-                        "intents_emotions": "Assistance - Empathetic/Helpful",
                         "speaker": "Agent",
                         "utterance": "i understand if you miss the flight do you remember your booking reference i can check your options ..."
                     },
@@ -967,7 +905,6 @@
                         "escalation_level": 0.48977864583333336,
                         "escalation_risks": 0.4371419270833333,
                         "id": "u69",
-                        "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
                         "speaker": "Customer",
                         "utterance": "i understand it looks like your flight was delayed due to mechanical issues"
                     }
@@ -983,7 +920,6 @@
                 "churn_risk_score": -0.007847377232142858,
                 "empathy_score": 0.7578125,
                 "escalation_risks": 0.009272984095982142,
-                "intents_emotions": "Apology - Empathetic/Inquiry",
                 "speaker": "Agent",
                 "similarity": 0.44262033700942993
             },
@@ -994,7 +930,6 @@
                 "churn_risk_score": 0.3564453125,
                 "empathy_score": 0.061636861165364584,
                 "escalation_risks": 0.4371419270833333,
-                "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
                 "speaker": "Customer",
                 "similarity": 0.43957531452178955
             }
@@ -1018,7 +953,6 @@
                         "escalation_level": 0.08111114501953125,
                         "escalation_risks": 0.06387798602764423,
                         "id": "a9",
-                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
                     },
@@ -1033,7 +967,6 @@
                         "escalation_level": 0.4247159090909091,
                         "escalation_risks": 0.4677734375,
                         "id": "u17",
-                        "intents_emotions": "Complaint - Frustrated/Comparative",
                         "speaker": "Customer",
                         "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
                     }
@@ -1048,7 +981,6 @@
                         "escalation_level": 0.06644901476408306,
                         "escalation_risks": 0.025248678107010692,
                         "id": "a17",
-                        "intents_emotions": "Gratitude/Reassurance - Empathetic",
                         "speaker": "Agent",
                         "utterance": "you are welcome emma i am glad i could help it is important for us to resolve this as smoothly as po..."
                     },
@@ -1063,7 +995,6 @@
                         "escalation_level": 0.4247159090909091,
                         "escalation_risks": 0.4677734375,
                         "id": "u17",
-                        "intents_emotions": "Complaint - Frustrated/Comparative",
                         "speaker": "Customer",
                         "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
                     }
@@ -1078,7 +1009,6 @@
                         "escalation_level": 0.2979592715992647,
                         "escalation_risks": 0.2940494312959559,
                         "id": "u19",
-                        "intents_emotions": "Compensation Request - Neutral/Curious",
                         "speaker": "Customer",
                         "utterance": "okay sounds good what about any compensation for this delay"
                     },
@@ -1093,7 +1023,6 @@
                         "escalation_level": 0.08111114501953125,
                         "escalation_risks": 0.06387798602764423,
                         "id": "a9",
-                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
                     },
@@ -1108,7 +1037,6 @@
                         "escalation_level": 0.4247159090909091,
                         "escalation_risks": 0.4677734375,
                         "id": "u17",
-                        "intents_emotions": "Complaint - Frustrated/Comparative",
                         "speaker": "Customer",
                         "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
                     }
@@ -1123,7 +1051,6 @@
                         "escalation_level": 0.214923095703125,
                         "escalation_risks": 0.20157470703125,
                         "id": "u44",
-                        "intents_emotions": "Confirmation/Assistance - Polite/Neutral",
                         "speaker": "Customer",
                         "utterance": "yes perfect thank you when will i receive the meal voucher"
                     },
@@ -1138,7 +1065,6 @@
                         "escalation_level": 0.08111114501953125,
                         "escalation_risks": 0.06387798602764423,
                         "id": "a9",
-                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
                     },
@@ -1153,7 +1079,6 @@
                         "escalation_level": 0.4247159090909091,
                         "escalation_risks": 0.4677734375,
                         "id": "u17",
-                        "intents_emotions": "Complaint - Frustrated/Comparative",
                         "speaker": "Customer",
                         "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
                     }
@@ -1168,7 +1093,6 @@
                         "escalation_level": 0.12968844459170387,
                         "escalation_risks": 0.13834635416666666,
                         "id": "u9",
-                        "intents_emotions": "Cancellation Inquiry - Concerned/Seeking Clarification",
                         "speaker": "Customer",
                         "utterance": "great also if i needed to cancel or whatever is there a fee for that"
                     },
@@ -1183,7 +1107,6 @@
                         "escalation_level": 0.08111114501953125,
                         "escalation_risks": 0.06387798602764423,
                         "id": "a9",
-                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
                     },
@@ -1198,7 +1121,6 @@
                         "escalation_level": 0.4247159090909091,
                         "escalation_risks": 0.4677734375,
                         "id": "u17",
-                        "intents_emotions": "Complaint - Frustrated/Comparative",
                         "speaker": "Customer",
                         "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
                     }
@@ -1214,7 +1136,6 @@
                 "churn_risk_score": 0.44691051136363635,
                 "empathy_score": -0.0014312050559303977,
                 "escalation_risks": 0.4677734375,
-                "intents_emotions": "Complaint - Frustrated/Comparative",
                 "speaker": "Customer",
                 "similarity": 0.5284009575843811
             },
@@ -1225,7 +1146,6 @@
                 "churn_risk_score": 0.3351236979166667,
                 "empathy_score": 0.18848673502604166,
                 "escalation_risks": 0.378662109375,
-                "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
                 "speaker": "Customer",
                 "similarity": 0.43957531452178955
             }
@@ -1253,7 +1173,6 @@
                         "escalation_level": 0.08111114501953125,
                         "escalation_risks": 0.06387798602764423,
                         "id": "a9",
-                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
                     },
@@ -1268,7 +1187,6 @@
                         "escalation_level": 0.4247159090909091,
                         "escalation_risks": 0.4677734375,
                         "id": "u17",
-                        "intents_emotions": "Complaint - Frustrated/Comparative",
                         "speaker": "Customer",
                         "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
                     }
@@ -1283,7 +1201,6 @@
                         "escalation_level": 0.06644901476408306,
                         "escalation_risks": 0.025248678107010692,
                         "id": "a17",
-                        "intents_emotions": "Gratitude/Reassurance - Empathetic",
                         "speaker": "Agent",
                         "utterance": "you are welcome emma i am glad i could help it is important for us to resolve this as smoothly as po..."
                     },
@@ -1298,7 +1215,6 @@
                         "escalation_level": 0.4247159090909091,
                         "escalation_risks": 0.4677734375,
                         "id": "u17",
-                        "intents_emotions": "Complaint - Frustrated/Comparative",
                         "speaker": "Customer",
                         "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
                     }
@@ -1313,7 +1229,6 @@
                         "escalation_level": 0.2979592715992647,
                         "escalation_risks": 0.2940494312959559,
                         "id": "u19",
-                        "intents_emotions": "Compensation Request - Neutral/Curious",
                         "speaker": "Customer",
                         "utterance": "okay sounds good what about any compensation for this delay"
                     },
@@ -1328,7 +1243,6 @@
                         "escalation_level": 0.08111114501953125,
                         "escalation_risks": 0.06387798602764423,
                         "id": "a9",
-                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
                     },
@@ -1343,7 +1257,6 @@
                         "escalation_level": 0.4247159090909091,
                         "escalation_risks": 0.4677734375,
                         "id": "u17",
-                        "intents_emotions": "Complaint - Frustrated/Comparative",
                         "speaker": "Customer",
                         "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
                     }
@@ -1358,7 +1271,6 @@
                         "escalation_level": 0.214923095703125,
                         "escalation_risks": 0.20157470703125,
                         "id": "u44",
-                        "intents_emotions": "Confirmation/Assistance - Polite/Neutral",
                         "speaker": "Customer",
                         "utterance": "yes perfect thank you when will i receive the meal voucher"
                     },
@@ -1373,7 +1285,6 @@
                         "escalation_level": 0.08111114501953125,
                         "escalation_risks": 0.06387798602764423,
                         "id": "a9",
-                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
                     },
@@ -1388,7 +1299,6 @@
                         "escalation_level": 0.4247159090909091,
                         "escalation_risks": 0.4677734375,
                         "id": "u17",
-                        "intents_emotions": "Complaint - Frustrated/Comparative",
                         "speaker": "Customer",
                         "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
                     }
@@ -1403,7 +1313,6 @@
                         "escalation_level": 0.12968844459170387,
                         "escalation_risks": 0.13834635416666666,
                         "id": "u9",
-                        "intents_emotions": "Cancellation Inquiry - Concerned/Seeking Clarification",
                         "speaker": "Customer",
                         "utterance": "great also if i needed to cancel or whatever is there a fee for that"
                     },
@@ -1418,7 +1327,6 @@
                         "escalation_level": 0.08111114501953125,
                         "escalation_risks": 0.06387798602764423,
                         "id": "a9",
-                        "intents_emotions": "Compensation Offer - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "you are eligible for a meal voucher due to the delay would you me to provide that"
                     },
@@ -1433,7 +1341,6 @@
                         "escalation_level": 0.4247159090909091,
                         "escalation_risks": 0.4677734375,
                         "id": "u17",
-                        "intents_emotions": "Complaint - Frustrated/Comparative",
                         "speaker": "Customer",
                         "utterance": "that sounds like an excuse i deal with airlines quite a bit i mean delta does better with this sort ..."
                     }
@@ -1449,7 +1356,6 @@
                 "churn_risk_score": 0.44691051136363635,
                 "empathy_score": -0.0014312050559303977,
                 "escalation_risks": 0.4677734375,
-                "intents_emotions": "Complaint - Frustrated/Comparative",
                 "speaker": "Customer",
                 "similarity": 0.5284009575843811
             },
@@ -1460,7 +1366,6 @@
                 "churn_risk_score": 0.3351236979166667,
                 "empathy_score": 0.18848673502604166,
                 "escalation_risks": 0.378662109375,
-                "intents_emotions": "Flight Delay Notification - Empathetic/Informative",
                 "speaker": "Customer",
                 "similarity": 0.43957531452178955
             }
@@ -1480,7 +1385,6 @@
                         "escalation_level": 0.027165004185267856,
                         "escalation_risks": 0.016124861580984935,
                         "id": "a9",
-                        "intents_emotions": "Assistance - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "i can definitely help you with that jack can i get your booking I would first please"
                     },
@@ -1495,7 +1399,6 @@
                         "escalation_level": 0.2191162109375,
                         "escalation_risks": 0.26229372891512787,
                         "id": "u10",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     }
@@ -1510,7 +1413,6 @@
                         "escalation_level": 0.13918682347948305,
                         "escalation_risks": 0.1501878405374194,
                         "id": "a0",
-                        "intents_emotions": "Policy Explanation - Neutral/Informative",
                         "speaker": "Agent",
                         "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
                     },
@@ -1525,7 +1427,6 @@
                         "escalation_level": 0.2191162109375,
                         "escalation_risks": 0.26229372891512787,
                         "id": "u10",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     }
@@ -1555,7 +1456,6 @@
                         "escalation_level": 0.027165004185267856,
                         "escalation_risks": 0.016124861580984935,
                         "id": "a9",
-                        "intents_emotions": "Assistance - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "i can definitely help you with that jack can i get your booking I would first please"
                     },
@@ -1570,7 +1470,6 @@
                         "escalation_level": 0.2191162109375,
                         "escalation_risks": 0.26229372891512787,
                         "id": "u10",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     }
@@ -1585,7 +1484,6 @@
                         "escalation_level": 0.3993219339622642,
                         "escalation_risks": 0.46541883680555557,
                         "id": "u16",
-                        "intents_emotions": "Cancellation Inquiry - Frustrated/Concerned",
                         "speaker": "Customer",
                         "utterance": "yes please i just find it frustrating because i did not realize the penalties involved with cancelli..."
                     },
@@ -1600,7 +1498,6 @@
                         "escalation_level": 0.027165004185267856,
                         "escalation_risks": 0.016124861580984935,
                         "id": "a9",
-                        "intents_emotions": "Assistance - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "i can definitely help you with that jack can i get your booking I would first please"
                     },
@@ -1615,7 +1512,6 @@
                         "escalation_level": 0.2191162109375,
                         "escalation_risks": 0.26229372891512787,
                         "id": "u10",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     }
@@ -1630,7 +1526,6 @@
                         "escalation_level": 0.392578125,
                         "escalation_risks": 0.427734375,
                         "id": "u30",
-                        "intents_emotions": "Consideration - Neutral/Considering",
                         "speaker": "Customer",
                         "utterance": "what if i yeah i might be interested but i really need to think about it you know if i decide to sta..."
                     },
@@ -1645,7 +1540,6 @@
                         "escalation_level": 0.027165004185267856,
                         "escalation_risks": 0.016124861580984935,
                         "id": "a9",
-                        "intents_emotions": "Assistance - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "i can definitely help you with that jack can i get your booking I would first please"
                     },
@@ -1660,7 +1554,6 @@
                         "escalation_level": 0.2191162109375,
                         "escalation_risks": 0.26229372891512787,
                         "id": "u10",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     }
@@ -1676,7 +1569,6 @@
                 "churn_risk_score": 0.30473128609035327,
                 "empathy_score": -0.006027885105298913,
                 "escalation_risks": 0.26229372891512787,
-                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                 "speaker": "Customer",
                 "similarity": 0.4922518730163574
             },
@@ -1687,7 +1579,6 @@
                 "churn_risk_score": 0.32728794642857145,
                 "empathy_score": 0.03226579938616071,
                 "escalation_risks": 0.3662109375,
-                "intents_emotions": "Complaint - Frustrated/Concerned about rate",
                 "speaker": "Customer",
                 "similarity": 0.4709113836288452
             }
@@ -1707,7 +1598,6 @@
                         "escalation_level": 0.027165004185267856,
                         "escalation_risks": 0.016124861580984935,
                         "id": "a9",
-                        "intents_emotions": "Assistance - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "i can definitely help you with that jack can i get your booking I would first please"
                     },
@@ -1722,7 +1612,6 @@
                         "escalation_level": 0.2191162109375,
                         "escalation_risks": 0.26229372891512787,
                         "id": "u10",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     }
@@ -1737,7 +1626,6 @@
                         "escalation_level": 0.13918682347948305,
                         "escalation_risks": 0.1501878405374194,
                         "id": "a0",
-                        "intents_emotions": "Policy Explanation - Neutral/Informative",
                         "speaker": "Agent",
                         "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
                     },
@@ -1752,7 +1640,6 @@
                         "escalation_level": 0.2191162109375,
                         "escalation_risks": 0.26229372891512787,
                         "id": "u10",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     }
@@ -1767,7 +1654,6 @@
                         "escalation_level": 0.3993219339622642,
                         "escalation_risks": 0.46541883680555557,
                         "id": "u16",
-                        "intents_emotions": "Cancellation Inquiry - Frustrated/Concerned",
                         "speaker": "Customer",
                         "utterance": "yes please i just find it frustrating because i did not realize the penalties involved with cancelli..."
                     },
@@ -1782,7 +1668,6 @@
                         "escalation_level": 0.027165004185267856,
                         "escalation_risks": 0.016124861580984935,
                         "id": "a9",
-                        "intents_emotions": "Assistance - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "i can definitely help you with that jack can i get your booking I would first please"
                     },
@@ -1797,7 +1682,6 @@
                         "escalation_level": 0.2191162109375,
                         "escalation_risks": 0.26229372891512787,
                         "id": "u10",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     }
@@ -1812,7 +1696,6 @@
                         "escalation_level": 0.392578125,
                         "escalation_risks": 0.427734375,
                         "id": "u30",
-                        "intents_emotions": "Consideration - Neutral/Considering",
                         "speaker": "Customer",
                         "utterance": "what if i yeah i might be interested but i really need to think about it you know if i decide to sta..."
                     },
@@ -1827,7 +1710,6 @@
                         "escalation_level": 0.027165004185267856,
                         "escalation_risks": 0.016124861580984935,
                         "id": "a9",
-                        "intents_emotions": "Assistance - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "i can definitely help you with that jack can i get your booking I would first please"
                     },
@@ -1842,7 +1724,6 @@
                         "escalation_level": 0.2191162109375,
                         "escalation_risks": 0.26229372891512787,
                         "id": "u10",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     }
@@ -1857,7 +1738,6 @@
                         "escalation_level": 0.04931640625,
                         "escalation_risks": 0.030002593994140625,
                         "id": "u5",
-                        "intents_emotions": "Clarification Request - Neutral/Curious",
                         "speaker": "Customer",
                         "utterance": "like what"
                     },
@@ -1872,7 +1752,6 @@
                         "escalation_level": 0.13918682347948305,
                         "escalation_risks": 0.1501878405374194,
                         "id": "a0",
-                        "intents_emotions": "Policy Explanation - Neutral/Informative",
                         "speaker": "Agent",
                         "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
                     },
@@ -1887,7 +1766,6 @@
                         "escalation_level": 0.2191162109375,
                         "escalation_risks": 0.26229372891512787,
                         "id": "u10",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     }
@@ -1903,7 +1781,6 @@
                 "churn_risk_score": 0.30473128609035327,
                 "empathy_score": -0.006027885105298913,
                 "escalation_risks": 0.26229372891512787,
-                "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                 "speaker": "Customer",
                 "similarity": 0.4922518730163574
             },
@@ -1914,7 +1791,6 @@
                 "churn_risk_score": 0.32728794642857145,
                 "empathy_score": 0.03226579938616071,
                 "escalation_risks": 0.3662109375,
-                "intents_emotions": "Complaint - Frustrated/Concerned about rate",
                 "speaker": "Customer",
                 "similarity": 0.4709113836288452
             }
@@ -1934,7 +1810,6 @@
                         "escalation_level": 0.08336359840194667,
                         "escalation_risks": 0.08415499805698734,
                         "id": "a0",
-                        "intents_emotions": "Policy Explanation - Neutral/Informative",
                         "speaker": "Agent",
                         "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
                     },
@@ -1949,7 +1824,6 @@
                         "escalation_level": 0.1449112451377035,
                         "escalation_risks": 0.13910335964626735,
                         "id": "u24",
-                        "intents_emotions": "Complaint - Frustrated/Requesting Improvement",
                         "speaker": "Customer",
                         "utterance": "i know that it is just frustrating you guys should really do better with your policies"
                     }
@@ -1964,7 +1838,6 @@
                         "escalation_level": 0.0633544921875,
                         "escalation_risks": 0.0657958984375,
                         "id": "a28",
-                        "intents_emotions": "Retention Advice - Informative/Neutral",
                         "speaker": "Agent",
                         "utterance": "that is a great question generally we find that retention discussions can lead to maintaining about ..."
                     },
@@ -1979,7 +1852,6 @@
                         "escalation_level": 0.1449112451377035,
                         "escalation_risks": 0.13910335964626735,
                         "id": "u24",
-                        "intents_emotions": "Complaint - Frustrated/Requesting Improvement",
                         "speaker": "Customer",
                         "utterance": "i know that it is just frustrating you guys should really do better with your policies"
                     }
@@ -1994,7 +1866,6 @@
                         "escalation_level": 0.0533447265625,
                         "escalation_risks": 0.0379486083984375,
                         "id": "a14",
-                        "intents_emotions": "Billing Information - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "right i can give you the specifics on those fees right now"
                     },
@@ -2009,7 +1880,6 @@
                         "escalation_level": 0.1449112451377035,
                         "escalation_risks": 0.13910335964626735,
                         "id": "u24",
-                        "intents_emotions": "Complaint - Frustrated/Requesting Improvement",
                         "speaker": "Customer",
                         "utterance": "i know that it is just frustrating you guys should really do better with your policies"
                     }
@@ -2024,7 +1894,6 @@
                         "escalation_level": 0.2740637461344401,
                         "escalation_risks": 0.30945148873836437,
                         "id": "u6",
-                        "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
                     },
@@ -2039,7 +1908,6 @@
                         "escalation_level": 0.08336359840194667,
                         "escalation_risks": 0.08415499805698734,
                         "id": "a0",
-                        "intents_emotions": "Policy Explanation - Neutral/Informative",
                         "speaker": "Agent",
                         "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
                     },
@@ -2054,7 +1922,6 @@
                         "escalation_level": 0.1449112451377035,
                         "escalation_risks": 0.13910335964626735,
                         "id": "u24",
-                        "intents_emotions": "Complaint - Frustrated/Requesting Improvement",
                         "speaker": "Customer",
                         "utterance": "i know that it is just frustrating you guys should really do better with your policies"
                     }
@@ -2069,7 +1936,6 @@
                         "escalation_level": 0.428955078125,
                         "escalation_risks": 0.4837646484375,
                         "id": "u10",
-                        "intents_emotions": "Cancellation Inquiry - Frustrated/Concerned",
                         "speaker": "Customer",
                         "utterance": "yes please i just find it frustrating because i did not realize the penalties involved with cancelli..."
                     },
@@ -2084,7 +1950,6 @@
                         "escalation_level": 0.08336359840194667,
                         "escalation_risks": 0.08415499805698734,
                         "id": "a0",
-                        "intents_emotions": "Policy Explanation - Neutral/Informative",
                         "speaker": "Agent",
                         "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
                     },
@@ -2099,7 +1964,6 @@
                         "escalation_level": 0.1449112451377035,
                         "escalation_risks": 0.13910335964626735,
                         "id": "u24",
-                        "intents_emotions": "Complaint - Frustrated/Requesting Improvement",
                         "speaker": "Customer",
                         "utterance": "i know that it is just frustrating you guys should really do better with your policies"
                     }
@@ -2115,7 +1979,6 @@
                 "churn_risk_score": 0.15587160767627364,
                 "empathy_score": 0.060527897682510504,
                 "escalation_risks": 0.13910335964626735,
-                "intents_emotions": "Complaint - Frustrated/Requesting Improvement",
                 "speaker": "Customer",
                 "similarity": 0.41121912002563477
             },
@@ -2126,7 +1989,6 @@
                 "churn_risk_score": -0.007415771484375,
                 "empathy_score": 0.337890625,
                 "escalation_risks": 0.01116943359375,
-                "intents_emotions": "Clarification Request - Neutral/Curious",
                 "speaker": "Agent",
                 "similarity": 0.4049704074859619
             }
@@ -2146,7 +2008,6 @@
                         "escalation_level": 0.09356679795663568,
                         "escalation_risks": 0.09927308714234984,
                         "id": "u8",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     },
@@ -2161,7 +2022,6 @@
                         "escalation_level": 0.1554686504861583,
                         "escalation_risks": 0.18742138406504755,
                         "id": "a1",
-                        "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
                         "speaker": "Agent",
                         "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
                     }
@@ -2176,7 +2036,6 @@
                         "escalation_level": 0.08336359840194667,
                         "escalation_risks": 0.08415499805698734,
                         "id": "a0",
-                        "intents_emotions": "Policy Explanation - Neutral/Informative",
                         "speaker": "Agent",
                         "utterance": "absolutely jack so with our policy if you cancel within forty eight hours there is a fee it is reall..."
                     },
@@ -2191,7 +2050,6 @@
                         "escalation_level": 0.1554686504861583,
                         "escalation_risks": 0.18742138406504755,
                         "id": "a1",
-                        "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
                         "speaker": "Agent",
                         "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
                     }
@@ -2206,7 +2064,6 @@
                         "escalation_level": 0.23909005301339287,
                         "escalation_risks": 0.21237655738731484,
                         "id": "u2",
-                        "intents_emotions": "Churn Threat - Uncertain/Considering Cancellation",
                         "speaker": "Customer",
                         "utterance": "i see but i am still not sure it is worth it i might just cancel altogether"
                     },
@@ -2221,7 +2078,6 @@
                         "escalation_level": 0.1554686504861583,
                         "escalation_risks": 0.18742138406504755,
                         "id": "a1",
-                        "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
                         "speaker": "Agent",
                         "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
                     }
@@ -2236,7 +2092,6 @@
                         "escalation_level": 0.2740637461344401,
                         "escalation_risks": 0.30945148873836437,
                         "id": "u6",
-                        "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
                     },
@@ -2251,7 +2106,6 @@
                         "escalation_level": 0.1554686504861583,
                         "escalation_risks": 0.18742138406504755,
                         "id": "a1",
-                        "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
                         "speaker": "Agent",
                         "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
                     }
@@ -2266,7 +2120,6 @@
                         "escalation_level": 0.12095133463541667,
                         "escalation_risks": 0.0992889404296875,
                         "id": "u9",
-                        "intents_emotions": "Confirmation/Agreement - Neutral/Cooperative",
                         "speaker": "Customer",
                         "utterance": "yeah that might help clear things up i can review it later"
                     },
@@ -2281,7 +2134,6 @@
                         "escalation_level": 0.1554686504861583,
                         "escalation_risks": 0.18742138406504755,
                         "id": "a1",
-                        "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
                         "speaker": "Agent",
                         "utterance": "i understand your concerns just to reiterate if you do proceed with the cancellation it will be proc..."
                     }
@@ -2297,7 +2149,6 @@
                 "churn_risk_score": 0.092376708984375,
                 "empathy_score": 0.3927001953125,
                 "escalation_risks": 0.0657958984375,
-                "intents_emotions": "Retention Advice - Informative/Neutral",
                 "speaker": "Agent",
                 "similarity": 0.41733741760253906
             },
@@ -2308,7 +2159,6 @@
                 "churn_risk_score": 0.19958031695822012,
                 "empathy_score": 0.5952551468558933,
                 "escalation_risks": 0.18742138406504755,
-                "intents_emotions": "Cancellation Reassurance - Empathetic/Informative",
                 "speaker": "Agent",
                 "similarity": 0.3299262523651123
             }
@@ -2328,7 +2178,6 @@
                         "escalation_level": 0.1115403297619942,
                         "escalation_risks": 0.11950045215840242,
                         "id": "u7",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     },
@@ -2343,7 +2192,6 @@
                         "escalation_level": 0.2599637118252841,
                         "escalation_risks": 0.2945319281684028,
                         "id": "u26",
-                        "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
                     }
@@ -2358,7 +2206,6 @@
                         "escalation_level": 0.09207227085176753,
                         "escalation_risks": 0.10642670453605005,
                         "id": "a1",
-                        "intents_emotions": "Informational - Helpful/Neutral",
                         "speaker": "Agent",
                         "utterance": "well if you change your dates or even transfer the booking you might avoid fees entirely"
                     },
@@ -2373,7 +2220,6 @@
                         "escalation_level": 0.2599637118252841,
                         "escalation_risks": 0.2945319281684028,
                         "id": "u26",
-                        "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
                     }
@@ -2388,7 +2234,6 @@
                         "escalation_level": 0.10283990601199357,
                         "escalation_risks": 0.09020799070924193,
                         "id": "a3",
-                        "intents_emotions": "Acknowledgement/Empathy - Reassuring",
                         "speaker": "Agent",
                         "utterance": "i understand your hesitation many customers find that it is a bit easier in hindsight"
                     },
@@ -2403,7 +2248,6 @@
                         "escalation_level": 0.2599637118252841,
                         "escalation_risks": 0.2945319281684028,
                         "id": "u26",
-                        "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
                     }
@@ -2418,7 +2262,6 @@
                         "escalation_level": 0.02020407622715212,
                         "escalation_risks": 0.02944930056308178,
                         "id": "a4",
-                        "intents_emotions": "Greeting - Neutral/Helpful",
                         "speaker": "Agent",
                         "utterance": "thank you for calling premier resorts this is ethan clark how can i help you today"
                     },
@@ -2433,7 +2276,6 @@
                         "escalation_level": 0.1115403297619942,
                         "escalation_risks": 0.11950045215840242,
                         "id": "u7",
-                        "intents_emotions": "Cancellation Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi this is jack nguyen i am looking to cancel my booking in las vegas"
                     },
@@ -2448,7 +2290,6 @@
                         "escalation_level": 0.2599637118252841,
                         "escalation_risks": 0.2945319281684028,
                         "id": "u26",
-                        "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
                     }
@@ -2463,7 +2304,6 @@
                         "escalation_level": 0.14592950994318182,
                         "escalation_risks": 0.1477325439453125,
                         "id": "u11",
-                        "intents_emotions": "Decision Consideration - Neutral/Uncertain",
                         "speaker": "Customer",
                         "utterance": "sure i will think about it"
                     },
@@ -2478,7 +2318,6 @@
                         "escalation_level": 0.10283990601199357,
                         "escalation_risks": 0.09020799070924193,
                         "id": "a3",
-                        "intents_emotions": "Acknowledgement/Empathy - Reassuring",
                         "speaker": "Agent",
                         "utterance": "i understand your hesitation many customers find that it is a bit easier in hindsight"
                     },
@@ -2493,7 +2332,6 @@
                         "escalation_level": 0.2599637118252841,
                         "escalation_risks": 0.2945319281684028,
                         "id": "u26",
-                        "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "well the terms are not great i am kind of leaning towards marriott they offer better cancellation te..."
                     }
@@ -2509,7 +2347,6 @@
                 "churn_risk_score": 0.33310158469460227,
                 "empathy_score": 0.06189602938565341,
                 "escalation_risks": 0.2945319281684028,
-                "intents_emotions": "Cancellation Intent - Skeptical/Considering Switch",
                 "speaker": "Customer",
                 "similarity": 0.6453855633735657
             },
@@ -2520,7 +2357,6 @@
                 "churn_risk_score": 0.11559041341145833,
                 "empathy_score": 0.18929036458333334,
                 "escalation_risks": 0.08199055989583333,
-                "intents_emotions": "Cancellation Policy Information - Neutral/Informative",
                 "speaker": "Customer",
                 "similarity": 0.49552851915359497
             }
@@ -2540,7 +2376,6 @@
                         "escalation_level": 0.07953982883029515,
                         "escalation_risks": 0.06337646816087805,
                         "id": "a4",
-                        "intents_emotions": "Product Information - Polite/Neutral",
                         "speaker": "Agent",
                         "utterance": "thank you so you are looking at travel interruption coverage i will just give you a brief overview"
                     },
@@ -2555,7 +2390,6 @@
                         "escalation_level": 0.3159586588541667,
                         "escalation_risks": 0.336212158203125,
                         "id": "u20",
-                        "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "but what if jetblue has a better cancellation policy"
                     }
@@ -2570,7 +2404,6 @@
                         "escalation_level": 0.074951171875,
                         "escalation_risks": 0.039398193359375,
                         "id": "u41",
-                        "intents_emotions": "Agreement/Consent - Positive/Neutral",
                         "speaker": "Customer",
                         "utterance": "oh wow okay alright then let us do it"
                     },
@@ -2585,7 +2418,6 @@
                         "escalation_level": 0.07953982883029515,
                         "escalation_risks": 0.06337646816087805,
                         "id": "a4",
-                        "intents_emotions": "Product Information - Polite/Neutral",
                         "speaker": "Agent",
                         "utterance": "thank you so you are looking at travel interruption coverage i will just give you a brief overview"
                     },
@@ -2600,7 +2432,6 @@
                         "escalation_level": 0.3159586588541667,
                         "escalation_risks": 0.336212158203125,
                         "id": "u20",
-                        "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "but what if jetblue has a better cancellation policy"
                     }
@@ -2615,7 +2446,6 @@
                         "escalation_level": 0.0791179950420673,
                         "escalation_risks": 0.03779792785644531,
                         "id": "a10",
-                        "intents_emotions": "Acknowledgement/Empathy - Urgent/Assuring",
                         "speaker": "Agent",
                         "utterance": "okay i understand olivia since you are boarding soon i want to make sure we handle this urgently"
                     },
@@ -2630,7 +2460,6 @@
                         "escalation_level": 0.3159586588541667,
                         "escalation_risks": 0.336212158203125,
                         "id": "u20",
-                        "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "but what if jetblue has a better cancellation policy"
                     }
@@ -2645,7 +2474,6 @@
                         "escalation_level": 0.22891616821289062,
                         "escalation_risks": 0.1842498779296875,
                         "id": "u26",
-                        "intents_emotions": "Coverage Inquiry - Concerned/Seeking Reassurance",
                         "speaker": "Customer",
                         "utterance": "it is pnr a3b4e5 i just i just want to make sure i am covered if anything happens"
                     },
@@ -2660,7 +2488,6 @@
                         "escalation_level": 0.0791179950420673,
                         "escalation_risks": 0.03779792785644531,
                         "id": "a10",
-                        "intents_emotions": "Acknowledgement/Empathy - Urgent/Assuring",
                         "speaker": "Agent",
                         "utterance": "okay i understand olivia since you are boarding soon i want to make sure we handle this urgently"
                     },
@@ -2675,7 +2502,6 @@
                         "escalation_level": 0.3159586588541667,
                         "escalation_risks": 0.336212158203125,
                         "id": "u20",
-                        "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "but what if jetblue has a better cancellation policy"
                     }
@@ -2690,7 +2516,6 @@
                         "escalation_level": 0.3685302734375,
                         "escalation_risks": 0.28080610795454547,
                         "id": "u1",
-                        "intents_emotions": "Information Request - Neutral/Curious",
                         "speaker": "Customer",
                         "utterance": "oh got it so how long is the delay expected to be"
                     },
@@ -2705,7 +2530,6 @@
                         "escalation_level": 0.0791179950420673,
                         "escalation_risks": 0.03779792785644531,
                         "id": "a10",
-                        "intents_emotions": "Acknowledgement/Empathy - Urgent/Assuring",
                         "speaker": "Agent",
                         "utterance": "okay i understand olivia since you are boarding soon i want to make sure we handle this urgently"
                     },
@@ -2720,7 +2544,6 @@
                         "escalation_level": 0.3159586588541667,
                         "escalation_risks": 0.336212158203125,
                         "id": "u20",
-                        "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
                         "speaker": "Customer",
                         "utterance": "but what if jetblue has a better cancellation policy"
                     }
@@ -2736,7 +2559,6 @@
                 "churn_risk_score": 0.3530849880642361,
                 "empathy_score": 0.043863932291666664,
                 "escalation_risks": 0.336212158203125,
-                "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
                 "speaker": "Customer",
                 "similarity": 0.4942339062690735
             },
@@ -2747,7 +2569,6 @@
                 "churn_risk_score": 0.2801278250558036,
                 "empathy_score": 0.017522103445870536,
                 "escalation_risks": 0.3251630510602679,
-                "intents_emotions": "Flight Cancellation Inquiry - Concerned/Seeking Resolution",
                 "speaker": "Customer",
                 "similarity": 0.31622302532196045
             },
@@ -2758,7 +2579,6 @@
                 "churn_risk_score": 0.3530849880642361,
                 "empathy_score": 0.043863932291666664,
                 "escalation_risks": 0.336212158203125,
-                "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
                 "speaker": "Customer",
                 "similarity": 0.32168805599212646
             },
@@ -2769,7 +2589,6 @@
                 "churn_risk_score": 0.16097005208333334,
                 "empathy_score": 0.058339436848958336,
                 "escalation_risks": 0.179931640625,
-                "intents_emotions": "Rebooking Request - Urgent/Urgent",
                 "speaker": "Customer",
                 "similarity": 0.26983290910720825
             },
@@ -2780,7 +2599,6 @@
                 "churn_risk_score": 0.3530849880642361,
                 "empathy_score": 0.043863932291666664,
                 "escalation_risks": 0.336212158203125,
-                "intents_emotions": "Cancellation Concern - Skeptical/Considering Switch",
                 "speaker": "Customer",
                 "similarity": 0.5974151492118835
             },
@@ -2791,7 +2609,6 @@
                 "churn_risk_score": 0.2801278250558036,
                 "empathy_score": 0.017522103445870536,
                 "escalation_risks": 0.3251630510602679,
-                "intents_emotions": "Flight Cancellation Inquiry - Concerned/Seeking Resolution",
                 "speaker": "Customer",
                 "similarity": 0.41005492210388184
             }
@@ -2804,15 +2621,12 @@
     },
     {
         "query": "What is education and school?",
-        "error": "[Errno 2] No such file or directory: '/home/interiit/obai/data/top_K'"
     },
     {
         "query": "What are the problems faced by customers in Hotel domain?",
-        "error": "[Errno 13] Permission denied: '/home/interiit/obai/output/clusters'"
     },
     {
         "query": "What are the problems faced by customers in Hotel domain?",
-        "error": "[Errno 13] Permission denied: '/home/interiit/obai/output/clusters'"
     },
     {
         "query": "What are the problems faced by customers in Hotel domain?",
@@ -2821,7 +2635,6 @@
     {
         "timestamp": "2025-12-05T09:55:53.378149",
         "query": "What are the problems faced by customers in Hotel domain?",
-        "answer": "Primary analysis indicates that issues experienced by hotel customers stem from inadequate communication with staff regarding special requests and unmet expectations. Evidence suggests a causal chain where customers express dissatisfaction due to misunderstandings about room amenities, services, or check-in/check-out procedures.\n\nInsufficient staffing during peak periods is another contributing factor, leading to long wait times for assistance, compromised in-room service, and delayed issue resolution. Furthermore, the hotel's inability to effectively manage guest expectations regarding room cleanliness and maintenance contributes to customer dissatisfaction.\n\nThe root cause of these problems appears to be a lack of proactive measures to address customer needs proactively, resulting in reactive responses that fail to meet expectations. High churn risk is also associated with this domain, suggesting that unaddressed issues can lead to long-term losses for the hotel.",
         "causal_chains_content": [],
         "landing_points_content": [],
         "candidate_pairs_content": null
@@ -2832,7 +2645,6 @@
     },
     {
         "query": "What are the problems faced by customers in Hotel domain?",
-        "error": "[Errno 2] No such file or directory: '/home/interiit/obai/output/data/transcript_id_list.txt'"
     },
     {
         "query": "What are the problems faced by customers in Hotel domain?",
@@ -2876,7 +2688,6 @@
     },
     {
         "query": "How does dissatisfaction with claim payout amounts, combined with unclear deductible explanations, drive complaints to external agencies and switches to rivals??",
-        "error": "Metadata file not found at /home/interiit/obai/data/example/conversations_metadata.json"
     },
     {
         "query": "How does dissatisfaction with claim payout amounts, combined with unclear deductible explanations, drive complaints to external agencies and switches to rivals??",
@@ -2896,12 +2707,10 @@
     },
     {
         "query": "What are the problems faced by customers in flight domain?",
-        "error": "[Errno 2] No such file or directory: '/home/linux/after_sub/obai/util/visualization/'"
     },
     {
         "timestamp": "2025-12-08T12:08:20.999334",
         "query": "What are the problems faced by customers in flight domain?",
-        "answer": "Primary analysis indicates that customers in the flight domain face difficulties with delayed flights due to a lack of clear communication from airline representatives. Evidence suggests that customers often express frustration and concern about their connecting flights, as seen in statements such as \"sure i really need to know what is causing the delay because you know i am catching a connecting fli...\" (Speaker: Customer). The high levels of empathy expressed by agents in response to these concerns (e.g., 0.7543402777777778) may not adequately address the underlying issues, leading to further churn risk (-0.0247802734375).\n\nPrimary analysis indicates that customers are often left seeking answers and solutions, as seen in the causal chain \"Flight Delay Inquiry\" triggered by statements such as \"[STATE a14]: 'thank you just a moment while i pull up your details'\" (Speaker: Agent). The direct answer/complaint pathway (e.g., PATHWAY 3) does not provide sufficient information about the cause of the delay, perpetuating the cycle of frustration and concern. Furthermore, agents' responses to these concerns often seem rehearsed, as seen in statements such as \"[STATE a0]: 'that is the standard procedure in these situations'\" (Speaker: Agent), which may come across as insensitive or unhelpful.\n\nPrimary analysis indicates that customers are seeking timely updates about flight delays and cancellations. However, agents' responses to these concerns often fall short of providing actionable information, leading to feelings of frustration and disempowerment. The high levels of churn risk (-0.0247802734375) associated with delayed flights suggest that addressing this issue is crucial for improving customer satisfaction and loyalty in the flight domain.",
         "causal_chains_content": [
             {
                 "chain": [
@@ -2911,7 +2720,6 @@
                         "escalation_level": 0.027062310112847224,
                         "escalation_risks": 0.001216888427734375,
                         "id": "a14",
-                        "intents_emotions": "Hold Request - Polite/Neutral",
                         "speaker": "Agent",
                         "utterance": "thank you just a moment while i pull up your details"
                     },
@@ -2926,7 +2734,6 @@
                         "escalation_level": 0.2491455078125,
                         "escalation_risks": 0.21133804321289062,
                         "id": "u8",
-                        "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
                         "speaker": "Customer",
                         "utterance": "sure i really need to know what is causing the delay because you know i am catching a connecting fli..."
                     }
@@ -2941,7 +2748,6 @@
                         "escalation_level": 0.2215629245923913,
                         "escalation_risks": 0.203857421875,
                         "id": "a2",
-                        "intents_emotions": "Service Delay - Informative/Neutral",
                         "speaker": "Agent",
                         "utterance": "it looks like there was a delay due to a t c restrictions"
                     },
@@ -2956,7 +2762,6 @@
                         "escalation_level": 0.2491455078125,
                         "escalation_risks": 0.21133804321289062,
                         "id": "u8",
-                        "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
                         "speaker": "Customer",
                         "utterance": "sure i really need to know what is causing the delay because you know i am catching a connecting fli..."
                     }
@@ -2971,14 +2776,12 @@
                         "escalation_level": 0.14187248385682397,
                         "escalation_risks": 0.10996075893970246,
                         "id": "a0",
-                        "intents_emotions": "Confirmation - Neutral/Informative",
                         "speaker": "Agent",
                         "utterance": "that is the standard procedure in these situations"
                     },
                     {
                         "source": "a0",
                         "target": "u8",
-                        "explanation": "Direct answer/complaint"
                     },
                     {
                         "churn_risk_score": 0.1929779052734375,
@@ -2986,7 +2789,6 @@
                         "escalation_level": 0.2491455078125,
                         "escalation_risks": 0.21133804321289062,
                         "id": "u8",
-                        "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
                         "speaker": "Customer",
                         "utterance": "sure i really need to know what is causing the delay because you know i am catching a connecting fli..."
                     }
@@ -3001,14 +2803,12 @@
                         "escalation_level": 0.0486400515534157,
                         "escalation_risks": 0.02215105988258539,
                         "id": "a8",
-                        "intents_emotions": "Acknowledgement - Reassuring/Informative",
                         "speaker": "Agent",
                         "utterance": "we are doing our best to relay any updates immediately"
                     },
                     {
                         "source": "a8",
                         "target": "u8",
-                        "explanation": "Direct answer/complaint"
                     },
                     {
                         "churn_risk_score": 0.1929779052734375,
@@ -3016,7 +2816,6 @@
                         "escalation_level": 0.2491455078125,
                         "escalation_risks": 0.21133804321289062,
                         "id": "u8",
-                        "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
                         "speaker": "Customer",
                         "utterance": "sure i really need to know what is causing the delay because you know i am catching a connecting fli..."
                     }
@@ -3031,14 +2830,12 @@
                         "escalation_level": 0.15311373197115385,
                         "escalation_risks": 0.1156627948467548,
                         "id": "a3",
-                        "intents_emotions": "Time Confirmation - Hopeful/Neutral",
                         "speaker": "Agent",
                         "utterance": "it is at four fifteen pm that should give you enough time hopefully"
                     },
                     {
                         "source": "a3",
                         "target": "u8",
-                        "explanation": "Direct answer/complaint"
                     },
                     {
                         "churn_risk_score": 0.1929779052734375,
@@ -3046,7 +2843,6 @@
                         "escalation_level": 0.2491455078125,
                         "escalation_risks": 0.21133804321289062,
                         "id": "u8",
-                        "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
                         "speaker": "Customer",
                         "utterance": "sure i really need to know what is causing the delay because you know i am catching a connecting fli..."
                     }
@@ -3062,7 +2858,6 @@
                 "churn_risk_score": 0.1929779052734375,
                 "empathy_score": 0.04752349853515625,
                 "escalation_risks": 0.21133804321289062,
-                "intents_emotions": "Flight Delay Inquiry - Urgent/Time-sensitive",
                 "speaker": "Customer",
                 "similarity": 0.6417624950408936
             },
@@ -3073,7 +2868,6 @@
                 "churn_risk_score": 0.02482771873474121,
                 "empathy_score": 0.6086634397506714,
                 "escalation_risks": 0.05104071094143775,
-                "intents_emotions": "Flight Delay Notification - Polite/Informative",
                 "speaker": "Agent",
                 "similarity": 0.6281412839889526
             }
@@ -3105,14 +2899,12 @@
                         "escalation_level": 0.1015264396993523,
                         "escalation_risks": 0.07208176346512528,
                         "id": "a2",
-                        "intents_emotions": "Acknowledgement - Reassuring/Concerned",
                         "speaker": "Agent",
                         "utterance": "i understand your point but we do have to follow the guidelines"
                     },
                     {
                         "source": "a2",
                         "target": "u33",
-                        "explanation": "Direct answer/complaint"
                     },
                     {
                         "churn_risk_score": 0.16090953199169303,
@@ -3120,7 +2912,6 @@
                         "escalation_level": 0.22486742236946203,
                         "escalation_risks": 0.1987663475242821,
                         "id": "u33",
-                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
                     }
@@ -3135,14 +2926,12 @@
                         "escalation_level": 0.04836638077445652,
                         "escalation_risks": 0.021670270321974112,
                         "id": "a0",
-                        "intents_emotions": "Acknowledgement - Reassuring/Informative",
                         "speaker": "Agent",
                         "utterance": "we are doing our best to relay any updates immediately"
                     },
                     {
                         "source": "a0",
                         "target": "u33",
-                        "explanation": "Direct answer/complaint"
                     },
                     {
                         "churn_risk_score": 0.16090953199169303,
@@ -3150,7 +2939,6 @@
                         "escalation_level": 0.22486742236946203,
                         "escalation_risks": 0.1987663475242821,
                         "id": "u33",
-                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
                     }
@@ -3165,14 +2953,12 @@
                         "escalation_level": 0.08119170937762164,
                         "escalation_risks": 0.052779984300153966,
                         "id": "a5",
-                        "intents_emotions": "Agent Acknowledgement - Polite/Neutral",
                         "speaker": "Agent",
                         "utterance": "got it thank you just a moment while i check your flight status okay"
                     },
                     {
                         "source": "a5",
                         "target": "u33",
-                        "explanation": "Direct answer/complaint"
                     },
                     {
                         "churn_risk_score": 0.16090953199169303,
@@ -3180,7 +2966,6 @@
                         "escalation_level": 0.22486742236946203,
                         "escalation_risks": 0.1987663475242821,
                         "id": "u33",
-                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
                     }
@@ -3195,7 +2980,6 @@
                         "escalation_level": 0.2999609744910038,
                         "escalation_risks": 0.3115192939495218,
                         "id": "u26",
-                        "intents_emotions": "Policy Comparison - Neutral/Curious",
                         "speaker": "Customer",
                         "utterance": "would that work what is the difference between aerolink and delta's policies on this"
                     },
@@ -3210,7 +2994,6 @@
                         "escalation_level": 0.22486742236946203,
                         "escalation_risks": 0.1987663475242821,
                         "id": "u33",
-                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
                     }
@@ -3225,14 +3008,12 @@
                         "escalation_level": 0.04347432454427083,
                         "escalation_risks": 0.019993486075565732,
                         "id": "a34",
-                        "intents_emotions": "Hold Request - Polite/Neutral",
                         "speaker": "Agent",
                         "utterance": "thank you just a moment while i pull up your details"
                     },
                     {
                         "source": "a34",
                         "target": "u47",
-                        "explanation": "Direct answer/complaint"
                     },
                     {
                         "churn_risk_score": 0.34998276654411764,
@@ -3240,7 +3021,6 @@
                         "escalation_level": 0.4973000919117647,
                         "escalation_risks": 0.4442354090073529,
                         "id": "u47",
-                        "intents_emotions": "Flight Delay - Concerned/Disappointed",
                         "speaker": "Customer",
                         "utterance": "it was supposed to leave at two fifteen this afternoon but i just got a notification that it is dela..."
                     }
@@ -3256,7 +3036,6 @@
                 "churn_risk_score": 0.16090953199169303,
                 "empathy_score": 0.09037751789334454,
                 "escalation_risks": 0.1987663475242821,
-                "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
                 "speaker": "Customer",
                 "similarity": 0.6192295551300049
             },
@@ -3267,7 +3046,6 @@
                 "churn_risk_score": 0.34998276654411764,
                 "empathy_score": 0.03830494600183824,
                 "escalation_risks": 0.4442354090073529,
-                "intents_emotions": "Flight Delay - Concerned/Disappointed",
                 "speaker": "Customer",
                 "similarity": 0.6142268776893616
             },
@@ -3278,7 +3056,6 @@
                 "churn_risk_score": 0.1516480763753255,
                 "empathy_score": 0.3667689005533854,
                 "escalation_risks": 0.16633270526754446,
-                "intents_emotions": "Refund Inquiry - Confused/Concerned",
                 "speaker": "Customer",
                 "similarity": 0.5095303654670715
             },
@@ -3289,7 +3066,6 @@
                 "churn_risk_score": 0.012581320369944853,
                 "empathy_score": 0.8423282398897058,
                 "escalation_risks": 0.015361989727457061,
-                "intents_emotions": "Apology - Empathetic/Inquiry",
                 "speaker": "Agent",
                 "similarity": 0.40497398376464844
             },
@@ -3300,7 +3076,6 @@
                 "churn_risk_score": 0.2161865234375,
                 "empathy_score": 0.17480087280273438,
                 "escalation_risks": 0.302685546875,
-                "intents_emotions": "Time Pressure - Stressed/Time-pressured",
                 "speaker": "Customer",
                 "similarity": 0.522715151309967
             },
@@ -3311,7 +3086,6 @@
                 "churn_risk_score": 0.27259088331653225,
                 "empathy_score": 0.009022866525957662,
                 "escalation_risks": 0.3566202799479167,
-                "intents_emotions": "Urgent Travel Request - Impatient/Time-pressured",
                 "speaker": "Customer",
                 "similarity": 0.4976361393928528
             }
@@ -3331,14 +3105,12 @@
                         "escalation_level": 0.1015264396993523,
                         "escalation_risks": 0.07208176346512528,
                         "id": "a2",
-                        "intents_emotions": "Acknowledgement - Reassuring/Concerned",
                         "speaker": "Agent",
                         "utterance": "i understand your point but we do have to follow the guidelines"
                     },
                     {
                         "source": "a2",
                         "target": "u33",
-                        "explanation": "Direct answer/complaint"
                     },
                     {
                         "churn_risk_score": 0.16090953199169303,
@@ -3346,7 +3118,6 @@
                         "escalation_level": 0.22486742236946203,
                         "escalation_risks": 0.1987663475242821,
                         "id": "u33",
-                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
                     }
@@ -3361,14 +3132,12 @@
                         "escalation_level": 0.04836638077445652,
                         "escalation_risks": 0.021670270321974112,
                         "id": "a0",
-                        "intents_emotions": "Acknowledgement - Reassuring/Informative",
                         "speaker": "Agent",
                         "utterance": "we are doing our best to relay any updates immediately"
                     },
                     {
                         "source": "a0",
                         "target": "u33",
-                        "explanation": "Direct answer/complaint"
                     },
                     {
                         "churn_risk_score": 0.16090953199169303,
@@ -3376,7 +3145,6 @@
                         "escalation_level": 0.22486742236946203,
                         "escalation_risks": 0.1987663475242821,
                         "id": "u33",
-                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
                     }
@@ -3391,14 +3159,12 @@
                         "escalation_level": 0.08119170937762164,
                         "escalation_risks": 0.052779984300153966,
                         "id": "a5",
-                        "intents_emotions": "Agent Acknowledgement - Polite/Neutral",
                         "speaker": "Agent",
                         "utterance": "got it thank you just a moment while i check your flight status okay"
                     },
                     {
                         "source": "a5",
                         "target": "u33",
-                        "explanation": "Direct answer/complaint"
                     },
                     {
                         "churn_risk_score": 0.16090953199169303,
@@ -3406,7 +3172,6 @@
                         "escalation_level": 0.22486742236946203,
                         "escalation_risks": 0.1987663475242821,
                         "id": "u33",
-                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
                     }
@@ -3421,7 +3186,6 @@
                         "escalation_level": 0.2999609744910038,
                         "escalation_risks": 0.3115192939495218,
                         "id": "u26",
-                        "intents_emotions": "Policy Comparison - Neutral/Curious",
                         "speaker": "Customer",
                         "utterance": "would that work what is the difference between aerolink and delta's policies on this"
                     },
@@ -3436,7 +3200,6 @@
                         "escalation_level": 0.22486742236946203,
                         "escalation_risks": 0.1987663475242821,
                         "id": "u33",
-                        "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
                         "speaker": "Customer",
                         "utterance": "hi olivia this is joseph hernandez i am calling about a delay on my flight from s f o to j k f"
                     }
@@ -3451,14 +3214,12 @@
                         "escalation_level": 0.04347432454427083,
                         "escalation_risks": 0.019993486075565732,
                         "id": "a34",
-                        "intents_emotions": "Hold Request - Polite/Neutral",
                         "speaker": "Agent",
                         "utterance": "thank you just a moment while i pull up your details"
                     },
                     {
                         "source": "a34",
                         "target": "u47",
-                        "explanation": "Direct answer/complaint"
                     },
                     {
                         "churn_risk_score": 0.34998276654411764,
@@ -3466,7 +3227,6 @@
                         "escalation_level": 0.4973000919117647,
                         "escalation_risks": 0.4442354090073529,
                         "id": "u47",
-                        "intents_emotions": "Flight Delay - Concerned/Disappointed",
                         "speaker": "Customer",
                         "utterance": "it was supposed to leave at two fifteen this afternoon but i just got a notification that it is dela..."
                     }
@@ -3482,7 +3242,6 @@
                 "churn_risk_score": 0.16090953199169303,
                 "empathy_score": 0.09037751789334454,
                 "escalation_risks": 0.1987663475242821,
-                "intents_emotions": "Flight Delay Inquiry - Neutral/Polite",
                 "speaker": "Customer",
                 "similarity": 0.6192295551300049
             },
@@ -3493,7 +3252,6 @@
                 "churn_risk_score": 0.34998276654411764,
                 "empathy_score": 0.03830494600183824,
                 "escalation_risks": 0.4442354090073529,
-                "intents_emotions": "Flight Delay - Concerned/Disappointed",
                 "speaker": "Customer",
                 "similarity": 0.6142268776893616
             },
@@ -3504,7 +3262,6 @@
                 "churn_risk_score": 0.1516480763753255,
                 "empathy_score": 0.3667689005533854,
                 "escalation_risks": 0.16633270526754446,
-                "intents_emotions": "Refund Inquiry - Confused/Concerned",
                 "speaker": "Customer",
                 "similarity": 0.5095303654670715
             },
@@ -3515,7 +3272,6 @@
                 "churn_risk_score": 0.012581320369944853,
                 "empathy_score": 0.8423282398897058,
                 "escalation_risks": 0.015361989727457061,
-                "intents_emotions": "Apology - Empathetic/Inquiry",
                 "speaker": "Agent",
                 "similarity": 0.40497398376464844
             },
@@ -3526,7 +3282,6 @@
                 "churn_risk_score": 0.2161865234375,
                 "empathy_score": 0.17480087280273438,
                 "escalation_risks": 0.302685546875,
-                "intents_emotions": "Time Pressure - Stressed/Time-pressured",
                 "speaker": "Customer",
                 "similarity": 0.522715151309967
             },
@@ -3537,7 +3292,6 @@
                 "churn_risk_score": 0.27259088331653225,
                 "empathy_score": 0.009022866525957662,
                 "escalation_risks": 0.3566202799479167,
-                "intents_emotions": "Urgent Travel Request - Impatient/Time-pressured",
                 "speaker": "Customer",
                 "similarity": 0.4976361393928528
             }
