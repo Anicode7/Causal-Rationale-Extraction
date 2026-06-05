@@ -398,9 +398,9 @@ def get_ans(query_text, queries_list, follow_up=0, UNEMBEDDED_JSON_FILE=os.path.
        # with open (os.path.join(os.getcwd(),"cached_convos" , "last_conversation_number.json"), 'w', encoding='utf-8') as f:
 
 
-    HISTORY_FILE = os.path.join(os.getcwd(),"cached_convos",f"conversation_history_{conv_num_data["num"]}.json")
+    HISTORY_FILE = os.path.join(os.getcwd(),"cached_convos",f"conversation_history_{conv_num_data['num']}.json")
     conversation_history = []
-    TRANSCRIPT_HISTORY_FILE = os.path.join(os.getcwd(),"cached_convos",f"transcript_history_{conv_num_data["num"]}.json")
+    TRANSCRIPT_HISTORY_FILE = os.path.join(os.getcwd(),"cached_convos",f"transcript_history_{conv_num_data['num']}.json")
     curr_transcripts_file = os.path.join(CURR_DIR, "data", "transcript_id_list.txt")
     with open(curr_transcripts_file, 'r', encoding='utf-8') as f:
         transcript_list = [line.strip() for line in f if line.strip()]

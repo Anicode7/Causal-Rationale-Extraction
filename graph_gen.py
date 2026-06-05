@@ -19,7 +19,7 @@ import re
 from pathlib import Path
 from collections import defaultdict
 from typing import Dict, List, Optional, Tuple
-import query_splitter
+import query_splitter 
 import llm_handler
 
 # Add current directory to path
