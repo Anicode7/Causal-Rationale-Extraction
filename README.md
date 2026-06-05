@@ -1,367 +1,246 @@
-# Dialog2Flow: Metadata-Enhanced Conversation Flow Analysis
+# Causal Analysis from Conversational Data
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Backend system for retrieval, graph construction, causal reasoning, and graph-guided inference over large conversational datasets. The project retrieves semantically relevant transcripts, converts dialogues into structured flow graphs, scores candidate causal transitions with LLMs, and synthesizes evidence-grounded answers for analytical queries.
 
-**Automated pipeline for extracting and visualizing conversation flows with metadata from customer service dialogues.**
+## Overview
 
-This repository extends the original [Dialog2Flow](https://github.com/sergioburdisso/dialog2flow) methodology with:
-- ✅ Semantic search to find relevant conversations
-- ✅ Metadata preservation (escalation levels, churn risk, empathy scores, etc.)
-- ✅ Speaker-separated clustering (Agent vs Customer)
-- ✅ LLM-based cluster labeling using Ollama
-- ✅ Interactive directed graph visualizations
-- ✅ Comprehensive metadata tracking at utterance and cluster levels
+- **Retrieval layer:** MPNet embeddings, SQLite-backed embedding cache, FAISS similarity search, domain-intent routing, and transcript-level ranking.
+- **Graph layer:** Dialog2Flow-based trajectory extraction, speaker-separated clustering, metadata-aware directed graph construction, and export to JSON/GraphML/HTML.
+- **Causal layer:** Memgraph-backed subgraph retrieval, LLM-based edge scoring, probabilistic traversal, and threshold-pruned causal chain discovery.
+- **Inference layer:** Graph-guided RAG over retrieved causal chains with support for contextual follow-up queries.
 
----
+## Demo and Report
 
-## 🚀 Quick Start (3 Steps)
+- **YouTube Demo:** [https://youtu.be/9tKXU63vhBU]
+- **Project Report:** [OBSERVE (3).pdf](<docs/OBSERVE (3).pdf>)
+- **Architecture Notes:** [ARCHITECTURE.md](ARCHITECTURE.md)
 
-```bash
-# 1. Clone and navigate
-git clone <your-repo-url>
-cd dialog2flow
+## What the System Does
 
-# 2. Run automated setup
-bash SETUP_ENVIRONMENT.sh
+1. Reformulates and routes a user query into one or more domain-intent retrieval queries.
+2. Searches a 19,621-transcript / 686,764-turn corpus using `sentence-transformers/all-mpnet-base-v2` embeddings and `FAISS`.
+3. Aggregates top-matching turns into transcript-level results and materializes the Top-K working set.
+4. Converts retrieved conversations into Dialog2Flow-compatible text while preserving turn metadata.
+5. Extracts speaker-aware dialogue trajectories and cluster assignments.
+6. Builds a metadata-enriched directed conversation graph with transition weights.
+7. Embeds graph nodes, ingests them into Memgraph, and retrieves causal neighborhoods around semantic landing points.
+8. Scores causal edges with an LLM, performs probabilistic traversal, and generates evidence-grounded answers.
 
-# 3. Run pipeline
-python3 integrated_pipeline.py \
-  --query "escalation issues" \
-  --domain "Banking" \
-  --distance-threshold 0.4 \
-  --formats json graphml html \
-  -l -lm llama3:8b
+## Repository Structure
+
+```text
+.
++-- main.py                             # End-to-end batch entry point
++-- graph_gen.py                        # Retrieval + graph generation orchestration
++-- graph_operator.py                   # Memgraph ingestion, subgraph extraction, causal traversal, answer synthesis
++-- query_splitter.py                   # Domain-intent routing and Top-K retrieval materialization
++-- create_embeddings_db.py             # Offline embedding + FAISS index builder
++-- query_embeddings_db.py              # Cached semantic retrieval over embeddings DB
++-- prepare_for_dialog2flow.py          # Converts Top-K transcripts into Dialog2Flow inputs
++-- extract_trajectories_with_metadata.py
+|   # Speaker-separated clustering + metadata aggregation
++-- build_graph_with_metadata.py        # Metadata-aware directed graph construction and export
++-- embedder.py                         # Node/query embedding for graph retrieval
++-- llm_handler.py                      # LLM prompts for routing, edge scoring, and answer generation
++-- docker-compose.yml                  # Ollama + Memgraph + app stack
++-- ARCHITECTURE.md                     # System architecture notes
++-- STARTUP.md                          # Docker-first startup guide
++-- SETUP.md                            # Local environment setup guide
+`-- data/final_annotated_dataset.json   # Main annotated transcript corpus
 ```
 
-**Results:** Open `output/graph_visualization.html` in your browser to see the interactive graph!
+## Core Pipeline
 
----
+### 1. Query Routing and Retrieval
 
-## 📋 What This Pipeline Does
+- Uses `llama3.2` through `Ollama` to map user questions into domain-intent retrieval queries.
+- Supports **36 domain-intent classes** across Banking, Flight, Hotel, Insurance, Retail, and Telecom.
+- Loads cached turn-level embeddings from `SQLite` and performs domain-filtered `FAISS IndexFlatIP` search.
+- Aggregates top-matching turns into transcript-level scores using max and average similarity statistics.
 
-1. **Find Top Conversations** → Semantic search across your dataset
-2. **Prepare Data** → Convert to Dialog2Flow format with metadata
-3. **Extract Trajectories** → Cluster utterances (Agent & Customer separately)
-4. **Generate Labels** → Use LLM to name each cluster
-5. **Build Graphs** → Create directed flow graphs with metadata
-6. **Visualize** → Interactive HTML graphs with hover tooltips
+### 2. Top-K Corpus Materialization
 
----
+- Writes retrieved transcripts and retrieval metadata into `data/top_K/`.
+- Preserves transcript ID, intent, reason-for-call, and top matching turns for downstream processing.
+- Supports follow-up queries by persisting transcript history across runs.
 
-## 📊 Example Output
+### 3. Conversation-to-Graph Preparation
 
-**Input:**
-- Query: "escalation issues"  
-- Domain: "Banking"
-- 3 conversations, 115 utterances
+- Converts retrieved JSON transcripts into Dialog2Flow-compatible `Speaker: text` files.
+- Persists aligned turn metadata separately so cluster assignments can be mapped back to the source turns.
+- Maintains provenance fields including transcript ID, turn index, speaker, and conversational metadata.
 
-**Output:**
-- 40 clusters (21 Agent + 19 Customer)
-- All clusters labeled by LLM:
-  - "Agent: Identify self and request assistance"
-  - "Customer: Compare financial services"
-  - "Agent: Request fee waiver"
-- Directed graph showing conversation flow
-- Metadata: escalation levels, churn risk, empathy scores
+### 4. Trajectory Extraction and Clustering
 
----
+- Uses `sergioburdisso/dialog2flow-joint-bert-base` for dialogue turn representations.
+- Applies speaker-separated `AgglomerativeClustering` with cosine distance and average linkage.
+- Prevents Agent and Customer turns from collapsing into the same latent dialogue state.
+- Aggregates cluster-level metadata including means, standard deviations, minima, maxima, and deduplicated categorical fields.
 
-## 🛠️ Installation
+### 5. Metadata-Aware Graph Construction
 
-### Prerequisites
-- Python 3.10+
-- Ollama (for LLM cluster labeling)
-- NVIDIA GPU (optional, for faster processing)
+- Builds a `NetworkX DiGraph` where nodes correspond to clustered dialogue states and edges represent transitions.
+- Stores utterance lists, source-turn mappings, cluster labels, and aggregated metadata directly on nodes.
+- Tracks edge weights by transition frequency and by number of unique dialogues contributing to each edge.
+- Exports graph artifacts in JSON, GraphML, GEXF, and interactive HTML forms.
 
-### Automated Setup (Recommended)
+### 6. Graph Retrieval and Causal Reasoning
+
+- Embeds graph nodes using `all-mpnet-base-v2` and ingests them into `Memgraph`.
+- Creates a Memgraph vector index to retrieve semantic landing points for the user query.
+- Extracts bounded subgraphs around landing nodes and reconstructs local causal neighborhoods.
+- Uses batched LLM inference to assign edge-level causal probabilities and short explanations.
+- Runs threshold-pruned BFS-style traversal to recover high-probability causal chains.
+
+### 7. Inference and Answer Generation
+
+- Converts top-ranked causal chains into a compact evidence context.
+- Answers the user query with LLM synthesis constrained to retrieved graph evidence.
+- Supports follow-up reasoning by contextualizing ambiguous queries using stored conversation history.
+
+## Technology Stack
+
+- **Language:** Python 3.10+
+- **Embedding models:** `sentence-transformers/all-mpnet-base-v2`, `sergioburdisso/dialog2flow-joint-bert-base`
+- **Vector search:** `FAISS`
+- **Storage:** `SQLite`, JSON artifacts
+- **Graph processing:** `NetworkX`
+- **Graph database:** `Memgraph` via `neo4j` driver
+- **LLM serving:** `Ollama`
+- **ML / NLP libraries:** `sentence-transformers`, `scikit-learn`, `transformers`, `torch`, `numpy`
+- **Runtime / tooling:** Docker, Docker Compose
+
+## Key Data Structures and Methods
+
+- **Embeddings store:** turn-level embedding rows in `SQLite` with serialized vectors and metadata
+- **Vector index:** normalized `FAISS IndexFlatIP` for cosine-similarity retrieval
+- **Trajectory representation:** per-dialogue ordered lists of cluster assignments with aligned turn metadata
+- **Graph representation:** `NetworkX DiGraph` with metadata-rich node and edge attributes
+- **Subgraph extraction:** landing-point-centered neighborhood retrieval from Memgraph
+- **Causal scoring:** batched LLM evaluation of candidate edges
+- **Traversal:** BFS-style probability propagation with threshold pruning and best-score updates
+
+## Running the Project
+
+### Option 1: Docker
+
+Start the full stack:
 
 ```bash
-bash SETUP_ENVIRONMENT.sh
+docker-compose up --build -d
 ```
 
-This script handles everything: virtual environment, dependencies, Ollama, and model downloads.
-
-### Manual Setup
+Pull the LLM model inside the Ollama container:
 
 ```bash
-# Create virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
+docker exec -it ollama-debug ollama pull llama3.2
+```
 
-# Install dependencies
+Run the application container:
+
+```bash
+docker exec -it dialog2flow-debug bash
+python main.py
+```
+
+See [STARTUP.md](STARTUP.md) for the full Docker workflow.
+
+### Option 2: Local Setup
+
+Create an environment and install dependencies:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
-pip install faiss-cpu ollama networkx
-
-# Install and start Ollama
-curl -fsSL https://ollama.com/install.sh | sh
-ollama serve &
-ollama pull llama3:8b
 ```
 
-See [SETUP.md](SETUP.md) for detailed instructions.
-
----
-
-## 📖 Usage
-
-### Basic Command
+Start Ollama and pull a model:
 
 ```bash
-python3 integrated_pipeline.py \
-  --query "your search query" \
-  --domain "Banking" \
-  --distance-threshold 0.4
+ollama serve
+ollama pull llama3.2
 ```
 
-### With LLM Labels (Recommended)
+Create the embedding database once:
 
 ```bash
-python3 integrated_pipeline.py \
-  --query "escalation issues" \
-  --domain "Banking" \
-  --distance-threshold 0.4 \
-  --formats json graphml html \
-  -l \
-  -lm llama3:8b
+python create_embeddings_db.py --data-path data/final_annotated_dataset.json --db-path data/embeddings.db
 ```
 
-### All Options
+Run the pipeline:
 
 ```bash
-python3 integrated_pipeline.py \
-  --query "escalation issues"                    # Search query
-  --domain "Banking"                             # Filter by domain
-  --distance-threshold 0.4                       # Clustering threshold (0.3-0.6)
-  --formats json graphml html                    # Output formats
-  --model sergioburdisso/dialog2flow-joint-bert-base  # Embedding model
-  -l                                             # Enable LLM labels
-  -lm llama3:8b                                  # LLM model
-  --output-dir ./output                          # Output directory
+python main.py
 ```
 
-### Available Domains
+See [SETUP.md](SETUP.md) for detailed local setup instructions.
 
-Your data may include: `Banking`, `Flight`, `Hotel`, `Retail`, `Telecom`, `Insurance`, etc.
+## Main Entry Points
 
-Check available domains:
-```bash
-python3 -c "
-import json
-with open('data/final_json_for_d2f.json') as f:
-    domains = sorted(set(t.get('domain', '') for t in json.load(f)))
-print('\n'.join(domains))
-"
-```
-
----
-
-## 📁 Output Files
-
-```
-output/
-├── trajectories_with_metadata.json     # Extracted trajectories + clusters
-├── graph_with_metadata.json            # Graph in JSON format
-├── graph_with_metadata.graphml         # Graph in GraphML format
-├── graph_visualization.html            # Interactive visualization ⭐
-└── graph_dialog2flow/
-    ├── graph.graphml                   # Dialog2Flow format
-    ├── graph.png                       # PNG visualization
-    └── visualization/graph.html        # Alternative HTML view
-```
-
-**Bonus:** Top 20 conversations saved in `data/top_K/` with full metadata.
-
----
-
-## 🎯 Core Features
-
-### 1. Semantic Search
-- Uses `sentence-transformers/all-mpnet-base-v2` for embeddings
-- FAISS index for fast similarity search
-- Finds top K most relevant conversations for any query
-
-### 2. Metadata Preservation
-- **Utterance-level:** escalation_level, churn_risk_score, empathy_score, intents_emotions, dialogue_acts, action_type, escalation_reason_tags
-- **Cluster-level:** Aggregated statistics (mean, std, min, max)
-- **Full tracking:** transcript_id + turn_idx for every utterance
-
-### 3. Speaker-Separated Clustering
-- Agent and Customer utterances clustered separately
-- Prevents mixing of Agent/Customer in same cluster
-- Follows Dialog2Flow methodology
-
-### 4. LLM Cluster Labeling
-- Uses Ollama (llama3:8b, mistral, gemma, etc.)
-- Generates canonical labels for each cluster
-- Example: "Agent: Identify self and request assistance"
-
-### 5. Directed Graph Visualization
-- NetworkX DiGraph with visual arrow markers
-- Interactive D3.js visualization
-- Hover tooltips show full metadata
-- Node size reflects number of utterances
-
----
-
-## 🧪 Verification
-
-After running the pipeline, verify outputs:
+### Build the embeddings database
 
 ```bash
-# Check graph statistics
-python3 -c "
-import json
-with open('output/graph_with_metadata.json') as f:
-    data = json.load(f)
-print(f'Nodes: {len(data[\"nodes\"])}')
-print(f'Edges: {len(data[\"edges\"])}')
-"
-
-# Check LLM labels
-python3 -c "
-import json
-with open('output/trajectories_with_metadata.json') as f:
-    data = json.load(f)
-labels = data.get('cluster_labels', {})
-print(f'Labels: {len(labels)}')
-for cid, label in list(labels.items())[:5]:
-    print(f'  {cid}: {label}')
-"
-
-# Open visualization
-xdg-open output/graph_visualization.html  # Linux
-# open output/graph_visualization.html    # macOS
+python create_embeddings_db.py --data-path data/final_annotated_dataset.json --db-path data/embeddings.db
 ```
 
----
+### Run the end-to-end backend pipeline
 
-## 📚 Documentation
-
-- **[SETUP.md](SETUP.md)** - Detailed setup guide with troubleshooting
-- **[PAPER.md](PAPER.md)** - Research paper reference
-- **[FILES_ANALYSIS.txt](FILES_ANALYSIS.txt)** - File structure analysis
-
----
-
-## 🔧 Pipeline Architecture
-
-```
-Step 1: Find Top 20 Conversations
-  ├─ Load data from data/final_json_for_d2f.json
-  ├─ Filter by domain
-  ├─ Create utterance embeddings
-  ├─ Build FAISS index
-  ├─ Search with query
-  └─ Save top 20 to data/top_K/
-
-Step 2: Prepare for Dialog2Flow
-  ├─ Convert to simplified text format
-  └─ Save metadata to data/example/
-
-Step 3: Extract Trajectories
-  ├─ Load Dialog2Flow model
-  ├─ Cluster Agent utterances separately
-  ├─ Cluster Customer utterances separately
-  ├─ Generate LLM labels (if enabled)
-  ├─ Aggregate metadata per cluster
-  └─ Save to output/trajectories_with_metadata.json
-
-Step 4: Build Graphs
-  ├─ Build metadata-enhanced graph
-  ├─ Build Dialog2Flow action flow graph
-  ├─ Export as JSON, GraphML, HTML
-  └─ Generate interactive visualizations
-```
-
----
-
-## 🎓 Research Citation
-
-This work extends the Dialog2Flow methodology:
-
-```bibtex
-@article{burdisso2022dialog2flow,
-  title={Dialog2Flow: Pre-training Soft-Contrastive Action-Driven Sentence Embeddings for Automatic Dialog Flow Extraction},
-  author={Burdisso, Sergio and Madikeri, Srikanth and Motlicek, Petr},
-  journal={arXiv preprint arXiv:2206.07148},
-  year={2022}
-}
-```
-
-Original repository: https://github.com/sergioburdisso/dialog2flow
-
----
-
-## 🐛 Troubleshooting
-
-### Ollama Not Running
 ```bash
-# Start Ollama
-ollama serve &
-
-# Verify
-ollama list
+python main.py
 ```
 
-### Missing Models
-```bash
-# Download models
-python3 -c "
-from sentence_transformers import SentenceTransformer
-SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
-SentenceTransformer('sergioburdisso/dialog2flow-joint-bert-base')
-"
+## Inputs and Outputs
+
+### Input
+
+- `data/final_annotated_dataset.json`
+- Annotated conversations with transcript-level and turn-level metadata
+
+### Common output artifacts
+
+- `ans.json` - query answers and serialized result bundles
+- `causal_chains.json` - ranked causal chains
+- `landing_points.json` - semantic landing nodes retrieved from the graph
+- `subgraph.json` - extracted causal neighborhoods
+- `edges_computed.json` - LLM-scored edges and explanations
+- `output/graph_with_metadata.json` - metadata-aware directed graph
+- `output/graph_with_metadata_embedded.json` - graph nodes enriched with embeddings
+- `output/trajectories_with_metadata.json` - cluster assignments and aggregated metadata
+
+## Example Execution Flow
+
+```text
+User query
+  -> LLM routing into domain-intent searches
+  -> MPNet + FAISS transcript retrieval
+  -> Top-K transcript materialization
+  -> Dialog2Flow-compatible conversation export
+  -> Speaker-separated clustering
+  -> Directed metadata-aware graph construction
+  -> Memgraph vector landing-point retrieval
+  -> LLM causal edge scoring
+  -> BFS-style probabilistic chain discovery
+  -> Evidence-grounded answer generation
 ```
 
-### No Domain Found
-```bash
-# Check available domains
-python3 -c "
-import json
-with open('data/final_json_for_d2f.json') as f:
-    domains = set(t.get('domain') for t in json.load(f))
-print(sorted(domains))
-"
-```
+## Verification Checklist
 
-See [SETUP.md](SETUP.md) for more troubleshooting.
+- `data/final_annotated_dataset.json` is present
+- `Ollama` is running
+- a local model such as `llama3.2` is pulled
+- `data/embeddings.db` and the paired `.faiss` index exist
+- `main.py` completes and writes `ans.json`
+- graph artifacts are created under `output/`
 
----
+## Documentation
 
-## 📝 License
+- [ARCHITECTURE.md](ARCHITECTURE.md) - system architecture and workflow
+- [STARTUP.md](STARTUP.md) - Docker and startup instructions
+- [SETUP.md](SETUP.md) - local setup and environment preparation
+- [COMMANDS.md](COMMANDS.md) - reproducibility and command reference
 
-MIT License - see [LICENSE](LICENSE) for details.
+## Acknowledgments
 
----
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
----
-
-## 📧 Contact
-
-For questions or issues:
-- Open an issue on GitHub
-- Check [SETUP.md](SETUP.md) for troubleshooting
-- Review existing issues for solutions
-
----
-
-## ⭐ Features in Progress
-
-- [ ] Support for more LLM providers (OpenAI, Anthropic, etc.)
-- [ ] Multi-domain comparison graphs
-- [ ] Time-based flow analysis
-- [ ] Export to Gephi/Cytoscape formats
-- [ ] Real-time conversation analysis API
-
----
-
-**Happy analyzing! 🎉**
+This repository builds on the ideas from [Dialog2Flow](https://github.com/sergioburdisso/dialog2flow) and extends them with retrieval infrastructure, metadata-aware graph construction, Memgraph-backed causal reasoning, and graph-guided answer synthesis.
